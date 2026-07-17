@@ -1,200 +1,233 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>La géologie — Almanach</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>La géologie — Almanach</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js" defer></script>
 </head>
+
 <body>
 
-<nav class="dotnav" id="dotnav"></nav>
+	<nav class="dotnav" id="dotnav"></nav>
 
-<header class="hero" id="hero">
-  <div class="hero-grain"></div>
-  <div class="hero-inner">
-    <div class="eyebrow">Almanach — fiche illustrée &amp; interactive</div>
-    <h1>La géologie<br><em>pour les nuls</em></h1>
-	<p class="sub">Huit planches pour comprendre, une bonne fois pour toutes, comment la Terre est construite, empilée et datée — du noyau jusqu'à la dernière strate.</p>
-    <div class="tags">
-      <span>Couches internes</span><span>Strates</span><span>Ères géologiques</span><span>Roches</span><span>Tectonique</span>
-    </div>
-  </div>
-  <svg class="hero-strata" viewBox="0 0 400 400">
-    <rect x="40" y="340" width="320" height="40" fill="#f4c95d"/>
-    <rect x="40" y="300" width="320" height="40" fill="#e8912b"/>
-    <rect x="40" y="250" width="320" height="50" fill="#b5602d"/>
-    <rect x="40" y="210" width="320" height="40" fill="#cb8c37"/>
-    <rect x="40" y="170" width="320" height="40" fill="#6b8f71"/>
-    <rect x="40" y="130" width="320" height="40" fill="#4c6b78"/>
-    <rect x="40" y="90"  width="320" height="40" fill="#8a3b92" opacity="0.85"/>
-  </svg>
-  <div class="scrollcue">Faire défiler</div>
-</header>
+	<header class="hero" id="hero">
+		<div class="hero-grain"></div>
+		<div class="hero-inner">
+			<div class="eyebrow">Almanach — fiche illustrée &amp; interactive</div>
+			<h1>La géologie<br><em>pour les nuls</em></h1>
+			<p class="sub">Huit planches pour comprendre, une bonne fois pour toutes, comment la Terre est construite,
+				empilée et datée — du noyau jusqu'à la dernière strate.</p>
+			<div class="tags">
+				<span>Couches internes</span><span>Strates</span><span>Ères
+					géologiques</span><span>Roches</span><span>Tectonique</span>
+			</div>
+		</div>
+		<svg class="hero-strata" viewBox="0 0 400 400">
+			<rect x="40" y="340" width="320" height="40" fill="#f4c95d" />
+			<rect x="40" y="300" width="320" height="40" fill="#e8912b" />
+			<rect x="40" y="250" width="320" height="50" fill="#b5602d" />
+			<rect x="40" y="210" width="320" height="40" fill="#cb8c37" />
+			<rect x="40" y="170" width="320" height="40" fill="#6b8f71" />
+			<rect x="40" y="130" width="320" height="40" fill="#4c6b78" />
+			<rect x="40" y="90" width="320" height="40" fill="#8a3b92" opacity="0.85" />
+		</svg>
+		<div class="scrollcue">Faire défiler</div>
+	</header>
 
-<main>
+	<main>
 
-<!-- ============================================================
+		<!-- ============================================================
      PLANCHE I — INTRODUCTION
      ============================================================ -->
-<section class="plate" id="p1" data-title="Introduction">
-  <div class="container">
-    <div class="eyebrow reveal"><span class="num">I</span> Introduction</div>
-    <h2 class="reveal">4,6 milliards d'années sous les pieds</h2>
-    <p class="lede reveal delay-1">La géologie étudie la Terre solide&nbsp;: sa structure interne, les roches qui la composent, et l'histoire écrite dans ses couches.</p>
+		<section class="plate" id="p1" data-title="Introduction">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">I</span> Introduction</div>
+				<h2 class="reveal">4,6 milliards d'années sous les pieds</h2>
+				<p class="lede reveal delay-1">La géologie étudie la Terre solide&nbsp;: sa structure interne, les
+					roches qui la composent, et l'histoire écrite dans ses couches.</p>
 
-    <div class="callout slate reveal">
-      <span class="callout-title">Définition</span>
-      <p>La <b>géologie</b> est la science qui étudie la structure, la composition et l'histoire de la Terre. Elle s'appuie sur deux grandes idées&nbsp;: la Terre est <b>stratifiée</b> (organisée en couches, aussi bien à l'intérieur qu'en surface) et son histoire peut être <b>lue</b> dans les roches, un peu comme les pages d'un livre.</p>
-    </div>
+				<div class="callout slate reveal">
+					<span class="callout-title">Définition</span>
+					<p>La <b>géologie</b> est la science qui étudie la structure, la composition et l'histoire de la
+						Terre. Elle s'appuie sur deux grandes idées&nbsp;: la Terre est <b>stratifiée</b> (organisée en
+						couches, aussi bien à l'intérieur qu'en surface) et son histoire peut être <b>lue</b> dans les
+						roches, un peu comme les pages d'un livre.</p>
+				</div>
 
-    <div class="grid-2">
-      <div class="callout rust reveal">
-        <span class="callout-title">L'échelle qui donne le vertige</span>
-        <p>Si toute l'histoire de la Terre tenait sur une année de calendrier, l'espèce humaine n'apparaîtrait que dans les <b>dernières minutes du 31&nbsp;décembre</b>.</p>
-      </div>
-      <div class="callout rust reveal delay-1">
-        <span class="callout-title">Le principe fondateur</span>
-        <p>Nicolas Sténon (1669) pose les bases de la stratigraphie&nbsp;: dans une pile de strates non perturbée, les couches du bas sont <b>toujours plus anciennes</b> que celles du dessus.</p>
-      </div>
-    </div>
-  </div>
-</section>
+				<div class="grid-2">
+					<div class="callout rust reveal">
+						<span class="callout-title">L'échelle qui donne le vertige</span>
+						<p>Si toute l'histoire de la Terre tenait sur une année de calendrier, l'espèce humaine
+							n'apparaîtrait que dans les <b>dernières minutes du 31&nbsp;décembre</b>.</p>
+					</div>
+					<div class="callout rust reveal delay-1">
+						<span class="callout-title">Le principe fondateur</span>
+						<p>Nicolas Sténon (1669) pose les bases de la stratigraphie&nbsp;: dans une pile de strates non
+							perturbée, les couches du bas sont <b>toujours plus anciennes</b> que celles du dessus.</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<!-- ============================================================
+		<!-- ============================================================
      PLANCHE II — COUCHES INTERNES DE LA TERRE
      ============================================================ -->
-<section class="plate" id="p2" data-title="Couches internes">
-  <div class="container">
-    <div class="eyebrow reveal"><span class="num">II</span> Voyage vers le centre</div>
-    <h2 class="reveal">Les couches internes de la Terre</h2>
-    <p class="lede reveal delay-1">Quatre grandes enveloppes, de la surface froide au centre aussi chaud que la surface du Soleil. Clique une couche pour en savoir plus.</p>
+		<section class="plate" id="p2" data-title="Couches internes">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">II</span> Voyage vers le centre</div>
+				<h2 class="reveal">Les couches internes de la Terre</h2>
+				<p class="lede reveal delay-1">Quatre grandes enveloppes, de la surface froide au centre aussi chaud que
+					la surface du Soleil. Clique une couche pour en savoir plus.</p>
 
-    <div class="earthwrap reveal" id="earthwrap"></div>
-    <div class="earth-detail placeholder reveal" id="earthDetail">Clique une couche du schéma ci-dessus.</div>
+				<div class="earthwrap reveal" id="earthwrap"></div>
+				<div class="earth-detail placeholder reveal" id="earthDetail">Clique une couche du schéma ci-dessus.
+				</div>
 
-    <div class="callout wine reveal" style="margin-top:28px;">
-      <span class="callout-title">Schéma non à l'échelle</span>
-      <p>Sur ce diagramme, la croûte est très exagérée pour rester visible&nbsp;: en réalité, elle ne représente qu'environ <b>1&nbsp;%</b> du rayon terrestre — plus fine, à cette échelle, que la peau d'une pomme.</p>
-    </div>
-  </div>
-</section>
+				<div class="callout wine reveal" style="margin-top:28px;">
+					<span class="callout-title">Schéma non à l'échelle</span>
+					<p>Sur ce diagramme, la croûte est très exagérée pour rester visible&nbsp;: en réalité, elle ne
+						représente qu'environ <b>1&nbsp;%</b> du rayon terrestre — plus fine, à cette échelle, que la
+						peau d'une pomme.</p>
+				</div>
+			</div>
+		</section>
 
-<!-- ============================================================
+		<!-- ============================================================
      PLANCHE III — STRATES & STRATIGRAPHIE
      ============================================================ -->
-<section class="plate" id="p3" data-title="Strates">
-  <div class="container">
-    <div class="eyebrow reveal"><span class="num">III</span> Lire les couches</div>
-    <h2 class="reveal">Strates &amp; stratigraphie</h2>
-    <p class="lede reveal delay-1">Exemple réel&nbsp;: une version simplifiée de la colonne stratigraphique du <b>Grand Canyon</b>, l'une des plus célèbres au monde. Clique une couche, du haut (récent) vers le bas (ancien).</p>
+		<section class="plate" id="p3" data-title="Strates">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">III</span> Lire les couches</div>
+				<h2 class="reveal">Strates &amp; stratigraphie</h2>
+				<p class="lede reveal delay-1">Exemple réel&nbsp;: une version simplifiée de la colonne stratigraphique
+					du <b>Grand Canyon</b>, l'une des plus célèbres au monde. Clique une couche, du haut (récent) vers
+					le bas (ancien).</p>
 
-    <div class="stratcol reveal">
-      <div class="strat-stack" id="stratStack"></div>
-      <div class="strat-detail" id="stratDetail"></div>
-    </div>
+				<div class="stratcol reveal">
+					<div class="strat-stack" id="stratStack"></div>
+					<div class="strat-detail" id="stratDetail"></div>
+				</div>
 
-    <div class="callout slate reveal">
-      <span class="callout-title">La grande discordance</span>
-      <p>Entre le grès de Tapeats (~525&nbsp;millions d'années) et le socle du Vishnu (~1,7&nbsp;milliard d'années) en dessous, il manque environ <b>1,2&nbsp;milliard d'années</b> de roches&nbsp;: elles ont été érodées avant que les couches suivantes ne se déposent. C'est une <b>discordance</b> — une page arrachée du livre géologique.</p>
-    </div>
-  </div>
-</section>
+				<div class="callout slate reveal">
+					<span class="callout-title">La grande discordance</span>
+					<p>Entre le grès de Tapeats (~525&nbsp;millions d'années) et le socle du Vishnu (~1,7&nbsp;milliard
+						d'années) en dessous, il manque environ <b>1,2&nbsp;milliard d'années</b> de roches&nbsp;: elles
+						ont été érodées avant que les couches suivantes ne se déposent. C'est une <b>discordance</b> —
+						une page arrachée du livre géologique.</p>
+				</div>
+			</div>
+		</section>
 
-<!-- ============================================================
+		<!-- ============================================================
      PLANCHE IV — ÈRES GÉOLOGIQUES
      ============================================================ -->
-<section class="plate" id="p4" data-title="Ères géologiques">
-  <div class="container">
-    <div class="eyebrow reveal"><span class="num">IV</span> L'échelle des temps</div>
-    <h2 class="reveal">Les ères géologiques</h2>
-    <p class="lede reveal delay-1">D'abord, une vérité qui pique&nbsp;: presque toute l'histoire de la Terre est «&nbsp;invisible&nbsp;» à cette échelle.</p>
+		<section class="plate" id="p4" data-title="Ères géologiques">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">IV</span> L'échelle des temps</div>
+				<h2 class="reveal">Les ères géologiques</h2>
+				<p class="lede reveal delay-1">D'abord, une vérité qui pique&nbsp;: presque toute l'histoire de la Terre
+					est «&nbsp;invisible&nbsp;» à cette échelle.</p>
 
-    <div class="deeptime reveal">
-      <div class="deeptime-bar" id="deepBar"></div>
-      <div class="deeptime-cap"><span>— 4 600 Ma (formation de la Terre)</span><span>Aujourd'hui</span></div>
-    </div>
+				<div class="deeptime reveal">
+					<div class="deeptime-bar" id="deepBar"></div>
+					<div class="deeptime-cap"><span>— 4 600 Ma (formation de la Terre)</span><span>Aujourd'hui</span>
+					</div>
+				</div>
 
-    <p class="reveal" style="color:var(--ink-3); font-size:15px;">Le petit segment tout à droite ci-dessus, c'est <b>l'éon Phanérozoïque</b> (541&nbsp;Ma à aujourd'hui) — celui où la vie complexe et les fossiles visibles apparaissent. Zoomons dessus&nbsp;:</p>
+				<p class="reveal" style="color:var(--ink-3); font-size:15px;">Le petit segment tout à droite ci-dessus,
+					c'est <b>l'éon Phanérozoïque</b> (541&nbsp;Ma à aujourd'hui) — celui où la vie complexe et les
+					fossiles visibles apparaissent. Zoomons dessus&nbsp;:</p>
 
-    <div class="eras-scale reveal">
-      <div class="eras-track" id="erasTrack"></div>
-    </div>
-    <div class="era-detail" id="eraDetail"></div>
-  </div>
-</section>
+				<div class="eras-scale reveal">
+					<div class="eras-track" id="erasTrack"></div>
+				</div>
+				<div class="era-detail" id="eraDetail"></div>
+			</div>
+		</section>
 
-<!-- ============================================================
+		<!-- ============================================================
      PLANCHE V — LES ROCHES
      ============================================================ -->
-<section class="plate" id="p5" data-title="Les roches">
-  <div class="container">
-    <div class="eyebrow reveal"><span class="num">V</span> Le cycle des roches</div>
-    <h2 class="reveal">Trois familles, un seul cycle</h2>
-    <p class="lede reveal delay-1">Aucune roche n'est éternelle&nbsp;: chacune peut, sur des millions d'années, se transformer en une autre. Clique une famille.</p>
+		<section class="plate" id="p5" data-title="Les roches">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">V</span> Le cycle des roches</div>
+				<h2 class="reveal">Trois familles, un seul cycle</h2>
+				<p class="lede reveal delay-1">Aucune roche n'est éternelle&nbsp;: chacune peut, sur des millions
+					d'années, se transformer en une autre. Clique une famille.</p>
 
-    <div class="rockcycle reveal">
-      <div id="rockSvgWrap"></div>
-      <div class="rock-detail" id="rockDetail"></div>
-    </div>
-  </div>
-</section>
+				<div class="rockcycle reveal">
+					<div id="rockSvgWrap"></div>
+					<div class="rock-detail" id="rockDetail"></div>
+				</div>
+			</div>
+		</section>
 
-<!-- ============================================================
+		<!-- ============================================================
      PLANCHE VI — TECTONIQUE DES PLAQUES
      ============================================================ -->
-<section class="plate" id="p6" data-title="Tectonique">
-  <div class="container">
-    <div class="eyebrow reveal"><span class="num">VI</span> Tectonique des plaques</div>
-    <h2 class="reveal">Pourquoi les couches se plissent</h2>
-    <p class="lede reveal delay-1">La croûte terrestre est découpée en plaques rigides qui bougent de quelques centimètres par an — à peu près la vitesse de pousse d'un ongle.</p>
+		<section class="plate" id="p6" data-title="Tectonique">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">VI</span> Tectonique des plaques</div>
+				<h2 class="reveal">Pourquoi les couches se plissent</h2>
+				<p class="lede reveal delay-1">La croûte terrestre est découpée en plaques rigides qui bougent de
+					quelques centimètres par an — à peu près la vitesse de pousse d'un ongle.</p>
 
-    <div class="tectotabs reveal">
-      <button class="ttab active" data-tab="div">Divergente</button>
-      <button class="ttab" data-tab="conv">Convergente</button>
-      <button class="ttab" data-tab="trans">Transformante</button>
-    </div>
-    <div class="tecto-panels reveal" id="tectoPanels"></div>
-  </div>
-</section>
+				<div class="tectotabs reveal">
+					<button class="ttab active" data-tab="div">Divergente</button>
+					<button class="ttab" data-tab="conv">Convergente</button>
+					<button class="ttab" data-tab="trans">Transformante</button>
+				</div>
+				<div class="tecto-panels reveal" id="tectoPanels"></div>
+			</div>
+		</section>
 
-<!-- ============================================================
+		<!-- ============================================================
      PLANCHE VII — LEXIQUE
      ============================================================ -->
-<section class="plate" id="p7" data-title="Lexique">
-  <div class="container">
-    <div class="eyebrow reveal"><span class="num">VII</span> Lexique express</div>
-    <h2 class="reveal">Le vocabulaire essentiel</h2>
-    <p class="lede reveal delay-1">Clique une carte pour lire la définition.</p>
-    <div class="lexgrid reveal" id="lexgrid"></div>
-  </div>
-</section>
+		<section class="plate" id="p7" data-title="Lexique">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">VII</span> Lexique express</div>
+				<h2 class="reveal">Le vocabulaire essentiel</h2>
+				<p class="lede reveal delay-1">Clique une carte pour lire la définition.</p>
+				<div class="lexgrid reveal" id="lexgrid"></div>
+			</div>
+		</section>
 
-<!-- ============================================================
+		<!-- ============================================================
      PLANCHE VIII — RESSOURCES
      ============================================================ -->
-<section class="plate" id="p8" data-title="Ressources">
-  <div class="container">
-    <div class="eyebrow reveal"><span class="num">VIII</span> Pour aller plus loin</div>
-    <h2 class="reveal">Quelques ressources fiables</h2>
-    <div class="reslist reveal">
-      <a class="rescard" href="https://www.brgm.fr" target="_blank" rel="noopener"><span class="rt">BRGM</span><span class="rd">Service géologique national français.</span></a>
-      <a class="rescard" href="https://www.usgs.gov" target="_blank" rel="noopener"><span class="rt">USGS</span><span class="rd">Institut géologique américain, données et cartes.</span></a>
-      <a class="rescard" href="https://stratigraphy.org" target="_blank" rel="noopener"><span class="rt">International Commission on Stratigraphy</span><span class="rd">L'échelle des temps géologiques officielle.</span></a>
-    </div>
-  </div>
-</section>
+		<section class="plate" id="p8" data-title="Ressources">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">VIII</span> Pour aller plus loin</div>
+				<h2 class="reveal">Quelques ressources fiables</h2>
+				<div class="reslist reveal">
+					<a class="rescard" href="https://www.brgm.fr" target="_blank" rel="noopener"><span
+							class="rt">BRGM</span><span class="rd">Service géologique national français.</span></a>
+					<a class="rescard" href="https://www.usgs.gov" target="_blank" rel="noopener"><span
+							class="rt">USGS</span><span class="rd">Institut géologique américain, données et
+							cartes.</span></a>
+					<a class="rescard" href="https://stratigraphy.org" target="_blank" rel="noopener"><span
+							class="rt">International Commission on Stratigraphy</span><span class="rd">L'échelle des
+							temps géologiques officielle.</span></a>
+				</div>
+			</div>
+		</section>
 
-</main>
+	</main>
 
-<footer>
-  <div class="fmark">✻</div>
-  Bonne exploration des profondeurs — <a href="../index.html">retour à l'Almanach</a>
-</footer>
+	<footer>
+		<div class="fmark">✻</div>
+		Bonne exploration des profondeurs — <a href="../index.html">retour à l'Almanach</a>
+	</footer>
 
 </body>
+
 </html>
