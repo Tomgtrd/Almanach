@@ -185,13 +185,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const rockSvgWrap = document.getElementById('rockSvgWrap');
   let rockSvg = `<svg class="rock-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <marker id="arrowhead-geo" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse">
-        <path d="M0,0 L6,3 L0,6 Z" fill="var(--ink-3)"/>
+      <marker id="arrowhead-geo" markerWidth="20" markerHeight="20" refX="7" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+        <path d="M0,0 L12,6 L0,12 Z" fill="var(--ink-3)"/>
       </marker>
     </defs>
     <path class="arrow-path" d="M135,70 C90,120 78,150 74,176"/>
     <path class="arrow-path" d="M100,240 C140,255 155,252 178,243"/>
-    <path class="arrow-path" d="M232,215 C225,160 205,110 192,97"/>
+    <path class="arrow-path" d="M232,215 C225,160 205,110 192,97"/> 	
   `;
   ROCKS.forEach(r=>{
     rockSvg += `<g class="node" data-id="${r.id}">
