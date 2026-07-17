@@ -146,17 +146,26 @@ document.addEventListener('DOMContentLoaded', () => {
   erasTrack.innerHTML = PERIODS.map((p,i)=>`
     <div class="era-row" data-i="${i}" style="background:${p.color}">
       <div class="era-head"><span>${p.nm}</span><span class="era-dates">${p.dates}</span></div>
-      <div class="era-body"><p>${p.desc}</p>${p.extinction ? `<div class="extinction-tag">✕ ${p.extinction}</div>` : ''}</div>
+      <div class="era-body" style="max-height:0; overflow:hidden; transition:max-height .3s ease, margin-top .3s ease;"><p>${p.desc}</p>${p.extinction ? `<div class="extinction-tag">✕ ${p.extinction}</div>` : ''}</div>
     </div>
   `).join('');
   erasTrack.querySelectorAll('.era-row').forEach(row=>{
+    const body = row.querySelector('.era-body');
     row.addEventListener('click', ()=>{
-      const wasActive = row.classList.contains('active');
-      erasTrack.querySelectorAll('.era-row').forEach(r=>r.classList.remove('active'));
-      if(!wasActive) row.classList.add('active');
+      const isOpen = row.classList.contains('active');
+      erasTrack.querySelectorAll('.era-row').forEach(r=>{
+        r.classList.remove('active');
+        r.querySelector('.era-body').style.maxHeight = '0px';
+        r.querySelector('.era-body').style.marginTop = '0px';
+      });
+      if(!isOpen){
+        row.classList.add('active');
+        body.style.marginTop = '10px';
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
     });
   });
-  erasTrack.querySelector('.era-row').classList.add('active');
+  erasTrack.querySelector('.era-row').click();
 
   /* ================= PLANCHE V — CYCLE DES ROCHES ================= */
   const ROCKS = [
@@ -176,13 +185,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const rockSvgWrap = document.getElementById('rockSvgWrap');
   let rockSvg = `<svg class="rock-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <marker id="arrowhead-geo" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <marker id="arrowhead-geo" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto" markerUnits="userSpaceOnUse">
         <path d="M0,0 L6,3 L0,6 Z" fill="var(--ink-3)"/>
       </marker>
     </defs>
-    <path class="arrow-path" d="M135,70 C90,120 75,160 68,215"/>
-    <path class="arrow-path" d="M100,240 C140,255 160,255 200,240"/>
-    <path class="arrow-path" d="M232,215 C225,160 210,120 165,70"/>
+    <path class="arrow-path" d="M135,70 C90,120 78,150 74,176"/>
+    <path class="arrow-path" d="M100,240 C140,255 155,252 178,243"/>
+    <path class="arrow-path" d="M232,215 C225,160 205,110 192,97"/>
   `;
   ROCKS.forEach(r=>{
     rockSvg += `<g class="node" data-id="${r.id}">
