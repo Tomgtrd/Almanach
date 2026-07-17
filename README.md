@@ -33,7 +33,7 @@ Chaque dossier de thème est indépendant et autoporteur — il fonctionne seul 
 
 ## Voir le site
 
-- **En ligne**, une fois GitHub Pages activé sur la branche `main` : `https://<ton-pseudo>.github.io/almanach/`
+- **En ligne** : [tomgtrd.github.io/Almanach](https://tomgtrd.github.io/Almanach/) (une fois GitHub Pages activé sur la branche `main`)
 - **En local** : ouvrir `index.html` à la racine (le hub), ou directement le `index.html` d'un thème.
 
 ## Ajouter un nouveau thème
