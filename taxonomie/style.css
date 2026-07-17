@@ -1,33 +1,50 @@
+/* ============================================================
+   ALMANACH — GÉOLOGIE
+   Même charte typographique que le hub, palette dédiée au thème.
+   ============================================================ */
+
 :root {
-	--ink: #142420;
-	--ink-2: #1c3630;
-	--ink-3: #234840;
-	--paper: #f1ecd9;
-	--paper-2: #e8e0c6;
-	--paper-3: #ded3ae;
-	--brass: #b8863b;
-	--brass-lt: #d9a441;
-	--moss: #3f6b52;
-	--moss-lt: #6b9a7e;
-	--teal: #3e7c89;
-	--teal-lt: #6fa8b4;
-	--plum: #7c3f58;
-	--plum-lt: #a6577a;
+	--ink: #1e2430;
+	--ink-2: #262e3d;
+	--ink-3: #3a4457;
+	--paper: #f1ead9;
+	--paper-2: #e8dfc7;
+	--paper-3: #ddd0ac;
+
+	/* accents génériques du thème */
 	--rust: #b5602d;
+	--rust-lt: #d98a4f;
+	--ochre: #c9922e;
+	--slate: #4c6b78;
+	--slate-lt: #7fa3af;
+	--copper: #6b8f71;
 	--wine: #8c2f39;
+	--magma: #e8912b;
 
-	--r-domaine: #1f4b47;
-	--r-regne: #3f6b52;
-	--r-embr: #3e7c89;
-	--r-classe: #b8863b;
-	--r-ordre: #b5602d;
-	--r-famille: #7c3f58;
-	--r-genre: #a6577a;
-	--r-espece: #8c2f39;
+	/* couches internes de la Terre */
+	--l-croute: #6b8f71;
+	--l-manteau: #b5602d;
+	--l-externe: #e8912b;
+	--l-interne: #f4c95d;
 
-	--serif-display: "Fraunces", serif;
-	--serif-body: "Newsreader", serif;
-	--sans-ui: "Space Grotesk", sans-serif;
+	/* ères géologiques (teintes inspirées de l'échelle des temps géologiques officielle) */
+	--e-precambrien: #e8899e;
+	--e-cambrien: #7fa056;
+	--e-ordovicien: #1f9a8a;
+	--e-silurien: #b3d9a0;
+	--e-devonien: #cb8c37;
+	--e-carbonifere: #67a599;
+	--e-permien: #e8552f;
+	--e-trias: #8a3b92;
+	--e-jurassique: #34a6c9;
+	--e-cretace: #6bb84e;
+	--e-paleogene: #f5c04a;
+	--e-neogene: #f7dc7a;
+	--e-quaternaire: #f2ecb0;
+
+	--serif-display: 'Fraunces', serif;
+	--serif-body: 'Newsreader', serif;
+	--sans-ui: 'Space Grotesk', sans-serif;
 
 	--container: 880px;
 }
@@ -58,18 +75,18 @@ body {
 }
 
 ::selection {
-	background: var(--brass-lt);
+	background: var(--ochre);
 	color: var(--ink);
 }
 
 a {
-	color: var(--teal);
+	color: var(--slate);
 	text-decoration-thickness: 1.5px;
 	text-underline-offset: 3px;
 }
 
 a:hover {
-	color: var(--plum);
+	color: var(--wine);
 }
 
 img,
@@ -101,7 +118,7 @@ h4 {
 	font-weight: 600;
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
-	color: var(--brass);
+	color: var(--rust);
 	display: flex;
 	align-items: center;
 	gap: 10px;
@@ -113,15 +130,15 @@ h4 {
 	font-style: italic;
 	font-size: 22px;
 	font-weight: 500;
-	color: var(--moss);
+	color: var(--slate);
 	letter-spacing: 0;
 }
 
 .eyebrow::after {
-	content: "";
+	content: '';
 	flex: 1;
 	height: 1px;
-	background: linear-gradient(to right, var(--brass), transparent);
+	background: linear-gradient(to right, var(--rust), transparent);
 }
 
 p {
@@ -134,7 +151,7 @@ p {
 }
 
 :focus-visible {
-	outline: 3px solid var(--plum);
+	outline: 3px solid var(--wine);
 	outline-offset: 3px;
 }
 
@@ -154,6 +171,9 @@ button {
 	}
 }
 
+/* ============================================================
+   SIDE DOT NAV
+   ============================================================ */
 .dotnav {
 	position: fixed;
 	right: 22px;
@@ -171,16 +191,16 @@ button {
 	height: 10px;
 	border-radius: 50%;
 	background: var(--paper-3);
-	border: 1.5px solid var(--brass);
-	transition: all 0.25s ease;
+	border: 1.5px solid var(--rust);
+	transition: all .25s ease;
 }
 
 .dotnav a:hover {
-	background: var(--brass-lt);
+	background: var(--rust-lt);
 }
 
 .dotnav a.active {
-	background: var(--brass);
+	background: var(--rust);
 	transform: scale(1.35);
 }
 
@@ -198,7 +218,7 @@ button {
 	white-space: nowrap;
 	opacity: 0;
 	pointer-events: none;
-	transition: opacity 0.2s ease;
+	transition: opacity .2s ease;
 }
 
 .dotnav a:hover .tip {
@@ -211,10 +231,13 @@ button {
 	}
 }
 
+/* ============================================================
+   HERO
+   ============================================================ */
 .hero {
 	position: relative;
 	min-height: 100vh;
-	background: radial-gradient(ellipse at 30% 20%, var(--ink-3), var(--ink) 65%);
+	background: radial-gradient(ellipse at 30% 20%, var(--ink-2), var(--ink) 65%);
 	color: var(--paper);
 	display: flex;
 	align-items: center;
@@ -240,11 +263,11 @@ button {
 }
 
 .hero .eyebrow {
-	color: var(--brass-lt);
+	color: var(--rust-lt);
 }
 
 .hero .eyebrow::after {
-	background: linear-gradient(to right, var(--brass-lt), transparent);
+	background: linear-gradient(to right, var(--rust-lt), transparent);
 }
 
 .hero h1 {
@@ -257,7 +280,7 @@ button {
 .hero h1 em {
 	font-style: italic;
 	font-weight: 500;
-	color: var(--brass-lt);
+	color: var(--magma);
 }
 
 .hero .sub {
@@ -283,7 +306,7 @@ button {
 	color: var(--paper-3);
 }
 
-.hero-tree {
+.hero-strata {
 	position: absolute;
 	right: -4%;
 	top: 50%;
@@ -292,17 +315,8 @@ button {
 	opacity: 0.95;
 }
 
-.hero-tree path {
-	fill: none;
-	stroke: var(--brass-lt);
-	stroke-width: 2;
-	stroke-linecap: round;
-}
-
-.hero-tree circle {
-	fill: var(--paper);
-	stroke: var(--brass-lt);
-	stroke-width: 2;
+.hero-strata rect {
+	transition: opacity .3s ease;
 }
 
 .scrollcue {
@@ -320,7 +334,7 @@ button {
 }
 
 .scrollcue::before {
-	content: "";
+	content: '';
 	width: 22px;
 	height: 1px;
 	background: var(--paper-3);
@@ -332,15 +346,18 @@ button {
 	0%,
 	100% {
 		width: 22px;
-		opacity: 0.5;
+		opacity: .5
 	}
 
 	50% {
 		width: 38px;
-		opacity: 1;
+		opacity: 1
 	}
 }
 
+/* ============================================================
+   PLATE STRUCTURE
+   ============================================================ */
 main {
 	background: var(--paper);
 	position: relative;
@@ -367,9 +384,7 @@ main {
 .reveal {
 	opacity: 0;
 	transform: translateY(26px);
-	transition:
-		opacity 0.7s cubic-bezier(0.2, 0.7, 0.3, 1),
-		transform 0.7s cubic-bezier(0.2, 0.7, 0.3, 1);
+	transition: opacity .7s cubic-bezier(.2, .7, .3, 1), transform .7s cubic-bezier(.2, .7, .3, 1);
 }
 
 .reveal.in {
@@ -378,43 +393,41 @@ main {
 }
 
 .reveal.delay-1 {
-	transition-delay: 0.08s;
+	transition-delay: .08s;
 }
 
+.reveal.delay-2 {
+	transition-delay: .16s;
+}
+
+/* ============================================================
+   CALLOUTS
+   ============================================================ */
 .callout {
 	border: 1.5px solid var(--ink);
 	border-radius: 14px;
 	padding: 24px 26px;
 	background: var(--paper);
-	box-shadow: 5px 5px 0 rgba(20, 36, 32, 0.08);
+	box-shadow: 5px 5px 0 rgba(30, 36, 48, 0.08);
 	margin: 28px 0;
 }
 
-.callout.moss {
-	border-color: var(--moss);
-	background: #eaf1e9;
+.callout.slate {
+	border-color: var(--slate);
+	background: #e8eef0;
 }
 
-.callout.moss .callout-title {
-	color: var(--moss);
+.callout.slate .callout-title {
+	color: var(--slate);
 }
 
-.callout.teal {
-	border-color: var(--teal);
-	background: #e8f0f1;
+.callout.rust {
+	border-color: var(--rust);
+	background: #f7ebdf;
 }
 
-.callout.teal .callout-title {
-	color: var(--teal);
-}
-
-.callout.brass {
-	border-color: var(--brass);
-	background: #f7eeda;
-}
-
-.callout.brass .callout-title {
-	color: var(--brass);
+.callout.rust .callout-title {
+	color: var(--rust);
 }
 
 .callout.wine {
@@ -424,6 +437,15 @@ main {
 
 .callout.wine .callout-title {
 	color: var(--wine);
+}
+
+.callout.copper {
+	border-color: var(--copper);
+	background: #eaf1e9;
+}
+
+.callout.copper .callout-title {
+	color: var(--copper);
 }
 
 .callout-title {
@@ -452,539 +474,388 @@ main {
 	}
 }
 
-.timeline {
+/* ============================================================
+   COUPE DE LA TERRE — cercles concentriques interactifs
+   ============================================================ */
+.earthwrap {
 	display: flex;
-	gap: 4px;
-	margin: 46px 0 10px;
-	padding-top: 10px;
-	overflow-x: auto;
-	scrollbar-width: thin;
-}
-
-.tl-item {
-	flex: 1 0 150px;
-	display: flex;
-	flex-direction: column;
+	gap: 40px;
 	align-items: center;
-	text-align: center;
-	padding: 0 8px;
-	position: relative;
-}
-
-.tl-item::before {
-	content: "";
-	position: absolute;
-	top: 44px;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: var(--brass);
-	z-index: 0;
-}
-
-.tl-item:first-child::before {
-	left: 50%;
-	width: 50%;
-}
-
-.tl-item:last-child::before {
-	width: 50%;
-}
-
-.tl-dot {
-	width: 13px;
-	height: 13px;
-	border-radius: 50%;
-	background: var(--brass);
-	border: 3px solid var(--paper-2);
-	margin-bottom: 12px;
-	position: relative;
-	z-index: 1;
-	margin-top: 38px;
-}
-
-.tl-year {
-	font-family: var(--sans-ui);
-	font-weight: 700;
-	color: var(--rust);
-	font-size: 14px;
-	margin-bottom: 4px;
-}
-
-.tl-name {
-	font-family: var(--serif-display);
-	font-weight: 600;
-	font-size: 17px;
-	margin-bottom: 6px;
-}
-
-.tl-desc {
-	font-size: 13.5px;
-	color: var(--ink-3);
-	line-height: 1.4;
-}
-
-.mnemo {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px;
 	justify-content: center;
-	margin: 32px 0;
-}
-
-.mnemo .letter-box {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	min-width: 92px;
-	padding: 14px 10px 12px;
-	border-radius: 12px;
-	background: var(--ink);
-	color: var(--paper);
-	box-shadow: 4px 4px 0 rgba(20, 36, 32, 0.15);
-	transition: transform 0.25s ease;
-}
-
-.mnemo .letter-box:hover {
-	transform: translateY(-6px) rotate(-1deg);
-}
-
-.mnemo .letter-box .L {
-	font-family: var(--serif-display);
-	font-size: 34px;
-	font-weight: 700;
-	color: var(--brass-lt);
-	line-height: 1;
-}
-
-.mnemo .letter-box .word {
-	font-family: var(--sans-ui);
-	font-size: 11.5px;
-	margin-top: 6px;
-	text-align: center;
-}
-
-.mnemo-caption {
-	text-align: center;
-	font-style: italic;
-	color: var(--ink-3);
-	margin-top: 6px;
-}
-
-.megatree {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 36px 0 6px;
-	width: 100%;
-}
-
-.mt-anim {
-	opacity: 0;
-	transform: translateY(14px);
-	transition:
-		opacity 0.45s ease,
-		transform 0.45s ease;
-}
-
-.mt-anim.show {
-	opacity: 1;
-	transform: translateY(0);
-}
-
-.mt-level {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-}
-
-.mt-ortho {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 80%;
-	max-width: 600px;
-	margin-top: 8px;
-}
-
-.o-line-v {
-	width: 2px;
-	height: 16px;
-	background: var(--brass);
-}
-
-.o-line-h {
-	width: 100%;
-	height: 2px;
-	background: var(--brass);
-}
-
-.o-legs {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-}
-
-.mt-choices {
-	display: flex;
-	gap: 14px;
-	width: 100%;
-	justify-content: center;
-	margin: 0 auto;
+	margin: 40px 0;
 	flex-wrap: wrap;
 }
 
-.mt-card {
-	flex: 1 1 0;
-	min-width: 200px;
-	text-align: left;
-	border-radius: 14px;
-	border: 2.5px solid var(--ink);
-	background: var(--paper);
-	padding: 14px 18px;
+.earth-svg {
+	width: min(360px, 90vw);
+}
+
+.earth-svg circle {
 	cursor: pointer;
-	transition: all 0.25s ease;
-	font-family: var(--sans-ui);
-}
-
-.mt-card:hover {
-	transform: translateY(-3px);
-	box-shadow: 4px 4px 0 rgba(20, 36, 32, 0.12);
-}
-
-.mt-card .rk {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-size: 10.5px;
-	text-transform: uppercase;
-	letter-spacing: 0.06em;
-	color: var(--brass);
-	font-weight: 700;
-}
-
-.mt-card .tx {
-	font-family: var(--serif-display);
-	font-style: italic;
-	font-weight: 600;
-	font-size: 18px;
-	color: var(--ink);
-	margin-top: 4px;
-	word-wrap: break-word;
-}
-
-.mt-card .desc {
-	font-family: var(--serif-body);
-	font-size: 14px;
-	color: var(--ink-3);
-	margin-top: 8px;
-	line-height: 1.35;
-}
-
-.mt-card.unselected {
-	opacity: 0.45;
-	filter: grayscale(100%);
-	border-color: var(--paper-3);
-	box-shadow: none;
-	transform: scale(0.96);
-}
-
-.mt-card.unselected:hover {
-	opacity: 0.8;
-	filter: grayscale(50%);
-	transform: scale(0.98);
-	border-color: var(--ink);
-}
-
-.mt-card.confirmed {
-	border-width: 3px;
-	box-shadow: 4px 4px 0 rgba(20, 36, 32, 0.15);
-	transform: translateY(-2px);
-	background: #fcfbf6;
-}
-
-.mt-card.confirmed:hover {
-	transform: translateY(-3px);
-	box-shadow: 6px 6px 0 rgba(20, 36, 32, 0.15);
-}
-
-.mt-card.root-card {
-	max-width: 320px;
-	margin: 0 auto;
-	cursor: pointer;
-	border-width: 3px;
-	border-color: var(--ink);
-}
-
-.mt-card.root-card:hover {
-	transform: translateY(-3px);
-	box-shadow: 4px 4px 0 rgba(20, 36, 32, 0.15);
-}
-
-.mt-final {
-	margin-top: 14px;
-	border: 3px solid var(--wine);
-	border-radius: 18px;
-	padding: 26px 32px;
-	text-align: center;
-	background: #f9ece9;
-	max-width: 420px;
-}
-
-.mt-final .ic {
-	font-size: 42px;
-	margin-bottom: 8px;
-}
-
-.mt-final .tx {
-	font-family: var(--serif-display);
-	font-style: italic;
-	font-weight: 700;
-	font-size: 1.6rem;
-	color: var(--wine);
-	margin-bottom: 6px;
-}
-
-.mt-final p {
-	margin: 0;
-	color: var(--ink-3);
-	font-size: 14.5px;
-	line-height: 1.4;
-}
-
-.mega-reset-btn {
-	font-family: var(--sans-ui);
-	font-size: 13px;
-	font-weight: 600;
-	color: var(--ink-3);
-	border: 1.5px solid var(--paper-3);
-	border-radius: 20px;
-	padding: 8px 18px;
-	transition: all 0.2s ease;
-	margin-top: 20px;
-}
-
-.mega-reset-btn:hover {
-	border-color: var(--brass);
-	color: var(--brass);
-}
-
-.treewrap {
-	margin: 40px 0 26px;
-	overflow-x: auto;
-}
-
-.tree-svg {
-	min-width: 720px;
-	margin: 0 auto;
-	display: block;
-}
-
-.tree-svg .branch {
-	fill: none;
-	stroke: var(--ink-3);
-	stroke-width: 2.5;
-	transition:
-		stroke 0.25s ease,
-		stroke-width 0.25s ease;
-}
-
-.tree-svg .branch.hl {
-	stroke: var(--wine);
-	stroke-width: 3.5;
-}
-
-.tree-svg .node-dot {
-	fill: var(--paper);
+	transition: filter .2s ease, stroke-width .2s ease;
 	stroke: var(--ink);
-	stroke-width: 2;
-}
-
-.tree-svg .leaf {
-	cursor: pointer;
-}
-
-.tree-svg .leaf .lf-ring {
-	fill: var(--paper);
-	stroke: var(--ink-3);
 	stroke-width: 1.5;
-	transition:
-		stroke 0.25s ease,
-		stroke-width 0.25s ease;
 }
 
-.tree-svg .leaf.hl .lf-ring,
-.tree-svg .leaf.selected .lf-ring {
-	stroke: var(--wine);
-	stroke-width: 3;
+.earth-svg circle.selected {
+	stroke: var(--paper);
+	stroke-width: 3.5;
+	filter: brightness(1.12);
 }
 
-.tree-svg .leaf .lf-icon {
-	font-size: 17px;
+.earth-legend {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	min-width: 220px;
 }
 
-.tree-svg .leaf .lf-label {
+.earth-legend-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 8px 12px;
+	border-radius: 10px;
+	cursor: pointer;
+	border: 1.5px solid transparent;
+	transition: all .2s ease;
+}
+
+.earth-legend-item:hover {
+	background: var(--paper-2);
+}
+
+.earth-legend-item.active {
+	border-color: var(--ink);
+	background: var(--paper-2);
+}
+
+.earth-legend-item .sw {
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.earth-legend-item .nm {
 	font-family: var(--sans-ui);
-	font-size: 9.5px;
-	fill: var(--ink-3);
+	font-weight: 600;
+	font-size: 14px;
 }
 
-.phylum-detail {
+.earth-detail {
 	border: 2.5px solid var(--ink);
 	border-radius: 18px;
 	padding: 26px 30px;
 	background: var(--paper);
-	box-shadow: 6px 6px 0 rgba(20, 36, 32, 0.1);
+	box-shadow: 6px 6px 0 rgba(30, 36, 48, 0.1);
+	min-height: 130px;
 	display: flex;
-	gap: 20px;
-	align-items: center;
-	flex-wrap: wrap;
-	min-height: 110px;
-	transition: border-color 0.3s ease;
-}
-
-.phylum-detail.placeholder {
+	flex-direction: column;
 	justify-content: center;
-	text-align: center;
-	color: var(--ink-3);
+	margin-top: 10px;
+}
+
+.earth-detail .nm {
+	font-family: var(--serif-display);
 	font-style: italic;
+	font-weight: 600;
+	font-size: 1.5rem;
+	margin-bottom: 8px;
 }
 
-.phylum-detail .pd-icon {
-	font-size: 42px;
+.earth-detail .stat-row {
+	display: flex;
+	gap: 22px;
+	flex-wrap: wrap;
+	margin: 10px 0;
+	font-family: var(--sans-ui);
+	font-size: 13px;
 }
 
-.phylum-detail .pd-body {
+.earth-detail .stat-row b {
+	display: block;
+	font-family: var(--serif-display);
+	font-size: 17px;
+	color: var(--rust);
+}
+
+.earth-detail p {
+	color: var(--ink-3);
+	margin: 6px 0 0;
+}
+
+/* ============================================================
+   COLONNE STRATIGRAPHIQUE
+   ============================================================ */
+.stratcol {
+	display: flex;
+	gap: 34px;
+	margin: 40px 0;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.strat-stack {
+	display: flex;
+	flex-direction: column-reverse;
+	width: 260px;
+	border: 2.5px solid var(--ink);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.strat-layer {
+	padding: 14px 16px;
+	cursor: pointer;
+	border-top: 1.5px solid rgba(30, 36, 48, 0.25);
+	font-family: var(--sans-ui);
+	font-weight: 600;
+	font-size: 13px;
+	color: var(--ink);
+	transition: filter .2s ease, padding .2s ease;
+}
+
+.strat-layer:first-child {
+	border-top: none;
+}
+
+.strat-layer:hover {
+	filter: brightness(1.08);
+}
+
+.strat-layer.active {
+	padding-left: 30px;
+	border-left: 8px solid var(--ink);
+	filter: brightness(1.06);
+}
+
+.strat-detail {
 	flex: 1;
-	min-width: 220px;
+	min-width: 280px;
+	border: 2.5px solid var(--ink);
+	border-radius: 18px;
+	padding: 24px 28px;
+	background: var(--paper);
+	box-shadow: 6px 6px 0 rgba(30, 36, 48, 0.1);
+	min-height: 220px;
 }
 
-.phylum-detail .pd-fr {
+.strat-detail .rk {
 	font-family: var(--sans-ui);
 	font-size: 11.5px;
 	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	color: var(--brass);
+	letter-spacing: .06em;
+	color: var(--rust);
 	margin-bottom: 4px;
 }
 
-.phylum-detail .pd-nm {
+.strat-detail .nm {
 	font-family: var(--serif-display);
 	font-style: italic;
 	font-weight: 600;
 	font-size: 1.4rem;
-	margin-bottom: 6px;
+	margin-bottom: 10px;
 }
 
-.phylum-detail .pd-car {
-	margin-bottom: 4px;
-}
-
-.phylum-detail .pd-ex {
-	color: var(--ink-3);
-	font-size: 14px;
-}
-
-.phylum-detail .pd-n {
-	font-family: var(--sans-ui);
-	font-size: 11.5px;
-	color: var(--ink-3);
-	margin-top: 8px;
-}
-
-.binomlab {
-	border: 2px solid var(--ink);
-	border-radius: 16px;
-	padding: 28px;
-	margin: 34px 0;
-	background: var(--paper);
-	text-align: center;
-}
-
-.binom-controls {
-	display: flex;
-	gap: 14px;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin-bottom: 18px;
-}
-
-.binom-controls select {
-	font-family: var(--sans-ui);
-	font-size: 14px;
-	padding: 9px 14px;
-	border-radius: 8px;
-	border: 1.5px solid var(--ink);
-	background: var(--paper);
-	color: var(--ink);
-}
-
-.espece-chips {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px;
-	justify-content: center;
-	margin: 0 0 22px;
-}
-
-.espece-chip {
-	font-family: var(--serif-display);
-	font-style: italic;
-	font-size: 14.5px;
-	padding: 7px 15px;
-	border-radius: 20px;
-	border: 1.5px solid var(--paper-3);
-	background: var(--paper);
-	color: var(--ink-3);
-	cursor: pointer;
-	transition: all 0.2s ease;
-}
-
-.espece-chip:hover {
-	border-color: var(--brass);
-	color: var(--brass);
-}
-
-.espece-chip.valid {
-	border-color: var(--moss);
-	color: var(--moss);
-	font-weight: 600;
-}
-
-.espece-chip.valid:hover {
-	background: var(--moss);
-	color: var(--paper);
-}
-
-.espece-chip.selected {
-	background: var(--ink);
-	color: var(--paper);
-	border-color: var(--ink);
-}
-
-.espece-chip.valid.selected {
-	background: var(--moss);
-	border-color: var(--moss);
-	color: var(--paper);
-}
-
-.binom-preview {
-	font-family: var(--serif-display);
-	font-style: italic;
-	font-size: clamp(1.6rem, 5vw, 2.6rem);
-	font-weight: 600;
-	color: var(--wine);
-	min-height: 60px;
-}
-
-.binom-fact {
-	margin-top: 14px;
+.strat-detail p {
 	color: var(--ink-3);
 	font-size: 15px;
 }
 
-.phylotabs {
+.strat-arrow {
+	text-align: center;
+	font-family: var(--sans-ui);
+	font-size: 12px;
+	color: var(--ink-3);
+	margin-top: 8px;
+}
+
+/* ============================================================
+   FRISE DES ÈRES GÉOLOGIQUES
+   ============================================================ */
+.deeptime {
+	margin: 40px 0 10px;
+}
+
+.deeptime-bar {
+	display: flex;
+	width: 100%;
+	height: 46px;
+	border-radius: 8px;
+	overflow: hidden;
+	border: 2px solid var(--ink);
+	margin-bottom: 8px;
+}
+
+.deeptime-bar .seg {
+	height: 100%;
+}
+
+.deeptime-cap {
+	display: flex;
+	justify-content: space-between;
+	font-family: var(--sans-ui);
+	font-size: 11px;
+	color: var(--ink-3);
+	margin-bottom: 36px;
+}
+
+.eras-vert {
+	display: flex;
+	flex-direction: column;
+	border: 2.5px solid var(--ink);
+	border-radius: 14px;
+	overflow: hidden;
+}
+
+.era-row {
+	padding: 14px 20px;
+	cursor: pointer;
+	border-top: 1.5px solid rgba(30, 36, 48, .15);
+	transition: padding .25s ease, filter .2s ease;
+}
+
+.era-row:first-child {
+	border-top: none;
+}
+
+.era-row:hover {
+	filter: brightness(1.06);
+}
+
+.era-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: var(--sans-ui);
+	font-weight: 700;
+	font-size: 14px;
+	color: var(--ink);
+}
+
+.era-dates {
+	font-family: var(--sans-ui);
+	font-size: 12px;
+	color: var(--ink-3);
+}
+
+.era-body {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height .3s ease, margin-top .3s ease;
+	font-size: 14px;
+	color: var(--ink-3);
+}
+
+.era-row.active .era-body {
+	max-height: 220px;
+	margin-top: 10px;
+}
+
+.era-row.active {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.extinction-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-family: var(--sans-ui);
+	font-size: 12px;
+	font-weight: 700;
+	color: var(--wine);
+	background: #f6e8e6;
+	padding: 5px 12px;
+	border-radius: 20px;
+	margin-top: 10px;
+}
+
+/* ============================================================
+   CYCLE DES ROCHES
+   ============================================================ */
+.rockcycle {
+	display: flex;
+	gap: 40px;
+	align-items: center;
+	justify-content: center;
+	margin: 40px 0;
+	flex-wrap: wrap;
+}
+
+.rock-svg {
+	width: min(380px, 90vw);
+}
+
+.rock-svg .node {
+	cursor: pointer;
+}
+
+.rock-svg .node circle {
+	transition: filter .2s ease, stroke-width .2s ease;
+	stroke: var(--ink);
+	stroke-width: 2;
+}
+
+.rock-svg .node.selected circle {
+	stroke: var(--wine);
+	stroke-width: 4;
+}
+
+.rock-svg .arrow-path {
+	fill: none;
+	stroke: var(--ink-3);
+	stroke-width: 2;
+	marker-end: url(#arrowhead-geo);
+}
+
+.rock-svg text {
+	font-family: var(--sans-ui);
+	font-weight: 700;
+	font-size: 13px;
+	fill: var(--ink);
+}
+
+.rock-detail {
+	flex: 1;
+	min-width: 260px;
+	border: 2.5px solid var(--ink);
+	border-radius: 18px;
+	padding: 24px 28px;
+	background: var(--paper);
+	box-shadow: 6px 6px 0 rgba(30, 36, 48, 0.1);
+	min-height: 200px;
+}
+
+.rock-detail .nm {
+	font-family: var(--serif-display);
+	font-style: italic;
+	font-weight: 600;
+	font-size: 1.4rem;
+	margin-bottom: 10px;
+}
+
+.rock-detail .ex {
+	font-family: var(--sans-ui);
+	font-size: 12px;
+	color: var(--rust);
+	margin-top: 10px;
+	text-transform: uppercase;
+	letter-spacing: .04em;
+}
+
+.rock-detail p {
+	color: var(--ink-3);
+	font-size: 15px;
+}
+
+/* ============================================================
+   TECTONIQUE — TABS
+   ============================================================ */
+.phylotabs,
+.tectotabs {
 	display: flex;
 	gap: 10px;
 	justify-content: center;
@@ -992,7 +863,7 @@ main {
 	flex-wrap: wrap;
 }
 
-.phylotabs button {
+.tectotabs button {
 	font-family: var(--sans-ui);
 	font-weight: 600;
 	font-size: 13.5px;
@@ -1001,83 +872,71 @@ main {
 	border: 2px solid var(--ink);
 	color: var(--ink);
 	background: var(--paper);
-	transition: all 0.2s ease;
+	transition: all .2s ease;
 }
 
-.phylotabs button.active {
+.tectotabs button.active {
 	background: var(--ink);
 	color: var(--paper);
 }
 
-.phylo-panels {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	gap: 40px;
+.tecto-panels {
+	position: relative;
+	min-height: 340px;
 }
 
-.phylo-panel {
+.tecto-panel {
 	display: none;
-	width: 100%;
-	flex-direction: column;
-	gap: 20px;
+	grid-template-columns: 1fr 1.1fr;
+	gap: 30px;
+	align-items: center;
 }
 
-.phylo-panel.active {
-	display: flex;
+.tecto-panel.active {
+	display: grid;
 }
 
 @media (max-width: 720px) {
-	.phylo-panel.active {
+	.tecto-panel.active {
 		grid-template-columns: 1fr;
 	}
 }
 
-.phylo-svg-wrap {
-	width: 100%;
+.tecto-svg-wrap {
 	border: 2px solid var(--ink);
 	border-radius: 16px;
 	padding: 20px;
 	background: var(--paper);
 }
 
-.phylo-verdict {
-	font-family: var(--sans-ui);
-	font-weight: 700;
-	font-size: 18px;
+.tecto-verdict {
 	display: inline-flex;
 	align-items: center;
-	gap: 10px;
+	gap: 8px;
+	font-family: var(--sans-ui);
+	font-weight: 700;
+	font-size: 14px;
+	padding: 6px 14px;
+	border-radius: 20px;
+	margin-bottom: 14px;
+	background: #e8eef0;
+	color: var(--slate);
 }
 
-.legend-box {
-	display: inline-block;
-	width: 16px;
-	height: 16px;
-	border-radius: 3px;
-}
-
-.phylo-text {
-	font-size: 1.1em;
-	line-height: 1.5;
-	color: var(--ink-2);
-}
-
-.phylo-verdict.ok {
-	background: #e6f0e7;
-	color: var(--moss);
-}
-
-.phylo-verdict.no {
-	background: #f6e8e6;
-	color: var(--wine);
-}
-
+/* ============================================================
+   LEXIQUE FLIP CARDS
+   ============================================================ */
 .lexgrid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+	grid-template-columns: repeat(4, 1fr);
 	gap: 16px;
 	margin: 36px 0;
+}
+
+@media (max-width: 600px) {
+	.lexgrid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 .lexcard {
@@ -1089,7 +948,7 @@ main {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.3, 1);
+	transition: transform .5s cubic-bezier(.2, .7, .3, 1);
 	transform-style: preserve-3d;
 }
 
@@ -1119,12 +978,15 @@ main {
 }
 
 .lexback {
-	background: var(--moss);
+	background: var(--slate);
 	color: var(--paper);
 	transform: rotateY(180deg);
 	font-size: 13px;
 }
 
+/* ============================================================
+   RESSOURCES / FOOTER
+   ============================================================ */
 .reslist {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1137,16 +999,11 @@ main {
 	border-radius: 12px;
 	padding: 18px 20px;
 	background: var(--paper);
-	transition:
-		border-color 0.2s ease,
-		transform 0.2s ease;
-	text-decoration: none;
-	color: inherit;
-	display: block;
+	transition: border-color .2s ease, transform .2s ease;
 }
 
 .rescard:hover {
-	border-color: var(--brass);
+	border-color: var(--rust);
 	transform: translateY(-3px);
 }
 
@@ -1179,4 +1036,8 @@ footer .fmark {
 	font-size: 22px;
 	color: var(--paper);
 	margin-bottom: 10px;
+}
+
+footer a {
+	color: var(--paper-3);
 }
