@@ -320,27 +320,20 @@ document.addEventListener("DOMContentLoaded", () => {
 		},
 	];
 	const erasTrack = document.getElementById("erasTrack");
-	PERIODS.forEach((p, i) => {
-		const seg = document.createElement("div");
-		seg.className = "era-seg";
-		seg.dataset.i = i;
-		seg.style.flex = p.dur;
-		seg.style.background = p.color;
-		seg.textContent = p.nm;
-		erasTrack.appendChild(seg);
-	});
-	const eraDetail = document.getElementById("eraDetail");
-	function selectEra(i) {
-		const p = PERIODS[i];
-		erasTrack
-			.querySelectorAll(".era-seg")
-			.forEach((s) => s.classList.toggle("active", +s.dataset.i === i));
-		eraDetail.innerHTML = `<div class="rk">Période</div><div class="nm">${p.nm}</div><div class="dates">${p.dates}</div><p>${p.desc}</p>${p.extinction ? `<div class="extinction-tag">✕ ${p.extinction}</div>` : ""}`;
-	}
-	erasTrack.querySelectorAll(".era-seg").forEach((s) => {
-		s.addEventListener("click", () => selectEra(+s.dataset.i));
-	});
-	selectEra(0);
+erasTrack.innerHTML = PERIODS.map((p,i)=>`
+  <div class="era-row" data-i="${i}" style="background:${p.color}">
+    <div class="era-head"><span>${p.nm}</span><span class="era-dates">${p.dates}</span></div>
+    <div class="era-body"><p>${p.desc}</p>${p.extinction ? `<div class="extinction-tag">✕ ${p.extinction}</div>` : ""}</div>
+  </div>
+`).join("");
+erasTrack.querySelectorAll(".era-row").forEach(row=>{
+  row.addEventListener("click", ()=>{
+    const wasActive = row.classList.contains("active");
+    erasTrack.querySelectorAll(".era-row").forEach(r=>r.classList.remove("active"));
+    if(!wasActive) row.classList.add("active");
+  });
+});
+erasTrack.querySelector(".era-row").classList.add("active");
 
 	/* ================= PLANCHE V — CYCLE DES ROCHES ================= */
 	const ROCKS = [
