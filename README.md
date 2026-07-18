@@ -11,8 +11,8 @@ Pas de framework, pas d'étape de build : du HTML/CSS/JS servi tel quel, ouvrabl
 ## Thèmes disponibles
 
 - ✅ Taxonomie — RECOFGE, arbre du vivant interactif, cladistique
-- 🔜 Géologie
-- 🔜 Physique quantique
+- ✅ Géologie
+- ✅ Physique quantique
 
 ## Structure du dépôt
 
