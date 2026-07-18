@@ -142,55 +142,68 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ============================================================
      PLANCHE III — LA GRAVITÉ COURBE L'ESPACE-TEMPS
+     Grille en pseudo-3D (grille (u,v) fixe + champ de hauteur projeté)
+     façon "nappe tendue vue de biais" — jamais de croisement de
+     lignes, même à forte masse, contrairement à une simple
+     déformation radiale en 2D.
      ============================================================ */
-  const GW = 400, GH = 260;
-  const gCols = 15, gRows = 10;
-  const gStepX = GW/(gCols-1), gStepY = GH/(gRows-1);
+  const GW = 440, GH = 240;
+  const CX = GW/2, CY = 100;
+  const A = 16, B = 7;   // échelle horizontale / profondeur de la projection
+  const U = 6, GN = 13;  // demi-étendue de la grille (u,v) et nombre de crans
   const PRESETS = {
-    planete: { nm:'Planète', strength: 650, soft: 24, radius: 9 },
-    etoile:  { nm:'Étoile',  strength: 2600, soft: 26, radius: 15 },
-    trounoir:{ nm:'Trou noir', strength: 8200, soft: 15, radius: 8 },
+    planete:  { nm:'Planète',  strength: 120,  soft: 10, radius: 8  },
+    etoile:   { nm:'Étoile',   strength: 290, soft: 9,  radius: 13 },
+    trounoir: { nm:'Trou noir', strength: 800, soft: 8,  radius: 7  },
   };
   let currentPreset = 'etoile';
-  let massPos = { x: GW/2, y: GH/2 };
+  let massUV = { u: 0, v: 0 };
 
   const gravityWrap = document.getElementById('gravityWrap');
   gravityWrap.innerHTML = `<svg class="gravity-live-svg" viewBox="0 0 ${GW} ${GH}" xmlns="http://www.w3.org/2000/svg">
     <g id="gridLines"></g>
-    <circle id="massPoint" class="masspoint" cx="${massPos.x}" cy="${massPos.y}" r="${PRESETS[currentPreset].radius}"/>
-    <text id="massLabel" class="masslabel" x="${massPos.x}" y="${massPos.y - PRESETS[currentPreset].radius - 10}">${PRESETS[currentPreset].nm}</text>
+    <circle id="massPoint" class="masspoint" r="${PRESETS[currentPreset].radius}"/>
+    <text id="massLabel" class="masslabel">${PRESETS[currentPreset].nm}</text>
   </svg>`;
   const gridLinesG = gravityWrap.querySelector('#gridLines');
   const massPointEl = gravityWrap.querySelector('#massPoint');
   const massLabelEl = gravityWrap.querySelector('#massLabel');
   const gravitySvgEl = gravityWrap.querySelector('svg');
 
-  function warpPoint(x, y){
+  // projette un point (u,v) du plan vers l'écran, en tenant compte du
+  // creux causé par la masse placée en massUV
+  function project(u, v){
     const p = PRESETS[currentPreset];
-    const dx = massPos.x - x, dy = massPos.y - y;
-    const dist = Math.sqrt(dx*dx + dy*dy) + p.soft;
-    const pull = p.strength / (dist*dist);
-    return [x + dx*pull, y + dy*pull];
+    const dx = u - massUV.u, dv = v - massUV.v;
+    const r = Math.sqrt(dx*dx + dv*dv);
+    const dip = p.strength / (r + p.soft);
+    const x = CX + (u - v) * A;
+    const y = CY + (u + v) * B + dip;
+    return [x, y];
   }
 
   function renderGrid(){
+    const step = (2*U)/(GN-1);
     const pts = [];
-    for(let j=0;j<gRows;j++){
-      pts.push([]);
-      for(let i=0;i<gCols;i++){ pts[j].push(warpPoint(i*gStepX, j*gStepY)); }
+    for(let vi=0; vi<GN; vi++){
+      const row = [];
+      const v = -U + vi*step;
+      for(let ui=0; ui<GN; ui++){ row.push(project(-U + ui*step, v)); }
+      pts.push(row);
     }
     let html = '';
-    for(let j=0;j<gRows;j++){
-      html += `<path class="gridline" d="M ${pts[j].map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' L ')}"/>`;
+    for(let vi=0; vi<GN; vi++){
+      html += `<path class="gridline" d="M ${pts[vi].map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' L ')}"/>`;
     }
-    for(let i=0;i<gCols;i++){
-      html += `<path class="gridline" d="M ${pts.map(row=>row[i][0].toFixed(1)+','+row[i][1].toFixed(1)).join(' L ')}"/>`;
+    for(let ui=0; ui<GN; ui++){
+      html += `<path class="gridline" d="M ${pts.map(row=>row[ui][0].toFixed(1)+','+row[ui][1].toFixed(1)).join(' L ')}"/>`;
     }
     gridLinesG.innerHTML = html;
-    massPointEl.setAttribute('cx', massPos.x);
-    massPointEl.setAttribute('cy', massPos.y);
-    massLabelEl.setAttribute('x', massPos.x);
-    massLabelEl.setAttribute('y', massPos.y - PRESETS[currentPreset].radius - 10);
+    const [mx, my] = project(massUV.u, massUV.v);
+    massPointEl.setAttribute('cx', mx.toFixed(1));
+    massPointEl.setAttribute('cy', my.toFixed(1));
+    massLabelEl.setAttribute('x', mx.toFixed(1));
+    massLabelEl.setAttribute('y', (my - PRESETS[currentPreset].radius - 10).toFixed(1));
   }
 
   function applyPreset(key){
@@ -207,18 +220,25 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', ()=>applyPreset(btn.dataset.preset));
   });
 
-  function svgPointFromEvent(evt){
+  // convertit un point écran en coordonnées (u,v) approximatives
+  // (on ignore le creux pour l'inversion — approximation suffisante
+  // pour un glisser-déposer fluide)
+  function uvFromEvent(evt){
     const pt = gravitySvgEl.createSVGPoint();
     pt.x = evt.clientX; pt.y = evt.clientY;
-    const ctm = gravitySvgEl.getScreenCTM().inverse();
-    const loc = pt.matrixTransform(ctm);
-    return { x: Math.max(0, Math.min(GW, loc.x)), y: Math.max(0, Math.min(GH, loc.y)) };
+    const loc = pt.matrixTransform(gravitySvgEl.getScreenCTM().inverse());
+    const xp = (loc.x - CX) / A;   // u - v
+    const yp = (loc.y - CY) / B;   // u + v
+    let u = (xp + yp) / 2, v = (yp - xp) / 2;
+    u = Math.max(-U, Math.min(U, u));
+    v = Math.max(-U, Math.min(U, v));
+    return { u, v };
   }
   let dragging = false;
   massPointEl.addEventListener('pointerdown', (e)=>{ dragging = true; massPointEl.setPointerCapture(e.pointerId); });
   gravitySvgEl.addEventListener('pointermove', (e)=>{
     if(!dragging) return;
-    massPos = svgPointFromEvent(e);
+    massUV = uvFromEvent(e);
     renderGrid();
   });
   gravitySvgEl.addEventListener('pointerup', ()=>{ dragging = false; });
