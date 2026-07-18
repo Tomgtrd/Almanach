@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La physique quantique — Almanach — planches illustrées</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="qua_style.css">
+<script src="qua_script.js" defer></script>
+</head>
+<body>
+
+<a class="theme-return" href="../hub_index.html">← Retour au menu</a>
+
+<nav class="dotnav" id="dotnav"></nav>
+
+<header class="hero" id="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Fiche illustrée &amp; interactive</div>
+    <h1>La physique quantique<br><em>pour les nuls</em></h1>
+    <p class="sub">Douze planches pour comprendre, une bonne fois pour toutes, comment le monde subatomique fonctionne — de la naissance du quantum jusqu'au plus grand défi non résolu de la physique moderne.</p>
+  </div>
+  <svg class="hero-quanta" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <circle class="ripple" cx="200" cy="200" r="60"/>
+    <circle class="ripple ripple-2" cx="200" cy="200" r="90"/>
+    <circle class="ripple ripple-3" cx="200" cy="200" r="120"/>
+    <path class="draw" d="M20,200 C60,80 100,80 140,200 C180,320 220,320 260,200 C300,80 340,80 380,200"/>
+    <circle class="quantum-dot" cx="20" cy="200" r="9"/>
+    <circle class="quantum-dot" cx="140" cy="200" r="9"/>
+    <circle class="quantum-dot" cx="260" cy="200" r="9"/>
+    <circle class="quantum-dot" cx="380" cy="200" r="9"/>
+  </svg>
+  <div class="scrollcue">Faire défiler</div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     PLANCHE I — INTRODUCTION
+     ============================================================ -->
+<section class="plate" id="p1" data-title="Introduction">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="num">I</span> Introduction</div>
+    <h2 class="reveal">1900&nbsp;: la naissance du quantum</h2>
+    <p class="lede reveal delay-1">La physique quantique étudie le comportement des constituants fondamentaux de la matière — à l'échelle des atomes et des particules — là où les règles de notre monde de tous les jours cessent de s'appliquer.</p>
+
+    <div class="callout indigo reveal">
+      <span class="callout-title">Définition</span>
+      <p>Le mot <b>quantique</b> vient du latin <i>quantum</i>, « combien ». Il désigne le fait que certaines grandeurs physiques, comme l'énergie, ne varient pas de façon continue mais s'échangent par <b>paquets indivisibles</b>, appelés <b>quanta</b>.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="callout amber reveal">
+        <span class="callout-title">1900 — Max Planck</span>
+        <p>En étudiant le rayonnement d'un corps chauffé, Planck découvre que l'énergie ne peut être émise ou absorbée que par petites quantités précises, selon la formule <b>E&nbsp;=&nbsp;h·f</b> — l'énergie d'un quantum dépend de sa fréquence. Il pensait avoir trouvé une astuce de calcul&nbsp;; il venait de fonder une nouvelle physique.</p>
+      </div>
+      <div class="callout cyan reveal delay-1">
+        <span class="callout-title">L'échelle qui donne le vertige</span>
+        <p>La constante de Planck, <b>h</b>, vaut environ 6,6 × 10⁻³⁴ joule-seconde — un nombre si petit que ses effets sont invisibles à notre échelle, mais deviennent la règle absolue à l'échelle d'un atome.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANCHE II — FENTE DE YOUNG & DUALITÉ ONDE-CORPUSCULE
+     ============================================================ -->
+<section class="plate" id="p2" data-title="Fente de Young">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="num">II</span> Dualité onde-corpuscule</div>
+    <h2 class="reveal">L'expérience qui a tout changé</h2>
+    <p class="lede reveal delay-1">La fente de Young (1801), revisitée avec des particules quantiques, montre qu'une particule élémentaire n'est ni tout à fait une bille, ni tout à fait une onde — elle est les deux, selon la façon dont on l'observe.</p>
+
+    <div class="qmtabs reveal">
+      <button class="qmtab active" data-tab="classic">Vision classique</button>
+      <button class="qmtab" data-tab="wave">Résultat réel</button>
+      <button class="qmtab" data-tab="single">Un photon à la fois</button>
+    </div>
+    <div class="qm-panels" id="youngPanels"></div>
+
+    <div class="callout violet reveal" style="margin-top:28px;">
+      <span class="callout-title">1905 &amp; 1924 — Einstein et de Broglie</span>
+      <p>Einstein montre que la lumière se comporte aussi comme des grains d'énergie, les <b>photons</b> (1905). Louis de Broglie propose l'inverse&nbsp;: la matière elle-même a une nature ondulatoire (1924). La dualité onde-corpuscule est posée.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANCHE III — FONCTION D'ONDE & PROBABILITÉS
+     ============================================================ -->
+<section class="plate" id="p3" data-title="Fonction d'onde">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="num">III</span> Fonction d'onde et probabilités</div>
+    <h2 class="reveal">Une carte de probabilités, pas une position</h2>
+    <p class="lede reveal delay-1">Puisqu'une particule se comporte comme une onde tant qu'on ne la mesure pas, on ne peut plus dire « elle est ici ». On utilise une <b>fonction d'onde</b> — un outil mathématique qui donne la probabilité de la trouver à tel ou tel endroit.</p>
+
+    <div class="wavebox reveal">
+      <div class="wave-svg-wrap" id="waveSvgWrap"></div>
+      <button class="qm-measure-btn" id="measureBtn">Effectuer une mesure</button>
+      <p class="wave-caption" id="waveCaption">Avant la mesure&nbsp;: la particule est « étalée » — présente avec différentes probabilités le long de l'onde.</p>
+    </div>
+
+    <div class="callout cyan reveal">
+      <span class="callout-title">1926 — Erwin Schrödinger</span>
+      <p>L'<b>équation de Schrödinger</b> décrit comment cette fonction d'onde évolue dans le temps — un peu comme une règle du jeu qui prédit comment les probabilités se déplacent, sans jamais dire à l'avance où la particule « atterrira » vraiment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANCHE IV — SUPERPOSITION
+     ============================================================ -->
+<section class="plate" id="p4" data-title="Superposition">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="num">IV</span> Superposition</div>
+    <h2 class="reveal">Plusieurs états à la fois</h2>
+    <p class="lede reveal delay-1">Tant qu'aucune mesure n'est effectuée, un système quantique peut être considéré comme se trouvant dans un ensemble de possibilités simultanées — une <b>superposition</b> d'états. Clique une carte pour voir ce qui se passe à la mesure.</p>
+
+    <div class="flipgrid" id="superposGrid"></div>
+
+    <div class="callout amber reveal" style="margin-top:28px;">
+      <span class="callout-title">1935 — Le chat de Schrödinger</span>
+      <p>Schrödinger imagine une expérience de pensée volontairement absurde&nbsp;: un chat enfermé avec un mécanisme relié à un événement quantique serait, si on appliquait la mécanique quantique à son échelle, « à la fois vivant et mort » jusqu'à l'ouverture de la boîte. Il voulait pointer du doigt un problème, pas proposer une vérité sur les chats&nbsp;— une nuance que la postérité a souvent oubliée.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANCHE V — MESURE, EFFONDREMENT & INCERTITUDE
+     ============================================================ -->
+<section class="plate" id="p5" data-title="Mesure &amp; incertitude">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="num">V</span> Mesure, effondrement &amp; incertitude</div>
+    <h2 class="reveal">Observer, c'est déjà changer</h2>
+    <p class="lede reveal delay-1">Au moment de la mesure, la fonction d'onde « s'effondre » sur un seul résultat, tiré au hasard parmi les possibilités. Et certaines paires de grandeurs ne peuvent jamais être connues parfaitement en même temps.</p>
+
+    <div class="callout indigo reveal">
+      <span class="callout-title">1927 — Werner Heisenberg</span>
+      <p>Le <b>principe d'incertitude</b>&nbsp;: plus on connaît précisément la position d'une particule, moins on peut connaître sa quantité de mouvement (et vice-versa). Ce n'est pas une limite de nos instruments&nbsp;: c'est une propriété fondamentale de la nature.</p>
+    </div>
+
+    <div class="uncertainty-wrap reveal">
+      <label class="unc-label" for="uncSlider">Fais glisser le curseur pour répartir la précision entre les deux grandeurs</label>
+      <input type="range" id="uncSlider" min="0" max="100" value="50" class="unc-slider">
+      <div class="unc-bars">
+        <div class="unc-bar-group">
+          <span class="unc-name">Position</span>
+          <div class="unc-track"><div class="unc-fill unc-fill-pos" id="uncFillPos"></div></div>
+        </div>
+        <div class="unc-bar-group">
+          <span class="unc-name">Vitesse</span>
+          <div class="unc-track"><div class="unc-fill unc-fill-vit" id="uncFillVit"></div></div>
+        </div>
+      </div>
+      <p class="unc-caption" id="uncCaption"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANCHE VI — DÉCOHÉRENCE
+     ============================================================ -->
+<section class="plate" id="p6" data-title="Décohérence">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="num">VI</span> Décohérence</div>
+    <h2 class="reveal">Pourquoi le chat ne se voit jamais vraiment « mort et vivant »</h2>
+    <p class="lede reveal delay-1">Réponse moderne au paradoxe du chat&nbsp;: la superposition est extrêmement fragile, et s'évanouit dès que le système interagit avec son environnement. Clique chaque étape.</p>
+
+    <div class="qm-accordion" id="decoherenceAcc"></div>
+
+    <div class="callout violet reveal" style="margin-top:28px;">
+      <span class="callout-title">Années 1970-1980</span>
+      <p>La théorie de la <b>décohérence</b> est formalisée bien après les faits qu'elle explique&nbsp;— il aura fallu près de 40 ans pour comprendre pourquoi, en pratique, un objet macroscopique ne montre jamais d'effet de superposition.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANCHE VII — INTRICATION QUANTIQUE
+     ============================================================ -->
+<section class="plate" id="p7" data-title="Intrication">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="num">VII</span> Intrication quantique</div>
+    <h2 class="reveal">Liées, même à distance</h2>
+    <p class="lede reveal delay-1">Deux particules ayant interagi peuvent devenir « intriquées »&nbsp;: leur état quantique global ne décrit plus qu'elles deux ensemble. Mesurer l'une fixe instantanément le résultat corrélé sur l'autre, quelle que soit la distance. Clique un jalon de la frise.</p>
+
+    <div class="entangle-wrap reveal">
+      <div class="entangle-track" id="entangleTrack"></div>
+      <div class="entangle-detail" id="entangleDetail"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANCHE VIII — LE MODÈLE DE L'ATOME QUANTIQUE
+     ============================================================ -->
+<section class="plate" id="p8" data-title="Modèle de l'atome">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="num">VIII</span> Le modèle de l'atome quantique</div>
+    <h2 class="reveal">Des orbites fixes aux nuages de probabilité</h2>
+    <p class="lede reveal delay-1">Le modèle de l'atome s'est construit par étapes, chacune corrigeant la précédente sans la jeter entièrement.</p>
+
+    <div class="qmtabs reveal">
+      <button class="qmtab active" data-tab="bohr">1913 — Bohr</button>
+      <button class="qmtab" data-tab="schrodinger">1926 — Schrödinger</button>
+      <button class="qmtab" data-tab="modern">Aujourd'hui</button>
+    </div>
+    <div class="qm-panels" id="atomPanels"></div>
+
+    <h3 class="reveal" style="margin-top:44px; font-size:1.3rem;">Les orbitales, en glossaire visuel</h3>
+    <p class="lede reveal delay-1" style="margin-bottom:24px;">Clique une carte pour lire sa forme et son rôle.</p>
+    <div class="flipgrid" id="orbitalGrid"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANCHE IX — THÉORIE QUANTIQUE DES CHAMPS
+     ============================================================ -->
+<section class="plate" id="p9" data-title="Théorie des champs">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="num">IX</span> Théorie quantique des champs</div>
+    <h2 class="reveal">Et si la brique de base n'était pas la particule&nbsp;?</h2>
+    <p class="lede reveal delay-1">Le cadre le plus abouti à ce jour va plus loin&nbsp;: ce ne sont pas les particules qui sont fondamentales, mais des <b>champs</b> qui recouvrent tout l'espace. Une particule est une vibration localisée d'un champ. Clique un champ pour voir sa particule.</p>
+
+    <div class="fieldwrap reveal" id="fieldWrap"></div>
+    <div class="field-detail" id="fieldDetail"></div>
+
+    <div class="callout indigo reveal" style="margin-top:28px;">
+      <span class="callout-title">1928 → 2012</span>
+      <p>De l'équation de Dirac (1928), qui unifie mécanique quantique et relativité restreinte, à la découverte du <b>boson de Higgs</b> au CERN en 2012 — la confirmation expérimentale du champ qui donne leur masse aux particules.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANCHE X — APPLICATIONS CONCRÈTES
+     ============================================================ -->
+<section class="plate" id="p10" data-title="Applications">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="num">X</span> Applications concrètes</div>
+    <h2 class="reveal">Une théorie qui a quitté le laboratoire</h2>
+    <p class="lede reveal delay-1">Depuis un siècle, la physique quantique s'est glissée, sans bruit, dans une bonne partie des objets qui nous entourent.</p>
+
+    <div class="qmtabs reveal">
+      <button class="qmtab active" data-tab="transistor">Transistor</button>
+      <button class="qmtab" data-tab="laser">Laser</button>
+      <button class="qmtab" data-tab="irm">IRM</button>
+      <button class="qmtab" data-tab="qubit">Ordinateur quantique</button>
+    </div>
+    <div class="qm-panels" id="appPanels"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANCHE XI — GRAVITÉ QUANTIQUE
+     ============================================================ -->
+<section class="plate" id="p11" data-title="Gravité quantique">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="num">XI</span> Le plus grand défi non résolu</div>
+    <h2 class="reveal">Quand la gravité et le quantique ne se parlent plus</h2>
+    <p class="lede reveal delay-1">La relativité générale décrit à merveille la gravité et l'espace-temps courbe à grande échelle. La mécanique quantique décrit à merveille l'infiniment petit. Le problème&nbsp;: personne n'a encore réussi à écrire une théorie qui marche pour les deux en même temps.</p>
+
+    <div class="callout void reveal">
+      <span class="callout-title">Pourquoi c'est si important</span>
+      <p>Sans une théorie de la <b>gravité quantique</b>, certains lieux restent hors de portée de la physique&nbsp;: le centre d'un trou noir, et le tout premier instant de l'univers — là où une masse énorme est concentrée dans un espace infiniment petit, exactement là où les deux théories devraient s'appliquer ensemble, et se contredisent.</p>
+    </div>
+
+    <div class="qmtabs reveal">
+      <button class="qmtab active" data-tab="cordes">Théorie des cordes</button>
+      <button class="qmtab" data-tab="boucles">Gravitation quantique à boucles</button>
+    </div>
+    <div class="qm-panels" id="gravityPanels"></div>
+
+    <div class="callout amber reveal" style="margin-top:28px;">
+      <span class="callout-title">Un débat toujours ouvert</span>
+      <p>Aucune des deux pistes n'a, à ce jour, été confirmée expérimentalement — ce n'est pas une faiblesse de la physique, mais le signe d'un vrai problème non résolu, au cœur des questions les plus vives de la recherche actuelle.</p>
+    </div>
+
+    <div class="callout cyan reveal" style="margin-top:28px;">
+      <span class="callout-title">Envie d'aller plus loin&nbsp;?</span>
+      <p>Ce sont exactement ces questions — l'origine de l'univers, le Big Bang, les trous noirs — qui seront abordées dans une prochaine fiche de l'Almanach consacrée à <b>l'espace et la cosmologie</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANCHE XII — LEXIQUE & RESSOURCES
+     ============================================================ -->
+<section class="plate" id="p12" data-title="Lexique">
+  <div class="container">
+    <div class="eyebrow reveal"><span class="num">XII</span> Lexique express</div>
+    <h2 class="reveal">Le vocabulaire essentiel</h2>
+    <p class="lede reveal delay-1">Clique une carte pour lire la définition.</p>
+    <div class="lexgrid" id="lexgrid"></div>
+
+    <h3 class="reveal" style="margin-top:56px; font-size:1.3rem;">Pour aller plus loin</h3>
+    <div class="reslist reveal">
+      <a class="rescard" href="https://www.cnrs.fr" target="_blank" rel="noopener"><span class="rt">CNRS</span><span class="rd">Actualités et dossiers scientifiques sur la physique quantique.</span></a>
+      <a class="rescard" href="https://www.cern" target="_blank" rel="noopener"><span class="rt">CERN</span><span class="rd">Le laboratoire européen pour la physique des particules.</span></a>
+      <a class="rescard" href="https://www.nobelprize.org" target="_blank" rel="noopener"><span class="rt">Nobel Prize.org</span><span class="rd">Archives et explications des découvertes récompensées, dont Planck, Einstein et Heisenberg.</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="fmark">✻</div>
+  Bon voyage dans l'infiniment petit — <a href="../hub_index.html">retour à l'Almanach</a>
+</footer>
+
+</body>
+</html>
