@@ -1,0 +1,568 @@
+/* ============================================================
+   ALMANACH — COSMOLOGIE
+   Même charte typographique que le hub, palette dédiée au thème
+   (ambiance « atlas céleste ancien » : violet nébuleuse, magenta
+   nova, cyan ionisé, doré étoile).
+   ============================================================ */
+
+:root {
+	--ink: #171325;
+	--ink-2: #221c38;
+	--ink-3: #4a3f66;
+	--paper: #f1ead9;
+	--paper-2: #e8dfc7;
+	--paper-3: #ddd0ac;
+
+	/* accents génériques du thème */
+	--nebula: #6a4c93;
+	--nebula-lt: #9b7dc4;
+	--nova: #c23b6b;
+	--nova-lt: #dd7096;
+	--ion: #2f8fb0;
+	--ion-lt: #6bbdd6;
+	--starlight: #e8c87a;
+	--wine: #8c2f39;
+
+	/* types d'étoiles (planche II) */
+	--star-red: #b5453f;
+	--star-orange: #d9803f;
+	--star-yellow: #e8c87a;
+	--star-blue: #8fb8d9;
+
+	/* chronologie de l'univers (planche VI) — du plus chaud/dense au plus froid/dilué */
+	--e-planck: #f2e2b8;
+	--e-inflation: #c23b6b;
+	--e-nucleo: #d9803f;
+	--e-recomb: #e8c87a;
+	--e-sombre: #221c38;
+	--e-etoiles: #6a4c93;
+	--e-galaxies: #2f8fb0;
+	--e-today: #9b7dc4;
+
+	--serif-display: "Fraunces", serif;
+	--serif-body: "Newsreader", serif;
+	--sans-ui: "Space Grotesk", sans-serif;
+
+	--container: 880px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; }
+
+body {
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--serif-body);
+	font-size: 18px;
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+::selection { background: var(--nova-lt); color: var(--ink); }
+
+a { color: var(--ion); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+a:hover { color: var(--wine); }
+
+img, svg { display: block; max-width: 100%; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 28px; }
+
+h1, h2, h3, h4 {
+	font-family: var(--serif-display);
+	font-weight: 600;
+	color: var(--ink);
+	letter-spacing: -0.01em;
+	margin: 0;
+}
+
+.eyebrow {
+	font-family: var(--sans-ui);
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--nebula);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 14px;
+}
+
+.eyebrow .num {
+	font-family: var(--serif-display);
+	font-style: italic;
+	font-size: 22px;
+	font-weight: 500;
+	color: var(--ion);
+	letter-spacing: 0;
+}
+
+.eyebrow::after {
+	content: "";
+	flex: 1;
+	height: 1px;
+	background: linear-gradient(to right, var(--nebula), transparent);
+}
+
+p { margin: 0 0 1em 0; }
+.lede { font-size: 1.15em; color: var(--ink-3); }
+
+:focus-visible { outline: 3px solid var(--wine); outline-offset: 3px; }
+
+button { font-family: var(--sans-ui); cursor: pointer; border: none; background: none; }
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+.theme-return {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 1000;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 14px;
+	border: 2px solid var(--ink);
+	border-radius: 999px;
+	background: rgba(241, 234, 217, 0.94);
+	color: var(--ink);
+	font-family: var(--sans-ui);
+	font-size: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 4px 4px 0 rgba(23, 19, 37, 0.12);
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.theme-return:hover {
+	transform: translateY(-2px);
+	box-shadow: 6px 6px 0 rgba(23, 19, 37, 0.16);
+	background: var(--paper-2);
+	color: var(--ink);
+}
+
+/* ============================================================
+   SIDE DOT NAV
+   ============================================================ */
+.dotnav {
+	position: fixed;
+	right: 22px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 500;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.dotnav a {
+	position: relative;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: var(--paper-3);
+	border: 1.5px solid var(--nebula);
+	transition: all 0.25s ease;
+}
+
+.dotnav a:hover { background: var(--nebula-lt); }
+
+.dotnav a.active {
+	background: var(--nebula);
+	transform: scale(1.35);
+}
+
+.dotnav a .tip {
+	position: absolute;
+	right: 22px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: var(--ink);
+	color: var(--paper);
+	font-family: var(--sans-ui);
+	font-size: 12px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	white-space: nowrap;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s ease;
+}
+
+.dotnav a:hover .tip { opacity: 1; }
+
+@media (max-width: 900px) { .dotnav { display: none; } }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+	position: relative;
+	min-height: 100vh;
+	background: radial-gradient(ellipse at 30% 20%, var(--ink-2), var(--ink) 65%);
+	color: var(--paper);
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.hero-grain {
+	position: absolute;
+	inset: 0;
+	background-image: radial-gradient(var(--paper) 0.6px, transparent 0.6px);
+	background-size: 3px 3px;
+	opacity: 0.045;
+	pointer-events: none;
+}
+
+.hero-inner {
+	position: relative;
+	z-index: 2;
+	max-width: var(--container);
+	margin: 0 auto;
+	padding: 140px 28px 120px;
+	width: 100%;
+}
+
+.hero .eyebrow { color: var(--nova-lt); }
+.hero .eyebrow::after { background: linear-gradient(to right, var(--nova-lt), transparent); }
+
+.hero h1 {
+	font-size: clamp(2.6rem, 7vw, 5.2rem);
+	color: var(--paper);
+	line-height: 0.98;
+	margin-bottom: 22px;
+}
+
+.hero h1 em { font-style: italic; font-weight: 500; color: var(--starlight); }
+
+.hero .sub {
+	font-size: 1.25rem;
+	max-width: 46ch;
+	color: var(--paper-3);
+	font-style: italic;
+}
+
+.hero-cosmos {
+	position: absolute;
+	right: -2%;
+	top: 50%;
+	transform: translateY(-50%);
+	width: min(44vw, 560px);
+	opacity: 0.95;
+}
+
+.hero-cosmos .ring {
+	fill: none;
+	stroke-width: 1.5;
+}
+.hero-cosmos .ring-1 { stroke: var(--nova-lt); }
+.hero-cosmos .ring-2 { stroke: var(--nebula-lt); }
+.hero-cosmos .ring-3 { stroke: var(--ion-lt); }
+
+.hero-cosmos .burst {
+	stroke: var(--starlight);
+	stroke-width: 2;
+	stroke-linecap: round;
+}
+
+.hero-cosmos .core { fill: var(--starlight); }
+.hero-cosmos .star { fill: var(--paper); }
+
+.scrollcue {
+	position: absolute;
+	bottom: 34px;
+	left: 28px;
+	font-family: var(--sans-ui);
+	font-size: 12px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--paper-3);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.scrollcue::before {
+	content: "";
+	width: 22px;
+	height: 1px;
+	background: var(--paper-3);
+	animation: pulseline 1.8s ease-in-out infinite;
+}
+
+@keyframes pulseline {
+	0%, 100% { width: 22px; opacity: 0.5; }
+	50% { width: 38px; opacity: 1; }
+}
+
+/* ============================================================
+   PLATE STRUCTURE
+   ============================================================ */
+main { background: var(--paper); position: relative; }
+
+.plate {
+	padding: 108px 0 92px;
+	border-bottom: 1px solid var(--paper-3);
+}
+
+.plate:nth-of-type(odd) { background: var(--paper-2); }
+
+.plate h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); margin-bottom: 22px; }
+.plate .lede { margin-bottom: 44px; }
+
+.reveal {
+	opacity: 0;
+	transform: translateY(26px);
+	transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.3, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal.delay-1 { transition-delay: 0.08s; }
+.reveal.delay-2 { transition-delay: 0.16s; }
+
+/* ============================================================
+   CALLOUTS
+   ============================================================ */
+.callout {
+	border: 1.5px solid var(--ink);
+	border-radius: 14px;
+	padding: 24px 26px;
+	background: var(--paper);
+	box-shadow: 5px 5px 0 rgba(23, 19, 37, 0.08);
+	margin: 28px 0;
+}
+
+.callout.nebula { border-color: var(--nebula); background: #ece6f3; }
+.callout.nebula .callout-title { color: var(--nebula); }
+
+.callout.nova { border-color: var(--nova); background: #f7e6ec; }
+.callout.nova .callout-title { color: var(--nova); }
+
+.callout.ion { border-color: var(--ion); background: #e5eff2; }
+.callout.ion .callout-title { color: var(--ion); }
+
+.callout.amber { border-color: var(--star-orange); background: #f7ecdf; }
+.callout.amber .callout-title { color: var(--star-orange); }
+
+.callout.wine { border-color: var(--wine); background: #f6e8e6; }
+.callout.wine .callout-title { color: var(--wine); }
+
+.callout-title {
+	font-family: var(--sans-ui);
+	font-weight: 700;
+	font-size: 13px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.callout p:last-child { margin-bottom: 0; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 720px) { .grid-2 { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   PATTERN — ACCORDÉON (séquences, classements)
+   ============================================================ */
+.accordion { display: flex; flex-direction: column; border: 2.5px solid var(--ink); border-radius: 14px; overflow: hidden; }
+.acc-row { padding: 14px 20px; cursor: pointer; border-top: 1.5px solid rgba(23, 19, 37, 0.15); transition: padding 0.25s ease, filter 0.2s ease; background: var(--paper); }
+.acc-row:first-child { border-top: none; }
+.acc-row:hover { filter: brightness(1.05); }
+.acc-head { display: flex; justify-content: space-between; align-items: center; gap: 14px; font-family: var(--sans-ui); font-weight: 700; font-size: 14px; color: var(--ink); }
+.acc-head .sw { width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; border: 1.5px solid var(--ink); }
+.acc-sub { font-family: var(--sans-ui); font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+.acc-body { overflow: hidden; max-height: 0; transition: max-height 0.3s ease, margin-top 0.3s ease; font-size: 14.5px; color: var(--ink-3); }
+.acc-row.active .acc-body { margin-top: 10px; }
+
+/* ============================================================
+   PLANCHE II — TAILLES COMPARÉES DES ÉTOILES
+   ============================================================ */
+.starsizes {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	gap: 28px;
+	margin: 8px 0 36px;
+	flex-wrap: wrap;
+	min-height: 190px;
+}
+
+.starsizes .ssitem { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.starsizes .ssdot { border-radius: 50%; border: 1.5px solid var(--ink); }
+.starsizes .sslabel { font-family: var(--sans-ui); font-size: 11.5px; color: var(--ink-3); text-align: center; }
+
+/* ============================================================
+   PLANCHE III — GRAVITÉ / ESPACE-TEMPS (grille animée)
+   ============================================================ */
+.gravitywrap {
+	border: 2.5px solid var(--ink);
+	border-radius: 18px;
+	background: var(--ink);
+	padding: 10px;
+	margin: 36px 0 20px;
+	box-shadow: 6px 6px 0 rgba(23, 19, 37, 0.12);
+}
+
+.gravitywrap svg { width: 100%; height: auto; border-radius: 10px; display: block; touch-action: none; }
+.gravitywrap .gridline { stroke: var(--nebula-lt); stroke-width: 1; fill: none; opacity: 0.75; }
+.gravitywrap .masspoint { fill: var(--starlight); cursor: grab; }
+.gravitywrap .masspoint:active { cursor: grabbing; }
+.gravitywrap .masslabel { fill: var(--paper-3); font-family: var(--sans-ui); font-size: 11px; text-anchor: middle; }
+
+.gravity-controls {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 8px;
+}
+
+.gravity-controls button {
+	font-family: var(--sans-ui);
+	font-weight: 600;
+	font-size: 13px;
+	padding: 9px 16px;
+	border-radius: 30px;
+	border: 2px solid var(--ink);
+	color: var(--ink);
+	background: var(--paper);
+	transition: all 0.2s ease;
+}
+
+.gravity-controls button.active { background: var(--ink); color: var(--paper); }
+.gravity-hint { text-align: center; font-family: var(--sans-ui); font-size: 12px; color: var(--ink-3); margin-top: 4px; }
+
+/* ============================================================
+   PLANCHE IV — TROU NOIR (schéma cliquable)
+   ============================================================ */
+.bhwrap { display: flex; gap: 40px; align-items: center; justify-content: center; margin: 40px 0; flex-wrap: wrap; }
+.bh-svg { width: min(320px, 90vw); }
+.bh-svg .zone { cursor: pointer; transition: filter 0.2s ease; }
+.bh-svg .zone:hover { filter: brightness(1.15); }
+.bh-svg .zone.selected { stroke: var(--starlight); stroke-width: 3; }
+.bh-svg text { font-family: var(--sans-ui); font-size: 10.5px; fill: var(--paper); text-anchor: middle; }
+
+.bh-legend { display: flex; flex-direction: column; gap: 10px; min-width: 200px; }
+.bh-legend-item { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 10px; cursor: pointer; border: 1.5px solid transparent; transition: all 0.2s ease; }
+.bh-legend-item:hover { background: var(--paper-2); }
+.bh-legend-item.active { border-color: var(--ink); background: var(--paper-2); }
+.bh-legend-item .sw { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; border: 1.5px solid var(--ink); }
+.bh-legend-item .nm { font-family: var(--sans-ui); font-weight: 600; font-size: 13.5px; }
+
+.bh-detail {
+	flex: 1;
+	min-width: 260px;
+	border: 2.5px solid var(--ink);
+	border-radius: 18px;
+	padding: 24px 28px;
+	background: var(--paper);
+	box-shadow: 6px 6px 0 rgba(23, 19, 37, 0.1);
+	min-height: 190px;
+}
+.bh-detail .nm { font-family: var(--serif-display); font-style: italic; font-weight: 600; font-size: 1.4rem; margin-bottom: 10px; }
+.bh-detail p { color: var(--ink-3); font-size: 15px; }
+
+/* ============================================================
+   PLANCHE V — EXPANSION (grille de galaxies)
+   ============================================================ */
+.expand-wrap { border: 2.5px solid var(--ink); border-radius: 18px; background: var(--ink); padding: 20px; margin: 36px 0; box-shadow: 6px 6px 0 rgba(23, 19, 37, 0.12); }
+.expand-wrap svg { width: 100%; height: auto; }
+.expand-wrap .gal { fill: var(--starlight); }
+.expand-wrap .gal.marked { fill: var(--nova-lt); }
+.expand-wrap .measuretxt { fill: var(--paper-3); font-family: var(--sans-ui); font-size: 11px; text-anchor: middle; }
+
+/* ============================================================
+   PLANCHE VI — FRISE / CHRONOLOGIE DE L'UNIVERS
+   ============================================================ */
+.deeptime { margin: 40px 0 10px; }
+.deeptime-bar { display: flex; width: 100%; height: 46px; border-radius: 8px; overflow: hidden; border: 2px solid var(--ink); margin-bottom: 8px; }
+.deeptime-bar .seg { height: 100%; }
+.deeptime-cap { display: flex; justify-content: space-between; font-family: var(--sans-ui); font-size: 11px; color: var(--ink-3); margin-bottom: 20px; }
+
+.eras-vert { display: grid; gap: 12px; margin-top: 24px; }
+.era-row { border: 2.5px solid var(--ink); border-radius: 16px; overflow: hidden; background: var(--paper); box-shadow: 5px 5px 0 rgba(23, 19, 37, 0.08); }
+.era-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 16px; font-family: var(--sans-ui); font-weight: 700; font-size: 14px; line-height: 1.3; cursor: pointer; }
+.era-head .sw { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; border: 1.5px solid var(--ink); }
+.era-head span.ttl { flex: 1; }
+.era-dates { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+.era-body { padding: 0 16px 0; font-size: 15px; color: var(--ink-3); max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+.era-row.active .era-body { padding-bottom: 16px; }
+.era-body p { margin: 0 0 0.7em 0; }
+.era-body p:last-child { margin-bottom: 0; }
+
+/* ============================================================
+   PLANCHE VII — MATIÈRE / ÉNERGIE NOIRE (donut cliquable)
+   ============================================================ */
+.donutwrap { display: flex; gap: 40px; align-items: center; justify-content: center; margin: 40px 0; flex-wrap: wrap; }
+.donut-svg { width: min(260px, 80vw); }
+.donut-svg .slice { cursor: pointer; transition: opacity 0.2s ease, filter 0.2s ease; stroke: var(--paper); stroke-width: 2; }
+.donut-svg .slice:hover { filter: brightness(1.1); }
+.donut-svg .slice.dim { opacity: 0.35; }
+.donut-svg .pct { font-family: var(--sans-ui); font-weight: 700; font-size: 22px; fill: var(--ink); text-anchor: middle; }
+.donut-svg .pctlabel { font-family: var(--sans-ui); font-size: 11px; fill: var(--ink-3); text-anchor: middle; }
+
+.donut-legend { display: flex; flex-direction: column; gap: 10px; min-width: 220px; }
+.donut-legend-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; cursor: pointer; border: 1.5px solid transparent; transition: all 0.2s ease; }
+.donut-legend-item:hover { background: var(--paper-2); }
+.donut-legend-item.active { border-color: var(--ink); background: var(--paper-2); }
+.donut-legend-item .sw { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; border: 1.5px solid var(--ink); }
+.donut-legend-item .nm { font-family: var(--sans-ui); font-weight: 600; font-size: 13.5px; display: block; }
+.donut-legend-item .pc { font-family: var(--sans-ui); font-size: 12px; color: var(--ink-3); }
+
+.donut-detail { border: 2.5px solid var(--ink); border-radius: 18px; padding: 22px 26px; background: var(--paper); box-shadow: 6px 6px 0 rgba(23, 19, 37, 0.1); min-width: 260px; max-width: 340px; min-height: 150px; }
+.donut-detail .nm { font-family: var(--serif-display); font-style: italic; font-weight: 600; font-size: 1.3rem; margin-bottom: 8px; }
+.donut-detail p { color: var(--ink-3); font-size: 14.5px; }
+
+/* ============================================================
+   PATTERN — ONGLETS avec mini-diagrammes (planche VIII)
+   ============================================================ */
+.tabgroup { display: flex; gap: 10px; justify-content: center; margin-bottom: 26px; flex-wrap: wrap; }
+.tabgroup button { font-family: var(--sans-ui); font-weight: 600; font-size: 13.5px; padding: 10px 18px; border-radius: 30px; border: 2px solid var(--ink); color: var(--ink); background: var(--paper); transition: all 0.2s ease; }
+.tabgroup button.active { background: var(--ink); color: var(--paper); }
+.tab-panels { position: relative; min-height: 320px; }
+.tab-panel { display: none; grid-template-columns: 1fr 1.1fr; gap: 30px; align-items: center; }
+.tab-panel.active { display: grid; }
+@media (max-width: 720px) { .tab-panel.active { grid-template-columns: 1fr; } }
+.tab-svg-wrap { border: 2px solid var(--ink); border-radius: 16px; padding: 20px; background: var(--ink); }
+.tab-badge { display: inline-flex; align-items: center; gap: 8px; font-family: var(--sans-ui); font-weight: 700; font-size: 14px; padding: 6px 14px; border-radius: 20px; margin-bottom: 14px; }
+.tab-badge.crunch { background: #f6e8e6; color: var(--wine); }
+.tab-badge.freeze { background: #e5eff2; color: var(--ion); }
+.tab-badge.rip { background: #f7e6ec; color: var(--nova); }
+.tab-badge.inconnu { background: #ece6f3; color: var(--nebula); }
+
+/* ============================================================
+   PLANCHE IX — POUSSIÈRE D'ÉTOILES (grille d'éléments)
+   ============================================================ */
+.lexgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 36px 0; }
+@media (max-width: 600px) { .lexgrid { grid-template-columns: repeat(2, 1fr); } }
+
+.lexcard { perspective: 1000px; height: 130px; }
+.lexcard-inner { position: relative; width: 100%; height: 100%; transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.3, 1); transform-style: preserve-3d; }
+.lexcard.flipped .lexcard-inner { transform: rotateY(180deg); }
+.lexface { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 10px; cursor: pointer; border: 2px solid var(--ink); }
+.lexfront { background: var(--paper); font-family: var(--serif-display); font-weight: 600; }
+.lexfront .elsym { font-size: 26px; }
+.lexfront .elname { font-family: var(--sans-ui); font-weight: 600; font-size: 11px; margin-top: 4px; color: var(--ink-3); }
+.lexback { background: var(--nebula); color: var(--paper); transform: rotateY(180deg); font-size: 12.5px; }
+
+/* ============================================================
+   RESSOURCES / FOOTER
+   ============================================================ */
+.reslist { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 30px; }
+.rescard { border: 1.5px solid var(--paper-3); border-radius: 12px; padding: 18px 20px; background: var(--paper); transition: border-color 0.2s ease, transform 0.2s ease; }
+.rescard:hover { border-color: var(--nebula); transform: translateY(-3px); }
+.rescard .rt { font-family: var(--serif-display); font-weight: 600; font-style: italic; font-size: 17px; display: block; margin-bottom: 4px; }
+.rescard .rd { font-size: 13.5px; color: var(--ink-3); }
+
+footer { background: var(--ink); color: var(--paper-3); text-align: center; padding: 60px 28px 40px; font-family: var(--sans-ui); font-size: 13px; }
+footer .fmark { font-family: var(--serif-display); font-style: italic; font-size: 22px; color: var(--paper); margin-bottom: 10px; }
+footer a { color: var(--paper-3); }

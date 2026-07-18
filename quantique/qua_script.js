@@ -139,9 +139,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ================= PLANCHE III — FONCTION D'ONDE ================= */
   const waveSvgWrap = document.getElementById('waveSvgWrap');
+  const WAVE_BASELINE = 108;
+  function waveProb(x){
+    const g1 = 58*Math.exp(-Math.pow((x-95)/26,2));
+    const g2 = 24*Math.exp(-Math.pow((x-215)/20,2));
+    return g1+g2;
+  }
+  const waveSamples = [];
+  for(let x=10; x<=290; x+=4){ waveSamples.push({x, y: WAVE_BASELINE - waveProb(x)}); }
+  const waveMaxProb = Math.max(...waveSamples.map(p=>WAVE_BASELINE - p.y));
+  function waveCurvePath(){
+    return 'M' + waveSamples.map(p=>`${p.x},${p.y.toFixed(1)}`).join(' L');
+  }
+  function sampleWaveX(){
+    for(let i=0;i<300;i++){
+      const x = 10 + Math.random()*280;
+      const threshold = Math.random()*waveMaxProb;
+      if(threshold <= waveProb(x)) return x;
+    }
+    return 95;
+  }
   const waveBaseSvg = `<svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
-    <path id="probCurve" d="M10,100 C60,100 70,20 110,20 C150,20 140,100 190,100 C220,100 230,60 260,60" fill="none" stroke="var(--cyan)" stroke-width="2.5"/>
-    <line x1="10" y1="108" x2="290" y2="108" stroke="var(--paper-3)" stroke-width="1.5"/>
+    <path d="${waveCurvePath()}" fill="none" stroke="var(--cyan)" stroke-width="2.5"/>
+    <line x1="10" y1="${WAVE_BASELINE}" x2="290" y2="${WAVE_BASELINE}" stroke="var(--paper-3)" stroke-width="1.5"/>
   </svg>`;
   waveSvgWrap.innerHTML = waveBaseSvg;
   const measureBtn = document.getElementById('measureBtn');
@@ -150,14 +170,15 @@ document.addEventListener('DOMContentLoaded', () => {
   measureBtn.addEventListener('click', ()=>{
     measured = !measured;
     if(measured){
-      const x = 60 + Math.random()*180;
+      const x = sampleWaveX();
+      const y = WAVE_BASELINE - waveProb(x);
       waveSvgWrap.innerHTML = `<svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
-        <path d="M10,100 C60,100 70,20 110,20 C150,20 140,100 190,100 C220,100 230,60 260,60" fill="none" stroke="var(--paper-3)" stroke-width="1.5" opacity="0.4"/>
-        <line x1="10" y1="108" x2="290" y2="108" stroke="var(--paper-3)" stroke-width="1.5"/>
-        <line x1="${x}" y1="108" x2="${x}" y2="22" stroke="var(--violet)" stroke-width="2.5"/>
-        <circle cx="${x}" cy="18" r="7" fill="var(--violet)"/>
+        <path d="${waveCurvePath()}" fill="none" stroke="var(--paper-3)" stroke-width="1.5" opacity="0.4"/>
+        <line x1="10" y1="${WAVE_BASELINE}" x2="290" y2="${WAVE_BASELINE}" stroke="var(--paper-3)" stroke-width="1.5"/>
+        <line x1="${x.toFixed(1)}" y1="${WAVE_BASELINE}" x2="${x.toFixed(1)}" y2="${y.toFixed(1)}" stroke="var(--violet)" stroke-width="2.5"/>
+        <circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="6" fill="var(--violet)"/>
       </svg>`;
-      waveCaption.textContent = "Après la mesure : un seul résultat, tiré au hasard parmi les possibilités — la fonction d'onde s'est « effondrée » sur ce point précis.";
+      waveCaption.textContent = "Après la mesure : un seul résultat, tiré au hasard selon les probabilités données par la courbe — la fonction d'onde s'est « effondrée » sur ce point précis.";
       measureBtn.textContent = 'Recommencer';
     } else {
       waveSvgWrap.innerHTML = waveBaseSvg;
