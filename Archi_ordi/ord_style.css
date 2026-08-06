@@ -1,0 +1,1286 @@
+/* ============================================================
+   ALMANACH — ARCHITECTURE DES ORDINATEURS
+   Même charte typographique que le hub, palette dédiée au thème.
+   ============================================================ */
+
+:root {
+	--ink: #1a1d24;
+	--ink-2: #232730;
+	--ink-3: #3d4350;
+	--paper: #eef0ea;
+	--paper-2: #e3e6dc;
+	--paper-3: #d3d8c9;
+
+	/* accents génériques du thème — circuit imprimé / hardware */
+	--cuivre: #c17a3d;
+	--cuivre-lt: #dba05f;
+	--vert-pcb: #3f7d5c;
+	--vert-pcb-lt: #6fae8a;
+	--bleu-phos: #2f6fb0;
+	--bleu-phos-lt: #6a9fd1;
+	--jaune-led: #e0a83a;
+	--jaune-led-lt: #eec87a;
+	--rouge-signal: #b23a2e;
+	--rouge-signal-lt: #d97268;
+	--gris-silicium: #5b6472;
+	--gris-silicium-lt: #8b93a0;
+
+	--serif-display: "Fraunces", serif;
+	--serif-body: "Newsreader", serif;
+	--sans-ui: "Space Grotesk", sans-serif;
+
+	--container: 880px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--serif-body);
+	font-size: 18px;
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+::selection {
+	background: var(--jaune-led-lt);
+	color: var(--ink);
+}
+
+a {
+	color: var(--bleu-phos);
+	text-decoration-thickness: 1.5px;
+	text-underline-offset: 3px;
+}
+
+a:hover {
+	color: var(--cuivre);
+}
+
+.theme-return {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 1000;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 14px;
+	border: 2px solid var(--ink);
+	border-radius: 999px;
+	background: rgba(238, 240, 234, 0.94);
+	color: var(--ink);
+	font-family: var(--sans-ui);
+	font-size: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 4px 4px 0 rgba(26, 29, 36, 0.12);
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.theme-return:hover {
+	transform: translateY(-2px);
+	box-shadow: 6px 6px 0 rgba(26, 29, 36, 0.16);
+	background: var(--paper-2);
+	color: var(--ink);
+}
+
+img,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+.container {
+	max-width: var(--container);
+	margin: 0 auto;
+	padding: 0 28px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--serif-display);
+	font-weight: 600;
+	color: var(--ink);
+	letter-spacing: -0.01em;
+	margin: 0;
+}
+
+.eyebrow {
+	font-family: var(--sans-ui);
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--cuivre);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 14px;
+}
+
+.eyebrow .num {
+	font-family: var(--serif-display);
+	font-style: italic;
+	font-size: 22px;
+	font-weight: 500;
+	color: var(--bleu-phos);
+	letter-spacing: 0;
+}
+
+.eyebrow::after {
+	content: "";
+	flex: 1;
+	height: 1px;
+	background: linear-gradient(to right, var(--cuivre), transparent);
+}
+
+p {
+	margin: 0 0 1em 0;
+}
+
+.lede {
+	font-size: 1.15em;
+	color: var(--ink-3);
+}
+
+:focus-visible {
+	outline: 3px solid var(--rouge-signal);
+	outline-offset: 3px;
+}
+
+button {
+	font-family: var(--sans-ui);
+	cursor: pointer;
+	border: none;
+	background: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* ============================================================
+   SIDE DOT NAV
+   ============================================================ */
+.dotnav {
+	position: fixed;
+	right: 22px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 500;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.dotnav a {
+	position: relative;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: var(--paper-3);
+	border: 1.5px solid var(--cuivre);
+	transition: all 0.25s ease;
+}
+
+.dotnav a:hover {
+	background: var(--cuivre-lt);
+}
+
+.dotnav a.active {
+	background: var(--cuivre);
+	transform: scale(1.35);
+}
+
+.dotnav a .tip {
+	position: absolute;
+	right: 22px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: var(--ink);
+	color: var(--paper);
+	font-family: var(--sans-ui);
+	font-size: 12px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	white-space: nowrap;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s ease;
+}
+
+.dotnav a:hover .tip {
+	opacity: 1;
+}
+
+@media (max-width: 900px) {
+	.dotnav {
+		display: none;
+	}
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+	position: relative;
+	min-height: 100vh;
+	background: radial-gradient(ellipse at 30% 20%, var(--ink-2), var(--ink) 65%);
+	color: var(--paper);
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.hero-grain {
+	position: absolute;
+	inset: 0;
+	background-image: radial-gradient(var(--paper) 0.6px, transparent 0.6px);
+	background-size: 3px 3px;
+	opacity: 0.045;
+	pointer-events: none;
+}
+
+.hero-inner {
+	position: relative;
+	z-index: 2;
+	max-width: var(--container);
+	margin: 0 auto;
+	padding: 140px 28px 120px;
+	width: 100%;
+}
+
+.hero .eyebrow {
+	color: var(--cuivre-lt);
+}
+
+.hero .eyebrow::after {
+	background: linear-gradient(to right, var(--cuivre-lt), transparent);
+}
+
+.hero h1 {
+	font-size: clamp(2.5rem, 6.8vw, 5rem);
+	color: var(--paper);
+	line-height: 0.98;
+	margin-bottom: 22px;
+}
+
+.hero h1 em {
+	font-style: italic;
+	font-weight: 500;
+	color: var(--jaune-led-lt);
+}
+
+.hero .sub {
+	font-size: 1.2rem;
+	max-width: 48ch;
+	color: var(--paper-3);
+	font-style: italic;
+}
+
+.hero-circuit {
+	position: absolute;
+	right: -4%;
+	top: 50%;
+	transform: translateY(-50%);
+	width: min(46vw, 620px);
+	opacity: 0.95;
+}
+
+.hero-circuit .trace {
+	fill: none;
+	stroke: var(--bleu-phos-lt);
+	stroke-width: 2.5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.hero-circuit .pad {
+	fill: var(--paper);
+	stroke: var(--cuivre-lt);
+	stroke-width: 2.5;
+}
+
+.hero-circuit .pad.lit {
+	fill: var(--jaune-led-lt);
+}
+
+.scrollcue {
+	position: absolute;
+	bottom: 34px;
+	left: 28px;
+	font-family: var(--sans-ui);
+	font-size: 12px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--paper-3);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.scrollcue::before {
+	content: "";
+	width: 22px;
+	height: 1px;
+	background: var(--paper-3);
+	animation: pulseline 1.8s ease-in-out infinite;
+}
+
+@keyframes pulseline {
+
+	0%,
+	100% {
+		width: 22px;
+		opacity: 0.5;
+	}
+
+	50% {
+		width: 38px;
+		opacity: 1;
+	}
+}
+
+/* ============================================================
+   PLATE STRUCTURE
+   ============================================================ */
+main {
+	background: var(--paper);
+	position: relative;
+}
+
+.plate {
+	padding: 108px 0 92px;
+	border-bottom: 1px solid var(--paper-3);
+}
+
+.plate:nth-of-type(odd) {
+	background: var(--paper-2);
+}
+
+.plate h2 {
+	font-size: clamp(1.9rem, 4vw, 2.7rem);
+	margin-bottom: 22px;
+}
+
+.plate .lede {
+	margin-bottom: 44px;
+}
+
+.reveal {
+	opacity: 0;
+	transform: translateY(26px);
+	transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.3, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.reveal.in {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.reveal.delay-1 {
+	transition-delay: 0.08s;
+}
+
+.reveal.delay-2 {
+	transition-delay: 0.16s;
+}
+
+/* ============================================================
+   CALLOUTS
+   ============================================================ */
+.callout {
+	border: 1.5px solid var(--ink);
+	border-radius: 14px;
+	padding: 24px 26px;
+	background: var(--paper);
+	box-shadow: 5px 5px 0 rgba(26, 29, 36, 0.08);
+	margin: 28px 0;
+}
+
+.callout.cuivre {
+	border-color: var(--cuivre);
+	background: #f5ece0;
+}
+
+.callout.cuivre .callout-title {
+	color: var(--cuivre);
+}
+
+.callout.vert-pcb {
+	border-color: var(--vert-pcb);
+	background: #e7f1ea;
+}
+
+.callout.vert-pcb .callout-title {
+	color: var(--vert-pcb);
+}
+
+.callout.bleu-phos {
+	border-color: var(--bleu-phos);
+	background: #e5edf6;
+}
+
+.callout.bleu-phos .callout-title {
+	color: var(--bleu-phos);
+}
+
+.callout.jaune-led {
+	border-color: var(--jaune-led);
+	background: #faf1de;
+}
+
+.callout.jaune-led .callout-title {
+	color: #a6791f;
+}
+
+.callout.rouge-signal {
+	border-color: var(--rouge-signal);
+	background: #f7e9e7;
+}
+
+.callout.rouge-signal .callout-title {
+	color: var(--rouge-signal);
+}
+
+.callout-title {
+	font-family: var(--sans-ui);
+	font-weight: 700;
+	font-size: 13px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.callout p:last-child {
+	margin-bottom: 0;
+}
+
+.grid-2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 22px;
+}
+
+@media (max-width: 720px) {
+	.grid-2 {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ============================================================
+   PLANCHE I — FRISE CLIQUABLE (HISTOIRE)
+   ============================================================ */
+.timeline-wrap {
+	display: flex;
+	gap: 34px;
+	margin: 40px 0;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.timeline-track {
+	display: flex;
+	flex-direction: column;
+	width: 280px;
+	border: 2.5px solid var(--ink);
+	border-radius: 10px;
+	overflow: hidden;
+	max-height: 460px;
+	overflow-y: auto;
+}
+
+.timeline-node {
+	padding: 14px 18px;
+	cursor: pointer;
+	border-top: 1.5px solid rgba(238, 240, 234, 0.1);
+	font-family: var(--sans-ui);
+	font-weight: 600;
+	font-size: 13px;
+	color: var(--paper-3);
+	background: var(--ink);
+	transition: background 0.2s ease, color 0.2s ease, padding 0.2s ease;
+}
+
+.timeline-node:first-child {
+	border-top: none;
+}
+
+.timeline-node:hover {
+	background: var(--ink-2);
+	color: var(--paper);
+}
+
+.timeline-node.active {
+	padding-left: 26px;
+	border-left: 8px solid var(--cuivre);
+	background: var(--ink-2);
+	color: var(--paper);
+}
+
+.timeline-node .tl-date {
+	display: block;
+	font-size: 11px;
+	opacity: 0.7;
+	margin-bottom: 2px;
+	font-family: var(--sans-ui);
+	color: var(--cuivre-lt);
+}
+
+.timeline-node.active .tl-date {
+	opacity: 1;
+}
+
+.timeline-detail {
+	flex: 1;
+	min-width: 280px;
+	border: 2.5px solid var(--ink);
+	border-radius: 18px;
+	padding: 24px 28px;
+	background: var(--paper);
+	box-shadow: 6px 6px 0 rgba(26, 29, 36, 0.1);
+	min-height: 220px;
+}
+
+.timeline-detail .nm {
+	font-family: var(--serif-display);
+	font-style: italic;
+	font-weight: 600;
+	font-size: 1.4rem;
+	margin-bottom: 4px;
+	color: var(--ink);
+}
+
+.timeline-detail .tl-year-full {
+	font-family: var(--sans-ui);
+	font-size: 13px;
+	font-weight: 700;
+	color: var(--cuivre);
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	margin-bottom: 14px;
+	display: block;
+}
+
+.timeline-detail p {
+	color: var(--ink-3);
+	font-size: 15.5px;
+}
+
+@media (max-width: 720px) {
+	.timeline-wrap {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.timeline-track {
+		width: 100%;
+		max-height: none;
+	}
+}
+
+/* ============================================================
+   PLANCHE II — ANATOMIE D'UN PC (DIAGRAMME CLIQUABLE)
+   ============================================================ */
+.pc-wrap {
+	display: flex;
+	gap: 28px;
+	margin: 40px 0;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.pc-left {
+	flex: 1 1 420px;
+	min-width: 300px;
+}
+
+.pc-svg-wrap {
+	border: 2px solid var(--ink);
+	border-radius: 16px;
+	padding: 20px;
+	background: var(--paper);
+}
+
+.pc-svg {
+	width: 100%;
+	height: auto;
+}
+
+.pc-part {
+	cursor: pointer;
+}
+
+.pc-part rect,
+.pc-part circle {
+	transition: fill 0.2s ease, stroke 0.2s ease, stroke-width 0.2s ease;
+}
+
+.pc-part:hover rect,
+.pc-part:hover circle {
+	stroke: var(--cuivre-lt);
+}
+
+.pc-part.selected rect {
+	fill: var(--cuivre-lt);
+	stroke: var(--cuivre);
+	stroke-width: 2.5;
+}
+
+.pc-part.selected circle {
+	stroke: var(--cuivre);
+}
+
+.pc-legend {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 8px;
+	margin-top: 16px;
+}
+
+@media (max-width: 480px) {
+	.pc-legend {
+		grid-template-columns: 1fr;
+	}
+}
+
+.pc-legend-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 9px 12px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-family: var(--sans-ui);
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--ink-3);
+	background: var(--paper-2);
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.pc-legend-item:hover {
+	background: var(--paper-3);
+}
+
+.pc-legend-item.active {
+	background: var(--ink);
+	color: var(--paper);
+}
+
+.pc-detail {
+	flex: 1 1 280px;
+	min-width: 260px;
+	border: 2.5px solid var(--ink);
+	border-radius: 18px;
+	padding: 24px 28px;
+	background: var(--paper);
+	box-shadow: 6px 6px 0 rgba(26, 29, 36, 0.1);
+	min-height: 220px;
+}
+
+.pc-detail .nm {
+	font-family: var(--serif-display);
+	font-style: italic;
+	font-weight: 600;
+	font-size: 1.4rem;
+	margin-bottom: 10px;
+	color: var(--ink);
+}
+
+.pc-detail p {
+	color: var(--ink-3);
+	font-size: 15.5px;
+	margin: 0;
+}
+
+/* ============================================================
+   ONGLETS GÉNÉRIQUES (HDD/SSD, bus, Von Neumann/Harvard, OS)
+   ============================================================ */
+.ord-tabs {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	margin-bottom: 26px;
+	flex-wrap: wrap;
+}
+
+.ord-tab {
+	font-family: var(--sans-ui);
+	font-weight: 600;
+	font-size: 13.5px;
+	padding: 10px 18px;
+	border-radius: 30px;
+	border: 2px solid var(--ink);
+	color: var(--ink);
+	background: var(--paper);
+	transition: all 0.2s ease;
+}
+
+.ord-tab.active {
+	background: var(--ink);
+	color: var(--paper);
+}
+
+.ord-panels {
+	position: relative;
+}
+
+.ord-panel {
+	display: none;
+	grid-template-columns: 190px 1fr;
+	gap: 28px;
+	align-items: center;
+}
+
+.ord-panel.active {
+	display: grid;
+}
+
+@media (max-width: 640px) {
+	.ord-panel {
+		grid-template-columns: 1fr;
+	}
+}
+
+.ord-svg-wrap {
+	border: 2px solid var(--ink);
+	border-radius: 14px;
+	padding: 16px;
+	background: var(--paper);
+}
+
+.ord-badge {
+	display: inline-block;
+	font-family: var(--sans-ui);
+	font-weight: 700;
+	font-size: 11.5px;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--cuivre);
+	background: var(--paper-2);
+	padding: 4px 10px;
+	border-radius: 20px;
+	margin-bottom: 10px;
+}
+
+.ord-panel-text p {
+	margin: 0;
+	color: var(--ink-3);
+	font-size: 15.5px;
+}
+
+/* ============================================================
+   PLANCHE V — DÉMONSTRATION VOLATILITÉ DE LA RAM
+   ============================================================ */
+.ram-demo {
+	border: 2.5px solid var(--ink);
+	border-radius: 18px;
+	padding: 30px 28px;
+	background: var(--paper);
+	box-shadow: 6px 6px 0 rgba(26, 29, 36, 0.1);
+	margin: 32px 0;
+	text-align: center;
+}
+
+.ram-grid {
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	gap: 8px;
+	max-width: 420px;
+	margin: 0 auto 22px;
+}
+
+.ram-cell {
+	aspect-ratio: 1;
+	border: 2px solid var(--ink);
+	border-radius: 4px;
+	background: var(--paper);
+	transition: background 0.35s ease, border-color 0.35s ease;
+}
+
+.ram-cell.filled {
+	background: var(--cuivre);
+	border-color: var(--cuivre);
+}
+
+.ram-toggle-btn {
+	font-family: var(--sans-ui);
+	font-weight: 700;
+	font-size: 14px;
+	padding: 12px 28px;
+	border-radius: 30px;
+	border: 2.5px solid var(--ink);
+	background: var(--ink);
+	color: var(--paper);
+	transition: all 0.2s ease;
+}
+
+.ram-toggle-btn:hover {
+	background: var(--ink-2);
+}
+
+.ram-status {
+	margin-top: 16px;
+	font-family: var(--sans-ui);
+	font-size: 13px;
+	color: var(--ink-3);
+}
+
+/* ============================================================
+   PLANCHE VI — DIAGRAMME ENTRÉES / SORTIES
+   ============================================================ */
+.io-wrap {
+	border: 2px solid var(--ink);
+	border-radius: 16px;
+	padding: 30px;
+	background: var(--paper);
+	margin: 36px 0;
+}
+
+.io-svg {
+	width: 100%;
+	max-width: 620px;
+	margin: 0 auto;
+	display: block;
+	height: auto;
+}
+
+/* ============================================================
+   FLIP-CARDS (PLANCHE IX — REGISTRES)
+   ============================================================ */
+.lexgrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+	gap: 16px;
+	margin: 36px 0;
+}
+
+.lexcard {
+	perspective: 1000px;
+	height: 150px;
+}
+
+.lexcard-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.3, 1);
+	transform-style: preserve-3d;
+}
+
+.lexcard.flipped .lexcard-inner {
+	transform: rotateY(180deg);
+}
+
+.lexface {
+	position: absolute;
+	inset: 0;
+	backface-visibility: hidden;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 16px;
+	cursor: pointer;
+	border: 2px solid var(--ink);
+}
+
+.lexfront {
+	background: var(--paper);
+	font-family: var(--serif-display);
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.lexback {
+	background: var(--ink);
+	color: var(--paper);
+	transform: rotateY(180deg);
+	font-size: 13px;
+	font-family: var(--sans-ui);
+	line-height: 1.5;
+}
+
+/* ============================================================
+   PLANCHE X — PYRAMIDE DES LANGAGES
+   ============================================================ */
+.pyramid-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+	margin: 36px auto 0;
+	max-width: 560px;
+}
+
+.pyramid-layer {
+	border: 2px solid var(--ink);
+	border-radius: 10px;
+	padding: 15px 20px;
+	background: var(--paper);
+	text-align: center;
+	font-family: var(--sans-ui);
+	font-weight: 700;
+	font-size: 14px;
+	cursor: pointer;
+	transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.pyramid-layer:hover {
+	background: var(--paper-2);
+}
+
+.pyramid-layer.selected {
+	background: var(--ink);
+	color: var(--paper);
+	border-color: var(--cuivre);
+}
+
+.pyramid-layer:nth-child(1) {
+	width: 56%;
+	margin: 0 auto;
+}
+
+.pyramid-layer:nth-child(2) {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.pyramid-layer:nth-child(3) {
+	width: 84%;
+	margin: 0 auto;
+}
+
+.pyramid-layer:nth-child(4) {
+	width: 96%;
+	margin: 0 auto;
+}
+
+.pyramid-layer:nth-child(5) {
+	width: 100%;
+	margin: 0 auto;
+}
+
+@media (max-width: 560px) {
+	.pyramid-layer:nth-child(n) {
+		width: 100%;
+	}
+}
+
+.pyramid-detail {
+	border: 2.5px solid var(--ink);
+	border-radius: 18px;
+	padding: 22px 26px;
+	background: var(--paper);
+	box-shadow: 6px 6px 0 rgba(26, 29, 36, 0.1);
+	margin-top: 26px;
+	min-height: 100px;
+}
+
+.pyramid-detail .nm {
+	font-family: var(--serif-display);
+	font-style: italic;
+	font-weight: 600;
+	font-size: 1.25rem;
+	margin-bottom: 8px;
+	color: var(--ink);
+}
+
+.pyramid-detail p {
+	color: var(--ink-3);
+	font-size: 15px;
+	margin: 0;
+}
+
+code {
+	font-family: var(--sans-ui);
+	background: var(--paper-3);
+	padding: 2px 7px;
+	border-radius: 5px;
+	font-size: 0.92em;
+}
+
+/* ============================================================
+   ACCORDÉON GÉNÉRIQUE (PLANCHE XI — COMPILATION)
+   ============================================================ */
+.ord-accordion {
+	display: grid;
+	gap: 12px;
+	margin: 28px 0;
+}
+
+.ord-acc-row {
+	border: 2.5px solid var(--ink);
+	border-radius: 16px;
+	overflow: hidden;
+	background: var(--paper);
+	box-shadow: 5px 5px 0 rgba(26, 29, 36, 0.08);
+}
+
+.ord-acc-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 12px;
+	padding: 16px 18px;
+	font-family: var(--sans-ui);
+	font-weight: 700;
+	font-size: 14.5px;
+	cursor: pointer;
+}
+
+.ord-acc-head .step-num {
+	font-family: var(--serif-display);
+	font-style: italic;
+	color: var(--cuivre);
+	margin-right: 8px;
+}
+
+.ord-acc-head .chevron {
+	font-size: 16px;
+	color: var(--ink-3);
+	transition: transform 0.3s ease;
+	flex-shrink: 0;
+}
+
+.ord-acc-row.active .chevron {
+	transform: rotate(180deg);
+}
+
+.ord-acc-body {
+	padding: 0 18px 0;
+	font-size: 15px;
+	color: var(--ink-3);
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.ord-acc-row.active .ord-acc-body {
+	padding-bottom: 16px;
+}
+
+.ord-acc-row.active .ord-acc-head {
+	background: var(--paper-2);
+}
+
+/* ============================================================
+   PLANCHE XII — HIÉRARCHIE DU CACHE (COUCHES CONCENTRIQUES)
+   ============================================================ */
+.cache-wrap {
+	display: flex;
+	gap: 28px;
+	margin: 40px 0;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.cache-left {
+	flex: 1 1 320px;
+	min-width: 280px;
+}
+
+.cache-svg-wrap {
+	border: 2px solid var(--ink);
+	border-radius: 16px;
+	padding: 20px;
+	background: var(--paper);
+	display: flex;
+	justify-content: center;
+}
+
+.cache-svg {
+	width: 100%;
+	max-width: 320px;
+	height: auto;
+}
+
+.cache-part {
+	cursor: pointer;
+	transition: stroke 0.2s ease, stroke-width 0.2s ease;
+}
+
+.cache-part:hover {
+	stroke: var(--cuivre-lt);
+	stroke-width: 2;
+}
+
+.cache-part.selected {
+	stroke: var(--cuivre);
+	stroke-width: 4;
+}
+
+.cache-legend {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-top: 16px;
+}
+
+.cache-legend-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 9px 12px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-family: var(--sans-ui);
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--ink-3);
+	background: var(--paper-2);
+	transition: background 0.2s ease, color 0.2s ease;
+}
+
+.cache-legend-item .sw {
+	width: 14px;
+	height: 14px;
+	border-radius: 4px;
+	border: 2px solid var(--ink);
+	flex-shrink: 0;
+}
+
+.cache-legend-item:hover {
+	background: var(--paper-3);
+}
+
+.cache-legend-item.active {
+	background: var(--ink);
+	color: var(--paper);
+}
+
+.cache-legend-item.active .sw {
+	border-color: var(--cuivre);
+}
+
+.cache-detail {
+	flex: 1 1 280px;
+	min-width: 260px;
+	border: 2.5px solid var(--ink);
+	border-radius: 18px;
+	padding: 24px 28px;
+	background: var(--paper);
+	box-shadow: 6px 6px 0 rgba(26, 29, 36, 0.1);
+	min-height: 220px;
+}
+
+.cache-detail .nm {
+	font-family: var(--serif-display);
+	font-style: italic;
+	font-weight: 600;
+	font-size: 1.4rem;
+	margin-bottom: 4px;
+	color: var(--ink);
+}
+
+.cache-detail .stat-row {
+	display: flex;
+	gap: 18px;
+	flex-wrap: wrap;
+	margin: 14px 0;
+	font-family: var(--sans-ui);
+	font-size: 12px;
+	color: var(--ink-3);
+}
+
+.cache-detail .stat-row b {
+	display: block;
+	color: var(--ink);
+	font-size: 14.5px;
+	font-family: var(--serif-display);
+	font-style: italic;
+	font-weight: 600;
+}
+
+.cache-detail p {
+	color: var(--ink-3);
+	font-size: 15px;
+	margin: 0;
+}
+
+/* ============================================================
+   RESSOURCES / FOOTER
+   ============================================================ */
+.reslist {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 16px;
+	margin-top: 30px;
+}
+
+.rescard {
+	border: 1.5px solid var(--paper-3);
+	border-radius: 12px;
+	padding: 18px 20px;
+	background: var(--paper);
+	transition: border-color 0.2s ease, transform 0.2s ease;
+	text-decoration: none;
+	color: inherit;
+	display: block;
+}
+
+.rescard:hover {
+	border-color: var(--cuivre);
+	transform: translateY(-3px);
+}
+
+.rescard .rt {
+	font-family: var(--serif-display);
+	font-weight: 600;
+	font-style: italic;
+	font-size: 17px;
+	display: block;
+	margin-bottom: 4px;
+}
+
+.rescard .rd {
+	font-size: 13.5px;
+	color: var(--ink-3);
+}
+
+footer {
+	background: var(--ink);
+	color: var(--paper-3);
+	text-align: center;
+	padding: 60px 28px 40px;
+	font-family: var(--sans-ui);
+	font-size: 13px;
+}
+
+footer .fmark {
+	font-family: var(--serif-display);
+	font-style: italic;
+	font-size: 22px;
+	color: var(--paper);
+	margin-bottom: 10px;
+}
+
+footer a {
+	color: var(--paper-3);
+}

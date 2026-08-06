@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Architecture des ordinateurs — Almanach — planches illustrées</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="ord_style.css">
+	<script src="ord_script.js" defer></script>
+</head>
+
+<body>
+
+	<a class="theme-return" href="../hub_index.html">← Retour au menu</a>
+
+	<nav class="dotnav" id="dotnav"></nav>
+
+	<header class="hero" id="hero">
+		<div class="hero-grain"></div>
+		<div class="hero-inner">
+			<div class="eyebrow">Fiche illustrée &amp; interactive</div>
+			<h1>Architecture des ordinateurs<br><em>pour les nuls</em></h1>
+			<p class="sub">Treize planches pour comprendre, une bonne fois pour toutes, comment un ordinateur fonctionne
+				— de la machine de Babbage jusqu'au cache du processeur moderne.</p>
+		</div>
+		<svg class="hero-circuit" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+			<rect x="175" y="175" width="50" height="50" rx="6" fill="var(--ink-2)" stroke="var(--bleu-phos-lt)"
+				stroke-width="2.5" />
+			<rect x="191" y="191" width="18" height="18" rx="2" fill="var(--jaune-led-lt)" opacity="0.85" />
+			<path class="trace" d="M190,175 L190,110 L130,110 L130,60" />
+			<path class="trace" d="M210,175 L210,90 L280,90 L280,50" />
+			<path class="trace" d="M225,190 L300,190 L300,140 L360,140" />
+			<path class="trace" d="M225,210 L290,210 L290,270 L350,270" />
+			<path class="trace" d="M190,225 L190,290 L120,290 L120,340" />
+			<path class="trace" d="M210,225 L210,310 L260,310 L260,360" />
+			<path class="trace" d="M175,190 L110,190 L110,130 L50,130" />
+			<path class="trace" d="M175,210 L100,210 L100,260 L40,260" />
+			<circle class="pad" cx="130" cy="60" r="9" />
+			<circle class="pad" cx="280" cy="50" r="9" />
+			<circle class="pad" cx="360" cy="140" r="9" />
+			<circle class="pad" cx="350" cy="270" r="9" />
+			<circle class="pad" cx="120" cy="340" r="9" />
+			<circle class="pad" cx="260" cy="360" r="9" />
+			<circle class="pad" cx="50" cy="130" r="9" />
+			<circle class="pad" cx="40" cy="260" r="9" />
+		</svg>
+		<div class="scrollcue">Faire défiler</div>
+	</header>
+
+	<main>
+
+		<!-- ============================================================
+     PLANCHE I — PETITE HISTOIRE DE LA MACHINE
+     ============================================================ -->
+		<section class="plate" id="p1" data-title="Histoire">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">I</span> Petite histoire de la machine</div>
+				<h2 class="reveal">Deux siècles pour arriver jusqu'ici</h2>
+				<p class="lede reveal delay-1">De la première machine à calculer programmable au premier ordinateur
+					quantique installé hors des États-Unis&nbsp;: neuf jalons pour comprendre d'où vient la machine que
+					tu as dans les mains. Clique une date.</p>
+
+				<div class="timeline-wrap reveal" id="timelineWrap"></div>
+
+				<div class="callout bleu-phos reveal">
+					<span class="callout-title">Pour resituer</span>
+					<p>Entre l'ENIAC (1946) et le premier smartphone grand public, il ne s'est écoulé qu'un peu plus
+						d'un demi-siècle — un battement de cils, à l'échelle de l'histoire des techniques.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+     PLANCHE II — ANATOMIE D'UN PC
+     ============================================================ -->
+		<section class="plate" id="p2" data-title="Anatomie d'un PC">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">II</span> Sous le capot</div>
+				<h2 class="reveal">L'anatomie d'un ordinateur moderne</h2>
+				<p class="lede reveal delay-1">Huit pièces maîtresses, reliées entre elles pour former une machine
+					cohérente. Clique un composant du schéma — ou de la légende.</p>
+
+				<div class="pc-wrap reveal">
+					<div class="pc-left">
+						<div class="pc-svg-wrap" id="pcSvgWrap">
+							<svg class="pc-svg" viewBox="0 0 440 300" xmlns="http://www.w3.org/2000/svg">
+								<g class="pc-part" data-id="boitier">
+									<rect x="8" y="8" width="424" height="284" rx="16" fill="var(--paper-2)"
+										stroke="var(--ink)" stroke-width="3" />
+								</g>
+								<g class="pc-part" data-id="cartemere">
+									<rect x="34" y="34" width="270" height="232" rx="8" fill="var(--paper-3)"
+										stroke="var(--ink)" stroke-width="2" />
+								</g>
+								<g class="pc-part" data-id="cpu">
+									<rect x="80" y="64" width="66" height="66" rx="6" fill="var(--paper)"
+										stroke="var(--ink)" stroke-width="2" />
+									<rect x="96" y="80" width="34" height="34" rx="3" fill="var(--paper-3)"
+										stroke="var(--ink)" stroke-width="1.5" />
+								</g>
+								<g class="pc-part" data-id="ram">
+									<rect x="168" y="60" width="16" height="100" rx="2" fill="var(--paper)"
+										stroke="var(--ink)" stroke-width="2" />
+									<rect x="192" y="60" width="16" height="100" rx="2" fill="var(--paper)"
+										stroke="var(--ink)" stroke-width="2" />
+								</g>
+								<g class="pc-part" data-id="gpu">
+									<rect x="80" y="180" width="200" height="46" rx="5" fill="var(--paper)"
+										stroke="var(--ink)" stroke-width="2" />
+									<circle cx="120" cy="203" r="14" fill="none" stroke="var(--ink)"
+										stroke-width="1.5" />
+									<circle cx="170" cy="203" r="14" fill="none" stroke="var(--ink)"
+										stroke-width="1.5" />
+								</g>
+								<g class="pc-part" data-id="stockage">
+									<rect x="330" y="40" width="76" height="50" rx="5" fill="var(--paper)"
+										stroke="var(--ink)" stroke-width="2" />
+								</g>
+								<g class="pc-part" data-id="lecteurs">
+									<rect x="330" y="104" width="76" height="30" rx="4" fill="var(--paper)"
+										stroke="var(--ink)" stroke-width="2" />
+								</g>
+								<g class="pc-part" data-id="alimentation">
+									<rect x="330" y="170" width="76" height="96" rx="6" fill="var(--paper)"
+										stroke="var(--ink)" stroke-width="2" />
+									<circle cx="368" cy="218" r="18" fill="none" stroke="var(--ink)"
+										stroke-width="1.5" />
+								</g>
+							</svg>
+						</div>
+						<div class="pc-legend" id="pcLegend"></div>
+					</div>
+					<div class="pc-detail" id="pcDetail"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+     PLANCHE III — HDD VS SSD
+     ============================================================ -->
+		<section class="plate" id="p3" data-title="HDD vs SSD">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">III</span> Le stockage</div>
+				<h2 class="reveal">HDD contre SSD&nbsp;: le match</h2>
+				<p class="lede reveal delay-1">Deux technologies, deux philosophies. L'une tourne, l'autre non.</p>
+
+				<div class="ord-tabs reveal" id="storageTabs">
+					<button class="ord-tab active" data-tab="hdd">HDD</button>
+					<button class="ord-tab" data-tab="ssd">SSD</button>
+				</div>
+				<div class="ord-panels reveal" id="storagePanels"></div>
+
+				<div class="callout cuivre reveal" style="margin-top:32px;">
+					<span class="callout-title">En bref</span>
+					<p>Le HDD mise sur la <b>capacité au meilleur prix</b>&nbsp;; le SSD mise sur la <b>vitesse et la
+							fiabilité mécanique</b>. Beaucoup de machines récentes combinent les deux&nbsp;: un SSD pour
+						le système, un HDD pour le stockage de masse.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+     PLANCHE IV — LE BUS SYSTÈME
+     ============================================================ -->
+		<section class="plate" id="p4" data-title="Le bus système">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">IV</span> La circulation interne</div>
+				<h2 class="reveal">Le bus système</h2>
+				<p class="lede reveal delay-1">Un bus informatique est un ensemble de liaisons physiques — fils
+					électriques, pistes de circuit imprimé — qui assurent la communication numérique entre les
+					composants d'un PC.</p>
+
+				<div class="callout bleu-phos reveal">
+					<span class="callout-title">Une analogie utile</span>
+					<p>On peut comparer le bus système à la circulation dans une ville&nbsp;: certaines voies sont à
+						sens unique, d'autres à double sens, et un système de signalisation coordonne l'ensemble. On
+						distingue aussi les bus <b>internes</b> (au sein de la carte mère) des bus <b>externes</b> (USB,
+						e-SATA…).</p>
+				</div>
+
+				<p class="lede reveal" style="margin-top:36px;">Un bus se compose de trois éléments principaux. Clique
+					un onglet.</p>
+				<div class="ord-tabs reveal" id="busTabs">
+					<button class="ord-tab active" data-tab="adresse">Bus d'adresse</button>
+					<button class="ord-tab" data-tab="donnees">Bus de données</button>
+					<button class="ord-tab" data-tab="controle">Bus de contrôle</button>
+				</div>
+				<div class="ord-panels reveal" id="busPanels"></div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+     PLANCHE V — LA RAM
+     ============================================================ -->
+		<section class="plate" id="p5" data-title="La RAM">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">V</span> La mémoire vive</div>
+				<h2 class="reveal">La RAM, une mémoire volatile</h2>
+				<p class="lede reveal delay-1">La RAM (Random Access Memory) est une mémoire dite « vive », présente
+					dans tous les ordinateurs actuels. Extrêmement rapide comparée à la mémoire de stockage, elle permet
+					au processeur — et au système d'exploitation — de garder sous la main les données dont ils ont
+					besoin dans l'instant.</p>
+
+				<div class="callout jaune-led reveal">
+					<span class="callout-title">RAM contre ROM</span>
+					<p>La RAM s'oppose à la <b>ROM</b> (Read-Only Memory), dite « de stockage ». La RAM, elle, est
+						<b>volatile</b>&nbsp;: elle s'efface entièrement à l'extinction de la machine. Essaie
+						ci-dessous.
+					</p>
+				</div>
+
+				<div class="ram-demo reveal">
+					<div class="ram-grid" id="ramGrid"></div>
+					<button class="ram-toggle-btn" id="ramToggleBtn">Couper l'alimentation</button>
+					<p class="ram-status" id="ramStatus"></p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+     PLANCHE VI — ENTRÉES / SORTIES
+     ============================================================ -->
+		<section class="plate" id="p6" data-title="Entrées / Sorties">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">VI</span> Dialoguer avec l'extérieur</div>
+				<h2 class="reveal">Les entrées et les sorties</h2>
+				<p class="lede reveal delay-1">On appelle « entrées-sorties » les échanges d'informations entre le
+					processeur et les périphériques qui lui sont associés — parfois désignées par l'acronyme <b>I/O</b>
+					(comme dans <code>#include &lt;stdio.h&gt;</code> en C).</p>
+
+				<div class="io-wrap reveal">
+					<svg class="io-svg" viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg">
+						<defs>
+							<marker id="arrIO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
+								orient="auto" markerUnits="userSpaceOnUse">
+								<path d="M0,0 L10,5 L0,10 z" fill="var(--cuivre)" />
+							</marker>
+						</defs>
+						<rect x="8" y="30" width="120" height="34" rx="6" fill="var(--paper-2)" stroke="var(--ink)"
+							stroke-width="2" />
+						<text x="68" y="52" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11"
+							font-weight="700" fill="var(--ink)">Clavier</text>
+						<rect x="8" y="82" width="120" height="34" rx="6" fill="var(--paper-2)" stroke="var(--ink)"
+							stroke-width="2" />
+						<text x="68" y="104" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11"
+							font-weight="700" fill="var(--ink)">Disque</text>
+						<rect x="8" y="134" width="120" height="34" rx="6" fill="var(--paper-2)" stroke="var(--ink)"
+							stroke-width="2" />
+						<text x="68" y="156" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11"
+							font-weight="700" fill="var(--ink)">Capteur</text>
+						<line x1="128" y1="47" x2="216" y2="90" stroke="var(--cuivre)" stroke-width="2.5"
+							marker-end="url(#arrIO)" />
+						<line x1="128" y1="99" x2="216" y2="99" stroke="var(--cuivre)" stroke-width="2.5"
+							marker-end="url(#arrIO)" />
+						<line x1="128" y1="151" x2="216" y2="108" stroke="var(--cuivre)" stroke-width="2.5"
+							marker-end="url(#arrIO)" />
+						<rect x="220" y="60" width="120" height="80" rx="10" fill="var(--ink)" stroke="var(--ink)"
+							stroke-width="2.5" />
+						<text x="280" y="105" text-anchor="middle" font-family="Space Grotesk, sans-serif"
+							font-size="13" font-weight="700" fill="var(--paper)">CPU</text>
+						<line x1="340" y1="90" x2="428" y2="47" stroke="var(--cuivre)" stroke-width="2.5"
+							marker-end="url(#arrIO)" />
+						<line x1="340" y1="99" x2="428" y2="99" stroke="var(--cuivre)" stroke-width="2.5"
+							marker-end="url(#arrIO)" />
+						<line x1="340" y1="108" x2="428" y2="151" stroke="var(--cuivre)" stroke-width="2.5"
+							marker-end="url(#arrIO)" />
+						<rect x="432" y="30" width="120" height="34" rx="6" fill="var(--paper-2)" stroke="var(--ink)"
+							stroke-width="2" />
+						<text x="492" y="52" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-size="11"
+							font-weight="700" fill="var(--ink)">Écran</text>
+						<rect x="432" y="82" width="120" height="34" rx="6" fill="var(--paper-2)" stroke="var(--ink)"
+							stroke-width="2" />
+						<text x="492" y="104" text-anchor="middle" font-family="Space Grotesk, sans-serif"
+							font-size="11" font-weight="700" fill="var(--ink)">Réseau</text>
+						<rect x="432" y="134" width="120" height="34" rx="6" fill="var(--paper-2)" stroke="var(--ink)"
+							stroke-width="2" />
+						<text x="492" y="156" text-anchor="middle" font-family="Space Grotesk, sans-serif"
+							font-size="11" font-weight="700" fill="var(--ink)">Disque</text>
+					</svg>
+				</div>
+
+				<div class="grid-2 reveal">
+					<div class="callout vert-pcb">
+						<span class="callout-title">Les entrées</span>
+						<p>Les données envoyées par un périphérique (disque, réseau, clavier, capteur…) à destination du
+							processeur.</p>
+					</div>
+					<div class="callout rouge-signal">
+						<span class="callout-title">Les sorties</span>
+						<p>Les données émises par le processeur à destination d'un périphérique (disque, réseau,
+							écran…).</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+     PLANCHE VII — VON NEUMANN VS HARVARD
+     ============================================================ -->
+		<section class="plate" id="p7" data-title="Von Neumann / Harvard">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">VII</span> Deux philosophies</div>
+				<h2 class="reveal">Architectures Von Neumann &amp; Harvard</h2>
+				<p class="lede reveal delay-1">Deux façons historiques d'organiser la mémoire d'un ordinateur, nées à un
+					an d'intervalle.</p>
+
+				<div class="ord-tabs reveal" id="archTabs">
+					<button class="ord-tab active" data-tab="vn">Von Neumann</button>
+					<button class="ord-tab" data-tab="harvard">Harvard</button>
+				</div>
+				<div class="ord-panels reveal" id="archPanels"></div>
+
+				<div class="callout cuivre reveal" style="margin-top:32px;">
+					<span class="callout-title">Le goulot d'étranglement de Von Neumann</span>
+					<p>Comme instructions et données empruntent le même bus, elles doivent parfois <b>attendre leur
+							tour</b>&nbsp;: c'est la limite structurelle de ce modèle. L'architecture Harvard, plus
+						rapide mais plus complexe et coûteuse, reste surtout utilisée dans les microcontrôleurs et les
+						processeurs de signal (DSP).</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+     PLANCHE VIII — LE CŒUR DU CPU
+     ============================================================ -->
+		<section class="plate" id="p8" data-title="Le cœur du CPU">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">VIII</span> À l'intérieur du processeur</div>
+				<h2 class="reveal">Le cœur du CPU</h2>
+				<p class="lede reveal delay-1">L'architecture de Von Neumann décompose le processeur en quatre parties
+					distinctes. Clique un bloc du schéma — ou de la légende.</p>
+
+				<div class="pc-wrap reveal">
+					<div class="pc-left">
+						<div class="pc-svg-wrap" id="cpuSvgWrap">
+							<svg class="pc-svg" viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg">
+								<line x1="200" y1="90" x2="200" y2="50" stroke="var(--ink-3)" stroke-width="2" />
+								<line x1="150" y1="130" x2="90" y2="130" stroke="var(--ink-3)" stroke-width="2" />
+								<line x1="250" y1="130" x2="310" y2="130" stroke="var(--ink-3)" stroke-width="2" />
+								<line x1="200" y1="170" x2="200" y2="210" stroke="var(--ink-3)" stroke-width="2" />
+								<g class="pc-part" data-id="controle">
+									<rect x="150" y="10" width="100" height="52" rx="8" fill="var(--paper)"
+										stroke="var(--ink)" stroke-width="2.5" />
+								</g>
+								<g class="pc-part" data-id="ual">
+									<rect x="8" y="104" width="82" height="52" rx="8" fill="var(--paper)"
+										stroke="var(--ink)" stroke-width="2.5" />
+								</g>
+								<g class="pc-part" data-id="memoire">
+									<rect x="310" y="104" width="82" height="52" rx="8" fill="var(--paper)"
+										stroke="var(--ink)" stroke-width="2.5" />
+								</g>
+								<g class="pc-part" data-id="es">
+									<rect x="150" y="198" width="100" height="52" rx="8" fill="var(--paper)"
+										stroke="var(--ink)" stroke-width="2.5" />
+								</g>
+								<text x="200" y="41" text-anchor="middle" font-family="Space Grotesk, sans-serif"
+									font-size="12" font-weight="700" fill="var(--ink)">Unité de contrôle</text>
+								<text x="49" y="134" text-anchor="middle" font-family="Space Grotesk, sans-serif"
+									font-size="11" font-weight="700" fill="var(--ink)">UAL</text>
+								<text x="351" y="134" text-anchor="middle" font-family="Space Grotesk, sans-serif"
+									font-size="11" font-weight="700" fill="var(--ink)">Mémoire</text>
+								<text x="200" y="229" text-anchor="middle" font-family="Space Grotesk, sans-serif"
+									font-size="12" font-weight="700" fill="var(--ink)">Entrées / Sorties</text>
+							</svg>
+						</div>
+						<div class="pc-legend" id="cpuLegend"></div>
+					</div>
+					<div class="pc-detail" id="cpuDetail"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+     PLANCHE IX — LES REGISTRES
+     ============================================================ -->
+		<section class="plate" id="p9" data-title="Les registres">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">IX</span> La mémoire de poche du CPU</div>
+				<h2 class="reveal">Les registres</h2>
+				<p class="lede reveal delay-1">De petites mémoires internes, très rapides et facilement accessibles, qui
+					contiennent des instructions ou des opérandes. Clique une carte pour lire sa définition.</p>
+
+				<div class="lexgrid" id="regGrid"></div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+     PLANCHE X — DU CODE AU SILICIUM
+     ============================================================ -->
+		<section class="plate" id="p10" data-title="Du code au silicium">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">X</span> Des mots aux électrons</div>
+				<h2 class="reveal">Du code au silicium</h2>
+				<p class="lede reveal delay-1">Entre la ligne de code que tu écris et le courant qui circule dans le
+					processeur, plusieurs couches de traduction s'empilent. Clique une couche.</p>
+
+				<div class="pyramid-wrap reveal" id="pyramidWrap"></div>
+				<div class="pyramid-detail reveal" id="pyramidDetail"></div>
+
+				<div class="callout bleu-phos reveal" style="margin-top:28px;">
+					<span class="callout-title">Les pointeurs</span>
+					<p>Un <b>pointeur</b> est une variable qui contient l'adresse d'une autre variable. En C&nbsp;:
+						<code>int* pNombre;</code>. Les tableaux et les chaînes de caractères sont eux-mêmes des
+						pointeurs — on parle d'<b>adressage indirect</b>, qui s'appuie directement sur le bus d'adresse
+						vu en planche IV.
+					</p>
+				</div>
+
+				<div class="callout rouge-signal reveal">
+					<span class="callout-title">Instructions &amp; sauts</span>
+					<p>Un programme n'est qu'une longue séquence d'instructions, exécutées séquentiellement — sauf quand
+						une instruction de <b>saut</b> (conditionnel ou non) transfère l'exécution ailleurs dans le
+						programme.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+     PLANCHE XI — LA COMPILATION
+     ============================================================ -->
+		<section class="plate" id="p11" data-title="La compilation">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">XI</span> De l'humain à la machine</div>
+				<h2 class="reveal">Sept étapes pour compiler un programme</h2>
+				<p class="lede reveal delay-1">Un compilateur traduit du code source, lisible par un humain, en code
+					binaire, exécutable par une machine. En chemin, il traverse sept étapes bien distinctes.</p>
+
+				<div class="ord-accordion" id="compileAccordion"></div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+     PLANCHE XII — LE CACHE CPU
+     ============================================================ -->
+		<section class="plate" id="p12" data-title="Le cache CPU">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">XII</span> Le raccourci de la mémoire</div>
+				<h2 class="reveal">Le cache du processeur</h2>
+				<p class="lede reveal delay-1">La mémoire cache stocke les données les plus fréquemment utilisées, au
+					plus près du processeur, pour éviter des allers-retours coûteux vers la RAM. Elle s'organise en
+					niveaux — clique une couche.</p>
+
+				<div class="cache-wrap reveal">
+					<div class="cache-left">
+						<div class="cache-svg-wrap" id="cacheSvgWrap"></div>
+						<div class="cache-legend" id="cacheLegend"></div>
+					</div>
+					<div class="cache-detail" id="cacheDetail"></div>
+				</div>
+
+				<div class="grid-2 reveal">
+					<div class="callout vert-pcb">
+						<span class="callout-title">Succès et défaut de cache</span>
+						<p>Quand l'information demandée par le processeur s'y trouve déjà, on parle de <b>succès de
+								cache</b>. Sinon, la mémoire cache va la chercher plus loin&nbsp;: c'est un <b>défaut de
+								cache</b>.</p>
+					</div>
+					<div class="callout jaune-led">
+						<span class="callout-title">Deux façons de ranger le cache</span>
+						<p>Le <b>mappage direct</b> divise les données en blocs de mémoire fixes&nbsp;; le <b>mappage
+								associatif</b> laisse les blocs occuper n'importe quel emplacement disponible.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+     PLANCHE XIII — SYSTÈME D'EXPLOITATION
+     ============================================================ -->
+		<section class="plate" id="p13" data-title="Système d'exploitation">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">XIII</span> Le grand chef d'orchestre</div>
+				<h2 class="reveal">Le système d'exploitation</h2>
+				<p class="lede reveal delay-1">L'ensemble des programmes qui pilotent les composants de la machine
+					(disque dur, écran, processeur, mémoire…) et font l'interface entre l'utilisateur et le matériel.
+					C'est le tout premier programme chargé au démarrage.</p>
+
+				<div class="ord-tabs reveal" id="osTabs">
+					<button class="ord-tab active" data-tab="noyau">Le noyau</button>
+					<button class="ord-tab" data-tab="pilotes">Les pilotes</button>
+				</div>
+				<div class="ord-panels reveal" id="osPanels"></div>
+
+				<h3 class="reveal" style="margin-top:56px; font-size:1.3rem;">Pour aller plus loin</h3>
+				<div class="reslist reveal">
+					<a class="rescard" href="https://ocw.mit.edu" target="_blank" rel="noopener"><span class="rt">MIT
+							OpenCourseWare</span><span class="rd">Cours de référence, en accès libre, sur l'architecture
+							des ordinateurs.</span></a>
+					<a class="rescard" href="https://www.ssi.gouv.fr" target="_blank" rel="noopener"><span
+							class="rt">ANSSI</span><span class="rd">L'agence nationale française de la sécurité des
+							systèmes d'information.</span></a>
+					<a class="rescard" href="https://interstices.info" target="_blank" rel="noopener"><span
+							class="rt">Interstices (CNRS / Inria)</span><span class="rd">Médiation scientifique en
+							informatique, en français.</span></a>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer>
+		<div class="fmark">✻</div>
+		Bonne exploration des entrailles de la machine — <a href="../hub_index.html">retour à l'Almanach</a>
+	</footer>
+
+</body>
+
+</html>
