@@ -1,0 +1,519 @@
+/* ============================================================
+   ALMANACH — HYDROLOGIE
+   Même charte typographique que le hub, palette dédiée au thème
+   (bleus profonds, turquoise, sable, corail — le monde de l'eau).
+   ============================================================ */
+
+:root {
+	--ink: #16232b;
+	--ink-2: #1d2f38;
+	--ink-3: #35505c;
+	--paper: #eef3f0;
+	--paper-2: #e2ece7;
+	--paper-3: #c9dad3;
+
+	/* accents génériques du thème */
+	--deep: #1c5f7a;
+	--deep-lt: #4a8fa8;
+	--teal: #2f9e8f;
+	--teal-lt: #6ec4b8;
+	--reed: #5f7f52;
+	--reed-lt: #8fae7e;
+	--sand: #c9a15f;
+	--sand-lt: #e0c491;
+	--coral: #c8654a;
+	--coral-lt: #e0917a;
+	--foam: #a8d8d0;
+
+	/* coupe de sol / nappe */
+	--l-eau: #2f9e8f;
+	--l-sol: #a9835a;
+	--l-roche: #6b6558;
+	--l-nappe: #4a8fa8;
+
+	--serif-display: "Fraunces", serif;
+	--serif-body: "Newsreader", serif;
+	--sans-ui: "Space Grotesk", sans-serif;
+
+	--container: 880px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+html, body { margin: 0; padding: 0; }
+
+body {
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--serif-body);
+	font-size: 18px;
+	line-height: 1.6;
+	overflow-x: hidden;
+}
+
+::selection { background: var(--foam); color: var(--ink); }
+
+a { color: var(--deep); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+a:hover { color: var(--coral); }
+
+img, svg { display: block; max-width: 100%; }
+
+.container { max-width: var(--container); margin: 0 auto; padding: 0 28px; }
+
+h1, h2, h3, h4 {
+	font-family: var(--serif-display);
+	font-weight: 600;
+	color: var(--ink);
+	letter-spacing: -0.01em;
+	margin: 0;
+}
+
+.eyebrow {
+	font-family: var(--sans-ui);
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--deep);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 14px;
+}
+
+.eyebrow .num {
+	font-family: var(--serif-display);
+	font-style: italic;
+	font-size: 22px;
+	font-weight: 500;
+	color: var(--teal);
+	letter-spacing: 0;
+}
+
+.eyebrow::after {
+	content: "";
+	flex: 1;
+	height: 1px;
+	background: linear-gradient(to right, var(--deep), transparent);
+}
+
+p { margin: 0 0 1em 0; }
+.lede { font-size: 1.15em; color: var(--ink-3); }
+
+:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+
+button { font-family: var(--sans-ui); cursor: pointer; border: none; background: none; }
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+.theme-return {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 1000;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 10px 14px;
+	border: 2px solid var(--ink);
+	border-radius: 999px;
+	background: rgba(238, 243, 240, 0.94);
+	color: var(--ink);
+	font-family: var(--sans-ui);
+	font-size: 13px;
+	font-weight: 700;
+	text-decoration: none;
+	box-shadow: 4px 4px 0 rgba(22, 35, 43, 0.12);
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.theme-return:hover {
+	transform: translateY(-2px);
+	box-shadow: 6px 6px 0 rgba(22, 35, 43, 0.16);
+	background: var(--paper-2);
+	color: var(--ink);
+}
+
+/* ============================================================
+   SIDE DOT NAV
+   ============================================================ */
+.dotnav {
+	position: fixed;
+	right: 22px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 500;
+	display: flex;
+	flex-direction: column;
+	gap: 11px;
+}
+
+.dotnav a {
+	position: relative;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: var(--paper-3);
+	border: 1.5px solid var(--deep);
+	transition: all 0.25s ease;
+}
+
+.dotnav a:hover { background: var(--deep-lt); }
+
+.dotnav a.active {
+	background: var(--deep);
+	transform: scale(1.35);
+}
+
+.dotnav a .tip {
+	position: absolute;
+	right: 22px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: var(--ink);
+	color: var(--paper);
+	font-family: var(--sans-ui);
+	font-size: 12px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	white-space: nowrap;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.2s ease;
+}
+
+.dotnav a:hover .tip { opacity: 1; }
+
+@media (max-width: 900px) { .dotnav { display: none; } }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+	position: relative;
+	min-height: 100vh;
+	background: radial-gradient(ellipse at 30% 20%, var(--ink-2), var(--ink) 65%);
+	color: var(--paper);
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.hero-grain {
+	position: absolute;
+	inset: 0;
+	background-image: radial-gradient(var(--paper) 0.6px, transparent 0.6px);
+	background-size: 3px 3px;
+	opacity: 0.045;
+	pointer-events: none;
+}
+
+.hero-inner {
+	position: relative;
+	z-index: 2;
+	max-width: var(--container);
+	margin: 0 auto;
+	padding: 140px 28px 120px;
+	width: 100%;
+}
+
+.hero .eyebrow { color: var(--foam); }
+.hero .eyebrow::after { background: linear-gradient(to right, var(--foam), transparent); }
+
+.hero h1 {
+	font-size: clamp(2.6rem, 7vw, 5.2rem);
+	color: var(--paper);
+	line-height: 0.98;
+	margin-bottom: 22px;
+}
+
+.hero h1 em { font-style: italic; font-weight: 500; color: var(--teal-lt); }
+
+.hero .sub {
+	font-size: 1.25rem;
+	max-width: 46ch;
+	color: var(--paper-3);
+	font-style: italic;
+}
+
+.hero-drop {
+	position: absolute;
+	right: -2%;
+	top: 50%;
+	transform: translateY(-50%);
+	width: min(38vw, 480px);
+	opacity: 0.95;
+}
+
+.hero-drop .outline {
+	fill: none;
+	stroke: var(--teal-lt);
+	stroke-width: 2.5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.hero-drop .fill { fill: var(--deep); opacity: 0.55; }
+.hero-drop .ripple { fill: none; stroke: var(--foam); stroke-width: 1.5; }
+.hero-drop .shine { fill: var(--paper); opacity: 0.5; }
+
+.scrollcue {
+	position: absolute;
+	bottom: 34px;
+	left: 28px;
+	font-family: var(--sans-ui);
+	font-size: 12px;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--paper-3);
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.scrollcue::before {
+	content: "";
+	width: 22px;
+	height: 1px;
+	background: var(--paper-3);
+	animation: pulseline 1.8s ease-in-out infinite;
+}
+
+@keyframes pulseline {
+	0%, 100% { width: 22px; opacity: 0.5; }
+	50% { width: 38px; opacity: 1; }
+}
+
+/* ============================================================
+   PLATE STRUCTURE
+   ============================================================ */
+main { background: var(--paper); position: relative; }
+
+.plate {
+	padding: 108px 0 92px;
+	border-bottom: 1px solid var(--paper-3);
+}
+
+.plate:nth-of-type(odd) { background: var(--paper-2); }
+
+.plate h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); margin-bottom: 22px; }
+.plate .lede { margin-bottom: 44px; }
+
+.reveal {
+	opacity: 0;
+	transform: translateY(26px);
+	transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.3, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+.reveal.in { opacity: 1; transform: translateY(0); }
+.reveal.delay-1 { transition-delay: 0.08s; }
+.reveal.delay-2 { transition-delay: 0.16s; }
+
+/* ============================================================
+   CALLOUTS
+   ============================================================ */
+.callout {
+	border: 1.5px solid var(--ink);
+	border-radius: 14px;
+	padding: 24px 26px;
+	background: var(--paper);
+	box-shadow: 5px 5px 0 rgba(22, 35, 43, 0.08);
+	margin: 28px 0;
+}
+
+.callout.teal { border-color: var(--teal); background: #e3f2ef; }
+.callout.teal .callout-title { color: var(--teal); }
+
+.callout.deep { border-color: var(--deep); background: #e2edf1; }
+.callout.deep .callout-title { color: var(--deep); }
+
+.callout.sand { border-color: var(--sand); background: #f7efdd; }
+.callout.sand .callout-title { color: var(--sand); }
+
+.callout.reed { border-color: var(--reed); background: #ecf1e6; }
+.callout.reed .callout-title { color: var(--reed); }
+
+.callout.coral { border-color: var(--coral); background: #f8e9e4; }
+.callout.coral .callout-title { color: var(--coral); }
+
+.callout-title {
+	font-family: var(--sans-ui);
+	font-weight: 700;
+	font-size: 13px;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	display: block;
+}
+
+.callout p:last-child { margin-bottom: 0; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 720px) { .grid-2 { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   PATTERN — ACCORDÉON (séquences, classements)
+   ============================================================ */
+.accordion { display: flex; flex-direction: column; border: 2.5px solid var(--ink); border-radius: 14px; overflow: hidden; }
+.acc-row { padding: 14px 20px; cursor: pointer; border-top: 1.5px solid rgba(22, 35, 43, 0.15); transition: padding 0.25s ease, filter 0.2s ease; background: var(--paper); }
+.acc-row:first-child { border-top: none; }
+.acc-row:hover { filter: brightness(1.05); }
+.acc-head { display: flex; justify-content: space-between; align-items: center; gap: 14px; font-family: var(--sans-ui); font-weight: 700; font-size: 14px; color: var(--ink); }
+.acc-head .sw { width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; border: 1.5px solid var(--ink); display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--paper); }
+.acc-sub { font-family: var(--sans-ui); font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+.acc-body { overflow: hidden; max-height: 0; transition: max-height 0.3s ease, margin-top 0.3s ease; font-size: 14.5px; color: var(--ink-3); }
+.acc-row.active .acc-body { margin-top: 10px; }
+
+/* ============================================================
+   PATTERN — ONGLETS avec mini-diagrammes
+   ============================================================ */
+.tabgroup { display: flex; gap: 10px; justify-content: center; margin-bottom: 26px; flex-wrap: wrap; }
+.tabgroup button { font-family: var(--sans-ui); font-weight: 600; font-size: 13.5px; padding: 10px 18px; border-radius: 30px; border: 2px solid var(--ink); color: var(--ink); background: var(--paper); transition: all 0.2s ease; }
+.tabgroup button.active { background: var(--ink); color: var(--paper); }
+.tab-panels { position: relative; min-height: 320px; }
+.tab-panel { display: none; grid-template-columns: 1fr 1.1fr; gap: 30px; align-items: center; }
+.tab-panel.active { display: grid; }
+@media (max-width: 720px) { .tab-panel.active { grid-template-columns: 1fr; } }
+.tab-svg-wrap { border: 2px solid var(--ink); border-radius: 16px; padding: 20px; background: var(--ink); }
+.tab-badge { display: inline-flex; align-items: center; gap: 8px; font-family: var(--sans-ui); font-weight: 700; font-size: 14px; padding: 6px 14px; border-radius: 20px; margin-bottom: 14px; }
+.tab-badge.a { background: #e3f2ef; color: var(--teal); }
+.tab-badge.b { background: #e2edf1; color: var(--deep); }
+.tab-badge.c { background: #f7efdd; color: var(--sand); }
+.tab-badge.d { background: #f8e9e4; color: var(--coral); }
+
+/* ============================================================
+   PATTERN — FLIP CARDS (glossaire)
+   ============================================================ */
+.lexgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 36px 0; }
+@media (max-width: 600px) { .lexgrid { grid-template-columns: repeat(2, 1fr); } }
+
+.lexcard { perspective: 1000px; height: 140px; }
+.lexcard-inner { position: relative; width: 100%; height: 100%; transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.3, 1); transform-style: preserve-3d; }
+.lexcard.flipped .lexcard-inner { transform: rotateY(180deg); }
+.lexface { position: absolute; inset: 0; backface-visibility: hidden; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 12px; cursor: pointer; border: 2px solid var(--ink); }
+.lexfront { background: var(--paper); font-family: var(--serif-display); font-weight: 600; font-size: 15px; }
+.lexfront .lexicon { font-size: 26px; margin-bottom: 4px; }
+.lexback { background: var(--deep); color: var(--paper); transform: rotateY(180deg); font-size: 12.5px; }
+
+/* ============================================================
+   RESSOURCES / FOOTER
+   ============================================================ */
+.reslist { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 30px; }
+.rescard { border: 1.5px solid var(--paper-3); border-radius: 12px; padding: 18px 20px; background: var(--paper); transition: border-color 0.2s ease, transform 0.2s ease; }
+.rescard:hover { border-color: var(--deep); transform: translateY(-3px); }
+.rescard .rt { font-family: var(--serif-display); font-weight: 600; font-style: italic; font-size: 17px; display: block; margin-bottom: 4px; }
+.rescard .rd { font-size: 13.5px; color: var(--ink-3); }
+
+footer { background: var(--ink); color: var(--paper-3); text-align: center; padding: 60px 28px 40px; font-family: var(--sans-ui); font-size: 13px; }
+footer .fmark { font-family: var(--serif-display); font-style: italic; font-size: 22px; color: var(--paper); margin-bottom: 10px; }
+footer a { color: var(--paper-3); }
+
+/* ============================================================
+   PLANCHE I — RÉPARTITION DE L'EAU (barre proportionnelle)
+   ============================================================ */
+.waterbar-wrap { margin: 36px 0 12px; }
+.waterbar { display: flex; width: 100%; height: 52px; border-radius: 10px; overflow: hidden; border: 2.5px solid var(--ink); box-shadow: 5px 5px 0 rgba(22, 35, 43, 0.1); }
+.waterbar .seg { height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--sans-ui); font-weight: 700; font-size: 12px; color: var(--paper); overflow: hidden; white-space: nowrap; }
+.waterbar-legend { display: flex; flex-wrap: wrap; gap: 16px 26px; margin-top: 16px; font-family: var(--sans-ui); font-size: 13px; color: var(--ink-3); }
+.waterbar-legend .li { display: flex; align-items: center; gap: 8px; }
+.waterbar-legend .sw { width: 13px; height: 13px; border-radius: 4px; flex-shrink: 0; border: 1.5px solid var(--ink); }
+
+/* ============================================================
+   PLANCHE II — LE CYCLE DE L'EAU (schéma cliquable)
+   ============================================================ */
+.cyclewrap { display: flex; gap: 40px; align-items: center; justify-content: center; margin: 40px 0; flex-wrap: wrap; }
+.cycle-svg { width: min(360px, 90vw); }
+.cycle-svg .zone { cursor: pointer; transition: filter 0.2s ease; }
+.cycle-svg .zone:hover { filter: brightness(1.15); }
+.cycle-svg .zone.selected circle,
+.cycle-svg .zone.selected path.hit { stroke: var(--ink); stroke-width: 3; }
+.cycle-svg text { font-family: var(--sans-ui); font-size: 10.5px; fill: var(--ink); text-anchor: middle; }
+
+.cycle-legend { display: flex; flex-direction: column; gap: 8px; min-width: 210px; }
+.cycle-legend-item { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 10px; cursor: pointer; border: 1.5px solid transparent; transition: all 0.2s ease; }
+.cycle-legend-item:hover { background: var(--paper-3); }
+.cycle-legend-item.active { border-color: var(--ink); background: var(--paper-3); }
+.cycle-legend-item .sw { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; border: 1.5px solid var(--ink); }
+.cycle-legend-item .nm { font-family: var(--sans-ui); font-weight: 600; font-size: 13.5px; }
+
+.cycle-detail {
+	flex: 1;
+	min-width: 260px;
+	border: 2.5px solid var(--ink);
+	border-radius: 18px;
+	padding: 24px 28px;
+	background: var(--paper);
+	box-shadow: 6px 6px 0 rgba(22, 35, 43, 0.1);
+	min-height: 170px;
+}
+.cycle-detail .nm { font-family: var(--serif-display); font-style: italic; font-weight: 600; font-size: 1.4rem; margin-bottom: 10px; }
+.cycle-detail p { color: var(--ink-3); font-size: 15px; margin-bottom: 0; }
+
+/* ============================================================
+   PLANCHE III — BASSIN VERSANT (schéma statique annoté)
+   ============================================================ */
+.basinwrap { border: 2.5px solid var(--ink); border-radius: 18px; background: var(--paper); padding: 24px; margin: 36px 0; box-shadow: 6px 6px 0 rgba(22, 35, 43, 0.1); }
+.basinwrap svg { width: 100%; height: auto; }
+.basin-label { font-family: var(--sans-ui); font-size: 12px; fill: var(--ink); }
+.basin-label.sm { font-size: 10.5px; fill: var(--ink-3); }
+
+/* ============================================================
+   PLANCHE IV / V — mini-SVG onglets partagent .tab-svg-wrap
+   ============================================================ */
+.rivsvg, .regimesvg { width: 100%; height: auto; }
+
+/* ============================================================
+   PLANCHE VI — LACS (endoréique/exoréique + cartes exemples)
+   ============================================================ */
+.lakewrap { display: flex; gap: 40px; align-items: center; justify-content: center; margin: 36px 0; flex-wrap: wrap; }
+.lake-svg { width: min(300px, 85vw); }
+.lakecards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 12px; }
+@media (max-width: 700px) { .lakecards { grid-template-columns: repeat(2, 1fr); } }
+.lakecard { border: 2px solid var(--ink); border-radius: 14px; padding: 16px 14px; background: var(--paper); text-align: center; box-shadow: 4px 4px 0 rgba(22, 35, 43, 0.08); }
+.lakecard .lc-icon { font-size: 26px; margin-bottom: 8px; }
+.lakecard .lc-nm { font-family: var(--sans-ui); font-weight: 700; font-size: 13px; margin-bottom: 6px; }
+.lakecard .lc-d { font-size: 12.5px; color: var(--ink-3); }
+
+/* ============================================================
+   PLANCHE VIII — AQUIFÈRES (coupes juxtaposées)
+   ============================================================ */
+.aquiferwrap { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; margin: 36px 0; }
+@media (max-width: 720px) { .aquiferwrap { grid-template-columns: 1fr; } }
+.aquifer-card { border: 2.5px solid var(--ink); border-radius: 16px; padding: 18px; background: var(--paper); box-shadow: 5px 5px 0 rgba(22, 35, 43, 0.08); }
+.aquifer-card svg { width: 100%; height: auto; }
+.aquifer-card h4 { font-family: var(--sans-ui); font-size: 14px; text-transform: uppercase; letter-spacing: 0.06em; margin: 12px 0 6px; color: var(--deep); }
+.aquifer-card p { font-size: 14.5px; color: var(--ink-3); margin: 0; }
+
+/* ============================================================
+   PLANCHE IX — INTERACTION SURFACE/SOUTERRAIN
+   ============================================================ */
+.interactwrap { border: 2.5px solid var(--ink); border-radius: 18px; padding: 20px; background: var(--paper); box-shadow: 6px 6px 0 rgba(22, 35, 43, 0.1); margin: 36px 0; }
+.interactwrap svg { width: 100%; height: auto; }
+
+/* ============================================================
+   PLANCHE X — PAYSAGES DE L'EAU (grand diagramme cliquable)
+   ============================================================ */
+.landform-wrap { border: 2.5px solid var(--ink); border-radius: 18px; background: #cfe8f0; padding: 14px; margin: 36px 0 20px; box-shadow: 6px 6px 0 rgba(22, 35, 43, 0.12); overflow: hidden; }
+.landform-wrap svg { width: 100%; height: auto; display: block; }
+.landform-wrap .zone { cursor: pointer; transition: filter 0.15s ease; }
+.landform-wrap .zone:hover .lf-hit { filter: brightness(1.12); }
+.landform-wrap .zone.selected .lf-hit { stroke: var(--ink); stroke-width: 2.5; }
+.landform-wrap .lf-label { font-family: var(--sans-ui); font-weight: 600; font-size: 9.5px; fill: var(--ink); text-anchor: middle; pointer-events: none; }
+
+.landform-detail {
+	border: 2.5px solid var(--ink);
+	border-radius: 18px;
+	padding: 22px 26px;
+	background: var(--paper);
+	box-shadow: 6px 6px 0 rgba(22, 35, 43, 0.1);
+	min-height: 110px;
+}
+.landform-detail .nm { font-family: var(--serif-display); font-style: italic; font-weight: 600; font-size: 1.3rem; margin-bottom: 8px; }
+.landform-detail p { color: var(--ink-3); font-size: 14.5px; margin-bottom: 0; }
+.landform-hint { text-align: center; font-family: var(--sans-ui); font-size: 12px; color: var(--ink-3); margin: 10px 0 0; }

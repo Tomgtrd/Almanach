@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>L'hydrologie — Almanach — planches illustrées</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="hyd_style.css">
+	<script src="hyd_script.js" defer></script>
+</head>
+
+<body>
+
+	<a class="theme-return" href="../hub_index.html">← Retour au menu</a>
+
+	<nav class="dotnav" id="dotnav"></nav>
+
+	<header class="hero" id="hero">
+		<div class="hero-grain"></div>
+		<div class="hero-inner">
+			<div class="eyebrow">Fiche illustrée &amp; interactive</div>
+			<h1>L'hydrologie<br><em>pour les nuls</em></h1>
+			<p class="sub">Treize planches pour comprendre, une bonne fois pour toutes, comment l'eau circule sur
+				Terre — de la molécule jusqu'à l'océan.</p>
+		</div>
+		<svg class="hero-drop" id="heroDrop" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+			<path class="fill" id="dropFill"
+				d="M200,60 C240,140 300,200 300,265 C300,325 255,360 200,360 C145,360 100,325 100,265 C100,200 160,140 200,60 Z" />
+			<path class="outline" id="dropOutline"
+				d="M200,60 C240,140 300,200 300,265 C300,325 255,360 200,360 C145,360 100,325 100,265 C100,200 160,140 200,60 Z" />
+			<ellipse class="shine" cx="168" cy="220" rx="16" ry="28" />
+			<circle class="ripple" id="ripple1" cx="200" cy="265" r="20" />
+			<circle class="ripple" id="ripple2" cx="200" cy="265" r="20" />
+			<circle class="ripple" id="ripple3" cx="200" cy="265" r="20" />
+		</svg>
+		<div class="scrollcue">Faire défiler</div>
+	</header>
+
+	<main>
+
+		<!-- ============================================================
+		 PLANCHE I — INTRODUCTION
+		 ============================================================ -->
+		<section class="plate" id="p1" data-title="Introduction">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">I</span> Introduction</div>
+				<h2 class="reveal">Une planète bleue, une eau presque introuvable</h2>
+				<p class="lede reveal delay-1">L'hydrologie étudie l'eau sur Terre&nbsp;: où elle se trouve, comment
+					elle circule, et comment elle façonne les paysages qu'elle traverse.</p>
+
+				<div class="callout deep reveal">
+					<span class="callout-title">Définition</span>
+					<p>L'<b>hydrologie</b> est la science qui étudie la répartition, la circulation et les propriétés
+						de l'eau à la surface et sous la surface de la Terre.</p>
+				</div>
+
+				<div class="waterbar-wrap reveal delay-1">
+					<div class="waterbar" id="waterbar"></div>
+					<div class="waterbar-legend" id="waterbarLegend"></div>
+				</div>
+
+				<div class="callout coral reveal" style="margin-top:28px;">
+					<span class="callout-title">Le chiffre qui donne le vertige</span>
+					<p>Sur toute l'eau de la planète, à peine <b>2,5&nbsp;%</b> est de l'eau douce — et les deux
+						tiers sont enfermés dans les glaciers et calottes polaires. Ce qui reste, rivières, lacs et
+						nappes accessibles, représente <b>moins de 1&nbsp;%</b> de l'eau totale de la Terre.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		 PLANCHE II — LE CYCLE DE L'EAU
+		 ============================================================ -->
+		<section class="plate" id="p2" data-title="Cycle de l'eau">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">II</span> Un mouvement perpétuel</div>
+				<h2 class="reveal">Le cycle de l'eau</h2>
+				<p class="lede reveal delay-1">La même eau circule en boucle depuis des milliards d'années. Clique une
+					étape du schéma pour en savoir plus.</p>
+
+				<div class="cyclewrap reveal">
+					<div id="cycleSvgWrap"></div>
+					<div class="cycle-legend" id="cycleLegend"></div>
+					<div class="cycle-detail" id="cycleDetail">Clique une étape du cycle ci-contre.</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		 PLANCHE III — LE BASSIN VERSANT
+		 ============================================================ -->
+		<section class="plate" id="p3" data-title="Bassin versant">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">III</span> La logique de collecte</div>
+				<h2 class="reveal">Le bassin versant</h2>
+				<p class="lede reveal delay-1">Toute goutte de pluie tombée sur un même territoire finit par converger
+					vers le même exutoire — rivière, lac ou mer.</p>
+
+				<div class="basinwrap reveal" id="basinWrap"></div>
+
+				<div class="callout teal reveal">
+					<span class="callout-title">Ligne de partage des eaux</span>
+					<p>C'est la frontière naturelle, souvent une crête, qui sépare deux bassins versants voisins&nbsp;:
+						d'un côté l'eau part vers un cours d'eau, de l'autre vers un cours d'eau différent.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		 PLANCHE IV — RIVIÈRES ET COURS D'EAU
+		 ============================================================ -->
+		<section class="plate" id="p4" data-title="Rivières">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">IV</span> Du torrent au fleuve calme</div>
+				<h2 class="reveal">Rivières et cours d'eau</h2>
+				<p class="lede reveal delay-1">Un même cours d'eau change complètement de visage entre sa source et
+					son embouchure.</p>
+
+				<div class="tabgroup reveal" id="rivTabs"></div>
+				<div class="tab-panels reveal" id="rivPanels"></div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		 PLANCHE V — DÉBIT ET RÉGIMES HYDROLOGIQUES
+		 ============================================================ -->
+		<section class="plate" id="p5" data-title="Débit et régimes">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">V</span> Mesurer un cours d'eau</div>
+				<h2 class="reveal">Débit et régimes hydrologiques</h2>
+				<p class="lede reveal delay-1">Le débit mesure le volume d'eau qui passe en un point donné, chaque
+					seconde.</p>
+
+				<div class="callout sand reveal">
+					<span class="callout-title">La formule à retenir</span>
+					<div style="display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-top:6px;">
+						<svg width="230" height="100" viewBox="0 0 230 100" xmlns="http://www.w3.org/2000/svg">
+							<path d="M10,20 L10,80 L60,80 L60,20" fill="none" stroke="var(--ink)" stroke-width="2" />
+							<rect x="10" y="20" width="50" height="60" fill="var(--l-eau)" opacity="0.4" />
+							<text x="35" y="95" text-anchor="middle" font-family="Space Grotesk" font-size="10.5" fill="var(--ink-3)">section</text>
+							<path d="M75,50 L150,50" stroke="var(--ink)" stroke-width="2.5" marker-end="url(#arr5)" />
+							<text x="112" y="42" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="11" fill="var(--ink)">courant</text>
+							<text x="190" y="45" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="13" fill="var(--deep)">Q</text>
+							<text x="190" y="60" text-anchor="middle" font-family="Space Grotesk" font-size="10" fill="var(--ink-3)">débit</text>
+							<defs>
+								<marker id="arr5" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+									<path d="M0,0 L9,4.5 L0,9 Z" fill="var(--ink)" />
+								</marker>
+							</defs>
+						</svg>
+						<p style="margin:0;"><b>Q = V / t</b> — le débit (Q, en m³/s) est le volume d'eau (V) qui
+							traverse une section de la rivière par unité de temps (t). Plus la section est large et le
+							courant rapide, plus le débit est élevé.</p>
+					</div>
+				</div>
+
+				<p class="lede" style="margin-top:36px;">Le débit varie aussi au fil de l'année, selon la source de
+					l'eau qui alimente le cours d'eau — c'est ce qu'on appelle son <b>régime</b>.</p>
+
+				<div class="tabgroup reveal" id="regimeTabs"></div>
+				<div class="tab-panels reveal" id="regimePanels"></div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		 PLANCHE VI — LACS ET PLANS D'EAU
+		 ============================================================ -->
+		<section class="plate" id="p6" data-title="Lacs">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">VI</span> Des réservoirs immobiles</div>
+				<h2 class="reveal">Lacs et plans d'eau</h2>
+				<p class="lede reveal delay-1">Tous les lacs ne se ressemblent pas&nbsp;: certains se déversent vers
+					la mer, d'autres n'ont aucune issue.</p>
+
+				<div class="lakewrap reveal">
+					<div id="lakeSvgWrap"></div>
+				</div>
+
+				<p class="lede" style="margin-top:8px;">Quatre lacs, quatre records&nbsp;:</p>
+				<div class="lakecards reveal" id="lakeCards"></div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		 PLANCHE VII — ZONES HUMIDES
+		 ============================================================ -->
+		<section class="plate" id="p7" data-title="Zones humides">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">VII</span> Les éponges du paysage</div>
+				<h2 class="reveal">Zones humides</h2>
+				<p class="lede reveal delay-1">Marais, tourbières, mangroves&nbsp;: des milieux à mi-chemin entre la
+					terre et l'eau, essentiels et pourtant parmi les plus menacés. Clique une carte.</p>
+
+				<div class="lexgrid reveal" id="wetlandGrid" style="grid-template-columns: repeat(3, 1fr);"></div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		 PLANCHE VIII — EAUX SOUTERRAINES / AQUIFÈRES
+		 ============================================================ -->
+		<section class="plate" id="p8" data-title="Aquifères">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">VIII</span> Ce qu'on ne voit pas</div>
+				<h2 class="reveal">Eaux souterraines et aquifères</h2>
+				<p class="lede reveal delay-1">Sous nos pieds, l'eau de pluie infiltrée s'accumule dans les roches
+					poreuses ou fissurées&nbsp;: c'est la nappe.</p>
+
+				<div class="aquiferwrap reveal" id="aquiferWrap"></div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		 PLANCHE IX — INTERACTION SURFACE / SOUTERRAIN
+		 ============================================================ -->
+		<section class="plate" id="p9" data-title="Surface & souterrain">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">IX</span> Le lien oublié</div>
+				<h2 class="reveal">Rivières et nappes&nbsp;: qui alimente qui&nbsp;?</h2>
+				<p class="lede reveal delay-1">Une rivière n'est pas toujours au-dessus de la nappe sans lien avec
+					elle&nbsp;: selon les endroits, l'échange peut se faire dans un sens ou dans l'autre.</p>
+
+				<div class="interactwrap reveal" id="interactWrap"></div>
+
+				<div class="grid-2 reveal">
+					<div class="callout deep">
+						<span class="callout-title">Rivière influente</span>
+						<p>La rivière perd de l'eau vers la nappe&nbsp;: son niveau est plus haut que la nappe, l'eau
+							s'infiltre à travers le lit. Fréquent en climat sec ou sur sols très perméables.</p>
+					</div>
+					<div class="callout teal">
+						<span class="callout-title">Rivière effluente</span>
+						<p>C'est l'inverse&nbsp;: la nappe alimente la rivière. C'est ce qui permet à de nombreux
+							cours d'eau de continuer à couler même après plusieurs semaines sans pluie.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		 PLANCHE X — PAYSAGES DE L'EAU (grand diagramme cliquable)
+		 ============================================================ -->
+		<section class="plate" id="p10" data-title="Paysages de l'eau">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">X</span> Tout le vocabulaire, en un coup d'œil</div>
+				<h2 class="reveal">Les paysages façonnés par l'eau</h2>
+				<p class="lede reveal delay-1">De la source en montagne jusqu'à la mer, un même parcours traverse une
+					dizaine de reliefs bien distincts. Clique une zone du schéma.</p>
+
+				<div class="landform-wrap reveal" id="landformWrap"></div>
+				<div class="landform-detail reveal" id="landformDetail">Clique une zone du paysage ci-dessus pour en
+					lire la définition.</div>
+				<p class="landform-hint reveal">Schéma non à l'échelle — un même bassin versant réel s'étend en
+					général sur plusieurs dizaines à plusieurs centaines de kilomètres.</p>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		 PLANCHE XI — QUALITÉ DE L'EAU ET POLLUTION
+		 ============================================================ -->
+		<section class="plate" id="p11" data-title="Qualité de l'eau">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">XI</span> Une ressource fragile</div>
+				<h2 class="reveal">Qualité de l'eau et pollution</h2>
+				<p class="lede reveal delay-1">Le vocabulaire de base pour comprendre ce qui menace la qualité de
+					l'eau. Clique une carte pour lire la définition.</p>
+
+				<div class="lexgrid reveal" id="pollutionGrid"></div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		 PLANCHE XII — GESTION ET ENJEUX
+		 ============================================================ -->
+		<section class="plate" id="p12" data-title="Gestion et enjeux">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">XII</span> Une ressource sous pression</div>
+				<h2 class="reveal">Gestion et enjeux de l'eau</h2>
+				<p class="lede reveal delay-1">L'eau douce accessible est limitée — et pas toujours là où on en a le
+					plus besoin.</p>
+
+				<div class="accordion reveal" id="stakesAccordion"></div>
+			</div>
+		</section>
+
+		<!-- ============================================================
+		 PLANCHE XIII — LEXIQUE + RESSOURCES
+		 ============================================================ -->
+		<section class="plate" id="p13" data-title="Lexique & ressources">
+			<div class="container">
+				<div class="eyebrow reveal"><span class="num">XIII</span> Lexique express</div>
+				<h2 class="reveal">Le vocabulaire essentiel</h2>
+				<p class="lede reveal delay-1">Clique une carte pour lire la définition.</p>
+				<div class="lexgrid reveal" id="lexgrid"></div>
+
+				<h2 class="reveal" style="margin-top:56px;">Pour aller plus loin</h2>
+				<div class="reslist reveal" id="resList"></div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer>
+		<div class="fmark">✻</div>
+		Bonne exploration du courant — <a href="../hub_index.html">retour à l'Almanach</a>
+	</footer>
+
+</body>
+
+</html>
