@@ -88,6 +88,23 @@ a {
 	font-family: var(--font-ui);
 }
 
+.mcu-topbar__almanach {
+	font-family: var(--font-ui);
+	font-size: 12px;
+	letter-spacing: 0.02em;
+	color: var(--ink-faint);
+	text-decoration: none;
+	white-space: nowrap;
+	padding-right: 14px;
+	margin-right: 6px;
+	border-right: 1px solid var(--hairline);
+	transition: color 0.2s ease;
+}
+
+.mcu-topbar__almanach:hover {
+	color: var(--mcu-red);
+}
+
 .mcu-topbar__home {
 	font-weight: 600;
 	font-size: 13px;
