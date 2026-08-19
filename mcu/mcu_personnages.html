@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>MCU — Les personnages | Almanach</title>
-	<link rel="stylesheet" href="mcu_style.css">
+	<link rel="stylesheet" href="mcu_style.css" />
 	<style>
 		.groups-section {
 			max-width: 880px;
@@ -42,8 +42,11 @@
 			padding: 26px 26px 24px;
 			opacity: 0;
 			transform: translateY(16px);
-			transition: opacity 0.6s ease, transform 0.6s ease,
-				border-color 0.25s ease, box-shadow 0.25s ease;
+			transition:
+				opacity 0.6s ease,
+				transform 0.6s ease,
+				border-color 0.25s ease,
+				box-shadow 0.25s ease;
 		}
 
 		.group-card.in {
@@ -91,7 +94,6 @@
 </head>
 
 <body>
-
 	<nav class="mcu-topbar">
 		<a class="mcu-topbar__almanach" href="../hub_index.html">← Almanach</a>
 		<a class="mcu-topbar__home" href="mcu_hub.html">MCU</a>
@@ -117,20 +119,18 @@
 			regroupées par famille narrative plutôt que par ordre alphabétique.
 		</p>
 
-		<div class="encart" style="margin-top:40px;">
-			<strong>Comment lire ces fiches.</strong> Chaque groupe ci-dessous
-			ouvre sur une sous-page dédiée, où chaque personnage se dévoile au
-			clic : origine des pouvoirs, famille, ennemis, relations clés. Les
-			équipes (Gardiens, Fantastic Four) s'ouvrent d'abord sur une
-			présentation collective, avant de se déplier membre par membre.
+		<div class="encart" style="margin-top: 40px">
+			<strong>Comment lire ces fiches.</strong> Chaque groupe ci-dessous ouvre
+			sur une sous-page dédiée, où chaque personnage se dévoile au clic :
+			origine des pouvoirs, famille, ennemis, relations clés. Les équipes
+			(Gardiens, Fantastic Four) s'ouvrent d'abord sur une présentation
+			collective, avant de se déplier membre par membre.
 		</div>
 	</header>
 
 	<main class="groups-section">
-
 		<div class="groups-section__label">Les héros</div>
 		<div class="groups-grid">
-
 			<a class="group-card" href="personnages/avengers-originels/mcu_avengers-originels.html">
 				<div class="group-card__eyebrow">Fondateurs · 2012</div>
 				<h2 class="group-card__title">Les Avengers originels</h2>
@@ -142,9 +142,7 @@
 			<a class="group-card" href="personnages/mystiques/mcu_mystiques.html">
 				<div class="group-card__eyebrow">Magie & arts mystiques</div>
 				<h2 class="group-card__title">Les mystiques</h2>
-				<p class="group-card__members">
-					Doctor Strange · Shang-Chi
-				</p>
+				<p class="group-card__members">Doctor Strange · Shang-Chi</p>
 			</a>
 
 			<a class="group-card" href="personnages/gardiens/mcu_gardiens.html">
@@ -167,16 +165,14 @@
 				<div class="group-card__eyebrow">Rejoignent l'équipe plus tard</div>
 				<h2 class="group-card__title">Les nouvelles recrues</h2>
 				<p class="group-card__members">
-					Ant-Man · Black Panther · Spider-Man · Captain Marvel ·
-					Wanda &amp; Vision · Loki
+					Ant-Man · Black Panther · Spider-Man · Captain Marvel · Wanda &amp;
+					Vision · Loki
 				</p>
 			</a>
-
 		</div>
 
 		<div class="groups-section__label">Les grands méchants</div>
 		<div class="groups-grid">
-
 			<a class="group-card group-card--villain" href="personnages/antagonistes/mcu_antagonistes.html">
 				<div class="group-card__eyebrow">Les menaces des films Avengers</div>
 				<h2 class="group-card__title">Les grands antagonistes</h2>
@@ -184,25 +180,23 @@
 					Ultron · Thanos · Kang le Conquérant · Doctor Doom
 				</p>
 			</a>
-
 		</div>
-
 	</main>
 
 	<script src="mcu_script.js"></script>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const cards = document.querySelectorAll('.group-card');
+		document.addEventListener("DOMContentLoaded", () => {
+			const cards = document.querySelectorAll(".group-card");
 			const observer = new IntersectionObserver(
 				(entries) => {
 					entries.forEach((entry) => {
 						if (entry.isIntersecting) {
-							entry.target.classList.add('in');
+							entry.target.classList.add("in");
 							observer.unobserve(entry.target);
 						}
 					});
 				},
-				{ threshold: 0.15 }
+				{ threshold: 0.15 },
 			);
 			cards.forEach((c) => observer.observe(c));
 		});

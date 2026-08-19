@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>MCU — Les mystiques | Almanach</title>
-	<link rel="stylesheet" href="../../mcu_style.css">
+	<link rel="stylesheet" href="../../mcu_style.css" />
 	<style>
 		.members-grid {
 			max-width: 880px;
@@ -26,8 +26,11 @@
 			padding: 28px 26px;
 			opacity: 0;
 			transform: translateY(16px);
-			transition: opacity 0.6s ease, transform 0.6s ease,
-				border-color 0.25s ease, box-shadow 0.25s ease;
+			transition:
+				opacity 0.6s ease,
+				transform 0.6s ease,
+				border-color 0.25s ease,
+				box-shadow 0.25s ease;
 		}
 
 		.member-card.in {
@@ -81,7 +84,6 @@
 </head>
 
 <body>
-
 	<nav class="mcu-topbar">
 		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
 		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
@@ -104,21 +106,20 @@
 		<p class="hero__lede">
 			Deux hommes que rien ne prédestinait à la magie ou aux arts martiaux
 			légendaires — jusqu'à ce qu'un drame personnel les y pousse.
-			<em>Cliquez sur un nom pour découvrir sa biographie complète et le
-				détail de chacune de ses apparitions</em>.
+			<em>Cliquez sur un nom pour découvrir sa biographie complète et le détail
+				de chacune de ses apparitions</em>.
 		</p>
 	</header>
 
 	<main class="members-grid">
-
 		<a class="member-card" href="doctor-strange.html">
 			<div class="member-card__icon">DS</div>
 			<h2 class="member-card__name">Doctor Strange</h2>
 			<p class="member-card__realname">Stephen Strange</p>
 			<p class="member-card__pitch">
-				Chirurgien brillant et arrogant devenu Sorcier Suprême — d'un
-				accident de voiture à la garde de l'univers tout entier contre les
-				menaces mystiques.
+				Chirurgien brillant et arrogant devenu Sorcier Suprême — d'un accident
+				de voiture à la garde de l'univers tout entier contre les menaces
+				mystiques.
 			</p>
 		</a>
 
@@ -127,11 +128,10 @@
 			<h2 class="member-card__name">Shang-Chi</h2>
 			<p class="member-card__realname">Xu Shang-Chi</p>
 			<p class="member-card__pitch">
-				Fils du chef millénaire des Dix Anneaux, formé de force à devenir
-				un assassin — avant de fuir cette vie, puis d'y être rattrapé.
+				Fils du chef millénaire des Dix Anneaux, formé de force à devenir un
+				assassin — avant de fuir cette vie, puis d'y être rattrapé.
 			</p>
 		</a>
-
 	</main>
 
 	<footer class="mcu-next">
@@ -141,18 +141,18 @@
 
 	<script src="../../mcu_script.js"></script>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const cards = document.querySelectorAll('.member-card');
+		document.addEventListener("DOMContentLoaded", () => {
+			const cards = document.querySelectorAll(".member-card");
 			const observer = new IntersectionObserver(
 				(entries) => {
 					entries.forEach((entry) => {
 						if (entry.isIntersecting) {
-							entry.target.classList.add('in');
+							entry.target.classList.add("in");
 							observer.unobserve(entry.target);
 						}
 					});
 				},
-				{ threshold: 0.15 }
+				{ threshold: 0.15 },
 			);
 			cards.forEach((c) => observer.observe(c));
 		});

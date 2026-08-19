@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>MCU — Les Avengers originels | Almanach</title>
-	<link rel="stylesheet" href="../../mcu_style.css">
+	<link rel="stylesheet" href="../../mcu_style.css" />
 	<style>
 		.members-grid {
 			max-width: 880px;
@@ -26,8 +26,11 @@
 			padding: 28px 26px;
 			opacity: 0;
 			transform: translateY(16px);
-			transition: opacity 0.6s ease, transform 0.6s ease,
-				border-color 0.25s ease, box-shadow 0.25s ease;
+			transition:
+				opacity 0.6s ease,
+				transform 0.6s ease,
+				border-color 0.25s ease,
+				box-shadow 0.25s ease;
 		}
 
 		.member-card.in {
@@ -81,7 +84,6 @@
 </head>
 
 <body>
-
 	<nav class="mcu-topbar">
 		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
 		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
@@ -103,20 +105,19 @@
 		<p class="hero__subtitle">pour les nuls</p>
 		<p class="hero__lede">
 			Les six premiers, ceux qui se sont assemblés à New York en 2012.
-			<em>Cliquez sur un nom pour découvrir sa biographie complète et le
-				détail de chacune de ses apparitions</em>.
+			<em>Cliquez sur un nom pour découvrir sa biographie complète et le détail
+				de chacune de ses apparitions</em>.
 		</p>
 	</header>
 
 	<main class="members-grid">
-
 		<a class="member-card" href="tony-stark.html">
 			<div class="member-card__icon">IM</div>
 			<h2 class="member-card__name">Iron Man</h2>
 			<p class="member-card__realname">Tony Stark</p>
 			<p class="member-card__pitch">
-				Génie, milliardaire, playboy, philanthrope — et le premier héros
-				du MCU. D'un enlèvement en Afghanistan à un sacrifice final contre
+				Génie, milliardaire, playboy, philanthrope — et le premier héros du
+				MCU. D'un enlèvement en Afghanistan à un sacrifice final contre
 				Thanos.
 			</p>
 		</a>
@@ -126,9 +127,8 @@
 			<h2 class="member-card__name">Thor</h2>
 			<p class="member-card__realname">Thor Odinson</p>
 			<p class="member-card__pitch">
-				Dieu du Tonnerre asgardien, banni sur Terre pour apprendre
-				l'humilité, avant de devenir le guerrier ayant tout perdu et tout
-				reconstruit.
+				Dieu du Tonnerre asgardien, banni sur Terre pour apprendre l'humilité,
+				avant de devenir le guerrier ayant tout perdu et tout reconstruit.
 			</p>
 		</a>
 
@@ -137,8 +137,8 @@
 			<h2 class="member-card__name">Captain America</h2>
 			<p class="member-card__realname">Steve Rogers</p>
 			<p class="member-card__pitch">
-				D'un jeune homme chétif rejeté par l'armée au symbole même du
-				devoir — soixante-dix ans de sommeil glacé entre les deux.
+				D'un jeune homme chétif rejeté par l'armée au symbole même du devoir —
+				soixante-dix ans de sommeil glacé entre les deux.
 			</p>
 		</a>
 
@@ -147,8 +147,8 @@
 			<h2 class="member-card__name">Hulk</h2>
 			<p class="member-card__realname">Bruce Banner</p>
 			<p class="member-card__pitch">
-				Le scientifique le plus brillant du MCU, prisonnier d'un accident
-				qui l'a transformé en la créature la plus puissante de la Terre.
+				Le scientifique le plus brillant du MCU, prisonnier d'un accident qui
+				l'a transformé en la créature la plus puissante de la Terre.
 			</p>
 		</a>
 
@@ -157,9 +157,9 @@
 			<h2 class="member-card__name">Black Widow</h2>
 			<p class="member-card__realname">Natasha Romanoff</p>
 			<p class="member-card__pitch">
-				Formée dès l'enfance par le Red Room pour tuer sans poser de
-				questions — et qui choisit, jusqu'au bout, de se sacrifier pour
-				sa famille de cœur.
+				Formée dès l'enfance par le Red Room pour tuer sans poser de questions
+				— et qui choisit, jusqu'au bout, de se sacrifier pour sa famille de
+				cœur.
 			</p>
 		</a>
 
@@ -168,12 +168,10 @@
 			<h2 class="member-card__name">Hawkeye</h2>
 			<p class="member-card__realname">Clint Barton</p>
 			<p class="member-card__pitch">
-				Le tireur d'élite sans super-pouvoirs, dont la famille cachée et
-				la perte de sa meilleure amie façonnent tout le reste de son
-				parcours.
+				Le tireur d'élite sans super-pouvoirs, dont la famille cachée et la
+				perte de sa meilleure amie façonnent tout le reste de son parcours.
 			</p>
 		</a>
-
 	</main>
 
 	<footer class="mcu-next">
@@ -183,18 +181,18 @@
 
 	<script src="../../mcu_script.js"></script>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const cards = document.querySelectorAll('.member-card');
+		document.addEventListener("DOMContentLoaded", () => {
+			const cards = document.querySelectorAll(".member-card");
 			const observer = new IntersectionObserver(
 				(entries) => {
 					entries.forEach((entry) => {
 						if (entry.isIntersecting) {
-							entry.target.classList.add('in');
+							entry.target.classList.add("in");
 							observer.unobserve(entry.target);
 						}
 					});
 				},
-				{ threshold: 0.15 }
+				{ threshold: 0.15 },
 			);
 			cards.forEach((c) => observer.observe(c));
 		});
