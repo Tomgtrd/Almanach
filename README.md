@@ -14,7 +14,7 @@ Pas de framework, pas d'étape de build : du HTML/CSS/JS servi tel quel, ouvrabl
 - ✅ **Cosmologie** — Big Bang, expansion de l'univers, trous noirs, matière noire, destin du cosmos
 - ✅ **Architecture des ordinateurs** — de la machine de Babbage au cache du processeur moderne
 - ✅ **Hydrologie** — cycle de l'eau, bassins versants, nappes phréatiques, gestion des ressources en eau
-- ✅ **MCU** — toute la chronologie du Marvel Cinematic Universe et le fonctionnement du multivers, de 1260 av. J.-C. à la fin du monde tel qu'on le connaît
+- 🚧 **MCU** — toute la chronologie du Marvel Cinematic Universe, ses personnages regroupés par famille narrative, et le fonctionnement du multivers, de 1260 av. J.-C. à la fin du monde tel qu'on le connaît. Chronologie et personnages terminés ; le groupe "artefacts" (Pierres d'Infinité, bouclier de Cap, Mjolnir…) reste à construire.
 
 ## Structure du dépôt
 
@@ -48,21 +48,30 @@ Almanach/
 │   ├── hyd_style.css
 │   └── hyd_script.js
 └── mcu/
-    ├── mcu_hub.html             # sommaire du thème, frise verticale des 7 chapitres
-    ├── mcu_multivers.html       # fiche concept : Sacred Timeline, TVA, glossaire
-    ├── mcu_antiquite.html       # 1260 av. J.-C. — 1946
-    ├── mcu_origines.html        # 1964 — 2012
-    ├── mcu_expansion.html       # 2013 — 2018
-    ├── mcu_multivers-chrono.html # 2023 — 2024
-    ├── mcu_actuel.html          # 2024 — 2027
-    ├── mcu_horizon.html         # 2027 — 2029
+    ├── mcu_hub.html               # sommaire du thème : chronologie, personnages, artefacts (à venir)
+    ├── mcu_personnages.html       # sommaire des personnages, groupés par famille narrative
     ├── mcu_style.css
-    └── mcu_script.js
+    ├── mcu_script.js
+    ├── chronologie/
+    │   ├── mcu_multivers.html        # fiche concept : Sacred Timeline, TVA, glossaire
+    │   ├── mcu_antiquite.html        # 1260 av. J.-C. — 1946
+    │   ├── mcu_origines.html         # 1964 — 2012
+    │   ├── mcu_expansion.html        # 2013 — 2018
+    │   ├── mcu_multivers-chrono.html # 2023 — 2024
+    │   ├── mcu_actuel.html           # 2024 — 2027
+    │   └── mcu_horizon.html          # 2027 — 2029
+    └── personnages/
+        ├── avengers-originels/    # mini-hub + 6 fiches
+        ├── mystiques/             # mini-hub + 2 fiches
+        ├── gardiens/              # mini-hub + 7 fiches
+        ├── fantastic-four/        # mini-hub + 4 fiches
+        ├── nouvelles-recrues/     # mini-hub + 7 fiches
+        └── antagonistes/          # mini-hub + 4 fiches
 ```
 
 Chaque dossier de thème est indépendant et autoporteur — il fonctionne seul (on peut ouvrir son `xxx_index.html` directement) aussi bien que depuis le hub.
 
-**Cas particulier : MCU.** Contrairement aux autres thèmes qui tiennent sur une seule fiche, MCU est un mini-site en 7 pages (le volume de contenu — près de 90 films et séries — ne rentrait pas dans une planche unique). Chaque sous-page reste néanmoins autonome et suit la même charte graphique, avec un bandeau de navigation dédié en haut de chaque page pour circuler entre les chapitres. `mcu_hub.html` sert de sommaire d'entrée.
+**Cas particulier : MCU.** Contrairement aux autres thèmes qui tiennent sur une seule fiche, MCU est un mini-site à plusieurs niveaux (le volume de contenu — près de 90 films et séries, une trentaine de personnages — ne rentrait pas dans une planche unique). Chaque sous-page reste néanmoins autonome et suit la même charte graphique, avec un bandeau de navigation dédié en haut de chaque page pour circuler entre les chapitres. `mcu_hub.html` sert de sommaire d'entrée, avec deux volets : la chronologie (7 chapitres) et les personnages (6 groupes, chacun avec son propre mini-hub). Un troisième volet, les artefacts, est prévu mais pas encore commencé.
 
 ## Voir le site
 
