@@ -1,387 +1,403 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MCU — Les Avengers originels | Almanach</title>
-<link rel="stylesheet" href="mcu_style.css">
-<style>
-  .roster {
-    max-width: 880px;
-    margin: 0 auto;
-    padding: 24px 32px 0;
-  }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MCU — Les Avengers originels | Almanach</title>
+	<link rel="stylesheet" href="../mcu_style.css">
+	<style>
+		.roster {
+			max-width: 880px;
+			margin: 0 auto;
+			padding: 24px 32px 0;
+		}
 
-  .roster__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 14px;
-    margin-bottom: 8px;
-  }
+		.roster__grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+			gap: 14px;
+			margin-bottom: 8px;
+		}
 
-  .roster__btn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    background: var(--paper-raised);
-    border: 1.5px solid var(--hairline);
-    border-radius: var(--radius-md);
-    padding: 18px 12px 16px;
-    cursor: pointer;
-    font-family: inherit;
-    text-align: center;
-    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  }
+		.roster__btn {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+			background: var(--paper-raised);
+			border: 1.5px solid var(--hairline);
+			border-radius: var(--radius-md);
+			padding: 18px 12px 16px;
+			cursor: pointer;
+			font-family: inherit;
+			text-align: center;
+			transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+		}
 
-  .roster__btn:hover { transform: translateY(-2px); }
+		.roster__btn:hover {
+			transform: translateY(-2px);
+		}
 
-  .roster__btn.active {
-    border-color: var(--mcu-red);
-    box-shadow: 0 4px 16px rgba(138, 46, 36, 0.12);
-  }
+		.roster__btn.active {
+			border-color: var(--mcu-red);
+			box-shadow: 0 4px 16px rgba(138, 46, 36, 0.12);
+		}
 
-  .roster__icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: var(--mcu-cream);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-display);
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: var(--mcu-red-soft);
-  }
+		.roster__icon {
+			width: 44px;
+			height: 44px;
+			border-radius: 50%;
+			background: var(--mcu-cream);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: var(--font-display);
+			font-size: 1.3rem;
+			font-weight: 500;
+			color: var(--mcu-red-soft);
+		}
 
-  .roster__btn.active .roster__icon {
-    background: var(--mcu-red);
-    color: var(--paper-raised);
-  }
+		.roster__btn.active .roster__icon {
+			background: var(--mcu-red);
+			color: var(--paper-raised);
+		}
 
-  .roster__name {
-    font-family: var(--font-ui);
-    font-size: 12.5px;
-    letter-spacing: 0.02em;
-    color: var(--ink);
-    line-height: 1.3;
-  }
+		.roster__name {
+			font-family: var(--font-ui);
+			font-size: 12.5px;
+			letter-spacing: 0.02em;
+			color: var(--ink);
+			line-height: 1.3;
+		}
 
-  .profile {
-    max-width: 880px;
-    margin: 40px auto 0;
-    padding: 0 32px 100px;
-  }
+		.profile {
+			max-width: 880px;
+			margin: 40px auto 0;
+			padding: 0 32px 100px;
+		}
 
-  .profile__card {
-    background: var(--paper-raised);
-    border: 1px solid var(--hairline);
-    border-radius: var(--radius-md);
-    padding: 40px 44px;
-  }
+		.profile__card {
+			background: var(--paper-raised);
+			border: 1px solid var(--hairline);
+			border-radius: var(--radius-md);
+			padding: 40px 44px;
+		}
 
-  .profile__eyebrow {
-    font-family: var(--font-ui);
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--mcu-gold);
-    margin-bottom: 10px;
-  }
+		.profile__eyebrow {
+			font-family: var(--font-ui);
+			font-size: 12px;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: var(--mcu-gold);
+			margin-bottom: 10px;
+		}
 
-  .profile__name {
-    font-family: var(--font-display);
-    font-size: clamp(1.9rem, 4vw, 2.4rem);
-    font-weight: 500;
-    margin: 0 0 4px;
-  }
+		.profile__name {
+			font-family: var(--font-display);
+			font-size: clamp(1.9rem, 4vw, 2.4rem);
+			font-weight: 500;
+			margin: 0 0 4px;
+		}
 
-  .profile__realname {
-    font-family: var(--font-display);
-    font-style: italic;
-    color: var(--ink-soft);
-    font-size: 1.1rem;
-    margin: 0 0 28px;
-  }
+		.profile__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			color: var(--ink-soft);
+			font-size: 1.1rem;
+			margin: 0 0 28px;
+		}
 
-  .profile__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 32px;
-  }
+		.profile__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin-bottom: 32px;
+		}
 
-  .profile__tag {
-    font-family: var(--font-ui);
-    font-size: 11px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    background: var(--mcu-cream);
-    color: var(--mcu-red);
-    padding: 4px 12px;
-    border-radius: 999px;
-  }
+		.profile__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
 
-  .profile__section {
-    margin-bottom: 30px;
-  }
+		.profile__section {
+			margin-bottom: 30px;
+		}
 
-  .profile__section:last-child { margin-bottom: 0; }
+		.profile__section:last-child {
+			margin-bottom: 0;
+		}
 
-  .profile__label {
-    font-family: var(--font-ui);
-    font-size: 11.5px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-    margin-bottom: 10px;
-  }
+		.profile__label {
+			font-family: var(--font-ui);
+			font-size: 11.5px;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			color: var(--ink-faint);
+			margin-bottom: 10px;
+		}
 
-  .profile__section p {
-    margin: 0 0 14px;
-    font-size: 1rem;
-    line-height: 1.7;
-    max-width: 66ch;
-  }
+		.profile__section p {
+			margin: 0 0 14px;
+			font-size: 1rem;
+			line-height: 1.7;
+			max-width: 66ch;
+		}
 
-  .profile__section p:last-child { margin-bottom: 0; }
+		.profile__section p:last-child {
+			margin-bottom: 0;
+		}
 
-  @media (max-width: 640px) {
-    .profile__card { padding: 28px 24px; }
-    .roster { padding: 24px 18px 0; }
-    .profile { padding: 0 18px 80px; }
-  }
-</style>
+		@media (max-width: 640px) {
+			.profile__card {
+				padding: 28px 24px;
+			}
+
+			.roster {
+				padding: 24px 18px 0;
+			}
+
+			.profile {
+				padding: 0 18px 80px;
+			}
+		}
+	</style>
 </head>
+
 <body>
 
-<nav class="mcu-topbar">
-  <a class="mcu-topbar__almanach" href="../hub_index.html">← Almanach</a>
-  <a class="mcu-topbar__home" href="mcu_hub.html">MCU</a>
-  <div class="mcu-topbar__links">
-    <a href="mcu_personnages.html">Les personnages</a>
-    <a href="mcu_multivers.html">Comprendre le multivers</a>
-    <a href="mcu_antiquite.html">Avant les héros</a>
-    <a href="mcu_origines.html">Les origines</a>
-    <a href="mcu_expansion.html">L'expansion</a>
-    <a href="mcu_multivers-chrono.html">La saga du multivers</a>
-    <a href="mcu_actuel.html">L'ère actuelle</a>
-    <a href="mcu_horizon.html">L'horizon</a>
-  </div>
-</nav>
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../mcu_personnages.html">Les personnages</a>
+			<a href="../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
 
-<header class="hero">
-  <div class="hero__eyebrow">MCU — les personnages</div>
-  <h1 class="hero__title">Les Avengers originels</h1>
-  <p class="hero__subtitle">pour les nuls</p>
-  <p class="hero__lede">
-    Les six premiers, ceux qui se sont assemblés à New York en 2012 —
-    <em>d'où viennent leurs pouvoirs, qui ils aiment, contre qui ils se
-    battent</em>.
-  </p>
-</header>
+	<header class="hero">
+		<div class="hero__eyebrow">MCU — les personnages</div>
+		<h1 class="hero__title">Les Avengers originels</h1>
+		<p class="hero__subtitle">pour les nuls</p>
+		<p class="hero__lede">
+			Les six premiers, ceux qui se sont assemblés à New York en 2012 —
+			<em>d'où viennent leurs pouvoirs, qui ils aiment, contre qui ils se
+				battent</em>.
+		</p>
+	</header>
 
-<section class="roster">
-  <div class="roster__grid" role="tablist" aria-label="Choisir un personnage">
-    <button class="roster__btn active" data-perso="tony" role="tab" aria-selected="true">
-      <span class="roster__icon">IM</span>
-      <span class="roster__name">Iron Man</span>
-    </button>
-    <button class="roster__btn" data-perso="thor" role="tab" aria-selected="false">
-      <span class="roster__icon">T</span>
-      <span class="roster__name">Thor</span>
-    </button>
-    <button class="roster__btn" data-perso="steve" role="tab" aria-selected="false">
-      <span class="roster__icon">CA</span>
-      <span class="roster__name">Captain America</span>
-    </button>
-    <button class="roster__btn" data-perso="bruce" role="tab" aria-selected="false">
-      <span class="roster__icon">H</span>
-      <span class="roster__name">Hulk</span>
-    </button>
-    <button class="roster__btn" data-perso="natasha" role="tab" aria-selected="false">
-      <span class="roster__icon">BW</span>
-      <span class="roster__name">Black Widow</span>
-    </button>
-    <button class="roster__btn" data-perso="clint" role="tab" aria-selected="false">
-      <span class="roster__icon">HE</span>
-      <span class="roster__name">Hawkeye</span>
-    </button>
-  </div>
-</section>
+	<section class="roster">
+		<div class="roster__grid" role="tablist" aria-label="Choisir un personnage">
+			<button class="roster__btn active" data-perso="tony" role="tab" aria-selected="true">
+				<span class="roster__icon">IM</span>
+				<span class="roster__name">Iron Man</span>
+			</button>
+			<button class="roster__btn" data-perso="thor" role="tab" aria-selected="false">
+				<span class="roster__icon">T</span>
+				<span class="roster__name">Thor</span>
+			</button>
+			<button class="roster__btn" data-perso="steve" role="tab" aria-selected="false">
+				<span class="roster__icon">CA</span>
+				<span class="roster__name">Captain America</span>
+			</button>
+			<button class="roster__btn" data-perso="bruce" role="tab" aria-selected="false">
+				<span class="roster__icon">H</span>
+				<span class="roster__name">Hulk</span>
+			</button>
+			<button class="roster__btn" data-perso="natasha" role="tab" aria-selected="false">
+				<span class="roster__icon">BW</span>
+				<span class="roster__name">Black Widow</span>
+			</button>
+			<button class="roster__btn" data-perso="clint" role="tab" aria-selected="false">
+				<span class="roster__icon">HE</span>
+				<span class="roster__name">Hawkeye</span>
+			</button>
+		</div>
+	</section>
 
-<section class="profile">
-  <div class="profile__card" id="profile-card"></div>
-</section>
+	<section class="profile">
+		<div class="profile__card" id="profile-card"></div>
+	</section>
 
-<footer class="mcu-next">
-  <div class="mcu-next__label">Groupe suivant</div>
-  <a href="mcu_perso_mystiques.html">Les mystiques →</a>
-</footer>
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Groupe suivant</div>
+		<a href="mcu_perso_mystiques.html">Les mystiques →</a>
+	</footer>
 
-<script src="mcu_script.js"></script>
-<script>
-const PERSOS = {
-  tony: {
-    eyebrow: "Iron Man",
-    name: "Tony Stark",
-    realname: "Anthony Edward Stark",
-    tags: ["Génie", "Milliardaire", "Fondateur des Avengers", "Décédé"],
-    sections: [
-      {
-        label: "D'où viennent ses pouvoirs",
-        html: `<p>Tony Stark n'a pas de super-pouvoirs à proprement parler — son arme, c'est son génie.
-        Fils adoptif du magnat de l'armement Howard Stark, il hérite de l'entreprise familiale à la mort
+	<script src="../mcu_script.js"></script>
+	<script>
+		const PERSOS = {
+			tony: {
+				eyebrow: "Iron Man",
+				name: "Tony Stark",
+				realname: "Anthony Edward Stark",
+				tags: ["Génie", "Milliardaire", "Fondateur des Avengers", "Décédé"],
+				sections: [
+					{
+						label: "D'où viennent ses pouvoirs",
+						html: `<p>Tony Stark n'a pas de super-pouvoirs à proprement parler — son arme, c'est son génie.
+        Fils d'Howard Stark, magnat de l'armement, il hérite de l'entreprise familiale à la mort
         de ses parents et devient l'un des hommes les plus riches et les plus brillants du monde. Tout
         bascule lorsque, en supervisant une démonstration d'armes en Afghanistan, il est capturé par le
         groupe terroriste des Ten Rings. Grièvement blessé, il construit avec l'aide de son codétenu,
         le Dr Yinsen, une armure de fortune pour s'échapper — la toute première version de son armure
         Iron Man. De retour chez lui, il en construit des versions toujours plus sophistiquées, jusqu'à
         devenir l'un des êtres les plus puissants de la Terre grâce à la seule force de sa technologie.</p>`
-      },
-      {
-        label: "Famille",
-        html: `<p>Fils d'Howard et Maria Stark, Tony grandit dans l'ombre d'un père exigeant et souvent
+					},
+					{
+						label: "Famille",
+						html: `<p>Fils d'Howard et Maria Stark, Tony grandit dans l'ombre d'un père exigeant et souvent
         absent, avec qui la relation reste tendue jusqu'à la mort de ses parents dans un accident de
         voiture — un accident dont on découvrira bien plus tard qu'il s'agissait en réalité d'un
         assassinat orchestré par HYDRA. Il épouse Pepper Potts, sa plus proche collaboratrice de longue
         date, et devient père d'une fille, Morgan Stark, née après le Blip.</p>`
-      },
-      {
-        label: "Relations clés",
-        html: `<p>Son meilleur ami est James « Rhodey » Rhodes, à ses côtés depuis avant même qu'il
+					},
+					{
+						label: "Relations clés",
+						html: `<p>Son meilleur ami est James « Rhodey » Rhodes, à ses côtés depuis avant même qu'il
         devienne Iron Man, et qui devient lui-même le héros War Machine. Il noue une relation de
         mentorat avec Peter Parker/Spider-Man, qu'il recrute pour l'aider durant la Guerre Civile et
         qu'il considère peu à peu comme un fils. Sa relation avec Steve Rogers, complice au départ,
         se brise profondément lors de la révélation que Bucky Barnes, sous contrôle d'HYDRA, a tué
         ses parents — un conflit qui déclenche la Guerre Civile des Avengers.</p>`
-      },
-      {
-        label: "Ennemis marquants",
-        html: `<p>Obadiah Stane, son associé et figure paternelle de substitution, se révèle être celui
+					},
+					{
+						label: "Ennemis marquants",
+						html: `<p>Obadiah Stane, son associé et figure paternelle de substitution, se révèle être celui
         qui fournissait en secret des armes Stark aux Ten Rings et tente de l'évincer de sa propre
         entreprise. Plus tard, c'est Thanos qui devient son adversaire ultime — la menace qui le hante
         depuis la bataille de New York et qu'il finit par vaincre au prix de sa propre vie.</p>`
-      },
-      {
-        label: "Son arc en une phrase",
-        html: `<p>D'un playboy égocentriste et marchand d'armes à un père de famille prêt à sacrifier
+					},
+					{
+						label: "Son arc en une phrase",
+						html: `<p>D'un playboy égocentriste et marchand d'armes à un père de famille prêt à sacrifier
         sa vie pour sauver l'univers — le personnage fondateur dont le sacrifice referme toute la
         première décennie du MCU.</p>`
-      }
-    ]
-  },
+					}
+				]
+			},
 
-  thor: {
-    eyebrow: "Dieu du Tonnerre",
-    name: "Thor",
-    realname: "Thor Odinson",
-    tags: ["Asgardien", "Ex-roi d'Asgard", "Fondateur des Avengers"],
-    sections: [
-      {
-        label: "D'où viennent ses pouvoirs",
-        html: `<p>Thor est un Asgardien, fils aîné d'Odin et de la reine Frigga, doté depuis sa
+			thor: {
+				eyebrow: "Dieu du Tonnerre",
+				name: "Thor",
+				realname: "Thor Odinson",
+				tags: ["Asgardien", "Ex-roi d'Asgard", "Fondateur des Avengers"],
+				sections: [
+					{
+						label: "D'où viennent ses pouvoirs",
+						html: `<p>Thor est un Asgardien, fils aîné d'Odin et de la reine Frigga, doté depuis sa
         naissance d'une force, d'une longévité et d'une résistance surhumaines propres à son peuple.
         Sa puissance est amplifiée par Mjolnir, un marteau enchanté par Odin pour n'être soulevé que
         par celui qui s'en montre digne. Le jour de son couronnement, son comportement impulsif ravive
         une guerre ancestrale contre les Géants des Glace de Jotunheim ; furieux, Odin le dépouille de
         ses pouvoirs et le bannit sur Terre pour lui apprendre l'humilité. Ce n'est qu'après un acte de
         sacrifice sincère qu'il retrouve Mjolnir et ses pouvoirs.</p>`
-      },
-      {
-        label: "Famille",
-        html: `<p>Fils d'Odin et de Frigga, Thor apprend bien plus tard l'existence d'une demi-sœur
+					},
+					{
+						label: "Famille",
+						html: `<p>Fils d'Odin et de Frigga, Thor apprend bien plus tard l'existence d'une demi-sœur
         aînée cachée, Hela, déesse de la mort bannie par leur père pour ses ambitions de conquête
         universelle. Son frère Loki n'est pas un lien de sang : il s'agit d'un enfant Jötunn recueilli
         et élevé par Odin et Frigga comme leur propre fils, sans jamais lui révéler ses véritables
         origines — une découverte qui bouleverse profondément Loki à l'âge adulte.</p>`
-      },
-      {
-        label: "Relations clés",
-        html: `<p>Sa relation avec Loki, faite d'amour fraternel sincère et de trahisons répétées, est
+					},
+					{
+						label: "Relations clés",
+						html: `<p>Sa relation avec Loki, faite d'amour fraternel sincère et de trahisons répétées, est
         le fil rouge de toute son histoire personnelle. Il vit une histoire d'amour avec l'astrophysicienne
         Jane Foster, rencontrée lors de son exil sur Terre, qui deviendra plus tard brièvement digne de
         manier Mjolnir à son tour sous le nom de Mighty Thor. La mort de sa mère Frigga, tuée en
         protégeant Jane d'une attaque des Elfes Noirs, marque un tournant dans sa relation avec Loki,
         qui s'allie à lui pour la venger.</p>`
-      },
-      {
-        label: "Ennemis marquants",
-        html: `<p>Malekith, seigneur des Elfes Noirs, cherche à plonger l'univers dans les ténèbres
+					},
+					{
+						label: "Ennemis marquants",
+						html: `<p>Malekith, seigneur des Elfes Noirs, cherche à plonger l'univers dans les ténèbres
         et tue Frigga au passage. Hela, sa propre demi-sœur, s'empare d'Asgard à la mort d'Odin et le
         pousse à provoquer volontairement la destruction de son propre royaume pour l'arrêter. Thanos,
         enfin, tue une partie de son peuple et le blesse profondément — tant physiquement
         qu'émotionnellement — lors de leur premier affrontement direct.</p>`
-      },
-      {
-        label: "Son arc en une phrase",
-        html: `<p>Du prince arrogant banni pour son orgueil au guerrier ayant tout perdu — royaume,
+					},
+					{
+						label: "Son arc en une phrase",
+						html: `<p>Du prince arrogant banni pour son orgueil au guerrier ayant tout perdu — royaume,
         famille, marteau — mais qui apprend, avec le temps, à trouver son identité ailleurs que dans
         la couronne ou le pouvoir.</p>`
-      }
-    ]
-  },
+					}
+				]
+			},
 
-  steve: {
-    eyebrow: "Captain America",
-    name: "Steve Rogers",
-    realname: "Steven Grant Rogers",
-    tags: ["Super-soldat", "Vétéran de 1943", "Fondateur des Avengers", "Retiré"],
-    sections: [
-      {
-        label: "D'où viennent ses pouvoirs",
-        html: `<p>Né à Brooklyn dans les années 1920, Steve Rogers grandit chétif et maladif, cumulant
+			steve: {
+				eyebrow: "Captain America",
+				name: "Steve Rogers",
+				realname: "Steven Grant Rogers",
+				tags: ["Super-soldat", "Vétéran de 1943", "Fondateur des Avengers", "Retiré"],
+				sections: [
+					{
+						label: "D'où viennent ses pouvoirs",
+						html: `<p>Né à Brooklyn dans les années 1920, Steve Rogers grandit chétif et maladif, cumulant
         les problèmes de santé qui lui valent d'être refusé par l'armée à de multiples reprises malgré
         sa détermination farouche à servir son pays durant la Seconde Guerre mondiale. C'est son
         patriotisme sincère, plus que sa force physique, qui attire l'attention du Dr Abraham Erskine,
         qui le choisit comme unique cobaye du Sérum du Super-Soldat dans le cadre du Projet Renaissance.
         Le sérum le transforme en un humain à la perfection physique absolue : force, vitesse,
         endurance et réflexes surhumains.</p>`
-      },
-      {
-        label: "Famille",
-        html: `<p>Fils de Sarah et Joseph Rogers, il perd son père, tué au combat durant la Première
+					},
+					{
+						label: "Famille",
+						html: `<p>Fils de Sarah et Joseph Rogers, il perd son père, tué au combat durant la Première
         Guerre mondiale, et est élevé seul par sa mère, elle-même emportée par la tuberculose alors
         qu'il est encore jeune. Il n'a pas d'enfants dans la trame principale — mais dans la ligne
         temporelle alternative qu'il choisit de vivre après avoir ramené les Pierres d'Infinité à
         leur place, il épouse enfin Peggy Carter et construit avec elle la vie qu'ils n'avaient jamais
         pu avoir.</p>`
-      },
-      {
-        label: "Relations clés",
-        html: `<p>James « Bucky » Barnes est son meilleur ami depuis l'enfance, celui qui l'a protégé
+					},
+					{
+						label: "Relations clés",
+						html: `<p>James « Bucky » Barnes est son meilleur ami depuis l'enfance, celui qui l'a protégé
         des brimades avant que les rôles ne s'inversent avec le sérum — leur amitié, mise à mal par
         la transformation de Bucky en Soldat de l'Hiver, reste l'un des liens les plus forts de tout
         le MCU. Il partage une histoire d'amour avec Peggy Carter, agent de la Réserve scientifique
         stratégique, interrompue par sa chute dans les glaces de l'Arctique et son sommeil de près de
         soixante-dix ans.</p>`
-      },
-      {
-        label: "Ennemis marquants",
-        html: `<p>Le Crâne Rouge, chef de la division scientifique nazie HYDRA, est son adversaire
+					},
+					{
+						label: "Ennemis marquants",
+						html: `<p>Le Crâne Rouge, chef de la division scientifique nazie HYDRA, est son adversaire
         historique dès la Seconde Guerre mondiale. Des décennies plus tard, il découvre qu'HYDRA
         n'avait jamais disparu et s'était infiltrée jusqu'au cœur du S.H.I.E.L.D., dirigée en coulisses
         par Alexander Pierce — une trahison qui provoque l'effondrement de l'agence tout entière.</p>`
-      },
-      {
-        label: "Son arc en une phrase",
-        html: `<p>D'un jeune homme chétif rejeté par l'armée à l'incarnation même du devoir et du
+					},
+					{
+						label: "Son arc en une phrase",
+						html: `<p>D'un jeune homme chétif rejeté par l'armée à l'incarnation même du devoir et du
         sacrifice — jusqu'à s'autoriser enfin, après avoir tout donné, à vivre la vie tranquille qu'il
         n'avait jamais eue.</p>`
-      }
-    ]
-  },
+					}
+				]
+			},
 
-  bruce: {
-    eyebrow: "Hulk",
-    name: "Bruce Banner",
-    realname: "Robert Bruce Banner",
-    tags: ["Scientifique", "Fondateur des Avengers"],
-    sections: [
-      {
-        label: "D'où viennent ses pouvoirs",
-        html: `<p>Bruce Banner est l'un des plus grands esprits scientifiques de la planète, spécialiste
+			bruce: {
+				eyebrow: "Hulk",
+				name: "Bruce Banner",
+				realname: "Robert Bruce Banner",
+				tags: ["Scientifique", "Fondateur des Avengers"],
+				sections: [
+					{
+						label: "D'où viennent ses pouvoirs",
+						html: `<p>Bruce Banner est l'un des plus grands esprits scientifiques de la planète, spécialiste
         en biochimie et en radiations gamma. Alors qu'il tentait de recréer le sérum du super-soldat à
         l'origine de Captain America, une expérience mal maîtrisée l'expose à une dose massive de
         radiations gamma. Le résultat n'a rien à voir avec ce qu'il recherchait : chaque fois que sa
@@ -389,141 +405,141 @@ const PERSOS = {
         d'une force quasiment illimitée, mais initialement incontrôlable. Après des années de fuite et
         d'exil volontaire, il finit par fusionner consciemment intelligence et puissance, devenant ce
         qu'on appelle le « Professeur Hulk ».</p>`
-      },
-      {
-        label: "Famille",
-        html: `<p>Le MCU reste volontairement discret sur l'enfance de Bruce Banner ; l'essentiel de
+					},
+					{
+						label: "Famille",
+						html: `<p>Le MCU reste volontairement discret sur l'enfance de Bruce Banner ; l'essentiel de
         son histoire personnelle tourne autour de sa relation à sa propre transformation plutôt que
         de liens familiaux développés à l'écran.</p>`
-      },
-      {
-        label: "Relations clés",
-        html: `<p>Bruce développe une relation amoureuse avec Natasha Romanoff, l'une des rares
+					},
+					{
+						label: "Relations clés",
+						html: `<p>Bruce développe une relation amoureuse avec Natasha Romanoff, l'une des rares
         personnes capables de l'apaiser lorsque Hulk prend le dessus — une romance compliquée par sa
         peur constante de représenter un danger pour elle. Il noue une amitié et une rivalité
         scientifique amicale avec Tony Stark, avec qui il collabore sur plusieurs avancées technologiques
         majeures de l'équipe, dont la création involontaire d'Ultron.</p>`
-      },
-      {
-        label: "Ennemis marquants",
-        html: `<p>Le général Thaddeus Ross le traque sans relâche après l'accident originel, le
+					},
+					{
+						label: "Ennemis marquants",
+						html: `<p>Le général Thaddeus Ross le traque sans relâche après l'accident originel, le
         considérant comme une arme échappée de tout contrôle plutôt qu'un homme. Emil Blonsky, devenu
         Abomination après s'être injecté du sang gamma de Banner, représente un miroir sombre de ce que
         Bruce redoute de devenir lui-même.</p>`
-      },
-      {
-        label: "Son arc en une phrase",
-        html: `<p>D'un homme en fuite perpétuelle face à son propre corps à un scientifique ayant
+					},
+					{
+						label: "Son arc en une phrase",
+						html: `<p>D'un homme en fuite perpétuelle face à son propre corps à un scientifique ayant
         appris, avec le temps, à faire de sa plus grande peur sa plus grande force.</p>`
-      }
-    ]
-  },
+					}
+				]
+			},
 
-  natasha: {
-    eyebrow: "Black Widow",
-    name: "Natasha Romanoff",
-    realname: "Natalia Alianovna Romanova",
-    tags: ["Espionne", "Fondatrice des Avengers", "Décédée"],
-    sections: [
-      {
-        label: "D'où viennent ses pouvoirs",
-        html: `<p>Natasha Romanoff n'a aucun pouvoir surnaturel : tout ce qu'elle sait faire est le
+			natasha: {
+				eyebrow: "Black Widow",
+				name: "Natasha Romanoff",
+				realname: "Natalia Alianovna Romanova",
+				tags: ["Espionne", "Fondatrice des Avengers", "Décédée"],
+				sections: [
+					{
+						label: "D'où viennent ses pouvoirs",
+						html: `<p>Natasha Romanoff n'a aucun pouvoir surnaturel : tout ce qu'elle sait faire est le
         fruit d'un entraînement impitoyable. Enfant, elle est enrôlée de force dans le Red Room, un
         programme soviétique clandestin dirigé par le général Dreykov, qui façonne des fillettes en
         espionnes et assassins d'élite par un conditionnement psychologique extrême, y compris une
         stérilisation forcée présentée comme faisant partie de sa « graduation ». Elle en ressort
         experte en combat rapproché, en infiltration et en manipulation, l'une des meilleures espionnes
         au monde.</p>`
-      },
-      {
-        label: "Famille",
-        html: `<p>Fille biologique d'Ivan Romanov, elle grandit brièvement comme fille adoptive
+					},
+					{
+						label: "Famille",
+						html: `<p>Fille biologique d'Ivan Romanov, elle grandit brièvement comme fille adoptive
         d'Alexei Shostakov et Melina Vostokoff, deux agents du Red Room en mission d'infiltration aux
         États-Unis sous couverture de famille — dont Yelena Belova, une autre enfant du programme,
         devient sa sœur de cœur. Cette famille de façade, dissoute une fois la mission accomplie, reste
         pourtant le lien le plus proche d'un foyer qu'elle ait jamais connu.</p>`
-      },
-      {
-        label: "Relations clés",
-        html: `<p>Clint Barton, envoyé pour l'éliminer, choisit de l'épargner et de la recruter pour le
+					},
+					{
+						label: "Relations clés",
+						html: `<p>Clint Barton, envoyé pour l'éliminer, choisit de l'épargner et de la recruter pour le
         S.H.I.E.L.D. à la place — ils deviennent les meilleurs amis, un lien d'une loyauté absolue qui
         traverse tout le reste de son histoire. Elle noue une relation amoureuse avec Bruce Banner,
         l'un des rares hommes capables de la comprendre sans la juger pour son passé.</p>`
-      },
-      {
-        label: "Ennemis marquants",
-        html: `<p>Le général Dreykov reste la plaie ouverte de son passé : elle croit l'avoir tué des
+					},
+					{
+						label: "Ennemis marquants",
+						html: `<p>Le général Dreykov reste la plaie ouverte de son passé : elle croit l'avoir tué des
         années plus tôt lors d'une mission au prix de la vie de sa fille Antonia, avant de découvrir
         qu'il est toujours vivant et que Antonia, transformée en l'implacable Taskmaster, est toujours
         sous son contrôle.</p>`
-      },
-      {
-        label: "Son arc en une phrase",
-        html: `<p>D'une arme façonnée pour tuer sans poser de questions à une femme qui choisit,
+					},
+					{
+						label: "Son arc en une phrase",
+						html: `<p>D'une arme façonnée pour tuer sans poser de questions à une femme qui choisit,
         jusqu'au bout, de se sacrifier pour ceux qu'elle a fini par considérer comme sa vraie famille.</p>`
-      }
-    ]
-  },
+					}
+				]
+			},
 
-  clint: {
-    eyebrow: "Hawkeye",
-    name: "Clint Barton",
-    realname: "Clinton Francis Barton",
-    tags: ["Tireur d'élite", "Fondateur des Avengers", "Père de famille"],
-    sections: [
-      {
-        label: "D'où viennent ses pouvoirs",
-        html: `<p>Clint Barton n'a rien de surhumain : c'est un tireur d'élite hors pair, doté d'une
+			clint: {
+				eyebrow: "Hawkeye",
+				name: "Clint Barton",
+				realname: "Clinton Francis Barton",
+				tags: ["Tireur d'élite", "Fondateur des Avengers", "Père de famille"],
+				sections: [
+					{
+						label: "D'où viennent ses pouvoirs",
+						html: `<p>Clint Barton n'a rien de surhumain : c'est un tireur d'élite hors pair, doté d'une
         précision quasiment infaillible à l'arc, forgée par des années d'entraînement rigoureux plutôt
         que par un quelconque accident scientifique. Le MCU reste très discret sur ses jeunes années —
         contrairement aux comics, où son passé de cirque est central, le film se concentre sur lui déjà
         pleinement formé, agent chevronné du S.H.I.E.L.D. au moment de son apparition.</p>`
-      },
-      {
-        label: "Famille",
-        html: `<p>Fils d'Edith et Harold Barton, il construit à l'âge adulte une famille tenue
+					},
+					{
+						label: "Famille",
+						html: `<p>Fils d'Edith et Harold Barton, il construit à l'âge adulte une famille tenue
         secrète de ses collègues des Avengers pendant des années : son épouse Laura, elle-même ancienne
         agente du S.H.I.E.L.D., et leurs trois enfants, Cooper, Lila et Nathaniel. Cette famille entière
         périt dans le Snap de Thanos, un drame qui le pousse à sombrer dans une croisade vengeresse
         sanglante sous l'identité de Ronin, avant leur retour miraculeux à la fin d'Endgame. Il devient
         plus tard le mentor et la figure paternelle de substitution de Kate Bishop.</p>`
-      },
-      {
-        label: "Relations clés",
-        html: `<p>Sa relation la plus forte reste son amitié avec Natasha Romanoff, qu'il a recrutée
+					},
+					{
+						label: "Relations clés",
+						html: `<p>Sa relation la plus forte reste son amitié avec Natasha Romanoff, qu'il a recrutée
         plutôt qu'éliminée sur ordre, et qui devient sa meilleure amie et sa partenaire de confiance
         absolue pendant des années. La perte de Natasha, morte à sa place sur Vormir pour obtenir la
         Pierre de l'Âme, le hante profondément et façonne une bonne partie de son parcours ultérieur,
         notamment sa relation tendue puis apaisée avec Yelena Belova, convaincue à tort qu'il est
         responsable de cette mort.</p>`
-      },
-      {
-        label: "Ennemis marquants",
-        html: `<p>Durant sa période Ronin, il traque et élimine sans pitié les criminels ayant
+					},
+					{
+						label: "Ennemis marquants",
+						html: `<p>Durant sa période Ronin, il traque et élimine sans pitié les criminels ayant
         survécu au Blip. Plus tard, il affronte Wilson Fisk/Kingpin et la mafia des Tracksuit, aux
         côtés de sa nouvelle protégée Kate Bishop.</p>`
-      },
-      {
-        label: "Son arc en une phrase",
-        html: `<p>De l'agent discret dans l'ombre des autres Avengers à un père de famille hanté par
+					},
+					{
+						label: "Son arc en une phrase",
+						html: `<p>De l'agent discret dans l'ombre des autres Avengers à un père de famille hanté par
         la perte, qui transmet finalement le flambeau à la génération suivante.</p>`
-      }
-    ]
-  }
-};
+					}
+				]
+			}
+		};
 
-function renderProfile(key) {
-  const data = PERSOS[key];
-  const card = document.getElementById('profile-card');
+		function renderProfile(key) {
+			const data = PERSOS[key];
+			const card = document.getElementById('profile-card');
 
-  const sectionsHtml = data.sections.map(s => `
+			const sectionsHtml = data.sections.map(s => `
     <div class="profile__section">
       <div class="profile__label">${s.label}</div>
       ${s.html}
     </div>
   `).join('');
 
-  card.innerHTML = `
+			card.innerHTML = `
     <div class="profile__eyebrow">${data.eyebrow}</div>
     <h2 class="profile__name">${data.name}</h2>
     <p class="profile__realname">${data.realname}</p>
@@ -532,24 +548,25 @@ function renderProfile(key) {
     </div>
     ${sectionsHtml}
   `;
-}
+		}
 
-document.addEventListener('DOMContentLoaded', () => {
-  renderProfile('tony');
+		document.addEventListener('DOMContentLoaded', () => {
+			renderProfile('tony');
 
-  document.querySelectorAll('.roster__btn').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.roster__btn').forEach((b) => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-      renderProfile(btn.dataset.perso);
-      document.getElementById('profile-card').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    });
-  });
-});
-</script>
+			document.querySelectorAll('.roster__btn').forEach((btn) => {
+				btn.addEventListener('click', () => {
+					document.querySelectorAll('.roster__btn').forEach((b) => {
+						b.classList.remove('active');
+						b.setAttribute('aria-selected', 'false');
+					});
+					btn.classList.add('active');
+					btn.setAttribute('aria-selected', 'true');
+					renderProfile(btn.dataset.perso);
+					document.getElementById('profile-card').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+				});
+			});
+		});
+	</script>
 </body>
+
 </html>
