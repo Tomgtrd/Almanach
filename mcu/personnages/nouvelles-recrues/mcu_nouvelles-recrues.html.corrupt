@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MCU â€” Les nouvelles recrues | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css">
+	<style>
+		.members-grid {
+			max-width: 880px;
+			margin: 0 auto;
+			padding: 24px 32px 100px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			gap: 20px;
+		}
+
+		.member-card {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+			background: var(--paper-raised);
+			border: 1px solid var(--hairline);
+			border-radius: var(--radius-md);
+			padding: 28px 26px;
+			opacity: 0;
+			transform: translateY(16px);
+			transition: opacity 0.6s ease, transform 0.6s ease,
+				border-color 0.25s ease, box-shadow 0.25s ease;
+		}
+
+		.member-card.in {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.member-card:hover {
+			border-color: var(--mcu-red-soft);
+			box-shadow: 0 4px 18px rgba(28, 23, 18, 0.06);
+		}
+
+		.member-card__icon {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background: var(--mcu-cream);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: var(--font-display);
+			font-size: 1.4rem;
+			font-weight: 500;
+			color: var(--mcu-red-soft);
+			margin-bottom: 16px;
+		}
+
+		.member-card__name {
+			font-family: var(--font-display);
+			font-size: 1.35rem;
+			font-weight: 500;
+			margin: 0 0 6px;
+			color: var(--ink);
+		}
+
+		.member-card__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 0.92rem;
+			color: var(--ink-faint);
+			margin: 0 0 14px;
+		}
+
+		.member-card__pitch {
+			font-size: 0.92rem;
+			color: var(--ink-soft);
+			margin: 0;
+			line-height: 1.55;
+		}
+	</style>
+</head>
+
+<body>
+
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="hero">
+		<div class="hero__eyebrow">MCU â€” les personnages</div>
+		<h1 class="hero__title">Les nouvelles recrues</h1>
+		<p class="hero__subtitle">pour les nuls</p>
+		<p class="hero__lede">
+			Sept figures qui rejoignent l'Ã©cosystÃ¨me Avengers aprÃ¨s 2012, chacune
+			Ã  sa maniÃ¨re â€” un voleur repenti, une famille royale, un adolescent
+			de quartier, une pilote perdue dans l'espace, une sorciÃ¨re faÃ§onnÃ©e
+			par le chagrin, un Ãªtre synthÃ©tique en quÃªte d'humanitÃ©, et un dieu
+			de la malice devenu, malgrÃ© lui, un hÃ©ros. <em>Cliquez sur un nom
+				pour dÃ©couvrir sa biographie complÃ¨te et le dÃ©tail de chacune de
+				ses apparitions</em>.
+		</p>
+	</header>
+
+	<main class="members-grid">
+
+		<a class="member-card" href="ant-man.html">
+			<div class="member-card__icon">AM</div>
+			<h2 class="member-card__name">Ant-Man</h2>
+			<p class="member-card__realname">Scott Lang</p>
+			<p class="member-card__pitch">
+				Un voleur repenti, prÃªt Ã  tout pour rester dans la vie de sa fille
+				â€” devenu, sans trop savoir comment, un hÃ©ros Ã  taille rÃ©duite.
+			</p>
+		</a>
+
+		<a class="member-card" href="black-panther.html">
+			<div class="member-card__icon">BP</div>
+			<h2 class="member-card__name">Black Panther</h2>
+			<p class="member-card__realname">T'Challa & Shuri</p>
+			<p class="member-card__pitch">
+				Un titre portÃ© par deux membres d'une mÃªme famille royale, gardiens
+				du royaume le plus avancÃ© et le plus discret du monde.
+			</p>
+		</a>
+
+		<a class="member-card" href="spider-man.html">
+			<div class="member-card__icon">SM</div>
+			<h2 class="member-card__name">Spider-Man</h2>
+			<p class="member-card__realname">Peter Parker</p>
+			<p class="member-card__pitch">
+				Un adolescent de Queens qui apprend, Ã  ses dÃ©pens, qu'un grand
+				pouvoir implique de grandes responsabilitÃ©s.
+			</p>
+		</a>
+
+		<a class="member-card" href="captain-marvel.html">
+			<div class="member-card__icon">CM</div>
+			<h2 class="member-card__name">Captain Marvel</h2>
+			<p class="member-card__realname">Carol Danvers</p>
+			<p class="member-card__pitch">
+				Une pilote de l'Air Force devenue arme kree malgrÃ© elle, avant de
+				reprendre le contrÃ´le de sa propre histoire.
+			</p>
+		</a>
+
+		<a class="member-card" href="wanda.html">
+			<div class="member-card__icon">W</div>
+			<h2 class="member-card__name">Wanda Maximoff</h2>
+			<p class="member-card__realname">Scarlet Witch</p>
+			<p class="member-card__pitch">
+				Une orpheline de guerre faÃ§onnÃ©e malgrÃ© elle par HYDRA, devenue la
+				sorciÃ¨re la plus puissante â€” et la plus dangereuse â€” du MCU.
+			</p>
+		</a>
+
+		<a class="member-card" href="vision.html">
+			<div class="member-card__icon">V</div>
+			<h2 class="member-card__name">Vision</h2>
+			<p class="member-card__realname">The Vision</p>
+			<p class="member-card__pitch">
+				Un Ãªtre synthÃ©tique nÃ© d'une intelligence artificielle hostile,
+				divisÃ© en deux aprÃ¨s sa mort â€” un seul reprend son envol.
+			</p>
+		</a>
+
+		<a class="member-card" href="loki.html">
+			<div class="member-card__icon">L</div>
+			<h2 class="member-card__name">Loki</h2>
+			<p class="member-card__realname">Loki Laufeyson</p>
+			<p class="member-card__pitch">
+				Un prince banni de sa propre lignÃ©e, dont la quÃªte de reconnaissance
+				le mÃ¨ne du rÃ´le de grand mÃ©chant Ã  celui de gardien du multivers
+				tout entier.
+			</p>
+		</a>
+
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Groupe suivant</div>
+		<a href="../antagonistes/mcu_antagonistes.html">Les grands antagonistes â†’</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const cards = document.querySelectorAll('.member-card');
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('in');
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{ threshold: 0.15 }
+			);
+			cards.forEach((c) => observer.observe(c));
+		});
+	</script>
+</body>
+
+</html>

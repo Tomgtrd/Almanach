@@ -1,0 +1,410 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Loki | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Dieu de la Malice</div>
+		<h1 class="hero__title">Loki</h1>
+		<p class="charhero__realname">Loki Laufeyson</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">GÃ©ant des Glaces</span>
+			<span class="charhero__tag">Prince d'Asgard</span>
+			<span class="charhero__tag">Dieu du Temps</span>
+		</div>
+	</header>
+
+	<main>
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>Biographie
+			</div>
+			<h2 class="planche__title">Du prince qui voulait un trÃ´ne au dieu qui a fini par en porter un tout autre
+			</h2>
+			<p class="planche__lede">
+				Un manipulateur qui a passÃ© une vie entiÃ¨re Ã  vouloir rÃ©gner â€”
+				avant de dÃ©couvrir que gouverner le temps lui-mÃªme exige d'y
+				renoncer entiÃ¨rement.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Loki naÃ®t sur Jotunheim, fils biologique de Laufey, roi des
+					GÃ©ants des Glaces, qui l'abandonne Ã  sa naissance en raison de sa
+					petite taille pour un membre de son espÃ¨ce. Recueilli par Odin,
+					il est Ã©levÃ© Ã  Asgard aux cÃ´tÃ©s de Thor par Odin et Frigga, sans
+					jamais connaÃ®tre la vÃ©ritÃ© sur ses origines â€” un secret qui,
+					lorsqu'il est rÃ©vÃ©lÃ©, le pousse Ã  une quÃªte dÃ©sespÃ©rÃ©e de
+					reconnaissance et le conduit Ã  saboter le couronnement de Thor
+					pour l'empÃªcher d'accÃ©der au trÃ´ne. Banni Ã  son tour aprÃ¨s avoir
+					tentÃ© de dÃ©truire Jotunheim entier pour prouver sa loyautÃ© Ã 
+					Odin, Loki se laisse tomber dans le vide plutÃ´t que d'affronter
+					la dÃ©ception de son pÃ¨re adoptif.
+				</p>
+				<p>
+					Recueilli par les serviteurs de Thanos, Loki accepte de mener
+					l'invasion de la Terre en Ã©change du Sceptre contenant la Pierre
+					de l'Esprit, mais Ã©choue face aux Avengers nouvellement formÃ©s.
+					EmprisonnÃ© Ã  Asgard, il retrouve une utilitÃ© lorsque la mort de
+					Frigga, tuÃ©e lors du sac d'Asgard par les Elfes Noirs, le pousse
+					Ã  s'allier temporairement Ã  Thor pour venger leur mÃ¨re â€” avant
+					de simuler sa propre mort et de usurper le trÃ´ne d'Asgard sous
+					l'apparence d'Odin pendant plusieurs annÃ©es. DÃ©masquÃ© par le
+					retour de Thor, Loki assiste Ã  la mort du vÃ©ritable Odin, qui
+					libÃ¨re Hela, leur sÅ“ur aÃ®nÃ©e jusque-lÃ  tenue secrÃ¨te, laquelle
+					manque de dÃ©truire Asgard tout entier. Loki aide finalement Thor
+					Ã  Ã©vacuer les survivants asgardiens Ã  bord d'un vaisseau, avant
+					que celui-ci ne soit attaquÃ© par Thanos en chemin : Loki tente
+					une derniÃ¨re ruse pour le tuer et se fait briser la nuque pour sa
+					peine, mourant sous les yeux de Thor.
+				</p>
+				<p>
+					Une variante de Loki, issue d'une ligne temporelle divergente
+					crÃ©Ã©e lorsque le Loki de 2012 s'Ã©chappe avec le Tesseract durant
+					le casse temporel des Avengers, est capturÃ©e par la TVA (AutoritÃ©
+					de Variance Temporelle), l'organisation chargÃ©e de prÃ©server la
+					Ligne SacrÃ©e du Temps. RecrutÃ© malgrÃ© lui pour traquer une autre
+					variante rebelle, Sylvie, Loki dÃ©couvre avec elle que la TVA
+					entiÃ¨re est l'Å“uvre d'un Ãªtre appelÃ© Celui qui Demeure â€” une
+					variante de Kang le ConquÃ©rant â€” qui a instaurÃ© la Ligne SacrÃ©e
+					pour empÃªcher une guerre multiversale dÃ©vastatrice entre ses
+					innombrables variantes. Sylvie choisit de le tuer malgrÃ© les
+					mises en garde de Loki, brisant le confinement de la Ligne
+					SacrÃ©e et libÃ©rant le multivers entier â€” ouvrant la voie au
+					chaos que Kang exploitera par la suite.
+				</p>
+				<p>
+					Dans la seconde saison, Loki dÃ©veloppe la capacitÃ© de glisser
+					dans le temps de faÃ§on incontrÃ´lÃ©e, une consÃ©quence de son
+					exposition prolongÃ©e aux radiations temporelles. AprÃ¨s avoir
+					explorÃ© de nombreuses branches possibles pour sauver la TVA et
+					le MÃ©tier Ã  Tisser Temporel sans provoquer de guerre
+					multiversale, Loki comprend qu'aucune solution ne permettra de
+					tout sauver sans sacrifice. Il choisit alors de porter lui-mÃªme
+					le poids de la Ligne SacrÃ©e : il absorbe l'Ã©nergie de
+					l'ensemble des lignes temporelles mourantes et s'installe pour
+					l'Ã©ternitÃ© Ã  la Citadelle de la Fin des Temps, oÃ¹ il tisse
+					lui-mÃªme, seul, un nouveau mÃ©tier maintenant la stabilitÃ© du
+					multivers â€” devenant Ã  son tour un Â« Celui qui Demeure Â»,
+					gardien solitaire du temps lui-mÃªme.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Famille & relations
+			</div>
+			<h2 class="planche__title">Une quÃªte de reconnaissance qui finit par se dÃ©placer ailleurs</h2>
+			<p class="planche__lede">
+				D'une famille qui ne lui a jamais tout Ã  fait dit la vÃ©ritÃ© Ã  une
+				poignÃ©e de compagnons de la TVA devenus, Ã  leur faÃ§on, la sienne.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Thor</strong> â€” son frÃ¨re adoptif, avec qui les liens
+					oscillent sans cesse entre rivalitÃ© amÃ¨re et loyautÃ© profonde.
+					Leur relation, plusieurs fois brisÃ©e par les trahisons de Loki,
+					finit par se rÃ©parer lors de l'Ã©vacuation d'Asgard â€” juste avant
+					que Loki ne meure sous ses yeux.
+				</p>
+				<p>
+					<strong>Odin</strong> â€” son pÃ¨re adoptif, dont l'amour
+					conditionnel et les mensonges sur ses origines faÃ§onnent
+					l'essentiel de la quÃªte de reconnaissance de Loki.
+				</p>
+				<p>
+					<strong>Frigga</strong> â€” sa mÃ¨re adoptive, la seule figure
+					parentale envers laquelle Loki n'exprime jamais de ressentiment.
+					Sa mort lors du sac d'Asgard reste l'un des rares Ã©vÃ©nements Ã 
+					provoquer chez lui un chagrin sincÃ¨re et sans calcul.
+				</p>
+				<p>
+					<strong>Laufey</strong> â€” son pÃ¨re biologique, roi des GÃ©ants
+					des Glaces, qui l'abandonne Ã  sa naissance. Loki le tue
+					lui-mÃªme dans <em>Thor</em>, en guise de preuve de loyautÃ©
+					envers Odin.
+				</p>
+				<p>
+					<strong>Sylvie Laufeydottir</strong> â€” une variante de
+					Loki devenue son alliÃ©e la plus proche au sein de la TVA. Leur
+					dÃ©saccord sur le sort de Celui qui Demeure â€” elle choisit de le
+					tuer, il tente de l'en dissuader â€” dÃ©clenche directement la
+					fracture du multivers.
+				</p>
+				<p>
+					<strong>Mobius M. Mobius</strong> â€” l'agent de la TVA qui
+					recrute Loki et devient son plus fidÃ¨le soutien au fil des deux
+					saisons, jusqu'Ã  assister, impuissant mais prÃ©sent, Ã  son
+					sacrifice final.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>Filmographie
+			</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'un prince manipulateur assoiffÃ© de trÃ´ne Ã  l'Ãªtre solitaire qui
+				finit par en tisser un tout autre, pour l'Ã©ternitÃ©.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-l-thor" id="f-l-thor-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Thor</span>
+								<span class="accordion__meta">2011</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-l-thor">
+							<div class="accordion__panel-inner">
+								<p>
+									Loki sabote le couronnement de Thor en laissant les GÃ©ants
+									des Glaces s'infiltrer Ã  Asgard, provoquant le bannissement
+									de son frÃ¨re sur Terre. DÃ©couvrant Ã  cette occasion sa
+									vÃ©ritable nature de GÃ©ant des Glaces adoptÃ© par Odin, il
+									tente de dÃ©truire Jotunheim entier pour prouver sa loyautÃ©,
+									avant de se laisser tomber dans le vide plutÃ´t que
+									d'affronter la dÃ©ception de son pÃ¨re.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-l-av" id="f-l-av-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">The Avengers</span>
+								<span class="accordion__meta">2012</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-l-av">
+							<div class="accordion__panel-inner">
+								<p>
+									Recueilli par les serviteurs de Thanos aprÃ¨s sa chute dans
+									le vide, Loki accepte de mener l'invasion de la Terre en
+									Ã©change du Sceptre contenant la Pierre de l'Esprit. Son
+									armÃ©e Chitauri est repoussÃ©e par les Avengers nouvellement
+									formÃ©s Ã  New York, et il est ramenÃ© prisonnier Ã  Asgard par
+									Thor.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-l-tdw" id="f-l-tdw-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Thor: The Dark World</span>
+								<span class="accordion__meta">2013</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-l-tdw">
+							<div class="accordion__panel-inner">
+								<p>
+									La mort de Frigga, tuÃ©e lors du sac d'Asgard par les Elfes
+									Noirs de Malekith, pousse Loki Ã  s'allier temporairement Ã 
+									Thor pour venger leur mÃ¨re. Ã€ l'issue du combat contre
+									Malekith, Loki simule sa propre mort et usurpe secrÃ¨tement
+									le trÃ´ne d'Asgard sous l'apparence d'Odin.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-l-rag" id="f-l-rag-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Thor: Ragnarok</span>
+								<span class="accordion__meta">2017</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-l-rag">
+							<div class="accordion__panel-inner">
+								<p>
+									DÃ©masquÃ© par le retour de Thor, Loki l'accompagne
+									rechercher leur pÃ¨re exilÃ© sur Terre et assiste Ã  sa mort,
+									qui libÃ¨re Hela, leur sÅ“ur aÃ®nÃ©e jusque-lÃ  tenue secrÃ¨te.
+									AprÃ¨s avoir fui Asgard aux cÃ´tÃ©s de Thor pour se rÃ©fugier
+									sur Sakaar, Loki l'aide finalement Ã  Ã©vacuer les survivants
+									asgardiens face Ã  la menace de Hela.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-l-iw" id="f-l-iw-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-l-iw">
+							<div class="accordion__panel-inner">
+								<p>
+									Le vaisseau transportant les survivants asgardiens est
+									attaquÃ© par Thanos venu rÃ©cupÃ©rer le Tesseract. Loki tente
+									une derniÃ¨re ruse pour le tuer et se fait briser la nuque
+									pour sa peine, mourant sous les yeux de Thor â€” une mort qui
+									reste dÃ©finitive dans la ligne temporelle principale.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item open">
+						<button class="accordion__trigger" aria-controls="f-l-s1" id="f-l-s1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Loki â€” saison 1</span>
+								<span class="accordion__meta">2021</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-l-s1" style="height: auto">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Tournant majeur</span>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Une variante de Loki, issue d'une ligne temporelle divergente
+									crÃ©Ã©e lorsque le Loki de 2012 s'Ã©chappe avec le Tesseract
+									durant le casse temporel des Avengers, est capturÃ©e par la
+									TVA, l'organisation chargÃ©e de prÃ©server la Ligne SacrÃ©e du
+									Temps. RecrutÃ© pour traquer une autre variante rebelle,
+									Sylvie, Loki dÃ©couvre avec elle que toute l'organisation est
+									l'Å“uvre de Celui qui Demeure, une variante de Kang le
+									ConquÃ©rant.
+								</p>
+								<span class="accordion__label">Ã€ retenir</span>
+								<p>
+									Sylvie choisit de tuer Celui qui Demeure malgrÃ© les mises en
+									garde de Loki, brisant le confinement de la Ligne SacrÃ©e et
+									libÃ©rant le multivers entier â€” un Ã©vÃ©nement fondateur qui
+									ouvre directement la voie Ã  <em>Doctor Strange in the
+										Multiverse of Madness</em> et Ã  l'ascension de Kang.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-l-s2" id="f-l-s2-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Loki â€” saison 2</span>
+								<span class="accordion__meta">2023</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-l-s2">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Tournant majeur</span>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Loki dÃ©veloppe la capacitÃ© de glisser dans le temps de faÃ§on
+									incontrÃ´lÃ©e, consÃ©quence de son exposition prolongÃ©e aux
+									radiations temporelles. AprÃ¨s avoir explorÃ© de nombreuses
+									branches possibles pour sauver la TVA et le MÃ©tier Ã  Tisser
+									Temporel sans provoquer de guerre multiversale, il comprend
+									qu'aucune solution ne permettra de tout sauver sans
+									sacrifice.
+								</p>
+								<span class="accordion__label">Ã€ retenir</span>
+								<p>
+									Loki choisit de porter lui-mÃªme le poids de la Ligne SacrÃ©e :
+									il absorbe l'Ã©nergie de l'ensemble des lignes temporelles
+									mourantes et s'installe pour l'Ã©ternitÃ© Ã  la Citadelle de la
+									Fin des Temps, oÃ¹ il tisse seul un nouveau mÃ©tier maintenant
+									la stabilitÃ© du multivers â€” devenant Ã  son tour un Â« Celui
+									qui Demeure Â», gardien solitaire du temps lui-mÃªme.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="encart" style="margin-top: 32px">
+					<strong>Un point de vigilance.</strong> Le personnage de
+					Â« Rama-Tut Â» apparu dans <em>X-Men '97</em> saison 2 (voix de
+					John de Lancie) appartient Ã  une continuitÃ© sÃ©parÃ©e â€” il ne
+					s'agit pas d'un retour du Loki ou du Kang du MCU principal.
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_nouvelles-recrues.html">Les nouvelles recrues â†’</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

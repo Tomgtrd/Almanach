@@ -1,0 +1,221 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pierre de la RÃ©alitÃ© | Artefacts | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: #b52d2d;
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">SingularitÃ© cosmique Â· Rouge</div>
+		<h1 class="hero__title">La Pierre de la RÃ©alitÃ©</h1>
+		<p class="charhero__realname">Contenant : L'Ã‰ther (Aether)</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Transmutation</span>
+			<span class="charhero__tag">MatiÃ¨re noire</span>
+			<span class="charhero__tag">DÃ©truite en 2018</span>
+		</div>
+	</header>
+
+	<main>
+		<section class="planche" id="planche-bio" data-nav-label="Origine & Pouvoir">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>Origine & Pouvoir
+			</div>
+			<h2 class="planche__title">Le fluide capable de remodeler les lois de l'univers</h2>
+			<p class="planche__lede">
+				Unique par sa consistance liquide et symbiotique, l'Ã‰ther absorbe la force vitale de ses hÃ´tes et
+				transmute la matiÃ¨re ordinaire en matiÃ¨re noire.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					La Pierre de la RÃ©alitÃ© est un cristal rouge capable d'altÃ©rer la constitution physique du rÃ©el,
+					d'annuler les lois scientifiques et de crÃ©er des illusions matÃ©rielles indiscernables du vrai[cite:
+					29, 31]. MillÃ©naires avant notre Ã¨re, le roi des Elfes Noirs Malekith la liquÃ©fie pour former
+					l'<strong>Ã‰ther</strong> (<em>Aether</em>), un fluide visqueux et parasitaire destinÃ© Ã  replonger
+					les Neuf Royaumes dans les tÃ©nÃ¨bres Ã©ternelles lors de la Convergence[cite: 29, 31].
+				</p>
+				<p>
+					InfiltrÃ© dans le corps d'un mortel comme Jane Foster, l'Ã‰ther agit comme une infection lÃ©tale tout
+					en dÃ©clenchant des dÃ©charges d'autodÃ©fense violentes[cite: 29, 31]. Lorsqu'il est maÃ®trisÃ© par un
+					Ãªtre puissant, il confÃ¨re une force surhumaine, rÃ©gÃ©nÃ¨re les membres coupÃ©s et permet de
+					mÃ©tamorphoser instantanÃ©ment la matiÃ¨re (dÃ©bris changÃ©s en cristaux ou en essaims, tirs laser
+					transformÃ©s en bulles, corps dÃ©sarticulÃ©s en rubans de matiÃ¨re)[cite: 29].
+				</p>
+				<p>
+					Thanos solidifie Ã  nouveau l'Ã‰ther sous forme de gemme rouge sur Knowhere avant de l'insÃ©rer dans le
+					Gantelet d'InfinitÃ©[cite: 29, 31].
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-owners" data-nav-label="Contenant & PropriÃ©taires">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Contenant & PropriÃ©taires
+			</div>
+			<h2 class="planche__title">Les gardiens de l'Ã‰ther</h2>
+			<p class="planche__lede">
+				De la crypte oubliÃ©e de Svartalfheim au musÃ©e du Collectionneur.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Malekith & les Elfes Noirs (2988 av. J.-C.)</strong> â€” Forgent l'Ã‰ther et tentent de
+					dÃ©truire la lumiÃ¨re cosmique avant d'Ãªtre vaincus par l'armÃ©e asgardienne du roi Bor[cite: 29, 31].
+				</p>
+				<p>
+					<strong>Le roi Bor d'Asgard (2988 av. J.-C.)</strong> â€” Jugeant l'Ã‰ther indestructible, Bor ordonne
+					de l'enfermer dans une chambre scellÃ©e souterraine tenue secrÃ¨te[cite: 29, 31].
+				</p>
+				<p>
+					<strong>Jane Foster (2013)</strong> â€” DÃ©couvre l'artefact Ã  travers une anomalie gravitationnelle Ã 
+					Londres ; l'Ã‰ther fusionne avec son organisme et la plonge dans un Ã©tat critique[cite: 29, 31].
+				</p>
+				<p>
+					<strong>Taneleer Tivan / Le Collectionneur (2013 â€” 2018)</strong> â€” Les guerriers asgardiens
+					Volstagg et Sif lui confient l'Ã‰ther pour Ã©viter de conserver deux Pierres d'InfinitÃ© dans les
+					coffres d'Odin[cite: 29, 31].
+				</p>
+				<p>
+					<strong>Thanos (2018)</strong> â€” Pille Knowhere, fige l'Ã‰ther sous sa forme minÃ©rale d'origine et
+					l'ajoute au Gantelet avant de le dÃ©truire sur Titan II[cite: 24, 29, 31].
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>Filmographie
+			</div>
+			<h2 class="planche__title">PrÃ©sence Ã  l'Ã©cran</h2>
+			<p class="planche__lede">
+				De la guerre millÃ©naire contre Malekith aux piÃ¨ges illusoires de Knowhere.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-tdw-r" id="f-tdw-r-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Thor: The Dark World</span>
+								<span class="accordion__meta">2013</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-tdw-r">
+							<div class="accordion__panel-inner">
+								<p>
+									Jane Foster est infectÃ©e par l'Ã‰ther, rÃ©veillant Malekith[cite: 29, 31]. Thor
+									l'emmÃ¨ne sur Svartalfheim oÃ¹ Malekith extrait le fluide de Jane et l'utilise lors de
+									la bataille de Greenwich avant d'Ãªtre anÃ©anti[cite: 29, 31]. Dans la scÃ¨ne
+									post-crÃ©dits, Sif et Volstagg remettent l'Ã‰ther au Collectionneur[cite: 29, 31].
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-iw-r" id="f-iw-r-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-iw-r">
+							<div class="accordion__panel-inner">
+								<p>
+									Sur Knowhere, Thanos utilise la pierre pour crÃ©er un faux dÃ©cor et piÃ©ger les
+									Gardiens de la Galaxie, transformant les tirs de Star-Lord en bulles et
+									dÃ©sarticulant Drax et Mantis[cite: 29, 31]. Sur Titan, il s'en sert pour montrer
+									l'ancienne beautÃ© de sa planÃ¨te natale[cite: 29, 31].
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg-r" id="f-eg-r-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg-r">
+							<div class="accordion__panel-inner">
+								<p>
+									Thor et Rocket voyagent en 2013 sur Asgard ; Rocket extrait l'Ã‰ther du corps de Jane
+									Foster Ã  l'aide d'un dispositif Ã  seringue quantique avant de regagner 2023[cite:
+									29, 31].
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Pierre suivante</div>
+		<a href="pierre-puissance.html">La Pierre de la Puissance â†’</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Drax le Destructeur | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css">
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Drax le Destructeur</div>
+		<h1 class="hero__title">Drax</h1>
+		<p class="charhero__realname">Drax</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Guerrier</span>
+			<span class="charhero__tag">LittÃ©ral</span>
+		</div>
+	</header>
+
+	<main>
+
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow"><span class="roman">I</span>Biographie</div>
+			<h2 class="planche__title">Le guerrier qui a perdu sa famille, puis en a trouvÃ© une autre</h2>
+			<p class="planche__lede">
+				Une vengeance qui aurait pu le consumer pour toujours â€” jusqu'Ã  ce
+				qu'une bande de marginaux lui redonne une raison de vivre.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Avant de devenir Drax le Destructeur, il Ã©tait simplement un mari
+					et un pÃ¨re, jusqu'Ã  ce que Ronan l'Accusateur, agissant sur les
+					ordres de Thanos, massacre sa femme et sa fille lors de la
+					destruction de sa planÃ¨te natale. RongÃ© par le chagrin et une soif
+					de vengeance implacable, Drax parcourt la galaxie en Ã©liminant
+					mÃ©thodiquement quiconque a servi Thanos et Ronan, jusqu'Ã  Ãªtre
+					capturÃ© et emprisonnÃ© par le Corps Nova.
+				</p>
+				<p>
+					C'est en prison, au Kyln, qu'il fait la rencontre de Peter Quill,
+					Gamora, Rocket et Groot â€” une Ã©quipe de circonstance qui devient
+					rapidement sa nouvelle famille. Drax se distingue par sa
+					comprÃ©hension littÃ©rale du langage, incapable de saisir les
+					mÃ©taphores ou le sarcasme, ce qui donne lieu Ã  des situations
+					aussi comiques qu'attachantes tout en masquant une intelligence
+					Ã©motionnelle bien plus fine qu'il n'y paraÃ®t.
+				</p>
+				<p>
+					Bien qu'il finisse par affronter et vaincre Ronan aux cÃ´tÃ©s des
+					Gardiens, sa vengeance n'apaise jamais totalement son deuil â€” mais
+					son lien grandissant avec Mantis, qu'il considÃ¨re peu Ã  peu comme
+					une fille de substitution, lui offre une nouvelle forme de
+					tendresse qu'il ne pensait plus jamais ressentir.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow"><span class="roman">II</span>Famille & relations</div>
+			<h2 class="planche__title">Ceux qui comptent</h2>
+			<p class="planche__lede">
+				Une famille arrachÃ©e par la violence, et une nouvelle famille
+				trouvÃ©e dans l'espace.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Sa femme et sa fille</strong> â€” assassinÃ©es par Ronan
+					l'Accusateur, leur perte faÃ§onne l'intÃ©gralitÃ© de sa trajectoire
+					et sa soif de vengeance.
+				</p>
+				<p>
+					<strong>Mantis</strong> â€” qu'il considÃ¨re peu Ã  peu comme une
+					fille de substitution, touchÃ© par son innocence et sa naÃ¯vetÃ©
+					aprÃ¨s une vie entiÃ¨re d'isolement auprÃ¨s d'Ego.
+				</p>
+				<p>
+					<strong>Les Gardiens de la Galaxie</strong> â€” la famille qu'il se
+					choisit aprÃ¨s avoir tout perdu, sans jamais totalement renoncer Ã 
+					son identitÃ© de guerrier vengeur.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow"><span class="roman">III</span>Filmographie</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'une vengeance solitaire Ã  une famille retrouvÃ©e parmi les Ã©toiles.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg1d" id="f-gotg1d-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy</span>
+								<span class="accordion__meta">2014</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg1d">
+							<div class="accordion__panel-inner">
+								<p>
+									EmprisonnÃ© au Kyln, Drax rejoint Peter Quill, Gamora,
+									Rocket et Groot dans leur alliance de circonstance,
+									cherchant avant tout Ã  attirer Ronan pour le tuer. Il
+									participe activement Ã  la bataille de Xandar qui met fin
+									Ã  la menace de Ronan.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg2d" id="f-gotg2d-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy Vol. 2</span>
+								<span class="accordion__meta">2014 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg2d">
+							<div class="accordion__panel-inner">
+								<p>
+									Drax se lie d'amitiÃ© avec Mantis, servante d'Ego, et l'aide
+									Ã  s'affirmer face Ã  ce dernier. Il participe Ã  la bataille
+									finale contre Ego pour sauver Peter Quill et le reste de
+									l'Ã©quipe.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-iw1d" id="f-iw1d-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-iw1d">
+							<div class="accordion__panel-inner">
+								<p>
+									Drax combat Thanos sur Titan aux cÃ´tÃ©s de Peter Quill,
+									Doctor Strange et Spider-Man, participant au plan
+									minutieux visant Ã  immobiliser le Titan â€” un plan qui
+									Ã©choue lorsque Peter, submergÃ© par la rage, frappe
+									Thanos prÃ©maturÃ©ment.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg1d" id="f-eg1d-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg1d">
+							<div class="accordion__panel-inner">
+								<p>
+									Drax combat aux cÃ´tÃ©s des Avengers survivants lors de la
+									bataille finale contre Thanos.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-ltt1d" id="f-ltt1d-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Thor: Love and Thunder</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-ltt1d">
+							<div class="accordion__panel-inner">
+								<p>
+									Drax accompagne les Gardiens dans l'accueil de Thor,
+									dÃ©vastÃ© par la perte de son peuple, avant de poursuivre
+									l'aventure avec le reste de l'Ã©quipe.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg3d" id="f-gotg3d-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy Vol. 3</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg3d">
+							<div class="accordion__panel-inner">
+								<p>
+									Drax participe Ã  la mission de sauvetage de Rocket,
+									affrontant le Haut Ã‰volutionnaire aux cÃ´tÃ©s du reste de
+									l'Ã©quipe, avant de choisir de rester veiller sur les
+									enfants sauvÃ©s de son emprise Ã  la fin du film.
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_gardiens.html">Les Gardiens de la Galaxie â†’</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

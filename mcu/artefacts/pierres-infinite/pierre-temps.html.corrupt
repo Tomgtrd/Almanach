@@ -1,0 +1,225 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pierre du Temps | Artefacts | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: #2e9c5d;
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">SingularitÃ© cosmique Â· Verte</div>
+		<h1 class="hero__title">La Pierre du Temps</h1>
+		<p class="charhero__realname">Contenant : L'Å’il d'Agamotto</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Boucles temporelles</span>
+			<span class="charhero__tag">CausalitÃ©</span>
+			<span class="charhero__tag">DÃ©truite en 2018</span>
+		</div>
+	</header>
+
+	<main>
+		<section class="planche" id="planche-bio" data-nav-label="Origine & Pouvoir">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>Origine & Pouvoir
+			</div>
+			<h2 class="planche__title">Le pouvoir d'inverser le cours des Ã©vÃ©nements</h2>
+			<p class="planche__lede">
+				LogÃ©e dans l'Å’il d'Agamotto, cette gemme verte permet d'accÃ©lÃ©rer, de rembobiner ou de figer le temps,
+				tout en sondant les probabilitÃ©s de l'avenir.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					La Pierre du Temps est le fragment primordial rÃ©gissant l'Ã©coulement temporel et la causalitÃ©[cite:
+					27, 31]. DÃ©couverte dans l'AntiquitÃ© par Agamotto, premier Sorcier SuprÃªme de la Terre, elle est
+					enchÃ¢ssÃ©e au cÅ“ur d'un pendentif protecteur â€” l'<strong>Å’il d'Agamotto</strong> â€” dont les
+					mÃ©canismes mystiques permettent d'activer ses pouvoirs via des mandalas et des runes d'Ã©nergie verte
+					sans rompre la trame du continuum espace-temps[cite: 27, 31].
+				</p>
+				<p>
+					Le porteur peut cibler prÃ©cisÃ©ment un objet ou une zone gÃ©ographique pour inverser son Ã©tat
+					(reconstituer une pomme croquÃ©e, rÃ©parer le Sanctuaire de Hong Kong dÃ©truit), enfermer des entitÃ©s
+					hors du temps dans des boucles temporelles infinies (comme Dormammu), ou accÃ©lÃ©rer sa propre
+					perception pour observer des millions de lignes temporelles alternatives en quelques instants[cite:
+					27, 31].
+				</p>
+				<p>
+					Un usage non maÃ®trisÃ© risque toutefois d'engendrer des paradoxes temporels instables, des
+					dÃ©doublements de rÃ©alitÃ© ou l'effacement de l'utilisateur[cite: 27].
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-owners" data-nav-label="Contenant & PropriÃ©taires">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Contenant & PropriÃ©taires
+			</div>
+			<h2 class="planche__title">Les MaÃ®tres des Arts Mystiques</h2>
+			<p class="planche__lede">
+				La relique jalousement gardÃ©e Ã  Kamar-Taj par les Sorciers SuprÃªmes successifs.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Agamotto</strong> â€” Premier Sorcier SuprÃªme de la Terre et fondateur des MaÃ®tres des Arts
+					Mystiques, il conÃ§oit l'Å’il d'Agamotto pour harnacher la pierre[cite: 27, 31].
+				</p>
+				<p>
+					<strong>L'Ancien (jusqu'en 2016)</strong> â€” Conserve la relique sur son piÃ©destal Ã  Kamar-Taj et
+					veille Ã  ce qu'elle ne soit pas employÃ©e Ã  la lÃ©gÃ¨re[cite: 27, 31].
+				</p>
+				<p>
+					<strong>Doctor Stephen Strange (2016 â€” 2018)</strong> â€” Ã‰tudie le grimoire de Cagliostro, apprend Ã 
+					manier l'Å’il, repousse Kaecilius et neutralise Dormammu[cite: 27, 31]. En 2018, il cÃ¨de la pierre Ã 
+					Thanos sur Titan pour sauver la vie de Tony Stark, ayant vu que c'Ã©tait l'unique voie vers la
+					victoire finale[cite: 24, 27, 31].
+				</p>
+				<p>
+					<strong>Thanos (2018)</strong> â€” InsÃ¨re la pierre dans le Gantelet, remonte le temps au Wakanda pour
+					ressusciter Vision et rÃ©cupÃ©rer la Pierre de l'Esprit, puis dÃ©truit les six gemmes trois semaines
+					plus tard[cite: 24, 27, 31].
+				</p>
+				<p>
+					<strong>Avengers (2023 / casse de 2012)</strong> â€” Bruce Banner convainc l'Ancien de lui cÃ©der la
+					pierre lors de la bataille de New York en 2012[cite: 27, 31]. Elle est restituÃ©e Ã  son Ã©poque par
+					Steve Rogers aprÃ¨s la dÃ©faite de Thanos[cite: 27, 31].
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>Filmographie
+			</div>
+			<h2 class="planche__title">PrÃ©sence Ã  l'Ã©cran</h2>
+			<p class="planche__lede">
+				De l'affrontement mÃ©taphysique dans la Dimension Noire au sacrifice calculÃ© sur Titan.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-ds-t" id="f-ds-t-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Doctor Strange</span>
+								<span class="accordion__meta">2016</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-ds-t">
+							<div class="accordion__panel-inner">
+								<p>
+									Strange dÃ©verrouille l'Å’il d'Agamotto Ã  Kamar-Taj[cite: 27]. Ã€ Hong Kong, il inverse
+									la destruction du Sanctuaire avant de se rendre dans la Dimension Noire pour
+									enfermer Dormammu dans une boucle temporelle infinie jusqu'Ã  ce que le dÃ©mon accepte
+									de quitter la Terre[cite: 27, 31].
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-iw-t" id="f-iw-t-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-iw-t">
+							<div class="accordion__panel-inner">
+								<p>
+									Strange explore 14 000 605 avenirs alternatifs sur Titan pour trouver le scÃ©nario
+									victorieux[cite: 27]. Il cÃ¨de ensuite la pierre Ã  Thanos pour Ã©pargner Tony
+									Stark[cite: 24, 27, 31]. Au Wakanda, Thanos remonte quelques secondes dans le temps
+									pour annuler le sacrifice de Vision et s'emparer de la Pierre de l'Esprit[cite: 24,
+									27, 30, 31].
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg-t" id="f-eg-t-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg-t">
+							<div class="accordion__panel-inner">
+								<p>
+									Sur le toit du Sanctuaire de New York en 2012, Bruce Banner explique Ã  l'Ancien que
+									Strange a volontairement donnÃ© la pierre Ã  Thanos[cite: 27, 31]. Confiante dans le
+									choix de son successeur, elle confie la gemme Ã  Banner[cite: 27, 31].
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Pierre suivante</div>
+		<a href="pierre-ame.html">La Pierre de l'Ã‚me â†’</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

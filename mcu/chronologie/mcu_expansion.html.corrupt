@@ -1,0 +1,1155 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MCU â€” L'expansion | Almanach</title>
+	<link rel="stylesheet" href="../mcu_style.css" />
+</head>
+
+<body>
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../mcu_personnages.html">Les personnages</a>
+			<a href="../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="mcu_multivers.html">Comprendre le multivers</a>
+			<a href="mcu_antiquite.html">Avant les héros</a>
+			<a href="mcu_origines.html">Les origines</a>
+			<a href="mcu_expansion.html">L'expansion</a>
+			<a href="mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="mcu_actuel.html">L'ère actuelle</a>
+			<a href="mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="hero">
+		<div class="hero__eyebrow">MCU â€” chapitre 3</div>
+		<h1 class="hero__title">L'expansion</h1>
+		<p class="hero__subtitle">pour les nuls</p>
+		<p class="hero__lede">
+			6 planches pour comprendre, une bonne fois pour toutes, comment le petit
+			groupe de New York est devenu un univers tentaculaire â€”
+			<em>entre gratte-ciels asgardiens, ruelles de Hell's Kitchen et guerre
+				civile entre hÃ©ros</em>.
+		</p>
+	</header>
+
+	<main>
+		<!-- ================= PLANCHE I ================= -->
+		<section class="planche" id="planche-1" data-nav-label="I. Deux artefacts, un seul problÃ¨me">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>Deux artefacts, un seul problÃ¨me
+			</div>
+			<h2 class="planche__title">L'Ã‰ther et le poison</h2>
+			<p class="planche__lede">
+				Deux suites en une seule annÃ©e, deux menaces bien diffÃ©rentes â€” et
+				deux scÃ¨nes post-crÃ©dits qui, sans le savoir encore, dessinent la
+				carte du MCU des cinq annÃ©es suivantes.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="tdw1" id="tdw1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Thor: The Dark World</span>
+								<span class="accordion__meta">2013</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="tdw1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Malekith, chef des Elfes Noirs, revient d'un long sommeil
+									pour rÃ©cupÃ©rer l'Ã‰ther â€” une substance ancienne capable de
+									plonger l'univers dans les tÃ©nÃ¨bres â€” aprÃ¨s qu'il s'est
+									accidentellement infiltrÃ© dans le corps de Jane Foster. Il
+									tue Frigga, la mÃ¨re de Thor et Loki, en s'introduisant Ã 
+									Asgard pour traquer Jane, ce qui pousse Thor Ã  s'allier Ã  un
+									Loki rongÃ© par le deuil pour affronter Malekith loin
+									d'Asgard, au prix d'un sacrifice lourd de consÃ©quences.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Deux scÃ¨nes cette fois. Dans la premiÃ¨re, Sif et Volstagg
+									confient l'Ã‰ther au Collector plutÃ´t que de le stocker Ã 
+									Asgard aux cÃ´tÃ©s du Tesseract â€”
+									<em>Â« il n'est pas prudent de garder deux Pierres d'InfinitÃ©
+										si proches l'une de l'autre Â»</em>. Une fois seul, le Collector murmure :
+									<em>Â« Une sur six Â».</em> C'est la toute premiÃ¨re fois que
+									le MCU confirme l'existence de six Pierres d'InfinitÃ© au
+									total, et cette scÃ¨ne plante la passerelle directe vers
+									<em>Guardians of the Galaxy</em>. La seconde scÃ¨ne, plus
+									lÃ©gÃ¨re, montre simplement Thor retrouver Jane sur Terre.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="im3" id="im3-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Iron Man 3</span>
+								<span class="accordion__meta">2013</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="im3">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Tony Stark, en proie Ã  des crises de panique aprÃ¨s
+									l'invasion de New York, affronte le Mandarin â€” un terroriste
+									mÃ©diatique qui se rÃ©vÃ¨le n'Ãªtre qu'une faÃ§ade masquant le
+									vÃ©ritable cerveau de l'opÃ©ration, Aldrich Killian, et sa
+									technologie Extremis.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									On dÃ©couvre que tout le rÃ©cit Ã©tait en fait narrÃ© par Tony
+									Ã ... Bruce Banner, endormi depuis le dÃ©but de la scÃ¨ne. Un
+									pur moment de comÃ©die qui confirme, en creux, l'amitiÃ©
+									naissante entre les deux hommes.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ================= PLANCHE II ================= -->
+		<section class="planche" id="planche-2" data-nav-label="II. Le soldat, les marginaux et l'arbre qui marche">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Le soldat, les marginaux et l'arbre qui
+				marche
+			</div>
+			<h2 class="planche__title">
+				Le S.H.I.E.L.D. s'effondre, la galaxie s'ouvre
+			</h2>
+			<p class="planche__lede">
+				2014 fait basculer le MCU d'un coup : l'organisation qui structurait
+				tout depuis le dÃ©but se rÃ©vÃ¨le pourrie de l'intÃ©rieur, tandis qu'un
+				tout premier film s'aventure loin, trÃ¨s loin de la Terre.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="ahtk" id="ahtk-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">All Hail the King</span>
+								<span class="accordion__meta">2014 Â· One-Shot</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="ahtk">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Ce dernier One-Shot Marvel suit Trevor Slattery, l'acteur
+									qui jouait le faux Mandarin dans <em>Iron Man 3</em>,
+									dÃ©sormais en prison oÃ¹ il coule des jours tranquilles grÃ¢ce
+									Ã  sa cÃ©lÃ©britÃ© inattendue. Un cinÃ©aste venu tourner un
+									documentaire sur lui se rÃ©vÃ¨le Ãªtre un agent du vÃ©ritable
+									rÃ©seau des Dix Anneaux : il abat les gardes, tue le garde du
+									corps de Trevor et l'enlÃ¨ve de force pour le livrer Ã  son
+									vÃ©ritable commanditaire, furieux qu'on ait usurpÃ© son
+									identitÃ© et son symbole.
+								</p>
+								<span class="accordion__label">Connexion</span>
+								<p>
+									Cette piÃ¨ce, longtemps restÃ©e un simple clin d'Å“il, prend
+									tout son sens des annÃ©es plus tard avec la sortie de
+									<em>Shang-Chi and the Legend of the Ten Rings</em>.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="tws" id="tws-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Captain America: The Winter Soldier</span>
+								<span class="accordion__meta">2014</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="tws">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Tournant majeur</span>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Steve Rogers dÃ©couvre qu'HYDRA n'a jamais Ã©tÃ© dÃ©truite aprÃ¨s
+									la Seconde Guerre mondiale : l'organisation s'est infiltrÃ©e
+									au cÅ“ur mÃªme du S.H.I.E.L.D. depuis des dÃ©cennies. Pire
+									encore, le tueur envoyÃ© pour l'Ã©liminer, le Soldat de
+									l'Hiver, n'est autre que Bucky Barnes, son meilleur ami que
+									l'on croyait mort â€” transformÃ© en arme par un lavage de
+									cerveau rÃ©pÃ©tÃ©. Le film se conclut sur la chute totale du
+									S.H.I.E.L.D., ses secrets rendus publics.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Bucky, en fuite et rongÃ© par des bribes de mÃ©moire, se rend
+									seul au Smithsonian pour observer l'exposition consacrÃ©e Ã 
+									Captain America et aux Howling Commandos â€” dont une photo de
+									lui-mÃªme dans les annÃ©es 1940. Le dÃ©but d'un long chemin
+									vers la reconstruction de son identitÃ©, qui deviendra le
+									cÅ“ur de
+									<em>Civil War</em>.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="gotg1" id="gotg1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy</span>
+								<span class="accordion__meta">2014</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="gotg1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Premier film cosmique</span>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Peter Quill, humain enlevÃ© enfant et Ã©levÃ© par des pirates
+									de l'espace, s'associe malgrÃ© lui Ã  Gamora, Drax, Rocket et
+									Groot pour empÃªcher Ronan l'Accusateur de mettre la main sur
+									l'Orbe â€” qui se rÃ©vÃ¨le contenir la Pierre du Pouvoir.
+									Thanos, dÃ©jÃ  entrevu Ã  la fin d'<em>Avengers</em>, apparaÃ®t
+									ici en personne pour la premiÃ¨re fois, en commanditaire de
+									Ronan. Lors de l'affrontement final, Groot se sacrifie en
+									formant un cocon protecteur autour de ses coÃ©quipiers pour
+									les protÃ©ger de l'explosion du vaisseau de Ronan, avant de
+									renaÃ®tre peu aprÃ¨s sous la forme d'une jeune pousse.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Dans les ruines de son musÃ©e dÃ©truit pendant le film, le
+									Collector, Ã©mÃ©chÃ©, se fait lÃ©cher le visage par Cosmo le
+									chien de l'espace, sous le regard dÃ©sapprobateur d'un
+									nouveau personnage tout juste Ã©chappÃ© d'une de ses vitrines
+									: Howard the Duck, improbable canard humanoÃ¯de tout droit
+									sorti des comics les plus obscurs de la maison Marvel.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="iag1" id="iag1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">I Am Groot â€” Ã©pisode 1</span>
+								<span class="accordion__meta">2014</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="iag1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Premier Ã©pisode de cette sÃ©rie de courts-mÃ©trages consacrÃ©s
+									Ã  BÃ©bÃ© Groot, situÃ© entre la fin du premier
+									<em>Guardians of the Galaxy</em> et le dÃ©but de son deuxiÃ¨me
+									volet â€” une maniÃ¨re ludique de suivre la croissance du
+									personnage entre deux films.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="gotg2" id="gotg2-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy Vol. 2</span>
+								<span class="accordion__meta">2014 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="gotg2">
+							<div class="accordion__panel-inner">
+								<div class="encart" style="margin-bottom: 24px">
+									<strong>Une date qui surprend.</strong> Sorti en salle en
+									2017, ce film est pourtant datÃ© 2014 dans la chronologie
+									interne officielle du MCU â€” il se dÃ©roule directement Ã  la
+									suite du premier volet, sans rÃ©el saut temporel.
+								</div>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Peter Quill dÃ©couvre l'identitÃ© de son pÃ¨re biologique :
+									Ego, une entitÃ© cÃ©leste vivante qui projette un corps
+									humanoÃ¯de pour mieux le manipuler et Ã©tendre sa conscience Ã 
+									travers toute la galaxie en implantant des germes de
+									lui-mÃªme sur d'innombrables planÃ¨tes. Ego rÃ©vÃ¨le avoir
+									lui-mÃªme provoquÃ© la tumeur qui a tuÃ© la mÃ¨re de Peter, pour
+									briser son attachement Ã  la Terre. Yondu, figure paternelle
+									bien plus sincÃ¨re que le vrai pÃ¨re de Peter, se sacrifie en
+									lui cÃ©dant sa derniÃ¨re combinaison spatiale pour le sauver
+									alors qu'ils s'Ã©chappent de la planÃ¨te en train de
+									s'effondrer.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Le film dÃ©tient le record du plus grand nombre de scÃ¨nes
+									post-crÃ©dits du MCU : cinq au total, dont l'une montre
+									Ayesha, souveraine des Sovereign, faire naÃ®tre dans une
+									capsule de gestation un certain Adam Warlock â€” un personnage
+									promis Ã  un rÃ´le bien plus important dans la suite de la
+									saga cosmique.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="iag2" id="iag2-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">I Am Groot â€” Ã©pisodes 2 Ã  10</span>
+								<span class="accordion__meta">2014</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="iag2">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Les Ã©pisodes suivants de la sÃ©rie se dÃ©roulent cette fois
+									entre la fin de <em>Guardians of the Galaxy Vol. 2</em> et
+									sa scÃ¨ne post-gÃ©nÃ©rique â€” de courtes tranches de vie qui
+									suivent Groot, toujours aussi jeune et distrait, Ã  bord du
+									vaisseau des Gardiens.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ================= PLANCHE III ================= -->
+		<section class="planche" id="planche-3" data-nav-label="III. Hell's Kitchen, saison 1">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>Hell's Kitchen, saison 1
+			</div>
+			<h2 class="planche__title">Le MCU descend dans la rue</h2>
+			<p class="planche__lede">
+				Pendant que les Avengers crÃ©ent une intelligence artificielle
+				destructrice, un tout autre MCU prend racine au ras du bitume, sur
+				Netflix â€” plus sombre, plus lent, Ã  hauteur de quartier.
+			</p>
+
+			<div class="planche__body">
+				<div class="encart">
+					<strong>Deux MCU, une seule chronologie.</strong> Ã€ partir d'ici,
+					les sÃ©ries produites par Marvel Television pour Netflix
+					s'intercalent directement dans la timeline officielle, mÃªme si leur
+					ton et leur production restaient, Ã  l'Ã©poque, largement indÃ©pendants
+					des films.
+				</div>
+
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="dd1" id="dd1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Daredevil â€” saison 1</span>
+								<span class="accordion__meta">2015</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="dd1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Matt Murdock, avocat aveugle aux sens surdÃ©veloppÃ©s, mÃ¨ne
+									une double vie de justicier masquÃ© Ã  Hell's Kitchen, oÃ¹ il
+									affronte Wilson Fisk â€” futur Kingpin â€” dont l'empire
+									criminel commence tout juste Ã  prendre forme dans l'ombre de
+									la reconstruction de New York aprÃ¨s la bataille contre les
+									Chitauris.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="jj1" id="jj1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Jessica Jones â€” saison 1</span>
+								<span class="accordion__meta">2015</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="jj1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									DÃ©tective privÃ©e dotÃ©e d'une force surhumaine, Jessica Jones
+									traque Kilgrave, un homme capable de contrÃ´ler l'esprit des
+									autres par simple suggestion â€” et qui l'a autrefois rÃ©duite
+									en esclavage psychologique. Ayant repris le contrÃ´le de sa
+									vie, elle recroise sa route lorsque celui-ci refait surface,
+									jusqu'Ã  un affrontement final oÃ¹ elle met un terme dÃ©finitif
+									Ã  son emprise. Une sÃ©rie sombre, centrÃ©e sur le traumatisme,
+									qui tranche radicalement avec le ton des films.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="aou" id="aou-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Age of Ultron</span>
+								<span class="accordion__meta">2015</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="aou">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Tony Stark, hantÃ© par la vision d'une invasion
+									extraterrestre dÃ©vastatrice montrÃ©e par Wanda Maximoff, crÃ©e
+									en secret Ultron â€” une intelligence artificielle censÃ©e
+									protÃ©ger la Terre, qui se retourne aussitÃ´t contre
+									l'humanitÃ© entiÃ¨re, qu'elle juge Ãªtre la vÃ©ritable menace.
+									Ultron soulÃ¨ve une partie de la capitale sokovienne dans les
+									airs pour la faire s'Ã©craser au sol faÃ§on mÃ©tÃ©orite,
+									provoquant une extinction de masse. Lors de la bataille
+									finale, Pietro Maximoff se sacrifie pour protÃ©ger Hawkeye et
+									un enfant sous une pluie de balles, un geste hÃ©roÃ¯que qui
+									achÃ¨ve de convaincre sa sÅ“ur Wanda de rejoindre pleinement
+									les Avengers aux cÃ´tÃ©s de Vision, l'Ãªtre synthÃ©tique nÃ© du
+									combat.
+								</p>
+								<span class="accordion__label">Ã€ retenir</span>
+								<p>
+									C'est le seul film Avengers de la saga de l'Infini Ã  ne
+									comporter aucune scÃ¨ne post-crÃ©dits â€” un choix volontaire
+									pour laisser le film se refermer sur lui-mÃªme.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="am1" id="am1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Ant-Man</span>
+								<span class="accordion__meta">2015</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="am1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Scott Lang, cambrioleur repenti, hÃ©rite malgrÃ© lui de la
+									combinaison Ant-Man mise au point par le vieillissant Hank
+									Pym, qui refuse de laisser sa propre fille Hope l'endosser.
+									Darren Cross, ancien protÃ©gÃ© de Pym devenu son rival au sein
+									de l'entreprise familiale, est sur le point d'achever sa
+									propre version de la technologie de rÃ©trÃ©cissement, le
+									costume Yellowjacket, pour la vendre Ã  des acheteurs peu
+									recommandables. Scott et Hope aident Pym Ã  s'infiltrer dans
+									l'entreprise pour dÃ©truire les recherches de Cross, avant un
+									affrontement final oÃ¹ Cross prend la fille de Scott, Cassie,
+									en otage pour l'attirer dans un piÃ¨ge â€” combat qui se
+									conclut par un duel miniaturisÃ©, littÃ©ralement, sur un
+									circuit de train jouet dans la chambre de la fillette.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Deux scÃ¨nes : Hank montre enfin Ã  Hope un prototype de
+									combinaison de la GuÃªpe â€” sa rÃ©plique culte,
+									<em>Â« il Ã©tait temps Â»</em>, sonne comme un clin d'Å“il
+									assumÃ© sur la lenteur du MCU Ã  mettre des hÃ©roÃ¯nes en avant.
+									La seconde scÃ¨ne montre Captain America et Falcon, en pleine
+									discussion sur la marche Ã  suivre avec Bucky, dÃ©sormais
+									localisÃ© mais toujours hors de contrÃ´le â€”
+									<em>un extrait littÃ©ralement tirÃ© de Civil War</em>, sorti
+									l'annÃ©e suivante.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="dd2" id="dd2-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Daredevil â€” saison 2</span>
+								<span class="accordion__meta">2015</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="dd2">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Deux nouvelles figures bousculent Matt Murdock : le
+									Punisher, justicier expÃ©ditif prÃªt Ã  tuer lÃ  oÃ¹ Daredevil
+									s'y refuse, et Elektra, ancien amour resurgi du passÃ©, mÃªlÃ©e
+									Ã  un ordre ninja ancestral, la Main.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="lc1" id="lc1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Luke Cage â€” saison 1</span>
+								<span class="accordion__meta">2015</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="lc1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Ancien dÃ©tenu dotÃ© d'une peau quasiment indestructible suite
+									Ã  une expÃ©rience ratÃ©e subie Ã  la prison de Seagate, Luke
+									Cage tente de mener une vie discrÃ¨te Ã  Harlem, oÃ¹ il
+									travaille pour Pop, propriÃ©taire d'un salon de coiffure â€”
+									jusqu'Ã  ce que Cornell Â« Cottonmouth Â» Stokes, baron local
+									du crime, fasse assassiner ce dernier. AprÃ¨s avoir vengÃ© Pop
+									en provoquant la chute de Cottonmouth, Luke doit affronter
+									Willis Stryker, alias Diamondback, un adversaire dotÃ© d'un
+									arsenal expÃ©rimental qui se rÃ©vÃ¨le Ãªtre son propre
+									demi-frÃ¨re.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ================= PLANCHE IV ================= -->
+		<section class="planche" id="planche-4" data-nav-label="IV. La fracture">
+			<div class="planche__eyebrow">
+				<span class="roman">IV</span>La fracture
+			</div>
+			<h2 class="planche__title">2016 : tout le monde choisit un camp</h2>
+			<p class="planche__lede">
+				L'annÃ©e la plus dense de cette pÃ©riode : une guerre civile entre
+				Avengers, l'arrivÃ©e d'un roi africain masquÃ© et d'un lycÃ©en
+				new-yorkais, et la conclusion du grand Å“uvre Netflix.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="if1" id="if1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Iron Fist â€” saison 1</span>
+								<span class="accordion__meta">2016</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="if1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Danny Rand, hÃ©ritier disparu et prÃ©sumÃ© mort, revient Ã  New
+									York aprÃ¨s quinze ans passÃ©s dans la citÃ© mystique de
+									K'un-Lun, oÃ¹ il est devenu le Iron Fist â€” gardien dotÃ© du
+									pouvoir de concentrer son chi dans son poing. Peinant Ã 
+									faire reconnaÃ®tre son identitÃ© par ses anciens amis Ward et
+									Joy Meachum, dÃ©sormais Ã  la tÃªte de son entreprise
+									familiale, il dÃ©couvre que leur pÃ¨re Harold, qu'il croyait
+									mort, a Ã©tÃ© secrÃ¨tement ramenÃ© Ã  la vie par la Main â€” dont
+									l'un des membres, la mystÃ©rieuse Madame Gao, exploite
+									l'entreprise pour Ã©couler une drogue Ã  travers le monde.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="def1" id="def1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">The Defenders</span>
+								<span class="accordion__meta">2016</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="def1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Crossover Netflix</span>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Daredevil, Jessica Jones, Luke Cage et Iron Fist unissent
+									enfin leurs forces contre la Main, l'organisation ninja
+									millÃ©naire dirigÃ©e par Alexandra Reid, qui cherche Ã 
+									exploiter New York depuis les coulisses â€” l'Ã©quivalent, Ã 
+									Ã©chelle de rue, du grand crossover que reprÃ©sentait
+									<em>The Avengers</em> pour les films. En cours de route,
+									Elektra, ressuscitÃ©e par la Main sans mÃ©moire de son passÃ©
+									et transformÃ©e en arme suprÃªme, se retourne contre Alexandra
+									et prend elle-mÃªme la tÃªte de l'organisation, obligeant
+									Daredevil Ã  l'affronter une derniÃ¨re fois.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="cw1" id="cw1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Captain America: Civil War</span>
+								<span class="accordion__meta">2016</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="cw1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Tournant majeur</span>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									AprÃ¨s une sÃ©rie de catastrophes collatÃ©rales impliquant les
+									Avengers, le gouvernement impose les Accords de Sokovie, qui
+									placeraient l'Ã©quipe sous supervision internationale. Tony
+									Stark, rongÃ© par la culpabilitÃ©, soutient les Accords ;
+									Steve Rogers, mÃ©fiant envers toute autoritÃ© centralisÃ©e et
+									dÃ©terminÃ© Ã  protÃ©ger Bucky â€” accusÃ© Ã  tort d'un attentat
+									manigancÃ© par Helmut Zemo â€” s'y oppose. L'Ã©quipe se dÃ©chire,
+									littÃ©ralement, lors d'un affrontement Ã  l'aÃ©roport de
+									Leipzig qui introduit Black Panther et le tout nouveau
+									Spider-Man.
+								</p>
+								<p>
+									Le vrai climax se joue ensuite en SibÃ©rie : Zemo, dont le
+									seul but Ã©tait de faire imploser les Avengers de l'intÃ©rieur
+									pour venger sa famille tuÃ©e Ã  Sokovie, rÃ©vÃ¨le Ã  Tony une
+									vidÃ©o montrant Bucky, sous contrÃ´le mental HYDRA, assassiner
+									ses parents des dÃ©cennies plus tÃ´t. Fou de rage, Tony
+									affronte Steve et Bucky dans un combat d'une rare violence,
+									brisant dÃ©finitivement les liens entre les deux hommes.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Deux scÃ¨nes : la premiÃ¨re montre Bucky, tiraillÃ© par sa
+									programmation HYDRA persistante, choisir de se remettre
+									volontairement en cryosommeil au Wakanda, sous la protection
+									de T'Challa â€”
+									<em>Se rattache directement Ã  Black Panther</em>. La
+									seconde, plus lÃ©gÃ¨re, montre le jeune Peter Parker inventer
+									des excuses face Ã  sa tante May pour justifier ses
+									blessures.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="yfns1" id="yfns1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Your Friendly Neighborhood Spider-Man â€” saison 1</span>
+								<span class="accordion__meta">2016 Â· hors Sacred Timeline</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="yfns1">
+							<div class="accordion__panel-inner">
+								<div class="encart" style="margin-bottom: 24px">
+									<strong>Une parenthÃ¨se animÃ©e.</strong> Cette sÃ©rie se
+									dÃ©roule explicitement hors de la Sacred Timeline â€” elle
+									reste nÃ©anmoins placÃ©e ici pour sa proximitÃ© chronologique
+									avec les Ã©vÃ©nements de Civil War.
+								</div>
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Une version alternative et animÃ©e d'un jeune Peter Parker
+									qui fait ses dÃ©buts de hÃ©ros de quartier, dans une
+									continuitÃ© distincte de celle de Tom Holland.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="bw1" id="bw1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Black Widow</span>
+								<span class="accordion__meta">2016 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="bw1">
+							<div class="accordion__panel-inner">
+								<div class="encart" style="margin-bottom: 24px">
+									<strong>Sorti bien plus tard.</strong> Ce film n'est arrivÃ©
+									en salle qu'en 2021, mais se dÃ©roule chronologiquement juste
+									aprÃ¨s les Ã©vÃ©nements de Civil War, avant l'Ã©pilogue final de
+									ce dernier.
+								</div>
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									En cavale aprÃ¨s avoir pris le parti de Captain America,
+									Natasha Romanoff replonge dans son passÃ© de tueuse formÃ©e
+									par le Red Room, aux cÃ´tÃ©s d'une sÅ“ur de substitution,
+									Yelena Belova, pour dÃ©manteler ce programme et son
+									dirigeant, le gÃ©nÃ©ral Dreykov â€” qu'elle croyait pourtant
+									avoir tuÃ© des annÃ©es plus tÃ´t. Le film rÃ©vÃ¨le que la
+									redoutable Taskmaster, mercenaire mystÃ©rieux qui les traque
+									depuis le dÃ©but, n'est autre qu'Antonia, la propre fille de
+									Dreykov, maintenue en vie et sous son contrÃ´le aprÃ¨s avoir
+									Ã©tÃ© gravement blessÃ©e par Natasha.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="bp1" id="bp1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Black Panther</span>
+								<span class="accordion__meta">2016</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="bp1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									AprÃ¨s la mort de son pÃ¨re lors de l'attentat de Vienne (vu
+									dans Civil War), T'Challa devient roi du Wakanda et doit
+									affronter Erik Killmonger, un cousin qu'il ignorait avoir.
+									Le film rÃ©vÃ¨le que T'Chaka a lui-mÃªme tuÃ© son propre frÃ¨re
+									N'Jobu Ã  Oakland en 1992, abandonnant sur place le jeune
+									fils de ce dernier â€” Erik, devenu Killmonger, revient des
+									dÃ©cennies plus tard rÃ©clamer le trÃ´ne par la force, bien
+									dÃ©cidÃ© Ã  utiliser les ressources technologiques du Wakanda
+									pour armer les opprimÃ©s du monde entier.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Bucky, rÃ©veillÃ© de son sommeil cryogÃ©nique, est accueilli
+									par des enfants wakandais qui le surnomment Â« Loup Blanc Â».
+									Shuri lui annonce qu'il reste du travail Ã  faire pour le
+									soigner complÃ¨tement â€”
+									<em>refermant la boucle ouverte par la scÃ¨ne post-crÃ©dits de
+										Civil War et prÃ©parant son retour dans Infinity War</em>.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="hc1" id="hc1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Spider-Man: Homecoming</span>
+								<span class="accordion__meta">2016</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="hc1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Peter Parker, marquÃ© par sa participation Ã  la bataille de
+									l'aÃ©roport de Leipzig aux cÃ´tÃ©s de Tony Stark, tente de
+									concilier vie de lycÃ©en et justicier de quartier en
+									attendant impatiemment d'intÃ©grer les Avengers. Il affronte
+									Adrian Toomes, le Vautour â€” un entrepreneur reconverti dans
+									le trafic d'armes extraterrestres rÃ©cupÃ©rÃ©es aprÃ¨s la
+									bataille de New York. Le film mÃ©nage un rebondissement
+									marquant : Toomes se rÃ©vÃ¨le Ãªtre le pÃ¨re de Liz, la camarade
+									dont Peter est amoureux, ce qu'il dÃ©couvre juste avant de
+									l'emmener au bal de promo.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Captain America, filmÃ© dans le cadre d'une vidÃ©o pÃ©dagogique
+									destinÃ©e aux lycÃ©ens, entame un discours sur la vertu de la
+									patience â€” avant d'abandonner en plein milieu, agacÃ©, lassÃ©
+									d'attendre. Un pur clin d'Å“il mÃ©ta au public, restÃ© assis
+									jusqu'au bout du gÃ©nÃ©rique.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="pun1" id="pun1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">The Punisher â€” saison 1</span>
+								<span class="accordion__meta">2016</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="pun1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Frank Castle, ancien Marine dont la famille a Ã©tÃ© massacrÃ©e,
+									mÃ¨ne une croisade personnelle et sanglante contre le rÃ©seau
+									responsable â€” bien loin de la morale de Daredevil, dont le
+									personnage est issu.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ================= PLANCHE V ================= -->
+		<section class="planche" id="planche-5" data-nav-label="V. Le sorcier et le crÃ©puscule des dieux">
+			<div class="planche__eyebrow">
+				<span class="roman">V</span>Le sorcier et le crÃ©puscule des dieux
+			</div>
+			<h2 class="planche__title">
+				La magie s'installe, Hell's Kitchen se referme
+			</h2>
+			<p class="planche__lede">
+				Le mysticisme fait officiellement son entrÃ©e dans le MCU pendant que
+				les sÃ©ries new-yorkaises entament leurs derniers tours de piste â€” et
+				qu'Asgard elle-mÃªme part en fumÃ©e.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="ds1" id="ds1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Doctor Strange</span>
+								<span class="accordion__meta">2016-2017</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="ds1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Introduction de la magie</span>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Stephen Strange, chirurgien de gÃ©nie devenu infirme aprÃ¨s un
+									accident de voiture, part chercher une guÃ©rison miraculeuse
+									jusqu'au NÃ©pal â€” oÃ¹ il dÃ©couvre les Arts Mystiques auprÃ¨s de
+									l'Ancienne. Il doit affronter Kaecilius, un ancien disciple
+									de l'Ancienne passÃ© du cÃ´tÃ© de Dormammu, entitÃ© de la
+									Dimension Noire, dans l'espoir de fusionner la Terre avec
+									cette dimension pour offrir la vie Ã©ternelle Ã  l'humanitÃ©.
+									AprÃ¨s la mort de l'Ancienne, Strange affronte directement
+									Dormammu, qu'il piÃ¨ge dans une boucle temporelle infinie
+									jusqu'Ã  ce que l'entitÃ© accepte de renoncer Ã  la Terre.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Deux scÃ¨nes : Strange propose son aide Ã  Thor pour retrouver
+									Odin, disparu d'Asgard â€”
+									<em>un extrait directement tirÃ© de Thor: Ragnarok</em>. Dans
+									la seconde, Mordo, dÃ©sormais convaincu qu'il existe Â« trop
+									de sorciers Â» dans le monde, retire ses pouvoirs Ã  Jonathan
+									Pangborn, laissant prÃ©sager une dÃ©rive vers le villain qu'il
+									deviendra.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="jj2" id="jj2-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Jessica Jones â€” saison 2</span>
+								<span class="accordion__meta">2017</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="jj2">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Jessica enquÃªte sur les origines de ses propres pouvoirs et
+									sur IGH, l'organisation responsable de l'expÃ©rience qui l'a
+									transformÃ©e â€” une plongÃ©e plus personnelle que la premiÃ¨re
+									saison, centrÃ©e sur sa mÃ¨re qu'elle croyait morte.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="lc2" id="lc2-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Luke Cage â€” saison 2</span>
+								<span class="accordion__meta">2017</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="lc2">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Luke doit gÃ©rer sa nouvelle cÃ©lÃ©britÃ© Ã  Harlem tout en
+									affrontant Bushmaster, un rival jamaÃ¯cain aux pouvoirs
+									similaires aux siens, dont la vendetta remonte Ã  plusieurs
+									gÃ©nÃ©rations.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="if2" id="if2-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Iron Fist â€” saison 2</span>
+								<span class="accordion__meta">2017</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="if2">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Danny Rand doit protÃ©ger New York d'une nouvelle menace liÃ©e
+									Ã  la Main, tout en composant avec le retour inattendu de
+									Davos, son frÃ¨re d'armes devenu rival Ã  K'un-Lun.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="dd3" id="dd3-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Daredevil â€” saison 3</span>
+								<span class="accordion__meta">2017</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="dd3">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Matt Murdock, brisÃ© aprÃ¨s les Ã©vÃ©nements du
+									<em>Defenders</em>
+									et prÃ©sumÃ© mort, doit reconstruire sa foi et son identitÃ©
+									tandis que Wilson Fisk, de retour, manipule le F.B.I. depuis
+									sa cellule pour reprendre le contrÃ´le de la ville.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="rag1" id="rag1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Thor: Ragnarok</span>
+								<span class="accordion__meta">2017</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="rag1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Hela, dÃ©esse de la mort et sÅ“ur aÃ®nÃ©e cachÃ©e de Thor et
+									Loki, s'empare d'Asgard Ã  la mort d'Odin, y massacrant
+									l'armÃ©e et ressuscitant d'anciens guerriers pour Ã©tendre sa
+									conquÃªte. ExilÃ© sur Sakaar, une planÃ¨te-dÃ©charge dirigÃ©e par
+									le fantasque Grandmaster, Thor doit affronter Hulk dans une
+									arÃ¨ne de gladiateurs avant de rÃ©unir une Ã©quipe improbable â€”
+									Loki, Valkyrie, Hulk â€” pour reconquÃ©rir son royaume.
+									RÃ©alisant que Hela puise sa force d'Asgard elle-mÃªme, Thor
+									choisit de provoquer volontairement RagnarÃ¶k, la prophÃ©tie
+									de destruction du royaume, en libÃ©rant le dÃ©mon Surtur pour
+									la tuer â€” Ã©vacuant le peuple asgardien Ã  bord d'un vaisseau
+									plutÃ´t que de sauver le territoire.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Le Grandmaster, ayant survÃ©cu Ã  la rÃ©volte de ses sujets sur
+									Sakaar, tente de dÃ©samorcer la situation par l'humour,
+									dÃ©clarant la rÃ©volution Â« match nul Â». Une seconde scÃ¨ne
+									montre le vaisseau transportant les survivants asgardiens
+									interceptÃ© par une ombre massive â€”
+									<em>celle du vaisseau de Thanos, qui ouvre directement sur la
+										scÃ¨ne d'introduction d'Infinity War</em>.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ================= PLANCHE VI ================= -->
+		<section class="planche" id="planche-6" data-nav-label="VI. Le prix Ã  payer">
+			<div class="planche__eyebrow">
+				<span class="roman">VI</span>Le prix Ã  payer
+			</div>
+			<h2 class="planche__title">2018, l'annÃ©e oÃ¹ tout s'effondre</h2>
+			<p class="planche__lede">
+				Le dernier chapitre de cette expansion referme les histoires de Hell's
+				Kitchen et culmine dans l'un des dÃ©nouements les plus sombres jamais
+				vus dans un blockbuster grand public.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="pun2" id="pun2-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">The Punisher â€” saison 2</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="pun2">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Frank Castle protÃ¨ge une jeune femme traquÃ©e par une secte
+									dangereuse, tout en voyant resurgir Billy Russo, son ancien
+									frÃ¨re d'armes devenu ennemi jurÃ© sous le nom de Jigsaw.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="jj3" id="jj3-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Jessica Jones â€” saison 3</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="jj3">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Dans cette derniÃ¨re saison, Jessica affronte un tueur en
+									sÃ©rie qui cible spÃ©cifiquement les personnes dotÃ©es de
+									pouvoirs, tout en gÃ©rant la trahison de sa meilleure amie
+									Trish, elle-mÃªme en train de dÃ©velopper des capacitÃ©s
+									surhumaines.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="amw1" id="amw1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Ant-Man and the Wasp</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="amw1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Scott Lang, en rÃ©sidence surveillÃ©e aprÃ¨s Civil War, aide
+									Hank Pym et Hope van Dyne Ã  sauver Janet van Dyne, coincÃ©e
+									depuis des dÃ©cennies dans le Royaume Quantique, tout en
+									Ã©chappant Ã  Ghost, alias Ava Starr, une femme capable de
+									traverser la matiÃ¨re suite Ã  un accident subi dans son
+									enfance lors d'une expÃ©rience quantique ratÃ©e de son pÃ¨re â€”
+									qui cherche Ã  extraire l'Ã©nergie de Janet pour stabiliser
+									son Ã©tat.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Scott plonge dans le Royaume Quantique pour rÃ©cupÃ©rer de
+									l'Ã©nergie curative pour Ghost. Pendant ce temps, Ã  la
+									surface, Hope, Hank et Janet se dÃ©sintÃ¨grent brutalement en
+									poussiÃ¨re â€” les toutes premiÃ¨res victimes visibles du Snap
+									de Thanos montrÃ©es hors du film Avengers lui-mÃªme, laissant
+									Scott piÃ©gÃ©, seul, dans le Royaume Quantique.
+									<em>Se rattache directement Ã  l'ouverture d'Avengers:
+										Endgame</em>.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="iw1" id="iw1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="iw1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Tournant majeur</span>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Thanos entame sa quÃªte mÃ©thodique des six Pierres d'InfinitÃ©
+									pour, selon sa logique gÃ©nocidaire, effacer la moitiÃ© de
+									toute vie dans l'univers et rÃ©tablir un Ã©quilibre des
+									ressources. MalgrÃ© une rÃ©sistance acharnÃ©e sur plusieurs
+									fronts â€” Wakanda, Titan, New York â€” les hÃ©ros Ã©chouent Ã 
+									l'arrÃªter. D'un simple claquement de doigts avec le Gant de
+									l'Infini complet, Thanos efface la moitiÃ© de toute vie
+									existante, Avengers compris.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Nick Fury et Maria Hill, tÃ©moins impuissants de la
+									dÃ©sintÃ©gration en cours, se volatilisent Ã  leur tour. Dans
+									un dernier geste avant de disparaÃ®tre, Fury parvient Ã 
+									activer un bipeur modifiÃ© qui affiche, l'instant d'aprÃ¨s, un
+									symbole encore inconnu du grand public : celui de Captain
+									Marvel.
+									<em>Se rattache directement Ã  l'ouverture du film Captain
+										Marvel</em>, qui referme la boucle entamÃ©e bien plus tÃ´t dans la
+									chronologie de ce mÃªme almanach.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="encart" style="margin-top: 40px">
+					<strong>Et ensuite ?</strong> La moitiÃ© de l'univers vient de
+					disparaÃ®tre. Il faudra cinq annÃ©es â€” et un demi-film entier de deuil
+					â€” avant que les survivants ne trouvent un moyen de tout annuler.
+					Direction le multivers.
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Chapitre suivant</div>
+		<a href="mcu_multivers-chrono.html">La saga du multivers â†’</a>
+	</footer>
+
+	<script src="../mcu_script.js"></script>
+</body>
+
+</html>

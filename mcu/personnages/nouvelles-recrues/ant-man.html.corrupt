@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Scott Lang / Ant-Man | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css">
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Ant-Man</div>
+		<h1 class="hero__title">Scott Lang</h1>
+		<p class="charhero__realname">Scott Edward Harris Lang</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Ex-cambrioleur</span>
+			<span class="charhero__tag">Avenger</span>
+			<span class="charhero__tag">PÃ¨re de famille</span>
+		</div>
+	</header>
+
+	<main>
+
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow"><span class="roman">I</span>Biographie</div>
+			<h2 class="planche__title">Le voleur qui voulait juste Ãªtre un bon pÃ¨re</h2>
+			<p class="planche__lede">
+				Un homme au casier judiciaire chargÃ©, prÃªt Ã  tout recommencer Ã 
+				zÃ©ro pour une seule raison : mÃ©riter le regard de sa fille.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Scott Lang est un ancien cambrioleur, condamnÃ© pour avoir dÃ©tournÃ©
+					des fonds volÃ©s Ã  une entreprise corrompue afin de rembourser ses
+					anciens clients â€” un acte qu'il considÃ©rait comme juste, mais qui
+					lui vaut une peine de prison. Ã€ sa sortie, il peine Ã  retrouver un
+					emploi stable Ã  cause de son casier judiciaire, tout en tentant de
+					maintenir un lien avec sa fille Cassie, dont il n'a la garde que de
+					faÃ§on limitÃ©e aprÃ¨s sa sÃ©paration d'avec son ex-femme Maggie.
+				</p>
+				<p>
+					Pour subvenir Ã  ses besoins et payer sa pension alimentaire, Scott
+					accepte de participer Ã  un dernier cambriolage, qui le mÃ¨ne,
+					sans qu'il le sache, tout droit dans un piÃ¨ge tendu par Hank Pym :
+					un test destinÃ© Ã  Ã©valuer s'il est digne de devenir le nouveau
+					porteur de la combinaison Ant-Man, capable de rÃ©trÃ©cir son porteur
+					Ã  la taille d'un insecte tout en dÃ©multipliant sa force. FormÃ© par
+					Hank et sa fille Hope van Dyne, Scott accepte la mission,
+					principalement motivÃ© par le dÃ©sir de redevenir, aux yeux de
+					Cassie, le hÃ©ros qu'elle a toujours cru qu'il Ã©tait.
+				</p>
+				<p>
+					Devenu membre Ã  part entiÃ¨re de l'Ã©cosystÃ¨me Avengers, Scott
+					traverse la Guerre Civile aux cÃ´tÃ©s de Captain America, avant
+					d'Ãªtre placÃ© en rÃ©sidence surveillÃ©e. Il se retrouve piÃ©gÃ© dans le
+					Royaume Quantique pendant cinq annÃ©es entiÃ¨res aprÃ¨s le Snap de
+					Thanos â€” un sauvetage inattendu, dÃ» Ã  un simple rat activant les
+					commandes de son tunnel quantique, qui lui permet de ressortir et
+					de contribuer de faÃ§on dÃ©cisive au plan des Avengers pour annuler
+					le claquement de doigts de Thanos.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow"><span class="roman">II</span>Famille & relations</div>
+			<h2 class="planche__title">Ceux qui comptent</h2>
+			<p class="planche__lede">
+				Un homme dont tous les choix, hÃ©roÃ¯ques ou non, tournent autour
+				d'une seule personne : sa fille.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Cassie Lang</strong> â€” sa fille, la raison principale de
+					tous ses choix, qui dÃ©veloppe elle-mÃªme des capacitÃ©s liÃ©es aux
+					particules Pym Ã  l'adolescence et rejoint activement le monde
+					hÃ©roÃ¯que de son pÃ¨re.
+				</p>
+				<p>
+					<strong>Hope van Dyne</strong> â€” sa partenaire, formÃ©e elle-mÃªme
+					au combat depuis l'enfance par son pÃ¨re Hank, devenue une figure
+					maternelle affectueuse pour Cassie.
+				</p>
+				<p>
+					<strong>Hank Pym</strong> â€” son mentor, ancien Ant-Man original,
+					qui le recrute par une mise en scÃ¨ne Ã©laborÃ©e pour tester sa
+					valeur avant de lui confier la combinaison.
+				</p>
+				<p>
+					<strong>Maggie Lang</strong> â€” son ex-femme, mÃ¨re de Cassie, avec
+					qui il entretient une relation coparentale respectueuse malgrÃ©
+					leur sÃ©paration.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow"><span class="roman">III</span>Filmographie</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'un cambriolage ratÃ© Ã  un voyage de cinq ans dans une dimension
+				hors du temps.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-am1sl" id="f-am1sl-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Ant-Man</span>
+								<span class="accordion__meta">2015</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-am1sl">
+							<div class="accordion__panel-inner">
+								<p>
+									Scott est recrutÃ© par Hank Pym Ã  travers un test Ã©laborÃ©
+									pour devenir le nouvel Ant-Man et empÃªcher Darren Cross de
+									vendre sa technologie Yellowjacket Ã  des acheteurs peu
+									recommandables â€” une mission qu'il accomplit au prix d'un
+									passage terrifiant dans le Royaume Quantique, dont il
+									parvient Ã  s'Ã©chapper de justesse.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-cw1sl" id="f-cw1sl-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Captain America: Civil War</span>
+								<span class="accordion__meta">2016</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-cw1sl">
+							<div class="accordion__panel-inner">
+								<p>
+									RecrutÃ© par Falcon pour aider Captain America Ã  l'aÃ©roport
+									de Leipzig, Scott dÃ©montre pour la premiÃ¨re fois sa
+									capacitÃ© Ã  grandir jusqu'Ã  une taille gigantesque plutÃ´t
+									que de seulement rÃ©trÃ©cir. Il est capturÃ© et incarcÃ©rÃ© au
+									Raft, avant de choisir la rÃ©sidence surveillÃ©e pour rester
+									proche de sa famille.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-amw1sl" id="f-amw1sl-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Ant-Man and the Wasp</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-amw1sl">
+							<div class="accordion__panel-inner">
+								<p>
+									Encore en rÃ©sidence surveillÃ©e, Scott aide clandestinement
+									Hope et Hank Ã  sauver Janet van Dyne, piÃ©gÃ©e depuis des
+									dÃ©cennies dans le Royaume Quantique, tout en Ã©chappant Ã 
+									Ghost. Il se retrouve piÃ©gÃ© lui-mÃªme dans cette dimension
+									lorsque Hank, Janet et Hope disparaissent tous trois lors
+									du Snap de Thanos.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg1sl" id="f-eg1sl-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg1sl">
+							<div class="accordion__panel-inner">
+								<p>
+									AprÃ¨s cinq annÃ©es passÃ©es dans le Royaume Quantique oÃ¹ le
+									temps s'Ã©coule diffÃ©remment, Scott est libÃ©rÃ© par un
+									simple hasard et rejoint les Avengers pour leur proposer
+									l'idÃ©e du voyage dans le temps qui permettra de rÃ©cupÃ©rer
+									les Pierres d'InfinitÃ© et d'annuler le Snap.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-qm1sl" id="f-qm1sl-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Ant-Man and the Wasp: Quantumania</span>
+								<span class="accordion__meta">2026 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-qm1sl">
+							<div class="accordion__panel-inner">
+								<p>
+									Toute la famille Lang-Pym-Van Dyne est aspirÃ©e dans le
+									Royaume Quantique, oÃ¹ Scott doit affronter une variante de
+									Kang le ConquÃ©rant, piÃ©gÃ©e lÃ  depuis des dÃ©cennies aprÃ¨s
+									avoir Ã©tÃ© bannie par le Council of Kangs.
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_nouvelles-recrues.html">Les nouvelles recrues â†’</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

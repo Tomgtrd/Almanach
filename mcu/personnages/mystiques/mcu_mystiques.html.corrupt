@@ -1,0 +1,163 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MCU â€” Les mystiques | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.members-grid {
+			max-width: 880px;
+			margin: 0 auto;
+			padding: 24px 32px 100px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			gap: 20px;
+		}
+
+		.member-card {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+			background: var(--paper-raised);
+			border: 1px solid var(--hairline);
+			border-radius: var(--radius-md);
+			padding: 28px 26px;
+			opacity: 0;
+			transform: translateY(16px);
+			transition:
+				opacity 0.6s ease,
+				transform 0.6s ease,
+				border-color 0.25s ease,
+				box-shadow 0.25s ease;
+		}
+
+		.member-card.in {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.member-card:hover {
+			border-color: var(--mcu-red-soft);
+			box-shadow: 0 4px 18px rgba(28, 23, 18, 0.06);
+		}
+
+		.member-card__icon {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background: var(--mcu-cream);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: var(--font-display);
+			font-size: 1.4rem;
+			font-weight: 500;
+			color: var(--mcu-red-soft);
+			margin-bottom: 16px;
+		}
+
+		.member-card__name {
+			font-family: var(--font-display);
+			font-size: 1.35rem;
+			font-weight: 500;
+			margin: 0 0 6px;
+			color: var(--ink);
+		}
+
+		.member-card__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 0.92rem;
+			color: var(--ink-faint);
+			margin: 0 0 14px;
+		}
+
+		.member-card__pitch {
+			font-size: 0.92rem;
+			color: var(--ink-soft);
+			margin: 0;
+			line-height: 1.55;
+		}
+	</style>
+</head>
+
+<body>
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="hero">
+		<div class="hero__eyebrow">MCU â€” les personnages</div>
+		<h1 class="hero__title">Les mystiques</h1>
+		<p class="hero__subtitle">pour les nuls</p>
+		<p class="hero__lede">
+			Deux hommes que rien ne prÃ©destinait Ã  la magie ou aux arts martiaux
+			lÃ©gendaires â€” jusqu'Ã  ce qu'un drame personnel les y pousse.
+			<em>Cliquez sur un nom pour dÃ©couvrir sa biographie complÃ¨te et le dÃ©tail
+				de chacune de ses apparitions</em>.
+		</p>
+	</header>
+
+	<main class="members-grid">
+		<a class="member-card" href="doctor-strange.html">
+			<div class="member-card__icon">DS</div>
+			<h2 class="member-card__name">Doctor Strange</h2>
+			<p class="member-card__realname">Stephen Strange</p>
+			<p class="member-card__pitch">
+				Chirurgien brillant et arrogant devenu Sorcier SuprÃªme â€” d'un accident
+				de voiture Ã  la garde de l'univers tout entier contre les menaces
+				mystiques.
+			</p>
+		</a>
+
+		<a class="member-card" href="shang-chi.html">
+			<div class="member-card__icon">SC</div>
+			<h2 class="member-card__name">Shang-Chi</h2>
+			<p class="member-card__realname">Xu Shang-Chi</p>
+			<p class="member-card__pitch">
+				Fils du chef millÃ©naire des Dix Anneaux, formÃ© de force Ã  devenir un
+				assassin â€” avant de fuir cette vie, puis d'y Ãªtre rattrapÃ©.
+			</p>
+		</a>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Groupe suivant</div>
+		<a href="../gardiens/mcu_gardiens.html">Les Gardiens de la Galaxie â†’</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const cards = document.querySelectorAll(".member-card");
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("in");
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{ threshold: 0.15 },
+			);
+			cards.forEach((c) => observer.observe(c));
+		});
+	</script>
+</body>
+
+</html>

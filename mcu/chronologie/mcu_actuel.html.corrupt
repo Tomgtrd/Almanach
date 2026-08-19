@@ -1,0 +1,935 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MCU â€” L'Ã¨re actuelle | Almanach</title>
+	<link rel="stylesheet" href="../mcu_style.css" />
+	<style>
+		.planche--mv .planche__eyebrow {
+			color: var(--mv-purple-soft);
+		}
+
+		.planche--mv .encart {
+			border-left-color: var(--mv-purple);
+		}
+	</style>
+</head>
+
+<body>
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../mcu_personnages.html">Les personnages</a>
+			<a href="../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="mcu_multivers.html">Comprendre le multivers</a>
+			<a href="mcu_antiquite.html">Avant les héros</a>
+			<a href="mcu_origines.html">Les origines</a>
+			<a href="mcu_expansion.html">L'expansion</a>
+			<a href="mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="mcu_actuel.html">L'ère actuelle</a>
+			<a href="mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="hero">
+		<div class="hero__eyebrow">MCU â€” chapitre 5</div>
+		<h1 class="hero__title">L'Ã¨re actuelle</h1>
+		<p class="hero__subtitle">pour les nuls</p>
+		<p class="hero__lede">
+			5 planches pour comprendre, une bonne fois pour toutes, comment le
+			multivers est devenu le quotidien du MCU â€”
+			<em>d'un archer Ã  la retraite jusqu'Ã  une Ã©quipe de super-vilains qui se
+				prennent pour des hÃ©ros</em>.
+		</p>
+	</header>
+
+	<main>
+		<!-- ================= PLANCHE I ================= -->
+		<section class="planche" id="planche-1" data-nav-label="I. AprÃ¨s la tempÃªte">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>AprÃ¨s la tempÃªte
+			</div>
+			<h2 class="planche__title">Retour au sol</h2>
+			<p class="planche__lede">
+				AprÃ¨s l'explosion multiversale de No Way Home et Multiverse of
+				Madness, le MCU reprend son souffle avec des histoires plus
+				resserrÃ©es, Ã  hauteur de personnage.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="hk1" id="hk1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Hawkeye</span>
+								<span class="accordion__meta">2024</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="hk1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Clint Barton, voulant simplement passer NoÃ«l en famille, se
+									retrouve entraÃ®nÃ© par Kate Bishop, jeune archÃ¨re qui
+									l'admire, dans les affaires de la mafia des Tracksuit â€”
+									menant tout droit jusqu'Ã  Wilson Fisk, le Kingpin, et Ã 
+									Yelena Belova, convaincue Ã  tort que Clint est responsable
+									de la mort de sa sÅ“ur Natasha. En chemin, Kate dÃ©couvre que
+									sa propre mÃ¨re, Eleanor Bishop, complotait secrÃ¨tement avec
+									Fisk.
+								</p>
+								<span class="accordion__label">Ã€ retenir</span>
+								<p>
+									La sÃ©rie ne comporte pas de scÃ¨ne post-crÃ©dits marquante
+									dans sa version finale â€” une scÃ¨ne impliquant Kingpin
+									envoyant un avertissement Ã  Clint a Ã©tÃ© tournÃ©e puis coupÃ©e
+									au montage.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="mk1" id="mk1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Moon Knight</span>
+								<span class="accordion__meta">2025 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="mk1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Steven Grant, employÃ© discret d'une boutique de souvenirs Ã 
+									Londres, dÃ©couvre qu'il partage son corps avec Marc Spector,
+									mercenaire endeuillÃ© et avatar du dieu Ã©gyptien Khonshu.
+									AidÃ©s par Layla El-Faouly, l'Ã©pouse de Marc dont il s'est
+									Ã©loignÃ©, ils doivent empÃªcher Arthur Harrow de libÃ©rer
+									Ammit, dÃ©esse de la justice implacable, prÃªte Ã  punir
+									l'humanitÃ© pour des crimes qu'elle n'a pas encore commis.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Une troisiÃ¨me personnalitÃ©, jusque-lÃ  seulement suggÃ©rÃ©e, se
+									rÃ©vÃ¨le enfin : Jake Lockley, alter le plus violent de Marc
+									Spector, abat Harrow sur ordre de Khonshu â€” prouvant que le
+									dieu conserve un contrÃ´le total sur cette facette cachÃ©e, Ã 
+									l'insu de Marc et Steven eux-mÃªmes.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="wf1" id="wf1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Black Panther: Wakanda Forever</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="wf1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									AprÃ¨s la mort de T'Challa, la reine Ramonda et sa fille
+									Shuri doivent dÃ©fendre le Wakanda alors que les grandes
+									puissances mondiales, avides d'accÃ©der au Vibranium, se
+									mettent Ã  traquer le mÃ©tal partout sur Terre. Une expÃ©dition
+									de la CIA, utilisant un dÃ©tecteur mis au point par la jeune
+									inventrice Riri Williams, localise un gisement sous-marin â€”
+									rÃ©vÃ©lant l'existence de Talokan, royaume englouti lui aussi
+									bÃ¢ti sur le Vibranium. Son souverain Namor, convaincu que
+									Wakanda est responsable de cette dÃ©couverte, dÃ©clare la
+									guerre Ã  la surface pour protÃ©ger son peuple. Shuri finit
+									par endosser Ã  son tour le manteau de Black Panther pour
+									affronter Namor, avant de lui offrir une alliance de paix.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne mi-crÃ©dits</span>
+								<p>
+									Shuri, en pleine cÃ©rÃ©monie de deuil pour sa mÃ¨re, retrouve
+									Nakia et dÃ©couvre l'existence de Toussaint â€” le fils secret
+									de T'Challa, restÃ© cachÃ© en HaÃ¯ti sous son nom wakandais,
+									T'Challa. La lignÃ©e royale se poursuit. Le film ne comporte,
+									Ã  l'inverse, aucune scÃ¨ne post-gÃ©nÃ©rique.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="ec1" id="ec1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Echo</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="ec1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Maya Lopez, ancienne protÃ©gÃ©e de Kingpin qui lui a tirÃ©
+									dessus Ã  la fin de <em>Hawkeye</em> avant de le croire mort,
+									retourne dans sa communautÃ© natale amÃ©rindienne pour renouer
+									avec ses racines Choctaw et sa famille, tout en tentant de
+									prendre la tÃªte de l'empire criminel de Fisk Ã  distance â€”
+									jusqu'Ã  ce que ce dernier, bien vivant, revienne rÃ©clamer ce
+									qui lui appartient.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ================= PLANCHE II ================= -->
+		<section class="planche" id="planche-2" data-nav-label="II. Grandir, avec ou sans super-pouvoirs">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Grandir, avec ou sans super-pouvoirs
+			</div>
+			<h2 class="planche__title">Des histoires Ã  hauteur d'humain</h2>
+			<p class="planche__lede">
+				Avant que Kang ne prenne toute la place, le MCU s'offre une parenthÃ¨se
+				plus lÃ©gÃ¨re â€” avocate improbable, adolescente fan de super-hÃ©ros, dieu
+				en pleine crise existentielle.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="sh1" id="sh1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">She-Hulk: Attorney at Law</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="sh1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Jennifer Walters, avocate qui hÃ©rite accidentellement des
+									pouvoirs de son cousin Bruce Banner, doit jongler entre sa
+									carriÃ¨re juridique spÃ©cialisÃ©e dans les affaires liÃ©es aux
+									surhumains et une cÃ©lÃ©britÃ© soudaine qu'elle n'a jamais
+									demandÃ©e â€” le tout sur un ton rÃ©solument comique et
+									autorÃ©fÃ©rentiel, brisant rÃ©guliÃ¨rement le quatriÃ¨me mur.
+									Elle croise en chemin Matt Murdock, alias Daredevil, venu
+									lui donner un coup de main sur une affaire.
+								</p>
+								<span class="accordion__label">Ã€ retenir</span>
+								<p>
+									Le season finale casse littÃ©ralement la structure narrative
+									de l'Ã©pisode : Jennifer sort du cadre du rÃ©cit pour
+									affronter directement l'intelligence artificielle chargÃ©e
+									d'Ã©crire les scÃ©narios Marvel, dÃ©nonÃ§ant les clichÃ©s des
+									final trop chargÃ©s du genre â€” un choix stylistique unique
+									dans tout le MCU.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="mm1" id="mm1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Ms. Marvel</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="mm1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Kamala Khan, adolescente de Jersey City fan absolue de
+									Captain Marvel, dÃ©couvre que le bracelet familial hÃ©ritÃ© de
+									son arriÃ¨re-grand-mÃ¨re Aisha lui confÃ¨re des pouvoirs de
+									manipulation de la lumiÃ¨re durcie (Noor). Elle apprend
+									qu'Aisha appartenait aux Clandestines, un groupe de Djinn
+									exilÃ©s de leur dimension d'origine, dont certains membres â€”
+									dirigÃ©s par Najma â€” cherchent Ã  rÃ©cupÃ©rer le bracelet pour
+									rouvrir un passage vers leur monde, quitte Ã  mettre la Terre
+									en danger. Kamala doit dÃ©jouer leurs plans tout en Ã©vitant
+									le Department of Damage Control, qui la traque comme menace
+									potentielle.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Les pouvoirs de Kamala s'emballent brusquement, la
+									tÃ©lÃ©portant hors de sa chambre â€” tandis que Carol Danvers
+									elle-mÃªme se retrouve inexplicablement transportÃ©e dans
+									cette mÃªme piÃ¨ce, entourÃ©e de posters Ã  son effigie.
+									<em>Cet Ã©change de position ouvre directement l'intrigue de
+										The Marvels</em>.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="ltt1" id="ltt1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Thor: Love and Thunder</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="ltt1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Thor, en pleine crise existentielle aprÃ¨s avoir tout perdu,
+									doit affronter Gorr le Bourreau de Dieux, un Ãªtre consumÃ©
+									par le deuil et dÃ©terminÃ© Ã  exterminer toutes les divinitÃ©s
+									de l'univers aprÃ¨s avoir perdu sa fille. Jane Foster,
+									atteinte d'un cancer en phase terminale que la mÃ©decine ne
+									parvient plus Ã  soigner, se tourne vers Mjolnir reconstituÃ©
+									et devient la Mighty Thor Ã  ses cÃ´tÃ©s â€” la puissance du
+									marteau la maintenant temporairement en vie Ã  chaque
+									transformation, au prix d'un affaiblissement accru de son
+									corps. AprÃ¨s la dÃ©faite de Gorr, convaincu de faire revivre
+									sa fille plutÃ´t que de se venger, Jane succombe Ã  la maladie
+									dans les bras de Thor.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Deux scÃ¨nes : Zeus, blessÃ© mais bien vivant aprÃ¨s son
+									humiliation par Thor, confie Ã  son fils Hercule la mission
+									de venger son honneur â€” introduisant le personnage dans le
+									MCU, sans suite donnÃ©e Ã  ce jour. La seconde montre Jane
+									Foster accueillie au Valhalla, le paradis asgardien, par
+									Heimdall â€” confirmant qu'elle est morte en hÃ©ros digne de
+									l'au-delÃ  divin.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="ih1" id="ih1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Ironheart</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="ih1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Riri Williams, jeune gÃ©nie de l'ingÃ©nierie ayant construit
+									sa propre armure inspirÃ©e d'Iron Man, revient dans son
+									Chicago natal aprÃ¨s un passage ratÃ© au MIT. HantÃ©e par la
+									mort de sa meilleure amie Natalie, elle recrÃ©e
+									accidentellement une IA dotÃ©e de ses souvenirs pour combler
+									ce vide. RecrutÃ©e par Parker Robbins, alias The Hood, pour
+									intÃ©grer sa bande de braqueurs, elle dÃ©couvre que les
+									pouvoirs du criminel sont d'origine mystique plutÃ´t que
+									technologique.
+								</p>
+								<span class="accordion__label">Ã€ retenir</span>
+								<p>
+									Le final introduit un personnage jusque-lÃ  seulement
+									mentionnÃ© dans le MCU : Mephisto, une entitÃ© dÃ©moniaque qui
+									manipule le deuil de Riri pour lui proposer un pacte â€”
+									ramener Natalie Ã  la vie en Ã©change de sa loyautÃ©.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="wbn1" id="wbn1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Werewolf by Night</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="wbn1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Ce tÃ©lÃ©film spÃ©cial, tournÃ© en noir et blanc dans un hommage
+									assumÃ© aux films d'horreur classiques, rÃ©unit un cercle
+									secret de chasseurs de monstres Ã  l'occasion des funÃ©railles
+									d'Ulysses Bloodstone, patriarche d'une lignÃ©e vouÃ©e Ã  la
+									traque surnaturelle. Une compÃ©tition mortelle est organisÃ©e
+									entre les participants pour dÃ©terminer qui hÃ©ritera de la
+									relique du Bloodstone â€” la cible du jour Ã©tant Man-Thing,
+									une crÃ©ature qui se rÃ©vÃ¨le Ãªtre, en rÃ©alitÃ©, le seul
+									vÃ©ritable ami de Jack Russell, lui-mÃªme dissimulant sa
+									nature de loup-garou depuis toujours.
+								</p>
+								<span class="accordion__label">Ã€ retenir</span>
+								<p>
+									La sÃ©rie ne prÃ©cise jamais explicitement oÃ¹ elle se
+									positionne dans la chronologie du MCU â€” son rÃ©alisateur,
+									Michael Giacchino, aurait une idÃ©e prÃ©cise en tÃªte, jamais
+									partagÃ©e publiquement Ã  ce jour.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="gh1" id="gh1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">The Guardians of the Galaxy Holiday Special</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="gh1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Pour offrir un cadeau de NoÃ«l rÃ©confortant Ã  Peter Quill,
+									toujours marquÃ© par la perte de Gamora, Drax et Mantis
+									s'aventurent jusqu'Ã  Hollywood pour kidnapper... Kevin
+									Bacon, dans une aventure aussi absurde qu'attachante. Le
+									tÃ©lÃ©film se referme sur Mantis rÃ©vÃ©lant enfin Ã  Quill
+									qu'elle est sa demi-sÅ“ur, fille d'Ego comme lui.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ================= PLANCHE III ================= -->
+		<section class="planche planche--mv" id="planche-3" data-nav-label="III. L'ombre de Kang">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>L'ombre de Kang
+			</div>
+			<h2 class="planche__title">
+				Un grand mÃ©chant qui ne verra jamais le bout de son plan
+			</h2>
+			<p class="planche__lede">
+				Le MCU s'apprÃªte Ã  faire de Kang le ConquÃ©rant son prochain Thanos â€”
+				avant qu'un Ã©vÃ©nement extÃ©rieur au rÃ©cit ne vienne tout bouleverser.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="qm1" id="qm1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Ant-Man and the Wasp: Quantumania</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="qm1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Introduction de Kang</span>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Scott Lang, Hope, Hank, Janet et Cassie se retrouvent
+									aspirÃ©s dans le Royaume Quantique, oÃ¹ Janet cache un lourd
+									secret : elle y a autrefois croisÃ© Kang le ConquÃ©rant, piÃ©gÃ©
+									dans cette dimension depuis des dÃ©cennies aprÃ¨s avoir Ã©tÃ©
+									banni par ses propres pairs pour avoir dÃ©clenchÃ© la guerre
+									multiversale Ã©voquÃ©e dans <em>Loki</em>. Kang manipule Scott
+									pour restaurer le cÅ“ur de son vaisseau et s'Ã©vader.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Deux scÃ¨nes : le Council of Kangs, menÃ© par le variant
+									Immortus et rÃ©unissant des centaines d'autres versions du
+									personnage (dont Rama-Tut), se rassemble Ã  l'annonce de la
+									mort apparente de Kang et planifie un soulÃ¨vement
+									multiversal contre la Terre-616. La seconde, tirÃ©e
+									directement d'un montage de <em>Loki saison 2</em>, montre
+									un autre variant, Victor Timely, se prÃ©senter en public au
+									dÃ©but du XXe siÃ¨cle â€” sous le regard terrifiÃ© de Loki.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="gotg3" id="gotg3-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy Vol. 3</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="gotg3">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Rocket, griÃ¨vement blessÃ© par Adam Warlock lors d'une
+									attaque, rÃ©vÃ¨le par flashbacks son passÃ© traumatique : crÃ©Ã©
+									et torturÃ© par le Haut Ã‰volutionnaire, un scientifique
+									obsÃ©dÃ© par la crÃ©ation de la vie parfaite. Pour le sauver
+									d'un mÃ©canisme mortel implantÃ© dans son corps, les Gardiens
+									infiltrent le laboratoire de son crÃ©ateur et libÃ¨rent au
+									passage des centaines d'autres crÃ©atures expÃ©rimentÃ©es.
+									Rocket finit par Ã©pargner la vie du Haut Ã‰volutionnaire,
+									vaincu et laissÃ© emprisonnÃ© sur Knowhere. Le film referme
+									l'arc de cette premiÃ¨re formation de l'Ã©quipe, plusieurs
+									membres choisissant de suivre des chemins sÃ©parÃ©s Ã  l'issue
+									de l'aventure.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="si1" id="si1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Secret Invasion</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="si1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Nick Fury, revenu sur Terre aprÃ¨s des annÃ©es passÃ©es dans
+									l'espace, doit affronter les consÃ©quences d'une promesse non
+									tenue : aprÃ¨s <em>Captain Marvel</em>, il s'Ã©tait engagÃ© Ã 
+									trouver aux Skrulls rÃ©fugiÃ©s un nouveau foyer en Ã©change de
+									leur aide en tant qu'espions infiltrÃ©s. Des dÃ©cennies plus
+									tard, faute de rÃ©sultat, une faction menÃ©e par Gravik â€”
+									lui-mÃªme formÃ© par Fury â€” se rebelle et infiltre les plus
+									hautes sphÃ¨res des gouvernements mondiaux pour s'emparer de
+									la Terre par la force. Fury doit reformer une alliance de
+									circonstance, notamment avec G'iah, fille de son alliÃ©
+									Talos, pour arrÃªter Gravik avant que sa manipulation ne
+									dÃ©clenche un conflit nuclÃ©aire.
+								</p>
+								<p>
+									Lors de l'affrontement final, G'iah se fait passer pour Fury
+									afin de remettre Ã  Gravik Â« la Moisson Â» â€” des Ã©chantillons
+									d'ADN de plusieurs Avengers â€” pour lui faire croire qu'il
+									obtient ainsi tous leurs pouvoirs Ã  la fois. PiÃ©gÃ©, c'est en
+									rÃ©alitÃ© G'iah elle-mÃªme qui absorbe ces capacitÃ©s et tue
+									Gravik au terme d'un duel titanesque, mettant fin Ã 
+									l'invasion.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="tm1" id="tm1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">The Marvels</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="tm1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Suite Ã  l'Ã©change survenu Ã  la fin de <em>Ms. Marvel</em>,
+									Carol Danvers, Kamala Khan et Monica Rambeau dÃ©couvrent que
+									leurs pouvoirs respectifs sont dÃ©sormais entremÃªlÃ©s : chaque
+									utilisation de pouvoirs provoque une tÃ©lÃ©portation alÃ©atoire
+									entre elles trois. Ensemble, elles affrontent Dar-Benn,
+									nouvelle dirigeante kree qui pille les ressources de
+									plusieurs planÃ¨tes â€” dont l'atmosphÃ¨re terrestre â€” pour
+									tenter de sauver Hala, sa planÃ¨te natale ravagÃ©e par les
+									choix passÃ©s de Carol.
+								</p>
+								<p>
+									Lors de l'affrontement final, la destruction de Dar-Benn
+									libÃ¨re une Ã©nergie incontrÃ´lable qui dÃ©chire l'espace-temps,
+									ouvrant une brÃ¨che menaÃ§ant Ã  la fois la Terre-616 et une
+									rÃ©alitÃ© adjacente. Monica se sacrifie pour la refermer de
+									l'intÃ©rieur, se retrouvant piÃ©gÃ©e de l'autre cÃ´tÃ© â€” dans une
+									rÃ©alitÃ© oÃ¹ les X-Men semblent occuper une place centrale.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="encart" style="margin-top: 40px">
+					<strong>Deux sÃ©ries hors chronologie.</strong>
+					<em>Loki saison 2</em> et <em>What If...? saison 2</em> se placent
+					ici dans l'ordre de visionnage Disney+, juste aprÃ¨s
+					<em>The Marvels</em> â€” bien qu'elles se dÃ©roulent, comme leurs
+					premiÃ¨res saisons, hors de la Sacred Timeline.
+				</div>
+
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="loki2" id="loki2-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Loki â€” saison 2</span>
+								<span class="accordion__meta">Hors Sacred Timeline</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="loki2">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Tournant majeur</span>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Loki, dÃ©sormais capable de Â« glisser Â» dans le temps, doit
+									aider la TVA Ã  stabiliser le Temporal Loom, un dispositif
+									censÃ© raffiner le flux brut du temps â€” avant de dÃ©couvrir
+									qu'il s'agit en rÃ©alitÃ© d'un ultime filet de sÃ©curitÃ© conÃ§u
+									par He Who Remains pour Ã©liminer toutes les branches du
+									multivers en cas de surcharge. Face Ã  ce choix impossible,
+									Loki se sacrifie pour dÃ©truire le mÃ©canisme et rÃ©unir toutes
+									les lignes temporelles en une structure arborescente,
+									s'installant lui-mÃªme au centre pour la maintenir
+									indÃ©finiment.
+								</p>
+
+								<div class="encart">
+									<strong>Un fil laissÃ© en suspens.</strong> Cette saison
+									referme, pour l'instant, le fil narratif de Kang le
+									ConquÃ©rant â€” Jonathan Majors, licenciÃ© par Marvel Studios
+									fin 2023 aprÃ¨s sa condamnation pour agression, n'est jamais
+									rÃ©apparu depuis. Le personnage n'a Ã©tÃ© formellement
+									abandonnÃ© dans aucun rÃ©cit Ã  l'Ã©cran ; c'est un tout autre
+									antagoniste, Doctor Doom, qui prend le relais pour la suite
+									de la saga.
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="wif2" id="wif2-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">What If...? â€” saison 2</span>
+								<span class="accordion__meta">Hors Sacred Timeline</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="wif2">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Le Watcher poursuit son exploration de rÃ©alitÃ©s
+									alternatives, introduisant notamment Kahhori, une jeune
+									femme mohawk qui acquiert des pouvoirs liÃ©s au Tesseract â€”
+									brisÃ© sur Terre Ã  la suite d'un Ragnarok diffÃ©rent â€” et
+									repousse l'invasion espagnole de son peuple, forÃ§ant une
+									paix durable entre les deux mondes. Personnage entiÃ¨rement
+									original crÃ©Ã© pour la sÃ©rie, elle compte parmi les figures
+									les plus marquantes de tout <em>What If...?</em>.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ================= PLANCHE IV ================= -->
+		<section class="planche" id="planche-4" data-nav-label="IV. Le tournant Doom">
+			<div class="planche__eyebrow">
+				<span class="roman">IV</span>Le tournant Doom
+			</div>
+			<h2 class="planche__title">
+				Un nouveau visage pour un nouveau grand mÃ©chant
+			</h2>
+			<p class="planche__lede">
+				Une comÃ©die dÃ©jantÃ©e venue d'un tout autre studio referme la porte sur
+				Kang et en rouvre une autre sur un visage bien connu du MCU â€” sous des
+				traits inattendus.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="dpw1" id="dpw1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Deadpool & Wolverine</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="dpw1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Tournant majeur</span>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Wade Wilson, ayant abandonnÃ© le costume de Deadpool depuis
+									sa rupture avec Vanessa, est enlevÃ© par une cellule
+									dissidente de la TVA menÃ©e par Mr. Paradox. Ce dernier lui
+									rÃ©vÃ¨le que son univers d'origine, la Terre-10005, est en
+									train de se dÃ©sintÃ©grer parce que son Wolverine â€” l'Ãªtre
+									ancrage indispensable Ã  la stabilitÃ© de cette rÃ©alitÃ© â€” est
+									mort. Pour sauver son monde, Wade doit convaincre une
+									variante de Wolverine de l'accompagner. Leur pÃ©riple les
+									mÃ¨ne jusqu'au Void, dÃ©potoir du multivers situÃ© hors du
+									temps, oÃ¹ ils affrontent Cassandra Nova, sÅ“ur jumelle
+									malÃ©fique d'un Charles Xavier, aux cÃ´tÃ©s d'une brochette de
+									hÃ©ros et vilains non-MCU venus de dÃ©cennies de productions
+									Fox.
+								</p>
+								<p>
+									Le film marque la toute premiÃ¨re rencontre officielle entre
+									l'univers X-Men de la Fox et le MCU proprement dit,
+									consommant dÃ©finitivement le rachat de la Fox par Disney Ã 
+									l'Ã©cran.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									De retour Ã  la TVA, Deadpool rÃ©vÃ¨le Ã  l'assistance des
+									images inÃ©dites confirmant qu'il n'avait pas menti sur les
+									propos tenus par la Torche Humaine Ã  propos de Cassandra
+									Nova â€” une pure scÃ¨ne comique sans rÃ©elle portÃ©e narrative
+									pour la suite.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="aaa1" id="aaa1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Agatha All Along</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="aaa1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Agatha Harkness, dÃ©pouillÃ©e de ses pouvoirs depuis
+									<em>WandaVision</em>, forme un coven de fortune pour
+									parcourir la Route des SorciÃ¨res, un chemin mystique censÃ©
+									exaucer le vÅ“u le plus cher de quiconque le termine. Parmi
+									son groupe se trouve Billy Maximoff, fils de Wanda dont
+									l'Ã¢me a trouvÃ© refuge dans le corps d'un adolescent aprÃ¨s
+									les Ã©vÃ©nements de <em>WandaVision</em>, en quÃªte de son
+									frÃ¨re jumeau Tommy â€” dont il finit par localiser l'Ã¢me et
+									qu'il installe dans le corps d'un garÃ§on mourant, lui
+									offrant une seconde vie.
+								</p>
+								<p>
+									Le final rÃ©vÃ¨le un double retournement : la Route n'a jamais
+									existÃ© â€” elle est une pure crÃ©ation inconsciente de Billy,
+									comme Wanda l'avait fait avec Westview â€” et Rio Vidal, la
+									complice d'Agatha prÃ©sente depuis le premier Ã©pisode, est en
+									rÃ©alitÃ© Death elle-mÃªme, venue rÃ©clamer une dette vieille de
+									plusieurs siÃ¨cles : le fils qu'Agatha a perdu il y a des
+									centaines d'annÃ©es. Agatha se sacrifie Ã  sa place pour
+									sauver Billy, mais revient sous forme de fantÃ´me, incapable
+									de rejoindre l'au-delÃ .
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="wif3" id="wif3-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">What If...? â€” saison 3</span>
+								<span class="accordion__meta">Hors Sacred Timeline</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="wif3">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Cette troisiÃ¨me et derniÃ¨re saison referme la sÃ©rie sur un
+									arc final centrÃ© sur le Watcher lui-mÃªme : jugÃ© par ses
+									pairs, dont l'Eminence, pour avoir violÃ© Ã  rÃ©pÃ©tition son
+									serment de non-intervention, il est sauvÃ© in extremis par
+									Captain Carter et une Ã©quipe de variantes rassemblÃ©es au fil
+									de la sÃ©rie (Kahhori, Storm, Byrdie). Face Ã  Infinity
+									Ultron, Peggy se sacrifie pour protÃ©ger ses alliÃ©s, poussant
+									l'Eminence Ã  reconsidÃ©rer la doctrine des Watchers â€” une
+									conclusion Ã©mouvante qui referme dÃ©finitivement la sÃ©rie.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ================= PLANCHE V ================= -->
+		<section class="planche" id="planche-5" data-nav-label="V. Reconstruire les Avengers">
+			<div class="planche__eyebrow">
+				<span class="roman">V</span>Reconstruire les Avengers
+			</div>
+			<h2 class="planche__title">Deux Ã©quipes, un seul nom</h2>
+			<p class="planche__lede">
+				Le MCU prÃ©pare ouvertement son prochain grand rassemblement â€” au point
+				que deux groupes rivaux se disputent dÃ©jÃ , au sens propre, le droit de
+				s'appeler Avengers.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="dbas1" id="dbas1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Daredevil: Born Again â€” saison 1</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="dbas1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Matt Murdock, Foggy Nelson et Karen Page exercent dÃ©sormais
+									le droit ensemble, loin des costumes â€” jusqu'Ã  ce que Foggy
+									soit assassinÃ© par Bullseye, sur ordre secret de Vanessa
+									Fisk. DÃ©vastÃ©, Matt reprend briÃ¨vement le costume de
+									Daredevil avant de raccrocher, tandis que Wilson Fisk se
+									prÃ©sente Ã  la mairie de New York sur un programme
+									anti-justiciers et remporte l'Ã©lection.
+								</p>
+								<p>
+									AprÃ¨s une tentative d'assassinat de Fisk par Bullseye
+									Ã©chappÃ© de prison â€” que Matt empÃªche en prenant une balle Ã 
+									sa place â€” Fisk, dÃ©sormais paranoÃ¯aque et vengeur, coupe le
+									courant dans toute la ville pour traquer Matt dans
+									l'obscuritÃ©. Le season finale voit Fisk asseoir un contrÃ´le
+									quasi total sur New York, dans l'une des sÃ©quences les plus
+									sombres jamais produites pour le MCU, tandis que Matt
+									reprend dÃ©finitivement le costume de Daredevil pour lui
+									rÃ©sister.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="bnw1" id="bnw1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Captain America: Brave New World</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="bnw1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Sam Wilson, premier Captain America Ã  ne pas disposer du
+									sÃ©rum du super-soldat, doit dÃ©jouer un complot visant le
+									prÃ©sident Thaddeus Ross â€” nouvellement Ã©lu et cherchant Ã 
+									rÃ©parer sa relation avec Sam aprÃ¨s leurs diffÃ©rends passÃ©s.
+									Samuel Sterns, alias le Leader, biologiste rendu fou par une
+									exposition au sang de Bruce Banner des annÃ©es plus tÃ´t, se
+									venge en dissimulant des pilules chargÃ©es de radiations
+									gamma dans le traitement cardiaque du prÃ©sident, le
+									transformant en un Red Hulk incontrÃ´lable dÃ¨s qu'il perd son
+									sang-froid. La confrontation finale se dÃ©roule sur l'Ã®le
+									CÃ©leste, ancien corps d'un CÃ©leste mort, seule source connue
+									d'Adamantium, dont l'accÃ¨s dÃ©clenche des tensions
+									internationales.
+								</p>
+								<p>
+									Sam parvient Ã  raisonner Ross en Ã©voquant sa fille Betty, le
+									ramenant Ã  sa forme humaine. Ross se rend aux autoritÃ©s et
+									rejoint Sterns au Raft, la prison sous-marine pour individus
+									surpuissants. Le film se conclut sur la dÃ©cision de Sam de
+									reformer officiellement une Ã©quipe d'Avengers.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Sam rend visite Ã  Sterns, incarcÃ©rÃ© au Raft, qui l'avertit
+									cryptiquement : d'autres mondes existent, et ils se
+									prÃ©parent eux aussi au conflit. Un premier Ã©cho, encore
+									vague Ã  ce stade, Ã  la menace multiversale qui approche.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="tb1" id="tb1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Thunderbolts*</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="tb1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Tournant majeur</span>
+
+								<span class="accordion__label">Le rÃ©cit</span>
+								<p>
+									Yelena Belova, Bucky Barnes, John Walker, Ghost et
+									Taskmaster, tous d'anciens agents ou anti-hÃ©ros au service
+									de Valentina Allegra de Fontaine, sont envoyÃ©s dans une
+									installation secrÃ¨te censÃ©e Ãªtre une mission de routine â€” en
+									rÃ©alitÃ© un piÃ¨ge destinÃ© Ã  les Ã©liminer discrÃ¨tement pour
+									effacer les traces de ses opÃ©rations les plus douteuses.
+									Dans le chaos, Taskmaster est tuÃ©e et le groupe libÃ¨re
+									accidentellement Bob Reynolds, cobaye amnÃ©sique du programme
+									Sentry, dotÃ© de pouvoirs titanesques mais rongÃ© par un
+									traumatisme profond et capable de faire naÃ®tre le Void, une
+									entitÃ© obscure qui engloutit tout ce qui l'entoure. Rejoints
+									par Alexei Shostakov, les anti-hÃ©ros doivent unir leurs
+									forces pour ramener Bob Ã  lui plutÃ´t que de l'affronter par
+									la violence. Leur victoire les propulse, malgrÃ© eux, au rang
+									de hÃ©ros publics.
+								</p>
+
+								<span class="accordion__label">ScÃ¨ne post-crÃ©dits</span>
+								<p>
+									Valentina prÃ©sente officiellement l'Ã©quipe au monde sous le
+									nom de Â« New Avengers Â», s'installant dans l'ancien QG des
+									Avengers rebaptisÃ© la Watchtower â€” dÃ©clenchant une bataille
+									juridique avec Sam Wilson, qui revendique l'usage exclusif
+									du nom Avengers pour sa propre Ã©quipe. Une seconde scÃ¨ne
+									montre le vaisseau des Quatre Fantastiques entrer dans
+									l'orbite terrestre, en provenance d'une dimension
+									diffÃ©rente.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="encart" style="margin-top: 40px">
+					<strong>Et ensuite ?</strong> Deux Ã©quipes revendiquent le nom
+					d'Avengers, une famille entiÃ¨re dÃ©barque d'un univers parallÃ¨le, et
+					un homme masquÃ© rÃ´de dÃ©jÃ  dans l'ombre d'un enfant aux pouvoirs
+					cosmiques. Direction l'horizon du MCU â€” lÃ  oÃ¹ toutes ces pistes
+					convergent enfin.
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Chapitre suivant</div>
+		<a href="mcu_horizon.html">L'horizon â†’</a>
+	</footer>
+
+	<script src="../mcu_script.js"></script>
+</body>
+
+</html>

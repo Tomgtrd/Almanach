@@ -1,0 +1,351 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Natasha Romanoff / Black Widow | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Black Widow</div>
+		<h1 class="hero__title">Natasha Romanoff</h1>
+		<p class="charhero__realname">Natalia Alianovna Romanova</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Espionne</span>
+			<span class="charhero__tag">Fondatrice des Avengers</span>
+			<span class="charhero__tag">DÃ©cÃ©dÃ©e</span>
+		</div>
+	</header>
+
+	<main>
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>Biographie
+			</div>
+			<h2 class="planche__title">L'arme qui a choisi de devenir humaine</h2>
+			<p class="planche__lede">
+				FormÃ©e dÃ¨s l'enfance pour tuer sans poser de questions â€” et qui passe
+				le reste de sa vie Ã  racheter ce qu'on a fait d'elle.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Natasha Romanoff n'a aucun pouvoir surnaturel : tout ce qu'elle sait
+					faire est le fruit d'un entraÃ®nement impitoyable. Enfant, elle est
+					enrÃ´lÃ©e de force dans le Red Room, un programme soviÃ©tique
+					clandestin dirigÃ© par le gÃ©nÃ©ral Dreykov, qui faÃ§onne des fillettes
+					en espionnes et assassins d'Ã©lite par un conditionnement
+					psychologique extrÃªme, y compris une stÃ©rilisation forcÃ©e prÃ©sentÃ©e
+					comme faisant partie de sa Â« graduation Â». Elle grandit briÃ¨vement
+					comme fille adoptive d'Alexei Shostakov et Melina Vostokoff, deux
+					agents du Red Room en mission d'infiltration aux Ã‰tats-Unis sous
+					couverture de famille â€” une parenthÃ¨se qui reste, malgrÃ© son
+					caractÃ¨re factice, le lien le plus proche d'un foyer qu'elle ait
+					jamais connu.
+				</p>
+				<p>
+					Devenue l'une des meilleures espionnes au monde, Natasha travaille
+					comme opÃ©rative pour le KGB avant d'Ãªtre ciblÃ©e par le S.H.I.E.L.D.
+					Clint Barton, envoyÃ© pour l'Ã©liminer, choisit de l'Ã©pargner et de la
+					recruter Ã  la place â€” un acte de confiance qui change le cours de sa
+					vie et donne naissance Ã  l'amitiÃ© la plus solide qu'elle connaÃ®tra
+					jamais. Elle devient agente du S.H.I.E.L.D., puis membre fondateur
+					des Avengers, mettant son passÃ© de tueuse au service de la
+					protection du monde plutÃ´t que de sa destruction.
+				</p>
+				<p>
+					RongÃ©e par la culpabilitÃ© de son passÃ© â€” notamment la mort de la
+					fille de Dreykov, Antonia, sacrifiÃ©e collatÃ©ralement lors d'une
+					mission â€” Natasha traverse les Avengers en quÃªte discrÃ¨te de
+					rÃ©demption. Lorsque vient le moment de sacrifier une vie pour
+					obtenir la Pierre de l'Ã‚me sur Vormir, elle devance Clint Barton et
+					choisit elle-mÃªme de mourir, mettant fin Ã  des annÃ©es de culpabilitÃ©
+					par un dernier acte de sacrifice pour ceux qu'elle considÃ¨re comme
+					sa vÃ©ritable famille.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Famille & relations
+			</div>
+			<h2 class="planche__title">Ceux qui comptent</h2>
+			<p class="planche__lede">
+				Une famille de sang qu'elle ne connaÃ®t presque pas, et une famille de
+				cÅ“ur qu'elle choisit envers et contre tout.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Clint Barton</strong> â€” celui qui l'a Ã©pargnÃ©e puis
+					recrutÃ©e, devenu son meilleur ami et son partenaire de confiance
+					absolue. Leur lien traverse toute son histoire, jusqu'Ã  leur dispute
+					dÃ©chirante sur Vormir pour savoir lequel des deux se sacrifiera.
+				</p>
+				<p>
+					<strong>Yelena Belova</strong> â€” sa sÅ“ur de cÅ“ur, autre enfant du
+					Red Room Ã©levÃ©e un temps dans la mÃªme famille de faÃ§ade. Leur lien
+					se ravive Ã  l'Ã¢ge adulte lorsqu'elles unissent leurs forces contre
+					Dreykov.
+				</p>
+				<p>
+					<strong>Alexei Shostakov et Melina Vostokoff</strong> â€” ses parents
+					adoptifs de mission, agents du Red Room ayant partagÃ© avec elle une
+					brÃ¨ve parenthÃ¨se de vie de famille avant que la couverture ne prenne
+					fin.
+				</p>
+				<p>
+					<strong>Bruce Banner</strong> â€” l'un des rares hommes capables de la
+					comprendre sans la juger pour son passÃ©, avec qui elle vit une
+					relation amoureuse au sein des Avengers.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>Filmographie
+			</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'une simple assistante infiltrÃ©e chez Tony Stark au sacrifice final
+				sur les falaises de Vormir.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-im2n" id="f-im2n-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Iron Man 2</span>
+								<span class="accordion__meta">2011</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-im2n">
+							<div class="accordion__panel-inner">
+								<p>
+									InfiltrÃ©e sous le nom de Natalie Rushman en tant
+									qu'assistante de Tony Stark pour le compte du S.H.I.E.L.D.,
+									Natasha Ã©value discrÃ¨tement son aptitude Ã  rejoindre
+									l'Initiative Avengers, rÃ©vÃ©lant en fin de film ses talents
+									de combattante lors de l'assaut contre les installations de
+									Justin Hammer.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-av1n" id="f-av1n-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">The Avengers</span>
+								<span class="accordion__meta">2012</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-av1n">
+							<div class="accordion__panel-inner">
+								<p>
+									Natasha recrute Bruce Banner pour localiser le Tesseract,
+									interroge Loki en usant de manipulation psychologique pour
+									lui soutirer des informations cruciales, et referme la
+									brÃ¨che Chitauri au sommet de la Stark Tower lors de la
+									bataille de New York.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-tws-n" id="f-tws-n-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Captain America: The Winter Soldier</span>
+								<span class="accordion__meta">2014</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-tws-n">
+							<div class="accordion__panel-inner">
+								<p>
+									Natasha aide Steve Rogers Ã  dÃ©masquer l'infiltration d'HYDRA
+									au sein du S.H.I.E.L.D., allant jusqu'Ã  divulguer
+									publiquement l'intÃ©gralitÃ© de ses propres dossiers secrets â€”
+									un choix qui expose son passÃ© mais confirme sa loyautÃ©
+									dÃ©finitive envers ses nouveaux alliÃ©s.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-aoun" id="f-aoun-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Age of Ultron</span>
+								<span class="accordion__meta">2015</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-aoun">
+							<div class="accordion__panel-inner">
+								<p>
+									Natasha dÃ©veloppe une relation amoureuse avec Bruce Banner,
+									partageant avec lui le rÃ©cit de sa stÃ©rilisation forcÃ©e
+									durant sa formation au Red Room. Elle joue un rÃ´le clÃ© dans
+									la bataille finale contre Ultron Ã  Sokovia, notamment en
+									apaisant Hulk aprÃ¨s ses transformations.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-cw1n" id="f-cw1n-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Captain America: Civil War</span>
+								<span class="accordion__meta">2016</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-cw1n">
+							<div class="accordion__panel-inner">
+								<p>
+									D'abord favorable aux Accords de Sokovie, Natasha finit par
+									aider Steve Rogers et Bucky Ã  s'Ã©chapper, choisissant la
+									loyautÃ© envers ses amis plutÃ´t que la ligne officielle â€” un
+									choix qui la met elle-mÃªme en dÃ©licatesse avec les
+									autoritÃ©s.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-bw1n" id="f-bw1n-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Black Widow</span>
+								<span class="accordion__meta">2016 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-bw1n">
+							<div class="accordion__panel-inner">
+								<p>
+									En cavale aprÃ¨s avoir pris le parti de Steve, Natasha
+									replonge dans son passÃ© de tueuse formÃ©e par le Red Room aux
+									cÃ´tÃ©s de Yelena Belova, sa sÅ“ur de cÅ“ur, pour dÃ©manteler ce
+									programme et son dirigeant, le gÃ©nÃ©ral Dreykov â€” qu'elle
+									croyait pourtant avoir tuÃ© des annÃ©es plus tÃ´t.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-iw1n" id="f-iw1n-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-iw1n">
+							<div class="accordion__panel-inner">
+								<p>
+									Natasha combat aux cÃ´tÃ©s des Avengers lors de la bataille du
+									Wakanda contre l'armÃ©e de Thanos, cherchant Ã  protÃ©ger
+									Vision et la Pierre de l'Esprit.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg1n" id="f-eg1n-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg1n">
+							<div class="accordion__panel-inner">
+								<p>
+									Devenue une figure centrale des Avengers survivants pendant
+									les cinq annÃ©es suivant le Snap, Natasha participe au voyage
+									dans le temps pour rÃ©cupÃ©rer la Pierre de l'Ã‚me sur Vormir.
+									Face Ã  Clint Barton qui veut se sacrifier Ã  sa place, elle
+									le devance et se laisse tomber dans le vide, offrant sa vie
+									pour la Pierre â€” la seule Avenger dont la mort ne sera
+									jamais annulÃ©e.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_avengers-originels.html">Les Avengers originels â†’</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

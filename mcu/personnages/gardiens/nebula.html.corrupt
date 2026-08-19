@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nebula | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css">
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Nebula</div>
+		<h1 class="hero__title">Nebula</h1>
+		<p class="charhero__realname">Nebula</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">LuphomoÃ¯de</span>
+			<span class="charhero__tag">CybernÃ©tisÃ©e</span>
+			<span class="charhero__tag">Avenger</span>
+		</div>
+	</header>
+
+	<main>
+
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow"><span class="roman">I</span>Biographie</div>
+			<h2 class="planche__title">Celle qu'on a dÃ©montÃ©e pour la reconstruire, encore et encore</h2>
+			<p class="planche__lede">
+				Une enfance transformÃ©e en champ de bataille perpÃ©tuel contre sa
+				propre sÅ“ur â€” jusqu'Ã  ce qu'elle choisisse, enfin, de s'en libÃ©rer.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Nebula est une LuphomoÃ¯de adoptÃ©e par Thanos aprÃ¨s la destruction
+					de son monde natal, Ã©levÃ©e aux cÃ´tÃ©s de sa sÅ“ur adoptive Gamora
+					dans un systÃ¨me d'entraÃ®nement dÃ©libÃ©rÃ©ment cruel : chaque combat
+					perdu contre Gamora se solde par une nouvelle Â« amÃ©lioration Â»
+					cybernÃ©tique forcÃ©e, son corps Ã©tant mÃ©thodiquement remplacÃ© par
+					des piÃ¨ces mÃ©caniques au fil des annÃ©es. Cette rivalitÃ© fabriquÃ©e
+					de toutes piÃ¨ces par Thanos faÃ§onne une haine profonde envers sa
+					sÅ“ur, que Nebula met des annÃ©es Ã  comprendre comme n'Ã©tant, en
+					rÃ©alitÃ©, que le fruit de la manipulation de leur pÃ¨re commun.
+				</p>
+				<p>
+					Nebula sert loyalement Thanos et Ronan l'Accusateur pendant des
+					annÃ©es, jusqu'Ã  ce que la trahison de Gamora et sa rencontre avec
+					les Gardiens de la Galaxie ne commencent, lentement, Ã  fissurer sa
+					loyautÃ©. CapturÃ©e et torturÃ©e par Thanos pour forcer Gamora Ã 
+					rÃ©vÃ©ler l'emplacement de la Pierre de l'Ã‚me, elle finit par
+					rejoindre pleinement la cause des hÃ©ros, dans une quÃªte de
+					rÃ©demption et de vengeance contre l'homme qui a dÃ©truit son
+					enfance.
+				</p>
+				<p>
+					AprÃ¨s la mort de Thanos, Nebula participe activement au voyage
+					dans le temps des Avengers, oÃ¹ elle affronte une version passÃ©e
+					d'elle-mÃªme â€” un moment d'une intensitÃ© rare qui la confronte
+					directement Ã  la personne qu'elle a cessÃ© d'Ãªtre. Elle rejoint
+					durablement les rangs des hÃ©ros, devenant l'une des figures les
+					plus stables de l'Ã¨re post-Thanos du MCU.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow"><span class="roman">II</span>Famille & relations</div>
+			<h2 class="planche__title">Ceux qui comptent</h2>
+			<p class="planche__lede">
+				Une famille entiÃ¨rement construite sur la manipulation â€” et une
+				sÅ“ur qu'elle finit par vraiment aimer.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Thanos</strong> â€” son pÃ¨re adoptif, responsable de
+					dÃ©cennies de tortures physiques et psychologiques dÃ©guisÃ©es en
+					entraÃ®nement, qu'elle finit par combattre activement aux cÃ´tÃ©s
+					des hÃ©ros.
+				</p>
+				<p>
+					<strong>Gamora</strong> â€” sa sÅ“ur adoptive, dressÃ©e contre elle
+					depuis l'enfance par Thanos. Leur relation Ã©volue d'une rivalitÃ©
+					toxique Ã  une solidaritÃ© sincÃ¨re, brisÃ©e par la mort de Gamora
+					puis compliquÃ©e par le retour d'une variante amnÃ©sique.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow"><span class="roman">III</span>Filmographie</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'une exÃ©cutrice loyale Ã  Thanos Ã  une hÃ©roÃ¯ne Ã  part entiÃ¨re.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg1n" id="f-gotg1n-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy</span>
+								<span class="accordion__meta">2014</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg1n">
+							<div class="accordion__panel-inner">
+								<p>
+									Nebula, encore loyale Ã  Ronan et Thanos, poursuit Gamora
+									aprÃ¨s sa trahison et rÃ©cupÃ¨re l'Orbe, avant que celui-ci
+									ne soit finalement repris par les futurs Gardiens lors de
+									la bataille de Xandar.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg2n" id="f-gotg2n-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy Vol. 2</span>
+								<span class="accordion__meta">2014 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg2n">
+							<div class="accordion__panel-inner">
+								<p>
+									CapturÃ©e par Gamora, qui compte la livrer Ã  la justice de
+									Xandar, Nebula s'Ã©chappe et finit par lui rÃ©vÃ©ler toute
+									l'ampleur de sa souffrance passÃ©e. Les deux sÅ“urs
+									s'allient temporairement pour affronter Ego, amorÃ§ant
+									une rÃ©conciliation sincÃ¨re.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-iw1n" id="f-iw1n-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-iw1n">
+							<div class="accordion__panel-inner">
+								<p>
+									CapturÃ©e par Thanos sur Vormir, Nebula est torturÃ©e sous
+									les yeux de Gamora pour la forcer Ã  rÃ©vÃ©ler l'emplacement
+									de la Pierre de l'Ã‚me. Elle rejoint ensuite la bataille de
+									Titan aux cÃ´tÃ©s des Avengers et des Gardiens survivants.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg1n" id="f-eg1n-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg1n">
+							<div class="accordion__panel-inner">
+								<p>
+									Nebula participe au voyage dans le temps et affronte sa
+									propre version passÃ©e de 2014, encore loyale Ã  Thanos,
+									qu'elle est contrainte de tuer. Elle accueille avec joie
+									la variante de Gamora de cette mÃªme pÃ©riode comme sa
+									nouvelle sÅ“ur.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg3n" id="f-gotg3n-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy Vol. 3</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg3n">
+							<div class="accordion__panel-inner">
+								<p>
+									Nebula participe Ã  la mission de sauvetage de Rocket et Ã 
+									l'affrontement contre le Haut Ã‰volutionnaire, devenant
+									l'une des figures les plus stables et matures de
+									l'Ã©quipe.
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_gardiens.html">Les Gardiens de la Galaxie â†’</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

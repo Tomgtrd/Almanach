@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mantis | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css">
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Mantis</div>
+		<h1 class="hero__title">Mantis</h1>
+		<p class="charhero__realname">Mantis</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Empathe</span>
+			<span class="charhero__tag">Fille d'Ego</span>
+		</div>
+	</header>
+
+	<main>
+
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow"><span class="roman">I</span>Biographie</div>
+			<h2 class="planche__title">L'enfant Ã©levÃ©e en isolement qui a dÃ©couvert l'amitiÃ© sur le tard</h2>
+			<p class="planche__lede">
+				Toute sa vie passÃ©e Ã  apaiser un pÃ¨re tyrannique â€” jusqu'Ã  ce
+				qu'une bande de marginaux lui apprenne enfin Ã  rire, sourire, et
+				aimer.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Mantis est recueillie enfant, abandonnÃ©e et orpheline, par Ego,
+					le CÃ©leste qui deviendra plus tard le pÃ¨re biologique de Peter
+					Quill. Ã‰levÃ©e seule sur la planÃ¨te-corps d'Ego, sans aucun contact
+					avec le monde extÃ©rieur ni avec d'autres membres de son espÃ¨ce
+					insectoÃ¯de, Mantis dÃ©veloppe des capacitÃ©s empathiques
+					exceptionnelles, capable de ressentir et d'altÃ©rer les Ã©motions
+					d'autrui par simple contact. Ego exploite ce don pour apaiser ses
+					propres accÃ¨s de rage et l'aider Ã  trouver le sommeil,
+					maintenant Mantis dans une servitude dÃ©guisÃ©e en affection
+					paternelle.
+				</p>
+				<p>
+					CoupÃ©e de toute interaction sociale normale, Mantis ignore les
+					codes sociaux les plus Ã©lÃ©mentaires â€” sourire, s'incliner,
+					comprendre l'humour ou le sarcasme â€” jusqu'Ã  sa rencontre avec les
+					Gardiens de la Galaxie, venus visiter la planÃ¨te d'Ego. C'est
+					au contact de Drax, en particulier, qu'elle dÃ©veloppe pour la
+					premiÃ¨re fois de vÃ©ritables liens d'amitiÃ©, dÃ©couvrant peu Ã  peu
+					ce que signifient la joie, l'humour et l'appartenance.
+				</p>
+				<p>
+					Lorsqu'elle dÃ©couvre la vÃ©ritable nature destructrice des plans
+					d'Ego, Mantis choisit de trahir celui qui l'a Ã©levÃ©e pour aider
+					les Gardiens Ã  l'arrÃªter â€” son premier vÃ©ritable acte de libre
+					arbitre. Elle rejoint dÃ©finitivement l'Ã©quipe et dÃ©couvre, bien
+					plus tard, qu'elle est en rÃ©alitÃ© la demi-sÅ“ur biologique de
+					Peter Quill, tous deux enfants d'Ego.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow"><span class="roman">II</span>Famille & relations</div>
+			<h2 class="planche__title">Ceux qui comptent</h2>
+			<p class="planche__lede">
+				Un pÃ¨re qui l'a asservie, et une famille de cÅ“ur qui lui a tout
+				appris de la vraie tendresse.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Ego</strong> â€” son pÃ¨re adoptif, qui l'a recueillie
+					enfant pour mieux exploiter ses dons empathiques Ã  des fins
+					purement Ã©goÃ¯stes, la maintenant dans un isolement social total.
+				</p>
+				<p>
+					<strong>Drax</strong> â€” le premier vÃ©ritable ami qu'elle se fait,
+					qui la considÃ¨re peu Ã  peu comme une fille de substitution,
+					touchÃ© par son innocence dÃ©sarmante.
+				</p>
+				<p>
+					<strong>Peter Quill</strong> â€” son demi-frÃ¨re biologique,
+					dÃ©couvert bien aprÃ¨s la mort de leur pÃ¨re commun, avec qui elle
+					dÃ©veloppe un lien fraternel tardif.
+				</p>
+				<p>
+					<strong>Les Gardiens de la Galaxie</strong> â€” la premiÃ¨re vraie
+					famille qui lui apprend, enfin, ce que signifient l'amitiÃ© et
+					l'amour choisi plutÃ´t qu'imposÃ©.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow"><span class="roman">III</span>Filmographie</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'une servante isolÃ©e Ã  un membre Ã  part entiÃ¨re de la famille la
+				plus improbable de la galaxie.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg2m" id="f-gotg2m-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy Vol. 2</span>
+								<span class="accordion__meta">2014 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg2m" style="height:auto;">
+							<div class="accordion__panel-inner">
+								<p>
+									Mantis accueille les Gardiens sur la planÃ¨te d'Ego et se
+									lie rapidement d'amitiÃ© avec eux, notamment Drax.
+									DÃ©couvrant la vÃ©ritÃ© sur les intentions destructrices
+									d'Ego, elle prÃ©vient discrÃ¨tement Drax puis les autres,
+									et participe activement Ã  sa dÃ©faite, rejoignant
+									dÃ©finitivement l'Ã©quipe.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-iw1m" id="f-iw1m-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-iw1m">
+							<div class="accordion__panel-inner">
+								<p>
+									Mantis Ã©labore avec les Gardiens un plan minutieux pour
+									immobiliser Thanos sur Titan grÃ¢ce Ã  ses pouvoirs
+									empathiques, un plan qui Ã©choue lorsque Peter Quill,
+									submergÃ© par la rage d'apprendre la mort de Gamora,
+									rompt sa concentration.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg1m" id="f-eg1m-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg1m">
+							<div class="accordion__panel-inner">
+								<p>
+									Mantis combat aux cÃ´tÃ©s des Avengers survivants lors de la
+									bataille finale contre Thanos.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-ltt1m" id="f-ltt1m-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Thor: Love and Thunder</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-ltt1m">
+							<div class="accordion__panel-inner">
+								<p>
+									Mantis participe Ã  l'accueil de Thor par les Gardiens,
+									avant de poursuivre l'aventure avec le reste de l'Ã©quipe.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg3m" id="f-gotg3m-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy Vol. 3</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg3m">
+							<div class="accordion__panel-inner">
+								<p>
+									Mantis participe activement Ã  la mission de sauvetage de
+									Rocket, rÃ©vÃ©lant au passage son lien de parentÃ© avec
+									Peter Quill. Elle choisit de partir explorer la galaxie
+									seule Ã  la fin du film, en quÃªte de sa propre identitÃ©,
+									hors de l'ombre de son pÃ¨re et de ses amis.
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_gardiens.html">Les Gardiens de la Galaxie â†’</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

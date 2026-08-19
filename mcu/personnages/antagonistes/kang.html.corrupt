@@ -1,0 +1,273 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Kang le ConquÃ©rant | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mv-purple);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+
+		.planche--mv .planche__eyebrow {
+			color: var(--mv-purple-soft);
+		}
+
+		.planche--mv .encart {
+			border-left-color: var(--mv-purple);
+		}
+	</style>
+</head>
+
+<body>
+		<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../artefacts/mcu_artefacts.html">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Kang le ConquÃ©rant</div>
+		<h1 class="hero__title">Kang</h1>
+		<p class="charhero__realname">Nathaniel Richards</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Variant du XXXIe siÃ¨cle</span>
+			<span class="charhero__tag">Antagoniste abandonnÃ©</span>
+		</div>
+	</header>
+
+	<main>
+		<section class="planche planche--mv" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>Biographie
+			</div>
+			<h2 class="planche__title">
+				Le conquÃ©rant nÃ© d'un millier de lui-mÃªme
+			</h2>
+			<p class="planche__lede">
+				Un scientifique du futur, Ã©parpillÃ© en des milliers de variantes Ã 
+				travers le multivers â€” et dont l'ambition dÃ©vorante a fini par
+				dÃ©passer le personnage lui-mÃªme.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Nathaniel Richards est, Ã  l'origine, un scientifique du XXXIe siÃ¨cle
+					qui dÃ©couvre l'existence du multivers : une infinitÃ© d'univers
+					parallÃ¨les, empilÃ©s les uns sur les autres. D'autres variantes de
+					lui-mÃªme, ayant fait la mÃªme dÃ©couverte indÃ©pendamment dans leurs
+					propres rÃ©alitÃ©s, finissent par entrer en contact les unes avec les
+					autres. Un temps, ces variantes collaborent pacifiquement,
+					Ã©changeant connaissances et technologies Ã  travers les univers.
+				</p>
+				<p>
+					Mais certaines de ces variantes, plus intÃ©ressÃ©es par la conquÃªte
+					que par la coopÃ©ration, dÃ©clenchent un conflit dÃ©vastateur connu
+					sous le nom de Guerre Multiversale. L'une de ces variantes, devenue
+					plus tard connue sous le nom de Â« He Who Remains Â», parvient Ã 
+					mettre fin au conflit en domptant Alioth, une entitÃ© destructrice
+					capable d'engloutir des rÃ©alitÃ©s entiÃ¨res. Il crÃ©e ensuite la Time
+					Variance Authority (TVA) et les Gardiens du Temps pour prÃ©server une
+					unique ligne temporelle â€” la Sacred Timeline â€” et empÃªcher ainsi le
+					retour de ses propres variantes conquÃ©rantes, dont Kang, considÃ©rÃ©
+					comme l'une des plus dangereuses.
+				</p>
+				<p>
+					Ã€ la mort de He Who Remains, tuÃ© par Sylvie sur ordre de sa propre
+					volontÃ©, la Sacred Timeline se ramifie en une infinitÃ© de branches
+					libres â€” permettant Ã  Kang et Ã  d'innombrables autres variantes de
+					refaire surface Ã  travers le multivers nouvellement libÃ©rÃ©. Une
+					variante de Kang, piÃ©gÃ©e dans le Royaume Quantique depuis des
+					dÃ©cennies aprÃ¨s avoir Ã©tÃ© bannie par le Council of Kangs pour son
+					ambition dÃ©mesurÃ©e, tente de s'en Ã©chapper en manipulant la famille
+					Pym-Van Dyne-Lang, avant d'Ãªtre vaincue.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche planche--mv" id="planche-family" data-nav-label="Origines & relations">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Origines & relations
+			</div>
+			<h2 class="planche__title">
+				Un personnage dÃ©multipliÃ© en des milliers de lui-mÃªme
+			</h2>
+			<p class="planche__lede">
+				Difficile de parler de Â« famille Â» pour un Ãªtre qui, littÃ©ralement,
+				est dÃ©jÃ  sa propre famille tout entiÃ¨re.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>He Who Remains</strong> â€” une variante bien plus ancienne et
+					sage de Kang, Ã  l'origine de la TVA elle-mÃªme, qui consacre
+					l'essentiel de son existence Ã  empÃªcher les autres variantes plus
+					conquÃ©rantes, dont Kang, de faire Ã  nouveau des ravages Ã  travers le
+					multivers.
+				</p>
+				<p>
+					<strong>Le Council of Kangs</strong> â€” une assemblÃ©e de variantes de
+					Nathaniel Richards, dont Immortus et Rama-Tut, qui bannit Kang dans
+					le Royaume Quantique en le jugeant trop dangereux, mÃªme pour leurs
+					propres ambitions communes.
+				</p>
+				<p>
+					<strong>Victor Timely</strong> â€” une autre variante de Nathaniel
+					Richards, bien plus modeste et discrÃ¨te, qui se prÃ©sente en public
+					au dÃ©but du XXe siÃ¨cle sans les ambitions conquÃ©rantes de Kang.
+				</p>
+				<p>
+					<strong>Loki et Mobius</strong> â€” figures centrales de la TVA qui
+					dÃ©couvrent, avec effroi, la vÃ©ritable nature de l'organisation
+					qu'ils servaient et l'existence de Kang derriÃ¨re son fondateur.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche planche--mv" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>Filmographie
+			</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'une rÃ©vÃ©lation vertigineuse en fin de saison Ã  un antagoniste de
+				film Ã  part entiÃ¨re â€” avant un arrÃªt brutal, hors-fiction.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-loki1k" id="f-loki1k-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Loki â€” saison 1</span>
+								<span class="accordion__meta">Hors Sacred Timeline</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-loki1k">
+							<div class="accordion__panel-inner">
+								<p>
+									Loki et Sylvie dÃ©couvrent, Ã  la Citadelle au Bout du Temps,
+									que la TVA a Ã©tÃ© fondÃ©e par une variante appelÃ©e He Who
+									Remains â€” la premiÃ¨re apparition du personnage Ã  l'Ã©cran,
+									prÃ©sentÃ©e non pas comme Kang directement, mais comme l'une
+									de ses innombrables variantes, Ã  l'origine de tout le
+									systÃ¨me temporel du MCU.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-qm1k" id="f-qm1k-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Ant-Man and the Wasp: Quantumania</span>
+								<span class="accordion__meta">2026 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-qm1k">
+							<div class="accordion__panel-inner">
+								<p>
+									Une variante de Kang, piÃ©gÃ©e dans le Royaume Quantique
+									depuis des dÃ©cennies aprÃ¨s avoir Ã©tÃ© bannie par le Council
+									of Kangs, manipule Scott Lang pour restaurer le cÅ“ur de son
+									vaisseau et s'Ã©vader. Vaincu par la famille Pym-Van
+									Dyne-Lang, il semble mourir â€” la scÃ¨ne post-crÃ©dits rÃ©vÃ¨le
+									toutefois que le Council of Kangs tout entier se prÃ©pare
+									dÃ©jÃ  Ã  un soulÃ¨vement multiversal contre la Terre-616.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-loki2k" id="f-loki2k-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Loki â€” saison 2</span>
+								<span class="accordion__meta">Hors Sacred Timeline</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-loki2k">
+							<div class="accordion__panel-inner">
+								<p>
+									Une autre variante, Victor Timely, apparaÃ®t briÃ¨vement dans
+									un montage se dÃ©roulant au dÃ©but du XXe siÃ¨cle. Loki finit
+									par se sacrifier pour maintenir toutes les lignes
+									temporelles rÃ©unies au sein d'une structure arborescente
+									stable, refermant ainsi, pour l'instant, le fil narratif de
+									Kang et de ses variantes.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="encart" style="margin-top: 32px">
+					<strong>Ce qu'il faut savoir sur la suite.</strong> Jonathan Majors,
+					qui interprÃ©tait Kang et ses variantes, a Ã©tÃ© licenciÃ© par Marvel
+					Studios fin 2023 aprÃ¨s sa condamnation pour agression. Le personnage
+					n'a Ã©tÃ© formellement abandonnÃ© dans aucun rÃ©cit Ã  l'Ã©cran ; c'est
+					Doctor Doom, incarnÃ© par Robert Downey Jr., qui a pris le relais
+					comme grand mÃ©chant central des films <em>Avengers: Doomsday</em> et
+					<em>Avengers: Secret Wars</em>. Ã€ noter : un personnage nommÃ©
+					Rama-Tut, autrefois l'une des identitÃ©s de Kang, apparaÃ®t dans la
+					saison 2 de la sÃ©rie d'animation <em>X-Men '97</em> â€” mais il s'agit
+					d'une production dans une continuitÃ© entiÃ¨rement sÃ©parÃ©e du MCU
+					principal, incarnÃ© par un acteur diffÃ©rent (John de Lancie), et non
+					d'un retour de Kang dans le MCU lui-mÃªme.
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_antagonistes.html">Les grands antagonistes â†’</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>
