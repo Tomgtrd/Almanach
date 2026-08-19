@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MCU — Les Pierres d'Infinité | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.stones-grid {
+			max-width: 880px;
+			margin: 0 auto;
+			padding: 24px 32px 100px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			gap: 20px;
+		}
+
+		.stone-card {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+			background: var(--paper-raised);
+			border: 1px solid var(--hairline);
+			border-radius: var(--radius-md);
+			padding: 28px 26px;
+			opacity: 0;
+			transform: translateY(16px);
+			transition:
+				opacity 0.6s ease,
+				transform 0.6s ease,
+				border-color 0.25s ease,
+				box-shadow 0.25s ease;
+		}
+
+		.stone-card.in {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.stone-card:hover {
+			border-color: var(--mcu-gold);
+			box-shadow: 0 4px 18px rgba(28, 23, 18, 0.06);
+		}
+
+		.stone-card__icon {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background: var(--mcu-cream);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: var(--font-display);
+			font-size: 1.4rem;
+			font-weight: 500;
+			margin-bottom: 16px;
+		}
+
+		.stone-card--space .stone-card__icon {
+			color: #2b7bc4;
+		}
+
+		.stone-card--mind .stone-card__icon {
+			color: #c99a2e;
+		}
+
+		.stone-card--reality .stone-card__icon {
+			color: #b52d2d;
+		}
+
+		.stone-card--power .stone-card__icon {
+			color: #8432b5;
+		}
+
+		.stone-card--time .stone-card__icon {
+			color: #2e9c5d;
+		}
+
+		.stone-card--soul .stone-card__icon {
+			color: #d96f27;
+		}
+
+		.stone-card--gauntlet .stone-card__icon {
+			color: var(--mcu-gold);
+		}
+
+		.stone-card__name {
+			font-family: var(--font-display);
+			font-size: 1.35rem;
+			font-weight: 500;
+			margin: 0 0 6px;
+			color: var(--ink);
+		}
+
+		.stone-card__containment {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 0.92rem;
+			color: var(--ink-faint);
+			margin: 0 0 14px;
+		}
+
+		.stone-card__pitch {
+			font-size: 0.92rem;
+			color: var(--ink-soft);
+			margin: 0;
+			line-height: 1.55;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../mcu_artefacts.html" aria-current="page">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="hero">
+		<div class="hero__eyebrow">Artefacts cosmiques</div>
+		<h1 class="hero__title">Les Pierres d'Infinité</h1>
+		<p class="hero__subtitle">pour les nuls</p>
+		<p class="hero__lede">
+			Six cristaux élémentaires forgés lors du Big Bang, régissant chacun un aspect fondamental de l'existence.
+			<em>Cliquez sur une pierre ou sur le Gantelet pour explorer son histoire, ses contenants et ses
+				apparitions</em>.
+		</p>
+	</header>
+
+	<main class="stones-grid">
+		<a class="stone-card stone-card--space" href="pierre-espace.html">
+			<div class="stone-card__icon">✦</div>
+			<h2 class="stone-card__name">Pierre de l'Espace</h2>
+			<p class="stone-card__containment">Contenant : Le Tesseract</p>
+			<p class="stone-card__pitch">
+				Permet la téléportation instantanée à travers l'univers et la manipulation du tissu spatial.
+			</p>
+		</a>
+
+		<a class="stone-card stone-card--mind" href="pierre-esprit.html">
+			<div class="stone-card__icon">✦</div>
+			<h2 class="stone-card__name">Pierre de l'Esprit</h2>
+			<p class="stone-card__containment">Contenants : Sceptre chitauri → Front de Vision</p>
+			<p class="stone-card__pitch">
+				Asservit les volontés, décuple l'intellect et abrite une matrice d'intelligence artificielle avancée.
+			</p>
+		</a>
+
+		<a class="stone-card stone-card--reality" href="pierre-realite.html">
+			<div class="stone-card__icon">✦</div>
+			<h2 class="stone-card__name">Pierre de la Réalité</h2>
+			<p class="stone-card__containment">Contenant : L'Éther (Aether)</p>
+			<p class="stone-card__pitch">
+				Fluide symbiotique capable de transmuter la matière et de plier les lois physiques aux désirs de son
+				hôte.
+			</p>
+		</a>
+
+		<a class="stone-card stone-card--power" href="pierre-puissance.html">
+			<div class="stone-card__icon">✦</div>
+			<h2 class="stone-card__name">Pierre de la Puissance</h2>
+			<p class="stone-card__containment">Contenant : L'Orbe de Morag</p>
+			<p class="stone-card__pitch">
+				Énergie destructrice brute, capable d'anéantir des planètes entières au moindre contact organique.
+			</p>
+		</a>
+
+		<a class="stone-card stone-card--time" href="pierre-temps.html">
+			<div class="stone-card__icon">✦</div>
+			<h2 class="stone-card__name">Pierre du Temps</h2>
+			<p class="stone-card__containment">Contenant : L'Œil d'Agamotto</p>
+			<p class="stone-card__pitch">
+				Permet d'altérer l'écoulement temporel, de créer des boucles sans fin et d'observer les avenirs
+				possibles.
+			</p>
+		</a>
+
+		<a class="stone-card stone-card--soul" href="pierre-ame.html">
+			<div class="stone-card__icon">✦</div>
+			<h2 class="stone-card__name">Pierre de l'Âme</h2>
+			<p class="stone-card__containment">Sanctuaire : Vormir (sans contenant)</p>
+			<p class="stone-card__pitch">
+				Régit l'essence spirituelle des êtres vivants et exige le sacrifice irréversible d'un être cher.
+			</p>
+		</a>
+
+		<a class="stone-card stone-card--gauntlet" href="gantelet.html">
+			<div class="stone-card__icon">🧤</div>
+			<h2 class="stone-card__name">Le Gantelet d'Infinité</h2>
+			<p class="stone-card__containment">Forgé par Eitri (Nidavellir)</p>
+			<p class="stone-card__pitch">
+				Le réceptacle en métal Uru conçu pour unifier et canaliser simultanément la puissance des six pierres.
+			</p>
+		</a>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour aux artefacts</div>
+		<a href="../mcu_artefacts.html">Tous les artefacts du MCU →</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const cards = document.querySelectorAll(".stone-card");
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("in");
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{ threshold: 0.15 },
+			);
+			cards.forEach((c) => observer.observe(c));
+		});
+	</script>
+</body>
+
+</html>
