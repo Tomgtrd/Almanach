@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Clint Barton / Hawkeye | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Hawkeye</div>
+		<h1 class="hero__title">Clint Barton</h1>
+		<p class="charhero__realname">Clinton Francis Barton</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Tireur d'élite</span>
+			<span class="charhero__tag">Fondateur des Avengers</span>
+			<span class="charhero__tag">Père de famille</span>
+		</div>
+	</header>
+
+	<main>
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>Biographie
+			</div>
+			<h2 class="planche__title">
+				L'homme sans super-pouvoirs qui vise toujours juste
+			</h2>
+			<p class="planche__lede">
+				Ni dieu, ni scientifique, ni soldat augmenté — juste un homme avec un
+				arc, une précision inouïe, et une famille qu'il protège coûte que
+				coûte.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Clint Barton n'a rien de surhumain : c'est un tireur d'élite hors
+					pair, doté d'une précision quasiment infaillible à l'arc, forgée par
+					des années d'entraînement rigoureux plutôt que par un quelconque
+					accident scientifique ou héritage divin. Fils d'Edith et Harold
+					Barton, le MCU reste très discret sur ses jeunes années — le film le
+					présente déjà pleinement formé, agent chevronné du S.H.I.E.L.D. au
+					moment de sa première apparition.
+				</p>
+				<p>
+					Envoyé pour éliminer une espionne russe jugée trop dangereuse,
+					Natasha Romanoff, Clint choisit de l'épargner et de la recruter pour
+					le S.H.I.E.L.D. à la place — un acte de confiance qui donne
+					naissance à l'amitié la plus solide de toute sa vie. Nick Fury, qui
+					l'a lui-même recruté, l'aide à installer secrètement sa famille —
+					son épouse Laura, ancienne agente du S.H.I.E.L.D., et leurs enfants
+					— dans une ferme tenue à l'écart des dossiers officiels, pour la
+					protéger des ennemis qu'il pourrait se faire.
+				</p>
+				<p>
+					Le Snap de Thanos efface d'un coup toute sa famille sous ses yeux,
+					le plongeant dans un désespoir absolu qui le pousse à devenir Ronin,
+					un justicier sans pitié traquant et éliminant sans procès les
+					criminels ayant survécu au Blip à travers le monde. Le retour
+					miraculeux de sa famille après l'annulation du Snap ne referme pas
+					immédiatement ses blessures : la mort de Natasha, morte à sa place
+					sur Vormir, continue de le hanter des années plus tard. Il finit par
+					transmettre ce qu'il a appris à une nouvelle génération, devenant le
+					mentor et la figure paternelle de substitution de Kate Bishop.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Famille & relations
+			</div>
+			<h2 class="planche__title">Ceux qui comptent</h2>
+			<p class="planche__lede">
+				Une double vie tenue secrète pendant des années — et une perte qui ne
+				cicatrise jamais complètement.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Laura Barton</strong> — son épouse, elle-même ancienne
+					agente du S.H.I.E.L.D., avec qui il construit une vie de famille
+					tenue à l'écart de ses collègues Avengers pendant des années.
+				</p>
+				<p>
+					<strong>Cooper, Lila et Nathaniel Barton</strong> — ses trois
+					enfants, dont la disparition dans le Snap le pousse à sombrer dans
+					la violence sous l'identité de Ronin.
+				</p>
+				<p>
+					<strong>Natasha Romanoff</strong> — sa meilleure amie et partenaire
+					de confiance absolue depuis qu'il a choisi de l'épargner plutôt que
+					de l'éliminer. Sa mort sur Vormir, pour lui éviter de se sacrifier,
+					façonne une bonne partie de son parcours ultérieur.
+				</p>
+				<p>
+					<strong>Kate Bishop</strong> — jeune archère qu'il prend sous son
+					aile après qu'elle sauve sa vie, devenant son mentor et sa protégée
+					dans la lutte contre la mafia des Tracksuit et Wilson Fisk.
+				</p>
+				<p>
+					<strong>Yelena Belova</strong> — sœur de cœur de Natasha, convaincue
+					à tort que Clint est responsable de la mort de cette dernière, avant
+					qu'une confrontation ne les amène à une réconciliation douloureuse
+					mais sincère.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>Filmographie
+			</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				De l'agent discret dans l'ombre des autres Avengers au père de famille
+				qui transmet le flambeau.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-av1c" id="f-av1c-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">The Avengers</span>
+								<span class="accordion__meta">2012</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-av1c">
+							<div class="accordion__panel-inner">
+								<p>
+									Assigné à surveiller le Tesseract, Clint est placé sous
+									contrôle mental par Loki et utilisé comme pion pour
+									infiltrer le S.H.I.E.L.D. Libéré de l'emprise de Loki par
+									Natasha, il rejoint la bataille de New York pour combattre
+									les forces qu'il avait lui-même aidé à faire entrer.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-aouc" id="f-aouc-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Age of Ultron</span>
+								<span class="accordion__meta">2015</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-aouc">
+							<div class="accordion__panel-inner">
+								<p>
+									Clint révèle aux autres Avengers l'existence de sa famille
+									cachée en les accueillant dans sa ferme secrète. Lors de la
+									bataille finale à Sokovia, il sauve un enfant et Pietro
+									Maximoff se sacrifie pour le protéger d'une pluie de balles
+									qui lui était destinée.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-cw1c" id="f-cw1c-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Captain America: Civil War</span>
+								<span class="accordion__meta">2016</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-cw1c">
+							<div class="accordion__panel-inner">
+								<p>
+									Sorti de sa retraite pour aider Steve Rogers et Wanda
+									Maximoff, Clint prend le parti de Captain America contre les
+									Accords de Sokovie, ce qui le mène à l'aéroport de Leipzig
+									puis à une arrestation qui le place en résidence surveillée.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg1c" id="f-eg1c-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg1c">
+							<div class="accordion__panel-inner">
+								<p>
+									Ayant perdu toute sa famille dans le Snap, Clint est devenu
+									Ronin, traquant sans pitié les criminels survivants à
+									travers le monde. Retrouvé par Natasha, il participe au
+									voyage dans le temps pour récupérer la Pierre de l'Âme sur
+									Vormir — où Natasha le devance et se sacrifie à sa place, le
+									laissant seul survivant de leur duo.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-hk1c" id="f-hk1c-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Hawkeye</span>
+								<span class="accordion__meta">2024</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-hk1c">
+							<div class="accordion__panel-inner">
+								<p>
+									Voulant simplement passer Noël en famille, Clint se retrouve
+									entraîné par Kate Bishop, jeune archère qui l'admire, dans
+									les affaires de la mafia des Tracksuit — menant tout droit
+									jusqu'à Wilson Fisk et à Yelena Belova, convaincue à tort
+									que Clint est responsable de la mort de sa sœur Natasha. Il
+									finit par se réconcilier avec Yelena et accepte Kate comme
+									sa protégée.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_avengers-originels.html">Les Avengers originels →</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

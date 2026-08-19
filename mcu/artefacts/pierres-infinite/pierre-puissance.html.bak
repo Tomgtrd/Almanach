@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pierre de la Puissance | Artefacts | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: #8432b5;
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../mcu_artefacts.html" aria-current="page">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Singularité cosmique · Violette</div>
+		<h1 class="hero__title">La Pierre de la Puissance</h1>
+		<p class="charhero__realname">Contenant : L'Orbe de Morag</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Énergie brute</span>
+			<span class="charhero__tag">Destruction de masse</span>
+			<span class="charhero__tag">Détruite en 2018</span>
+		</div>
+	</header>
+
+	<main>
+		<section class="planche" id="planche-bio" data-nav-label="Origine & Pouvoir">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>Origine & Pouvoir
+			</div>
+			<h2 class="planche__title">La force dévastatrice capable de faucher des civilisations</h2>
+			<p class="planche__lede">
+				Un concentré d'énergie cinétique et thermique violette si instable qu'il consume instantanément tout
+				être vivant ordinaire qui le touche sans protection.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					La Pierre de la Puissance incarne l'énergie destructrice pure de l'univers[cite: 28, 31]. De teinte
+					violette, son contact avec de la matière organique déclenche une réaction en chaîne explosive
+					proportionnelle à la taille de la cible, capable de vitrifier la surface d'une planète entière[cite:
+					28]. Jadis maniée par le Céleste Eson le Chercheur pour purger des mondes, elle détruisait tous les
+					êtres inférieurs ayant tenté de s'en emparer avant d'être scellée dans l'<strong>Orbe</strong> au
+					fond des océans de Morag[cite: 28, 31].
+				</p>
+				<p>
+					Maniée via un réceptacle adéquat (l'Arme Universelle de Ronan ou le Gantelet d'Infinité), elle émet
+					des ondes de choc sismiques, projette des rayons de plasma continus et permet de pulvériser des
+					astres à distance, comme la lune de Titan projetée sur les Avengers par Thanos en 2018[cite: 24,
+					28].
+				</p>
+				<p>
+					Seuls des êtres dotés d'une génétique exceptionnelle (demi-Céleste comme Peter Quill, Titan comme
+					Thanos) ou un groupe d'individus partageant la charge physique par contact direct peuvent survivre
+					brièvement à son étreinte sans équipement[cite: 28, 31].
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-owners" data-nav-label="Contenant & Propriétaires">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Contenant & Propriétaires
+			</div>
+			<h2 class="planche__title">De l'Orbe de Morag aux coffres de Nova Prime</h2>
+			<p class="planche__lede">
+				La relique la plus disputée du cosmos, protégée par le Nova Corps avant d'être dérobée par Thanos.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Eson le Chercheur / Les Célestes</strong> — Utilise la pierre fixée à son sceptre pour
+					éradiquer des civilisations entières au début des temps[cite: 28, 31].
+				</p>
+				<p>
+					<strong>Temple englouti de Morag</strong> — La pierre reste enfermée dans l'Orbe pendant des
+					millénaires, sous un océan planétaire qui ne se retire que tous les trois cents ans[cite: 28].
+				</p>
+				<p>
+					<strong>Peter Quill / Star-Lord (2014)</strong> — Vole l'Orbe sur Morag avant les Ravageurs et
+					Korath[cite: 28, 31].
+				</p>
+				<p>
+					<strong>Ronan l'Accusateur (2014)</strong> — Trahit Thanos, brise l'Orbe et incruste la gemme dans
+					son marteau de guerre pour anéantir Xandar[cite: 28, 31].
+				</p>
+				<p>
+					<strong>Les Gardiens de la Galaxie (2014)</strong> — Peter Quill, Gamora, Drax et Rocket lient leurs
+					mains pour canaliser l'énergie de la pierre et désintégrer Ronan[cite: 28, 31].
+				</p>
+				<p>
+					<strong>Nova Corps (2014 — 2018)</strong> — Reçoit l'Orbe refermé pour le placer dans le coffre-fort
+					de haute sécurité de la capitale de Xandar[cite: 28, 31].
+				</p>
+				<p>
+					<strong>Thanos (2018)</strong> — Décime Xandar pour s'emparer de la première pierre de sa quête,
+					l'insère dans le Gantelet et l'utilise tout au long d'<em>Infinity War</em>[cite: 24, 28, 31].
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>Filmographie
+			</div>
+			<h2 class="planche__title">Présence à l'écran</h2>
+			<p class="planche__lede">
+				L'enjeu central de la fondation des Gardiens de la Galaxie et la force de frappe de Thanos.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg1-p" id="f-gotg1-p-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy</span>
+								<span class="accordion__meta">2014</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg1-p">
+							<div class="accordion__panel-inner">
+								<p>
+									Star-Lord dérobe l'Orbe sur Morag[cite: 28, 31]. Sur Knowhere, la servante Carina
+									touche la pierre et explose en pulvérisant le musée du Collectionneur[cite: 28, 31].
+									Ronan s'en empare et attaque Xandar, mais les Gardiens canalisent ensemble sa
+									puissance pour détruire Ronan avant de la confier au Nova Corps[cite: 28, 31].
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-iw-p" id="f-iw-p-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-iw-p">
+							<div class="accordion__panel-inner">
+								<p>
+									Après avoir ravagé Xandar hors-champ, Thanos torture Thor avec la pierre pour forcer
+									Loki à céder le Tesseract, puis fait exploser le <em>Statesman</em>[cite: 24, 25,
+									28]. Sur Titan, il l'utilise pour briser la lune et repousser les assauts combinés
+									des héros[cite: 24, 28].
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg-p" id="f-eg-p-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg-p">
+							<div class="accordion__panel-inner">
+								<p>
+									War Machine et Nebula s'infiltrent sur Morag en 2014, assomment Peter Quill et
+									récupèrent l'Orbe dans le temple avant de regagner le présent[cite: 28, 31]. Lors du
+									combat final, Thanos arrache la pierre du Nano-Gantelet pour repousser Captain
+									Marvel[cite: 28, 31].
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Pierre suivante</div>
+		<a href="pierre-temps.html">La Pierre du Temps →</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

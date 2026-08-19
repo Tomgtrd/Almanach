@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Peter Parker / Spider-Man | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css">
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Spider-Man</div>
+		<h1 class="hero__title">Peter Parker</h1>
+		<p class="charhero__realname">Peter Benjamin Parker</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Lycéen de Queens</span>
+			<span class="charhero__tag">Avenger</span>
+		</div>
+	</header>
+
+	<main>
+
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow"><span class="roman">I</span>Biographie</div>
+			<h2 class="planche__title">Le héros de quartier devenu Avenger malgré lui</h2>
+			<p class="planche__lede">
+				Un adolescent ordinaire de Queens, mordu par une araignée pas tout
+				à fait comme les autres — et qui n'a jamais cessé, depuis, de tout
+				donner pour protéger ceux qu'il aime.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Peter Parker naît à Queens, New York, le 10 août 2001. Orphelin
+					très jeune, il est élevé par son oncle Ben et sa tante May, qui
+					deviennent ses figures parentales. Son oncle meurt avant le début
+					de son parcours de héros dans le MCU — les circonstances exactes
+					de sa mort n'ont, à ce jour, jamais été montrées à l'écran,
+					contrairement à d'autres adaptations du personnage, mais son
+					absence pèse sur toute la formation morale de Peter.
+				</p>
+				<p>
+					Lors d'une sortie scolaire, Peter est mordu par une araignée
+					génétiquement modifiée, ce qui lui confère une force, une agilité
+					et des réflexes surhumains, ainsi qu'un « sens de l'araignée »
+					capable de le prévenir instinctivement d'un danger imminent. Il
+					devient Spider-Man, protégeant discrètement son quartier de
+					Queens, jusqu'à être repéré par Tony Stark, qui le recrute pour
+					l'aider durant la Guerre Civile des Avengers et devient
+					rapidement une figure de mentor pour lui.
+				</p>
+				<p>
+					Peter traverse ensuite les grandes épreuves du MCU aux côtés des
+					Avengers : la défaite de Titan et sa propre disparition dans le
+					Snap de Thanos, sa résurrection cinq ans plus tard, et la mort de
+					Tony Stark, qu'il vit comme la perte d'une véritable figure
+					paternelle. Son identité secrète est révélée au monde entier par
+					Mysterio, avant d'être effacée de la mémoire de tous — y compris
+					de ses proches les plus chers — par un sort de Doctor Strange,
+					le laissant reconstruire une vie entièrement seule, sans que
+					personne ne se souvienne plus de qui il est vraiment.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow"><span class="roman">II</span>Famille & relations</div>
+			<h2 class="planche__title">Ceux qui comptent</h2>
+			<p class="planche__lede">
+				Une famille réduite au minimum, et des liens d'amitié qui en
+				deviennent d'autant plus précieux.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>May Parker</strong> — sa tante, qui l'élève seule après la
+					mort de son mari Ben, et qui finit par découvrir et accepter son
+					identité secrète de Spider-Man.
+				</p>
+				<p>
+					<strong>Ben Parker</strong> — son oncle, décédé avant le début de
+					l'histoire de Peter dans le MCU, dont l'absence façonne
+					durablement son sens du devoir.
+				</p>
+				<p>
+					<strong>Tony Stark</strong> — son mentor, qui le recrute pour la
+					Guerre Civile et devient, sans jamais le formuler ainsi, une
+					figure paternelle de substitution. Sa mort marque profondément
+					Peter.
+				</p>
+				<p>
+					<strong>Ned Leeds</strong> — son meilleur ami depuis le lycée, l'un
+					des rares à connaître son identité secrète de son plein gré.
+				</p>
+				<p>
+					<strong>MJ (Michelle Jones-Watson)</strong> — sa petite amie, dont
+					la relation est bouleversée par le sort qui efface le souvenir de
+					Peter Parker chez tout le monde, y compris elle.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow"><span class="roman">III</span>Filmographie</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'un lycéen recruté à l'aéroport de Leipzig à un héros oublié de
+				tous.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-cw1sp" id="f-cw1sp-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Captain America: Civil War</span>
+								<span class="accordion__meta">2016</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-cw1sp">
+							<div class="accordion__panel-inner">
+								<p>
+									Peter fait sa toute première apparition, recruté par Tony
+									Stark pour aider son camp lors de l'affrontement à
+									l'aéroport de Leipzig contre Steve Rogers et son équipe.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-hc1sp" id="f-hc1sp-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Spider-Man: Homecoming</span>
+								<span class="accordion__meta">2016</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-hc1sp">
+							<div class="accordion__panel-inner">
+								<p>
+									Peter tente de concilier vie de lycéen et justicier de
+									quartier, tout en affrontant Adrian Toomes, le Vautour —
+									qui se révèle être le père de Liz, la camarade dont Peter
+									est amoureux.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-iw1sp" id="f-iw1sp-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-iw1sp">
+							<div class="accordion__panel-inner">
+								<p>
+									Peter combat Thanos sur Titan aux côtés de Tony Stark,
+									Doctor Strange et les Gardiens de la Galaxie, avant de
+									disparaître dans les bras de Tony au moment du Snap — l'une
+									des scènes les plus déchirantes du film.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg1sp" id="f-eg1sp-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg1sp">
+							<div class="accordion__panel-inner">
+								<p>
+									Ramené à la vie après l'annulation du Snap, Peter retrouve
+									Tony Stark lors de la bataille finale contre Thanos, juste
+									avant que ce dernier ne se sacrifie pour sauver l'univers —
+									une perte que Peter porte profondément.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-ffh1sp" id="f-ffh1sp-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Spider-Man: Far From Home</span>
+								<span class="accordion__meta">2024</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-ffh1sp">
+							<div class="accordion__panel-inner">
+								<p>
+									Encore endeuillé par la mort de Tony, Peter croise Quentin
+									Beck, alias Mysterio — un manipulateur qui orchestre de
+									fausses attaques pour s'emparer d'E.D.I.T.H., le système
+									d'IA légué par Tony. Le film se termine sur Beck révélant
+									publiquement l'identité secrète de Spider-Man au monde
+									entier.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-nwh1sp" id="f-nwh1sp-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Spider-Man: No Way Home</span>
+								<span class="accordion__meta">2024</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-nwh1sp">
+							<div class="accordion__panel-inner">
+								<p>
+									Peter demande à Doctor Strange d'effacer la connaissance
+									publique de son identité, mais le sort déchire le tissu du
+									multivers, faisant affluer des méchants et deux autres
+									versions de Peter Parker venus d'autres réalités. Le film
+									se conclut par un sacrifice déchirant : Peter demande à
+									Strange d'effacer toute mémoire de lui, Peter Parker,
+									personne, chez absolument tout le monde — y compris ses
+									proches les plus chers.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-bnd1sp" id="f-bnd1sp-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Spider-Man: Brand New Day</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-bnd1sp">
+							<div class="accordion__panel-inner">
+								<p>
+									Quatre ans après avoir été effacé de la mémoire du monde
+									entier, Peter protège seul et anonymement New York, sans
+									plus aucune attache personnelle pour freiner son
+									engagement total dans le costume. Il affronte Jean Grey,
+									jeune mutante télépathe manipulée par Bill Metzger, avant
+									de choisir de libérer Jean plutôt que de la livrer à
+									l'agence qui la traque.
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_nouvelles-recrues.html">Les nouvelles recrues →</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

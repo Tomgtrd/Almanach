@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Peter Quill / Star-Lord | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css">
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Star-Lord</div>
+		<h1 class="hero__title">Peter Quill</h1>
+		<p class="charhero__realname">Peter Jason Quill</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Mi-humain, mi-Céleste</span>
+			<span class="charhero__tag">Chef des Gardiens</span>
+		</div>
+	</header>
+
+	<main>
+
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow"><span class="roman">I</span>Biographie</div>
+			<h2 class="planche__title">L'enfant enlevé qui a fondé sa propre famille</h2>
+			<p class="planche__lede">
+				Un Terrien pas tout à fait comme les autres, élevé par des pirates
+				de l'espace, qui découvre sur le tard une vérité bien plus grande
+				que lui-même.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Peter Quill naît en 1980 dans le Missouri, fils de Meredith
+					Quill, une humaine, et d'Ego, une entité cosmique appelée
+					Céleste capable de projeter une apparence humaine pour explorer
+					la galaxie. Le soir même de la mort de sa mère, emportée par une
+					tumeur au cerveau, le jeune Peter est enlevé par les Ravagers, un
+					groupe de pirates de l'espace dirigé par Yondu Udonta — chargé
+					par Ego lui-même de le lui ramener, mais qui choisit finalement de
+					le garder et de l'élever comme son propre fils, sans jamais lui
+					révéler la véritable raison de son enlèvement.
+				</p>
+				<p>
+					Devenu adulte, Peter se fait appeler Star-Lord et travaille comme
+					pilleur d'artefacts, jusqu'à voler un mystérieux Orbe convoité par
+					de nombreuses parties — dont Ronan l'Accusateur, qui compte
+					l'utiliser pour anéantir des planètes entières. Emprisonné au
+					Kyln, il fait la rencontre de Gamora, Rocket, Groot et Drax, avec
+					qui il forme une alliance de circonstance qui devient rapidement
+					une véritable famille : les Gardiens de la Galaxie.
+				</p>
+				<p>
+					Des années plus tard, Peter rencontre enfin son père biologique,
+					Ego, qui lui révèle ses origines célestes et l'existence de
+					pouvoirs cosmiques en sommeil en lui. Cette réunion tourne au
+					cauchemar lorsque Peter découvre qu'Ego a tué sa propre mère et
+					des centaines d'autres compagnes à travers la galaxie, et qu'il
+					prévoit d'utiliser Peter pour étendre sa conscience à l'infini au
+					détriment de toute vie existante. Peter doit se résoudre à tuer
+					son propre père pour sauver l'univers — et découvre, en perdant
+					Yondu peu après, que la vraie paternité n'a jamais été une
+					question de sang.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow"><span class="roman">II</span>Famille & relations</div>
+			<h2 class="planche__title">Ceux qui comptent</h2>
+			<p class="planche__lede">
+				Une famille de sang qui l'a trahi, et une famille choisie qui ne l'a
+				jamais abandonné.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Meredith Quill</strong> — sa mère, morte d'une tumeur
+					cérébrale — en réalité provoquée par Ego — quand Peter n'était
+					encore qu'un enfant. Son Walkman et sa cassette de musique restent
+					ses biens les plus précieux tout au long de sa vie.
+				</p>
+				<p>
+					<strong>Ego</strong> — son père biologique, un Céleste dont
+					l'amour affiché pour Peter masque un projet d'annihilation
+					universelle. Peter doit le tuer pour sauver la galaxie.
+				</p>
+				<p>
+					<strong>Yondu Udonta</strong> — son père adoptif, chef des
+					Ravagers, dont la relation bourrue cache un amour sincère.
+					Son sacrifice final pour sauver Peter referme la boucle de tout
+					ce que ce dernier pensait savoir sur la paternité.
+				</p>
+				<p>
+					<strong>Gamora</strong> — son grand amour au sein des Gardiens,
+					dont la mort sur Vormir puis le retour d'une variante amnésique
+					de 2014 bouleversent profondément son équilibre émotionnel.
+				</p>
+				<p>
+					<strong>Mantis</strong> — sa demi-sœur paternelle, découverte
+					après la mort d'Ego, avec qui il développe un lien fraternel
+					tardif.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow"><span class="roman">III</span>Filmographie</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'un voleur solitaire à la tête d'une famille improbable, à travers
+				toute la galaxie.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg1p" id="f-gotg1p-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy</span>
+								<span class="accordion__meta">2014</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg1p">
+							<div class="accordion__panel-inner">
+								<p>
+									Peter vole l'Orbe sur Morag et devient la cible de Ronan
+									l'Accusateur et de Yondu. Emprisonné au Kyln avec Gamora,
+									Rocket, Groot et Drax, il forme avec eux une alliance qui
+									devient une véritable équipe pour empêcher Ronan
+									d'anéantir Xandar avec la Pierre du Pouvoir cachée dans
+									l'Orbe.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg2p" id="f-gotg2p-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy Vol. 2</span>
+								<span class="accordion__meta">2014 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg2p">
+							<div class="accordion__panel-inner">
+								<p>
+									Peter rencontre enfin son père biologique Ego, qui lui
+									révèle ses origines célestes. Il découvre qu'Ego a
+									assassiné sa mère et prévoit d'utiliser son propre fils
+									pour étendre sa conscience à travers l'univers entier.
+									Peter doit tuer son père pour l'arrêter, et perd Yondu,
+									son véritable père de cœur, peu après.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-iw1p" id="f-iw1p-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-iw1p">
+							<div class="accordion__panel-inner">
+								<p>
+									Peter et les Gardiens rejoignent la lutte contre Thanos.
+									Apprenant que Thanos a tué Gamora pour obtenir la Pierre
+									de l'Âme, Peter, submergé par la rage, frappe Thanos et
+									brise le plan minutieux de Mantis pour le neutraliser,
+									laissant le Titan libre de compléter son Gant de l'Infini.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg1p" id="f-eg1p-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg1p">
+							<div class="accordion__panel-inner">
+								<p>
+									Ramené à la vie après l'annulation du Snap, Peter
+									participe au voyage dans le temps et rencontre une
+									variante de Gamora venue de 2014, qui ne le connaît pas —
+									une retrouvaille douce-amère qui rouvre sa blessure.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-ltt1p" id="f-ltt1p-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Thor: Love and Thunder</span>
+								<span class="accordion__meta">2025</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-ltt1p">
+							<div class="accordion__panel-inner">
+								<p>
+									Peter et les Gardiens recueillent Thor, dévasté par la
+									perte de son peuple, avant de le déposer sur Terre pour
+									qu'il retrouve Jane Foster, laissant le reste de l'équipe
+									poursuivre ses propres aventures.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg3p" id="f-gotg3p-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy Vol. 3</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg3p">
+							<div class="accordion__panel-inner">
+								<p>
+									Encore marqué par la perte de la Gamora qu'il a connue,
+									Peter dirige les Gardiens dans une mission désespérée pour
+									sauver Rocket, mortellement blessé, ce qui les mène à
+									affronter le Haut Évolutionnaire, responsable de la
+									création traumatique de leur ami. Le film se conclut sur
+									la dissolution de cette première formation de l'équipe,
+									chacun suivant un chemin séparé.
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_gardiens.html">Les Gardiens de la Galaxie →</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

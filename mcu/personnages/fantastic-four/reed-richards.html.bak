@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Reed Richards / Mister Fantastic | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Mister Fantastic</div>
+		<h1 class="hero__title">Reed Richards</h1>
+		<p class="charhero__realname">Reed Richards</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Terre-828</span>
+			<span class="charhero__tag">Scientifique</span>
+			<span class="charhero__tag">Leader des Quatre Fantastiques</span>
+		</div>
+	</header>
+
+	<main>
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>Biographie
+			</div>
+			<h2 class="planche__title">
+				Le scientifique qui porte le poids du monde sur ses épaules
+			</h2>
+			<p class="planche__lede">
+				Un esprit brillant, une logique implacable — et une culpabilité qui ne
+				le quitte jamais, née d'une expérience qu'il a lui-même provoquée.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Reed Richards est un scientifique de génie de la Terre-828, une
+					réalité alternative distincte de l'univers principal du MCU.
+					Rencontré à l'université, il se lie d'amitié pour la vie avec Ben
+					Grimm, futur pilote d'essai, et devient le compagnon de Sue Storm.
+					Convaincu que l'exposition contrôlée à des radiations cosmiques
+					pourrait révolutionner la science, il organise une mission spatiale
+					à bord de l'Excelsior en 1960, embarquant Sue, Johnny et Ben à ses
+					côtés.
+				</p>
+				<p>
+					Le vol tourne mal : une tempête de radiations cosmiques inattendue
+					transperce les protections du vaisseau et transforme
+					irrémédiablement les quatre passagers. Reed acquiert la capacité
+					d'étirer son corps à volonté, une malléabilité presque infinie.
+					Rongé par la culpabilité d'avoir organisé cette mission et
+					transformé ses proches les plus chers, il consacre le reste de sa
+					vie à comprendre leurs pouvoirs et à les protéger, devenant
+					naturellement le leader de l'équipe qu'ils forment ensemble : les
+					Quatre Fantastiques.
+				</p>
+				<p>
+					Quatre ans après la formation de l'équipe, Reed et Sue attendent
+					leur premier enfant lorsque Silver Surfer, héraut de Galactus,
+					annonce que ce dernier compte dévorer la Terre. Pire encore,
+					Galactus a détecté que l'enfant à naître de Reed et Sue possède un
+					pouvoir cosmique immense, et exige qu'il lui soit livré en échange
+					d'épargner la planète. Reed doit alors trouver, avec le reste de sa
+					famille, un moyen de sauver à la fois son fils et le monde entier —
+					sans jamais renoncer à l'un pour l'autre.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Famille & relations
+			</div>
+			<h2 class="planche__title">Ceux qui comptent</h2>
+			<p class="planche__lede">
+				Une famille née d'un accident qu'il n'a jamais cessé de porter comme
+				un fardeau personnel.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Sue Storm</strong> — son épouse, rencontrée avant même la
+					mission spatiale fatidique, avec qui il fonde à la fois une équipe
+					de super-héros et une famille.
+				</p>
+				<p>
+					<strong>Franklin Richards</strong> — son fils, né dans des
+					circonstances extraordinaires alors que Galactus menaçait déjà de
+					s'en emparer pour son pouvoir cosmique inné.
+				</p>
+				<p>
+					<strong>Ben Grimm</strong> — son meilleur ami depuis l'université,
+					dont il se sent éternellement responsable d'avoir transformé en
+					créature de pierre lors de la mission spatiale.
+				</p>
+				<p>
+					<strong>Johnny Storm</strong> — son beau-frère, plus jeune et
+					impétueux, avec qui la relation oscille entre agacement fraternel et
+					profond respect mutuel.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>Filmographie
+			</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'un accident spatial fondateur à un choix impossible face à un
+				dévoreur de mondes.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-ff1r" id="f-ff1r-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">The Fantastic Four: First Steps</span>
+								<span class="accordion__meta">1964 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-ff1r" style="height: auto">
+							<div class="accordion__panel-inner">
+								<p>
+									Reed et son équipe, devenus la première famille de
+									super-héros du monde depuis leur transformation, doivent
+									affronter Galactus, entité cosmique dévoreuse de mondes,
+									annoncée par sa messagère Silver Surfer. Galactus exige
+									l'enfant à naître de Reed et Sue en échange d'épargner la
+									Terre. Reed refuse ce marché et met tout son génie au
+									service d'un plan désespéré pour sauver à la fois son fils
+									et la planète, jusqu'à un affrontement final où sa famille
+									parvient à repousser Galactus sans le tuer.
+								</p>
+								<p>
+									Le film se conclut sur une scène post-crédits, quatre ans
+									plus tard : un homme masqué s'approche du jeune Franklin
+									Richards — Victor von Doom, dont l'apparition annonce la
+									prochaine grande menace du MCU.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="encart" style="margin-top: 32px">
+					<strong>Et ensuite ?</strong> Reed et le reste des Quatre
+					Fantastiques sont annoncés dans <em>Avengers: Doomsday</em> et
+					<em>Avengers: Secret Wars</em>, où leur arrivée sur la Terre-616 et
+					leur rencontre avec le reste des héros du MCU devraient enfin être
+					développées.
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_fantastic-four.html">Les Quatre Fantastiques →</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

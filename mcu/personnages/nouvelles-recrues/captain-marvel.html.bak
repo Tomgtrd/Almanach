@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Carol Danvers / Captain Marvel | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Captain Marvel</div>
+		<h1 class="hero__title">Carol Danvers</h1>
+		<p class="charhero__realname">Carol Susan Jane Danvers</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Hybride humaine-Kree</span>
+			<span class="charhero__tag">Ancienne pilote de l'Air Force</span>
+			<span class="charhero__tag">Membre des Avengers</span>
+		</div>
+	</header>
+
+	<main>
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>Biographie
+			</div>
+			<h2 class="planche__title">La pilote qui a appris à ne plus retenir sa force</h2>
+			<p class="planche__lede">
+				Une femme à qui l'on a répété toute sa vie de se contenir — jusqu'à
+				ce qu'elle découvre qu'elle n'a jamais eu besoin de le faire.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Carol Danvers grandit dans une famille où son père ne lui laisse
+					aucune place : déterminée depuis l'enfance à devenir pilote, elle se
+					heurte sans cesse à ceux qui jugent ce rêve inaccessible à une
+					femme. Elle intègre malgré tout l'US Air Force, où elle se lie
+					d'amitié avec Maria Rambeau, sa camarade d'entraînement, avant de
+					devenir pilote d'essai sous la direction de la mystérieuse
+					Dr Wendy Lawson — qui n'est autre que Mar-Vell, une Kree infiltrée
+					sur Terre travaillant secrètement à mettre au point un moteur à
+					propulsion lumière pour aider les Skrulls réfugiés à fuir l'Empire
+					Kree.
+				</p>
+				<p>
+					Lorsque Yon-Rogg, commandant Kree, abat Mar-Vell pour l'empêcher de
+					livrer sa technologie aux Skrulls, Carol détruit elle-même le
+					moteur pour éviter qu'il ne tombe entre de mauvaises mains — et
+					l'explosion la traverse d'une énergie cosmique alimentée par le
+					Tesseract. Recueillie inconsciente par Yon-Rogg, elle est ramenée à
+					Hala, où les Kree effacent sa mémoire et la transforment en
+					hybride humaine-Kree via une transfusion sanguine, la faisant
+					intégrer Starforce, l'unité d'élite de l'Empire, sous le nom de
+					code Vers.
+				</p>
+				<p>
+					Six ans plus tard, une mission tourne mal : capturée par des
+					Skrulls, Vers commence à revoir des fragments de son passé
+					terrien enfouis sous son conditionnement Kree. Elle s'échappe sur
+					Terre, où elle croise Nick Fury, encore jeune agent du S.H.I.E.L.D.,
+					et retrouve Maria et sa fille Monica. Elle découvre alors la
+					vérité que ses maîtres Kree lui ont cachée : les Skrulls qu'on lui
+					a appris à traquer comme des monstres ne sont que des réfugiés en
+					quête d'un foyer, fuyant l'oppression de l'Empire Kree lui-même.
+					Furieuse d'avoir été manipulée, elle rejette son nom Kree, affronte
+					la Suprême Intelligence qui gouverne Hala et libère pleinement ses
+					pouvoirs, devenant Captain Marvel en hommage à Mar-Vell — avant de
+					quitter la Terre pour aider les Skrulls à trouver un nouveau foyer
+					à travers la galaxie.
+				</p>
+				<p>
+					Carol ne revient sur Terre que des années plus tard, alertée par
+					le signal de détresse envoyé par Fury juste avant le Snap de
+					Thanos. Elle rejoint les Avengers pour le combat final contre le
+					Titan Fou, jouant un rôle décisif dans la bataille de la Terre en
+					2023. Deux ans plus tard, ses pouvoirs de lumière s'entremêlent
+					accidentellement à ceux de Kamala Khan et de Monica Rambeau,
+					formant temporairement une équipe surnommée « les Marvels » pour
+					affronter Dar-Benn, une Accusatrice Kree bien décidée à restaurer
+					Hala en pillant les ressources d'autres planètes.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Famille & relations
+			</div>
+			<h2 class="planche__title">Une famille choisie plutôt que subie</h2>
+			<p class="planche__lede">
+				Rejetée par sa propre famille, Carol construit la sienne loin
+				d'elle — et c'est celle-ci qui compte vraiment.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Maria Rambeau</strong> — sa meilleure amie depuis l'Air
+					Force, la première personne à l'avoir vue et acceptée telle
+					qu'elle est, sans jamais chercher à la contenir. À son retour sur
+					Terre après des années d'absence, c'est chez Maria que Carol
+					choisit de revenir en priorité.
+				</p>
+				<p>
+					<strong>Monica Rambeau</strong> — la fille de Maria, que Carol
+					considère comme sa propre nièce. Des années plus tard, leurs
+					pouvoirs de lumière s'entremêlent par un étrange hasard cosmique,
+					les réunissant de force au sein des Marvels aux côtés de Kamala
+					Khan.
+				</p>
+				<p>
+					<strong>Nick Fury</strong> — le jeune agent du S.H.I.E.L.D. qu'elle
+					rencontre à son retour sur Terre en 1995, devenu son plus fidèle
+					allié et point de contact lorsqu'elle sillonne l'espace. C'est son
+					signal de détresse, envoyé juste avant de disparaître dans le
+					Snap, qui la ramène sur Terre pour affronter Thanos.
+				</p>
+				<p>
+					<strong>Mar-Vell</strong> — sa mentore Kree infiltrée sous
+					l'identité de la Dr Wendy Lawson, dont la mort déclenche
+					l'accident à l'origine de ses pouvoirs. C'est en son honneur
+					qu'elle choisit le nom de Captain Marvel.
+				</p>
+				<p>
+					<strong>Kamala Khan</strong> — jeune héroïne et immense fan de
+					Captain Marvel, dont les pouvoirs s'entremêlent aux siens par
+					accident. Leur duo improvisé, complété par Monica, donne
+					naissance aux Marvels.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>Filmographie
+			</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'une pilote au passé effacé à une héroïne qui pèse sur l'équilibre
+				de l'univers entier.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-cm1" id="f-cm1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Captain Marvel</span>
+								<span class="accordion__meta">1995 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-cm1">
+							<div class="accordion__panel-inner">
+								<p>
+									Vers, soldate Kree amnésique persuadée d'appartenir à
+									Starforce, est capturée par des Skrulls lors d'une mission
+									qui tourne mal et se retrouve projetée sur Terre. Aidée par
+									un jeune Nick Fury, elle recouvre peu à peu des souvenirs de
+									sa vie antérieure de pilote humaine et découvre que les
+									Kree, qu'elle servait aveuglément, lui ont menti sur la
+									véritable nature de la guerre qu'elle croyait mener contre
+									les Skrulls. Elle rejette son passé Kree, libère l'intégralité
+									de ses pouvoirs cosmiques et devient Captain Marvel.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg1" id="f-eg1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2018-2023</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg1">
+							<div class="accordion__panel-inner">
+								<p>
+									Alertée par le signal de détresse de Nick Fury envoyé juste
+									avant le Snap, Carol arrive sur Terre pour secourir Tony
+									Stark et Nebula, perdus dans l'espace après l'échec du combat
+									contre Thanos. Absente pendant l'essentiel du film — occupée
+									à protéger d'autres coins de l'univers laissés sans défense
+									par le Snap — elle revient au moment critique pour aider les
+									Avengers à récupérer le Gantelet lors de la bataille finale
+									de la Terre, portant un temps seule le poids du combat
+									contre Thanos.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-sc1" id="f-sc1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Shang-Chi and the Legend of the Ten Rings</span>
+								<span class="accordion__meta">2024</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-sc1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__tag">Scène mi-crédits</span>
+								<p>
+									Carol retrouve Bruce Banner, revenu à sa forme humaine,
+									Wong, Shang-Chi et Katy Chen à Kamar-Taj, où le groupe
+									examine ensemble le pouvoir mystérieux des Dix Anneaux,
+									avant d'être brusquement interrompu par un appel les
+									convoquant ailleurs.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-tm1" id="f-tm1-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">The Marvels</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-tm1">
+							<div class="accordion__panel-inner">
+								<span class="accordion__label">Le récit</span>
+								<p>
+									Une manipulation d'un point de saut par Dar-Benn, une
+									Accusatrice Kree bien décidée à restaurer Hala en pillant
+									les ressources d'autres planètes, entremêle accidentellement
+									les pouvoirs de lumière de Carol à ceux de Monica Rambeau et
+									de la jeune héroïne Kamala Khan : les trois femmes échangent
+									désormais de place chaque fois qu'elles utilisent leurs
+									pouvoirs simultanément. Le trio, surnommé « les Marvels »
+									par Kamala, apprend à maîtriser ce phénomène pour affronter
+									Dar-Benn, dont le plan final consiste à siphonner l'énergie
+									du Soleil terrestre pour raviver Hala.
+								</p>
+								<span class="accordion__label">À retenir</span>
+								<p>
+									Pour refermer la faille spatiale ouverte par Dar-Benn, Carol
+									et Kamala combinent leurs pouvoirs pour donner à Monica
+									l'énergie nécessaire à sa fermeture depuis l'autre côté —
+									la laissant, malgré leurs efforts, bloquée dans un univers
+									alternatif.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="encart" style="margin-top: 32px">
+					<strong>Et ensuite ?</strong> Carol reste, à ce jour, absente des
+					annonces officielles pour <em>Avengers: Doomsday</em> et
+					<em>Avengers: Secret Wars</em> — son retour, ainsi que celui de
+					Monica Rambeau, demeure une inconnue.
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_nouvelles-recrues.html">Les nouvelles recrues →</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

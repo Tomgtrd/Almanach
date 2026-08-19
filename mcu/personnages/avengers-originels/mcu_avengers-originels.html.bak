@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MCU — Les Avengers originels | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.members-grid {
+			max-width: 880px;
+			margin: 0 auto;
+			padding: 24px 32px 100px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+			gap: 20px;
+		}
+
+		.member-card {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+			background: var(--paper-raised);
+			border: 1px solid var(--hairline);
+			border-radius: var(--radius-md);
+			padding: 28px 26px;
+			opacity: 0;
+			transform: translateY(16px);
+			transition:
+				opacity 0.6s ease,
+				transform 0.6s ease,
+				border-color 0.25s ease,
+				box-shadow 0.25s ease;
+		}
+
+		.member-card.in {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.member-card:hover {
+			border-color: var(--mcu-red-soft);
+			box-shadow: 0 4px 18px rgba(28, 23, 18, 0.06);
+		}
+
+		.member-card__icon {
+			width: 48px;
+			height: 48px;
+			border-radius: 50%;
+			background: var(--mcu-cream);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: var(--font-display);
+			font-size: 1.4rem;
+			font-weight: 500;
+			color: var(--mcu-red-soft);
+			margin-bottom: 16px;
+		}
+
+		.member-card__name {
+			font-family: var(--font-display);
+			font-size: 1.35rem;
+			font-weight: 500;
+			margin: 0 0 6px;
+			color: var(--ink);
+		}
+
+		.member-card__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 0.92rem;
+			color: var(--ink-faint);
+			margin: 0 0 14px;
+		}
+
+		.member-card__pitch {
+			font-size: 0.92rem;
+			color: var(--ink-soft);
+			margin: 0;
+			line-height: 1.55;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="hero">
+		<div class="hero__eyebrow">MCU — les personnages</div>
+		<h1 class="hero__title">Les Avengers originels</h1>
+		<p class="hero__subtitle">pour les nuls</p>
+		<p class="hero__lede">
+			Les six premiers, ceux qui se sont assemblés à New York en 2012.
+			<em>Cliquez sur un nom pour découvrir sa biographie complète et le détail
+				de chacune de ses apparitions</em>.
+		</p>
+	</header>
+
+	<main class="members-grid">
+		<a class="member-card" href="tony-stark.html">
+			<div class="member-card__icon">IM</div>
+			<h2 class="member-card__name">Iron Man</h2>
+			<p class="member-card__realname">Tony Stark</p>
+			<p class="member-card__pitch">
+				Génie, milliardaire, playboy, philanthrope — et le premier héros du
+				MCU. D'un enlèvement en Afghanistan à un sacrifice final contre
+				Thanos.
+			</p>
+		</a>
+
+		<a class="member-card" href="thor.html">
+			<div class="member-card__icon">T</div>
+			<h2 class="member-card__name">Thor</h2>
+			<p class="member-card__realname">Thor Odinson</p>
+			<p class="member-card__pitch">
+				Dieu du Tonnerre asgardien, banni sur Terre pour apprendre l'humilité,
+				avant de devenir le guerrier ayant tout perdu et tout reconstruit.
+			</p>
+		</a>
+
+		<a class="member-card" href="steve-rogers.html">
+			<div class="member-card__icon">CA</div>
+			<h2 class="member-card__name">Captain America</h2>
+			<p class="member-card__realname">Steve Rogers</p>
+			<p class="member-card__pitch">
+				D'un jeune homme chétif rejeté par l'armée au symbole même du devoir —
+				soixante-dix ans de sommeil glacé entre les deux.
+			</p>
+		</a>
+
+		<a class="member-card" href="bruce-banner.html">
+			<div class="member-card__icon">H</div>
+			<h2 class="member-card__name">Hulk</h2>
+			<p class="member-card__realname">Bruce Banner</p>
+			<p class="member-card__pitch">
+				Le scientifique le plus brillant du MCU, prisonnier d'un accident qui
+				l'a transformé en la créature la plus puissante de la Terre.
+			</p>
+		</a>
+
+		<a class="member-card" href="natasha-romanoff.html">
+			<div class="member-card__icon">BW</div>
+			<h2 class="member-card__name">Black Widow</h2>
+			<p class="member-card__realname">Natasha Romanoff</p>
+			<p class="member-card__pitch">
+				Formée dès l'enfance par le Red Room pour tuer sans poser de questions
+				— et qui choisit, jusqu'au bout, de se sacrifier pour sa famille de
+				cœur.
+			</p>
+		</a>
+
+		<a class="member-card" href="clint-barton.html">
+			<div class="member-card__icon">HE</div>
+			<h2 class="member-card__name">Hawkeye</h2>
+			<p class="member-card__realname">Clint Barton</p>
+			<p class="member-card__pitch">
+				Le tireur d'élite sans super-pouvoirs, dont la famille cachée et la
+				perte de sa meilleure amie façonnent tout le reste de son parcours.
+			</p>
+		</a>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Groupe suivant</div>
+		<a href="../mystiques/mcu_mystiques.html">Les mystiques →</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const cards = document.querySelectorAll(".member-card");
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("in");
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{ threshold: 0.15 },
+			);
+			cards.forEach((c) => observer.observe(c));
+		});
+	</script>
+</body>
+
+</html>

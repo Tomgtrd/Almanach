@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gamora | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css">
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Gamora</div>
+		<h1 class="hero__title">Gamora</h1>
+		<p class="charhero__realname">Gamora Zen Whoberi Ben Titan</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Zehoberei</span>
+			<span class="charhero__tag">Assassin</span>
+			<span class="charhero__tag">Décédée</span>
+		</div>
+	</header>
+
+	<main>
+
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow"><span class="roman">I</span>Biographie</div>
+			<h2 class="planche__title">L'arme qui a choisi de trahir son créateur</h2>
+			<p class="planche__lede">
+				Élevée par le pire monstre de la galaxie pour devenir la meilleure
+				tueuse qui soit — et qui choisit, envers et contre tout, de ne pas
+				le rester.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Gamora naît sur Zen-Whoberi, dont le peuple est presque entièrement
+					exterminé par Thanos, qui tue la moitié de la population de sa
+					planète natale sous ses yeux d'enfant. Le Titan l'adopte ensuite,
+					la présentant comme sa fille tout en la façonnant méthodiquement
+					en l'une des assassins les plus redoutables de l'univers — un
+					entraînement rythmé par des comparaisons constantes avec Nebula,
+					sa sœur adoptive, chaque défaite de cette dernière contre Gamora
+					entraînant une nouvelle « amélioration » cybernétique douloureuse.
+				</p>
+				<p>
+					Devenue adulte, Gamora sert Thanos et son allié Ronan l'Accusateur
+					pendant des années, avant de choisir de le trahir en tentant de
+					s'approprier l'Orbe pour l'empêcher, elle, de tomber entre de
+					mauvaises mains. Cette trahison la mène directement à Peter Quill
+					et aux futurs Gardiens de la Galaxie, avec qui elle finit par
+					trouver la famille loyale qu'elle n'avait jamais eue.
+				</p>
+				<p>
+					Des années plus tard, lorsque Thanos entame sa quête des Pierres
+					d'Infinité, Gamora se retrouve confrontée à son passé de la pire
+					des manières : son père adoptif la traque jusqu'à Vormir, où
+					seul le sacrifice d'un être cher peut permettre d'obtenir la
+					Pierre de l'Âme. Malgré tous ses efforts pour le tromper, Thanos
+					finit par la précipiter dans le vide lui-même, faisant d'elle,
+					avec une ironie tragique, la seule personne au monde qu'il ait
+					jamais réellement aimée — et son premier vrai sacrifice.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow"><span class="roman">II</span>Famille & relations</div>
+			<h2 class="planche__title">Ceux qui comptent</h2>
+			<p class="planche__lede">
+				Une famille imposée par la violence, et une famille choisie qui la
+				sauve d'elle-même.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Thanos</strong> — son père adoptif, responsable du
+					massacre de son peuple, qui la façonne en arme tout en prétendant
+					l'aimer sincèrement. Leur relation toxique atteint son paroxysme
+					lorsqu'il la sacrifie pour obtenir la Pierre de l'Âme.
+				</p>
+				<p>
+					<strong>Nebula</strong> — sa sœur adoptive, avec qui Thanos
+					entretient délibérément une rivalité destructrice depuis
+					l'enfance. Leur relation évolue d'une hostilité profonde à une
+					solidarité sincère face à leur passé commun.
+				</p>
+				<p>
+					<strong>Peter Quill</strong> — son grand amour au sein des
+					Gardiens, une relation construite avec méfiance puis confiance
+					totale, brutalement interrompue par sa mort.
+				</p>
+				<p>
+					<strong>Les Gardiens de la Galaxie</strong> — la première vraie
+					famille loyale qu'elle se choisit, en rupture complète avec
+					l'univers de manipulation dans lequel elle a grandi.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow"><span class="roman">III</span>Filmographie</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'une exécutrice loyale à Thanos à son sacrifice sur les falaises de
+				Vormir.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg1g" id="f-gotg1g-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy</span>
+								<span class="accordion__meta">2014</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg1g">
+							<div class="accordion__panel-inner">
+								<p>
+									Gamora trahit Ronan l'Accusateur en tentant de s'emparer
+									de l'Orbe pour l'empêcher de tomber entre de mauvaises
+									mains. Emprisonnée avec Peter Quill, Rocket, Groot et
+									Drax, elle rejoint leur alliance pour empêcher Ronan
+									d'anéantir Xandar, marquant le début de sa rupture
+									définitive avec Thanos.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg2g" id="f-gotg2g-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy Vol. 2</span>
+								<span class="accordion__meta">2014 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg2g">
+							<div class="accordion__panel-inner">
+								<p>
+									Gamora se rapproche de Peter Quill tout en renouant, à
+									contrecœur, avec Nebula, capturée après une tentative de
+									la livrer aux autorités de Xandar. Les deux sœurs finissent
+									par s'allier pour affronter Ego et sauver l'équipe,
+									amorçant une réconciliation sincère entre elles.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-iw1g" id="f-iw1g-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-iw1g">
+							<div class="accordion__panel-inner">
+								<p>
+									Gamora est capturée par Thanos, qui a besoin d'elle pour
+									localiser la Pierre de l'Âme sur Vormir. Après avoir menti
+									sur sa localisation, elle assiste à la torture de sa sœur
+									Nebula et finit par révéler la vérité pour la sauver.
+									Sur Vormir, Thanos la précipite dans le vide pour obtenir
+									la Pierre, la tuant de ses propres mains.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg1g" id="f-eg1g-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg1g">
+							<div class="accordion__panel-inner">
+								<p>
+									Une variante de Gamora venue de 2014, capturée avant même
+									sa trahison de Thanos, se retrouve amenée dans le présent
+									lors du voyage dans le temps des Avengers. Ne connaissant
+									ni Peter Quill ni les Gardiens, elle rejoint néanmoins le
+									combat final contre Thanos avant de disparaître, son sort
+									laissé incertain.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-gotg3g" id="f-gotg3g-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Guardians of the Galaxy Vol. 3</span>
+								<span class="accordion__meta">2026</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-gotg3g">
+							<div class="accordion__panel-inner">
+								<p>
+									Cette variante de 2014 de Gamora, désormais mercenaire
+									sans lien avec son passé de Gardienne, est retrouvée et
+									recrutée par Peter pour aider à sauver Rocket — sans
+									jamais retrouver les sentiments que « son » Peter avait
+									connus. Elle choisit finalement de rejoindre les Ravagers
+									plutôt que les Gardiens à la fin du film.
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_gardiens.html">Les Gardiens de la Galaxie →</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

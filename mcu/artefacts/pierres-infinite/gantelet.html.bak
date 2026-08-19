@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Le Gantelet d'Infinité | Artefacts | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-gold);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../mcu_artefacts.html" aria-current="page">Les artefacts</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Artefact · Forge de Nidavellir</div>
+		<h1 class="hero__title">Le Gantelet d'Infinité</h1>
+		<p class="charhero__realname">Forgé par Eitri en métal Uru (2015)</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Métal Uru</span>
+			<span class="charhero__tag">Canalisateur cosmique</span>
+			<span class="charhero__tag">Détruit en 2018</span>
+		</div>
+	</header>
+
+	<main>
+		<section class="planche" id="planche-bio" data-nav-label="Origine & Capacités">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>Origine & Capacités
+			</div>
+			<h2 class="planche__title">
+				Le réceptacle forgé pour plier l'univers à une seule volonté
+			</h2>
+			<p class="planche__lede">
+				Une pièce d'orfèvrerie cosmique conçue sous la contrainte sur l'anneau de Nidavellir pour canaliser et
+				synchroniser la puissance brute des six Pierres d'Infinité.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					En 2015, lassé de déléguer sa quête cosmique, Thanos envahit la forge stellaire de Nidavellir et
+					force les trois cents nains qui y vivent à lui fabriquer une arme capable de maîtriser les six
+					singularités primordiales[cite: 24]. Le roi forgeron Eitri conçoit alors un gantelet pour main
+					gauche taillé dans du <strong>métal Uru</strong> pur[cite: 24]. Une fois l'ouvrage achevé, Thanos
+					extermine l'intégralité du peuple nain et coule du métal en fusion sur les mains d'Eitri afin
+					d'empêcher toute création future[cite: 24].
+				</p>
+				<p>
+					Le gantelet attire naturellement les Pierres vers leurs réceptacles respectifs : dès qu'une gemme
+					est approchée d'une alvéole, elle s'y encastre et fusionne instantanément, libérant une vive
+					décharge d'énergie à travers le corps du porteur[cite: 24]. Lorsqu'elles ne sont pas sollicitées,
+					les Pierres restent sombres et inactives[cite: 24].
+				</p>
+				<p>
+					Pour canaliser les effets d'une ou plusieurs Pierres (lancer des rafales d'énergie, altérer la
+					matière, créer des trous noirs ou déformer l'espace), l'utilisateur doit impérativement
+					<strong>serrer le poing</strong>[cite: 24]. Cette contrainte mécanique — faille intégrée par Eitri —
+					est exploitée par les héros sur Titan, qui tentent d'empêcher Thanos de refermer ses doigts[cite:
+					24]. Pour déployer l'intégralité des six énergies réunies à l'échelle universelle, un geste plus
+					complexe est requis : un simple <strong>claquement de doigts</strong>[cite: 24].
+				</p>
+				<p>
+					L'énergie dégagée par le Snap de 2018 est telle qu'elle surcharge le métal Uru, calcinant le
+					gantelet et causant des brûlures irréversibles au bras de Thanos[cite: 24]. Quelques semaines plus
+					tard, un second Snap utilisé pour détruire les Pierres au niveau atomique détruit définitivement
+					l'objet, soudant sa carcasse noircie aux chairs de son porteur[cite: 24].
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-owners" data-nav-label="Créateur & Porteurs">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Créateur & Utilisateurs
+			</div>
+			<h2 class="planche__title">Les mains associées à l'artefact</h2>
+			<p class="planche__lede">
+				Du moule d'Eitri au bras calciné du Titan Fou, en passant par les imitations historiques.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Eitri (2015)</strong> — Roi des nains de Nidavellir et concepteur forcé de l'arme en métal
+					Uru[cite: 24]. Il conserve le moule original dans sa forge abandonnée avant d'aider Thor à fabriquer
+					Stormbreaker[cite: 24].
+				</p>
+				<p>
+					<strong>Thanos (2015 — 2018 / chronologie 2023)</strong> — Seul propriétaire et utilisateur
+					canonique du gantelet en Uru[cite: 24]. Il y réunit les six Pierres pour exécuter la Décimation
+					universelle[cite: 24], puis l'active une seconde fois sur Titan II (Le Jardin) pour désintégrer les
+					Pierres, scellant les restes de l'objet à son bras jusqu'à son exécution par Thor[cite: 24].
+				</p>
+				<p>
+					<strong>La réplique d'Odin (Asgard)</strong> — Une réplique droitière sertie de fausses gemmes était
+					entreposée dans la salle des trésors d'Odin[cite: 24]. Exposée pour tromper les ennemis du royaume,
+					elle est renversée et qualifiée de « fausse » par Hela lors de sa prise de pouvoir en 2017[cite:
+					24].
+				</p>
+
+				<div class="encart" style="margin-top: 24px">
+					<strong>À ne pas confondre avec le Nano-Gantelet :</strong> Lors du Casse Temporel de 2023, les
+					Avengers ne récupèrent pas ce gantelet détruit[cite: 24]. Tony Stark, Bruce Banner et Rocket
+					conçoivent un nouveau gantelet articulé basé sur la nanotechnologie Stark, porté par Hulk pour
+					ressusciter les disparus puis par Iron Man pour anéantir Thanos.
+				</div>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>Filmographie
+			</div>
+			<h2 class="planche__title">Chronologie des apparitions à l'écran</h2>
+			<p class="planche__lede">
+				De son apparition furtive en fin de Phase II à sa destruction dans les ruines du Jardin.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-aou-gauntlet" id="f-aou-gauntlet-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Age of Ultron</span>
+								<span class="accordion__meta">2015 (scène mi-crédits)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-aou-gauntlet">
+							<div class="accordion__panel-inner">
+								<p>
+									Après l'échec de Ronan et la destruction d'Ultron, Thanos ouvre un coffre sécurisé
+									dans son sanctuaire, enfile le Gantelet d'Infinité encore dépourvu de pierres et
+									déclare : « <em>Très bien, je vais m'en occuper moi-même</em> »[cite: 24].
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-iw-gauntlet" id="f-iw-gauntlet-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Infinity War</span>
+								<span class="accordion__meta">2018</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-iw-gauntlet">
+							<div class="accordion__panel-inner">
+								<p>
+									Thanos y insère successivement la Pierre du Pouvoir (Xandar/Statesman), de l'Espace
+									(Tesseract), de la Réalité (Knowhere), de l'Âme (Vormir) et du Temps (Titan)[cite:
+									24]. Sur Titan, il l'utilise pour pulvériser la lune et la projeter en météores sur
+									Iron Man, Spider-Man et les Gardiens[cite: 24]. Au Wakanda, il arrache la Pierre de
+									l'Esprit du front de Vision pour compléter le gantelet[cite: 24]. Malgré un coup
+									mortel de Stormbreaker au thorax, il claque des doigts et décime la moitié de toute
+									vie dans l'univers, endommageant lourdement le gantelet lors du processus[cite: 24].
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-eg-gauntlet" id="f-eg-gauntlet-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Avengers: Endgame</span>
+								<span class="accordion__meta">2023 (prologue)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-eg-gauntlet">
+							<div class="accordion__panel-inner">
+								<p>
+									Réfugié sur sa planète agricole, Thanos utilise une dernière fois le gantelet pour
+									détruire les Pierres afin d'empêcher toute tentative de retour en arrière, ce qui
+									détruit l'artefact et fusionne ses débris calcinés à son bras[cite: 24]. Alertés par
+									la signature énergétique, les Avengers prennent Thanos en embuscade ; Thor lui
+									sectionne le bras gauche avec Stormbreaker, découvrant les alvéoles vides, avant de
+									le décapiter[cite: 24].
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-mom-gauntlet" id="f-mom-gauntlet-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">Doctor Strange in the Multiverse of Madness</span>
+								<span class="accordion__meta">2022 (flashback multivers)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-mom-gauntlet">
+							<div class="accordion__panel-inner">
+								<p>
+									Sur la Terre-838, Thanos est confronté et exécuté sur Titan par les Illuminati alors
+									qu'il portait le gantelet garni de quatre Pierres d'Infinité[cite: 24].
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour aux forces cosmiques</div>
+		<a href="mcu_pierres-infinite.html">Les Pierres d'Infinité →</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>

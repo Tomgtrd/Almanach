@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Johnny Storm / Human Torch | MCU | Almanach</title>
+	<link rel="stylesheet" href="../../mcu_style.css" />
+	<style>
+		.charhero {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 88px 32px 48px;
+		}
+
+		.charhero__tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin: 24px 0 0;
+		}
+
+		.charhero__tag {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			background: var(--mcu-cream);
+			color: var(--mcu-red);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.charhero__realname {
+			font-family: var(--font-display);
+			font-style: italic;
+			font-size: 1.2rem;
+			color: var(--ink-soft);
+			margin: 4px 0 0;
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../../mcu_personnages.html">Les personnages</a>
+			<a href="../../chronologie/mcu_multivers.html">Comprendre le multivers</a>
+			<a href="../../chronologie/mcu_antiquite.html">Avant les héros</a>
+			<a href="../../chronologie/mcu_origines.html">Les origines</a>
+			<a href="../../chronologie/mcu_expansion.html">L'expansion</a>
+			<a href="../../chronologie/mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="../../chronologie/mcu_actuel.html">L'ère actuelle</a>
+			<a href="../../chronologie/mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
+
+	<header class="charhero">
+		<div class="hero__eyebrow">Human Torch</div>
+		<h1 class="hero__title">Johnny Storm</h1>
+		<p class="charhero__realname">Jonathan Lowell Spencer Storm</p>
+		<div class="charhero__tags">
+			<span class="charhero__tag">Terre-828</span>
+			<span class="charhero__tag">Ancien Eagle Scout</span>
+			<span class="charhero__tag">Membre des Quatre Fantastiques</span>
+		</div>
+	</header>
+
+	<main>
+		<section class="planche" id="planche-bio" data-nav-label="Biographie">
+			<div class="planche__eyebrow">
+				<span class="roman">I</span>Biographie
+			</div>
+			<h2 class="planche__title">Le petit frère qui s'embrase pour tout</h2>
+			<p class="planche__lede">
+				Impétueux, charismatique et toujours prêt à foncer tête baissée — le
+				membre le plus fougueux d'une famille qui a besoin de sa fougue autant
+				que de sa retenue.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					Johnny Storm grandit sur Long Island, jeune frère de Sue Storm. Il
+					s'engage tôt chez les scouts d'Amérique, gravissant les échelons
+					jusqu'au grade d'Eagle Scout — une discipline qui contraste avec son
+					tempérament naturellement impulsif et joueur. Sélectionné avec sa
+					sœur, Reed Richards et Ben Grimm pour participer à la mission
+					spatiale d'exploration des radiations cosmiques à bord de
+					l'Excelsior, il est frappé comme les autres par une tempête de
+					radiations imprévue lors du vol.
+				</p>
+				<p>
+					La transformation le touche de plein fouet : son corps entier peut
+					désormais s'embraser à volonté, générant des flammes puissantes qui
+					lui permettent également de voler. Charismatique et volontiers
+					taquin, Johnny devient rapidement le visage le plus médiatique et
+					populaire des Quatre Fantastiques auprès du public, tout en gardant
+					une relation fraternelle complice, quoique parfois conflictuelle,
+					avec le reste de sa famille adoptive de super-héros.
+				</p>
+				<p>
+					Lors de la confrontation avec Galactus qui menace la Terre, Johnny
+					met tout son courage et son impulsivité naturelle au service de la
+					protection de sa famille et de la planète, participant activement à
+					la bataille qui repousse finalement la menace cosmique.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-family" data-nav-label="Famille & relations">
+			<div class="planche__eyebrow">
+				<span class="roman">II</span>Famille & relations
+			</div>
+			<h2 class="planche__title">Ceux qui comptent</h2>
+			<p class="planche__lede">
+				Une fratrie soudée par le sang et par une transformation partagée.
+			</p>
+
+			<div class="planche__body">
+				<p>
+					<strong>Sue Storm</strong> — sa sœur aînée, avec qui il partage un
+					lien fraternel fort, fait de complicité et de taquineries
+					réciproques.
+				</p>
+				<p>
+					<strong>Reed Richards</strong> — son beau-frère et leader de
+					l'équipe, dont l'approche méthodique et réfléchie contraste
+					volontiers avec l'impulsivité de Johnny.
+				</p>
+				<p>
+					<strong>Ben Grimm</strong> — coéquipier de longue date, avec qui il
+					partage une relation amicale ponctuée de chamailleries affectueuses
+					typiques d'une fratrie.
+				</p>
+			</div>
+		</section>
+
+		<section class="planche" id="planche-films" data-nav-label="Filmographie">
+			<div class="planche__eyebrow">
+				<span class="roman">III</span>Filmographie
+			</div>
+			<h2 class="planche__title">Chacune de ses apparitions</h2>
+			<p class="planche__lede">
+				D'une mission spatiale transformatrice à la bataille contre un
+				dévoreur de mondes.
+			</p>
+
+			<div class="planche__body">
+				<div class="accordion">
+					<div class="accordion__item">
+						<button class="accordion__trigger" aria-controls="f-ff1j" id="f-ff1j-trigger">
+							<span class="accordion__heading">
+								<span class="accordion__title">The Fantastic Four: First Steps</span>
+								<span class="accordion__meta">1964 (chronologie interne)</span>
+							</span>
+							<span class="accordion__icon" aria-hidden="true"></span>
+						</button>
+						<div class="accordion__panel" id="f-ff1j" style="height: auto">
+							<div class="accordion__panel-inner">
+								<p>
+									Johnny, devenu une figure publique aimée en tant que membre
+									des Quatre Fantastiques, participe activement à la défense
+									de la Terre face à la menace de Galactus, mettant ses
+									pouvoirs de feu et de vol au service du combat final qui
+									repousse le dévoreur de mondes.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="encart" style="margin-top: 32px">
+					<strong>Et ensuite ?</strong> Johnny est annoncé dans
+					<em>Avengers: Doomsday</em> et <em>Avengers: Secret Wars</em>, aux
+					côtés du reste des Quatre Fantastiques.
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Retour au groupe</div>
+		<a href="mcu_fantastic-four.html">Les Quatre Fantastiques →</a>
+	</footer>
+
+	<script src="../../mcu_script.js"></script>
+</body>
+
+</html>
