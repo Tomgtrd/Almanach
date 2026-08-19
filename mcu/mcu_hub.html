@@ -1,315 +1,297 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>MCU — pour les nuls | Almanach</title>
-	<link rel="stylesheet" href="mcu_style.css">
-	<style>
-		/* ===== Frise verticale du hub ===== */
-		.timeline {
-			max-width: 760px;
-			margin: 0 auto;
-			padding: 24px 32px 100px;
-			position: relative;
-		}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCU — pour les nuls | Almanach</title>
+<link rel="stylesheet" href="mcu_style.css">
+<style>
+  /* ===== Frise verticale du hub ===== */
+  .timeline {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px 32px 100px;
+    position: relative;
+  }
 
-		.timeline::before {
-			content: '';
-			position: absolute;
-			left: 47px;
-			top: 24px;
-			bottom: 100px;
-			width: 1.5px;
-			background: linear-gradient(to bottom, var(--mcu-gold-soft), var(--mv-purple-soft));
-		}
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 47px;
+    top: 24px;
+    bottom: 100px;
+    width: 1.5px;
+    background: linear-gradient(to bottom, var(--mcu-gold-soft), var(--mv-purple-soft));
+  }
 
-		.timeline__item {
-			position: relative;
-			padding-left: 88px;
-			margin-bottom: 8px;
-			opacity: 0;
-			transform: translateY(20px);
-			transition: opacity 0.6s ease, transform 0.6s ease;
-		}
+  .timeline__item {
+    position: relative;
+    padding-left: 88px;
+    margin-bottom: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
 
-		.timeline__item.in {
-			opacity: 1;
-			transform: translateY(0);
-		}
+  .timeline__item.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
-		.timeline__dot {
-			position: absolute;
-			left: 40px;
-			top: 34px;
-			width: 15px;
-			height: 15px;
-			border-radius: 50%;
-			background: var(--paper);
-			border: 2px solid var(--mcu-gold);
-			z-index: 2;
-		}
+  .timeline__dot {
+    position: absolute;
+    left: 40px;
+    top: 34px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--mcu-gold);
+    z-index: 2;
+  }
 
-		.timeline__item--mv .timeline__dot {
-			border-color: var(--mv-purple);
-		}
+  .timeline__item--mv .timeline__dot {
+    border-color: var(--mv-purple);
+  }
 
-		.timeline__card {
-			display: block;
-			text-decoration: none;
-			color: inherit;
-			background: var(--paper-raised);
-			border: 1px solid var(--hairline);
-			border-radius: var(--radius-md);
-			padding: 26px 28px;
-			margin-bottom: 40px;
-			transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-		}
+  .timeline__card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--paper-raised);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-md);
+    padding: 26px 28px;
+    margin-bottom: 40px;
+    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  }
 
-		.timeline__card:hover {
-			border-color: var(--mcu-red-soft);
-			transform: translateX(4px);
-			box-shadow: 0 4px 18px rgba(28, 23, 18, 0.06);
-		}
+  .timeline__card:hover {
+    border-color: var(--mcu-red-soft);
+    transform: translateX(4px);
+    box-shadow: 0 4px 18px rgba(28, 23, 18, 0.06);
+  }
 
-		.timeline__item--mv .timeline__card:hover {
-			border-color: var(--mv-purple-soft);
-		}
+  .timeline__item--mv .timeline__card:hover {
+    border-color: var(--mv-purple-soft);
+  }
 
-		.timeline__period {
-			font-family: var(--font-ui);
-			font-size: 11.5px;
-			letter-spacing: 0.06em;
-			text-transform: uppercase;
-			color: var(--mcu-gold);
-			margin-bottom: 8px;
-		}
+  .timeline__period {
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--mcu-gold);
+    margin-bottom: 8px;
+  }
 
-		.timeline__item--mv .timeline__period {
-			color: var(--mv-purple-soft);
-		}
+  .timeline__item--mv .timeline__period { color: var(--mv-purple-soft); }
 
-		.timeline__title {
-			font-family: var(--font-display);
-			font-size: 1.5rem;
-			font-weight: 500;
-			color: var(--ink);
-			margin: 0 0 8px;
-		}
+  .timeline__title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
 
-		.timeline__pitch {
-			font-size: 0.98rem;
-			color: var(--ink-soft);
-			margin: 0 0 12px;
-			max-width: 56ch;
-		}
+  .timeline__pitch {
+    font-size: 0.98rem;
+    color: var(--ink-soft);
+    margin: 0 0 12px;
+    max-width: 56ch;
+  }
 
-		.timeline__meta {
-			font-family: var(--font-ui);
-			font-size: 11.5px;
-			letter-spacing: 0.03em;
-			color: var(--ink-faint);
-		}
+  .timeline__meta {
+    font-family: var(--font-ui);
+    font-size: 11.5px;
+    letter-spacing: 0.03em;
+    color: var(--ink-faint);
+  }
 
-		.timeline__chapter-num {
-			position: absolute;
-			left: 0;
-			top: 26px;
-			font-family: var(--font-display);
-			font-style: italic;
-			font-size: 1.05rem;
-			color: var(--ink-faint);
-			width: 32px;
-			text-align: right;
-		}
+  .timeline__chapter-num {
+    position: absolute;
+    left: 0;
+    top: 26px;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--ink-faint);
+    width: 32px;
+    text-align: right;
+  }
 
-		@media (max-width: 640px) {
-			.timeline {
-				padding: 24px 18px 80px;
-			}
-
-			.timeline::before {
-				left: 27px;
-			}
-
-			.timeline__dot {
-				left: 20px;
-			}
-
-			.timeline__item {
-				padding-left: 52px;
-			}
-
-			.timeline__chapter-num {
-				display: none;
-			}
-		}
-	</style>
+  @media (max-width: 640px) {
+    .timeline { padding: 24px 18px 80px; }
+    .timeline::before { left: 27px; }
+    .timeline__dot { left: 20px; }
+    .timeline__item { padding-left: 52px; }
+    .timeline__chapter-num { display: none; }
+  }
+</style>
 </head>
-
 <body>
 
-	<nav class="mcu-topbar">
-		<a class="mcu-topbar__almanach" href="../hub_index.html">← Almanach</a>
-		<a class="mcu-topbar__home" href="mcu_hub.html">MCU</a>
-		<div class="mcu-topbar__links">
-			<a href="mcu_multivers.html">Comprendre le multivers</a>
-			<a href="mcu_antiquite.html">Avant les héros</a>
-			<a href="mcu_origines.html">Les origines</a>
-			<a href="mcu_expansion.html">L'expansion</a>
-			<a href="mcu_multivers-chrono.html">La saga du multivers</a>
-			<a href="mcu_actuel.html">L'ère actuelle</a>
-			<a href="mcu_horizon.html">L'horizon</a>
-		</div>
-	</nav>
+<nav class="mcu-topbar">
+  <a class="mcu-topbar__almanach" href="../hub_index.html">← Almanach</a>
+  <a class="mcu-topbar__home" href="mcu_hub.html">MCU</a>
+  <div class="mcu-topbar__links">
+    <a href="mcu_personnages.html">Les personnages</a>
+    <a href="mcu_multivers.html">Comprendre le multivers</a>
+    <a href="mcu_antiquite.html">Avant les héros</a>
+    <a href="mcu_origines.html">Les origines</a>
+    <a href="mcu_expansion.html">L'expansion</a>
+    <a href="mcu_multivers-chrono.html">La saga du multivers</a>
+    <a href="mcu_actuel.html">L'ère actuelle</a>
+    <a href="mcu_horizon.html">L'horizon</a>
+  </div>
+</nav>
 
-	<header class="hero">
-		<div class="hero__eyebrow">MCU</div>
-		<h1 class="hero__title">MCU</h1>
-		<p class="hero__subtitle">pour les nuls</p>
-		<p class="hero__lede">
-			7 chapitres pour comprendre, une bonne fois pour toutes, comment un
-			homme en armure rouge et or est devenu le plus grand univers partagé
-			du cinéma — <em>de 1260 avant notre ère jusqu'à la fin du monde tel
-				qu'on le connaît</em>.
-		</p>
+<header class="hero">
+  <div class="hero__eyebrow">MCU</div>
+  <h1 class="hero__title">MCU</h1>
+  <p class="hero__subtitle">pour les nuls</p>
+  <p class="hero__lede">
+    7 chapitres pour comprendre, une bonne fois pour toutes, comment un
+    homme en armure rouge et or est devenu le plus grand univers partagé
+    du cinéma — <em>de 1260 avant notre ère jusqu'à la fin du monde tel
+    qu'on le connaît</em>.
+  </p>
 
-		<div class="encart" style="margin-top:40px;">
-			<strong>Comment lire cet almanach.</strong> Contrairement aux autres
-			thèmes, celui-ci se déploie sur sept pages distinctes plutôt qu'une
-			seule. La frise ci-dessous suit l'ordre de lecture recommandé — mais
-			chaque chapitre reste autonome, à picorer selon ce que vous cherchez.
-			Le premier, <em>Comprendre le multivers</em>, pose le vocabulaire
-			(Sacred Timeline, TVA, variants) utilisé partout ensuite ; le lire en
-			premier facilite tout le reste.
-		</div>
-	</header>
+  <div class="encart" style="margin-top:40px;">
+    <strong>Comment lire cet almanach.</strong> Contrairement aux autres
+    thèmes, celui-ci se déploie sur sept pages distinctes plutôt qu'une
+    seule. La frise ci-dessous suit l'ordre de lecture recommandé — mais
+    chaque chapitre reste autonome, à picorer selon ce que vous cherchez.
+    Le premier, <em>Comprendre le multivers</em>, pose le vocabulaire
+    (Sacred Timeline, TVA, variants) utilisé partout ensuite ; le lire en
+    premier facilite tout le reste.
+  </div>
+</header>
 
-	<main class="timeline">
+<main class="timeline">
 
-		<div class="timeline__item" id="ti-1" data-nav-label="multivers">
-			<span class="timeline__chapter-num">0</span>
-			<span class="timeline__dot"></span>
-			<a class="timeline__card" href="mcu_multivers.html">
-				<div class="timeline__period">Introduction — hors chronologie</div>
-				<h2 class="timeline__title">Comprendre le multivers</h2>
-				<p class="timeline__pitch">
-					La Sacred Timeline, la TVA, He Who Remains et tout le vocabulaire
-					du multivers, expliqués une bonne fois pour toutes avant de
-					plonger dans le reste.
-				</p>
-				<div class="timeline__meta">6 planches · vocabulaire & concepts</div>
-			</a>
-		</div>
+  <div class="timeline__item" id="ti-1" data-nav-label="multivers">
+    <span class="timeline__chapter-num">0</span>
+    <span class="timeline__dot"></span>
+    <a class="timeline__card" href="mcu_multivers.html">
+      <div class="timeline__period">Introduction — hors chronologie</div>
+      <h2 class="timeline__title">Comprendre le multivers</h2>
+      <p class="timeline__pitch">
+        La Sacred Timeline, la TVA, He Who Remains et tout le vocabulaire
+        du multivers, expliqués une bonne fois pour toutes avant de
+        plonger dans le reste.
+      </p>
+      <div class="timeline__meta">6 planches · vocabulaire & concepts</div>
+    </a>
+  </div>
 
-		<div class="timeline__item" id="ti-2" data-nav-label="antiquite">
-			<span class="timeline__chapter-num">I</span>
-			<span class="timeline__dot"></span>
-			<a class="timeline__card" href="mcu_antiquite.html">
-				<div class="timeline__period">1260 av. J.-C. — 1946</div>
-				<h2 class="timeline__title">Avant les héros</h2>
-				<p class="timeline__pitch">
-					Des agents secrets wakandais à travers les âges, la Seconde
-					Guerre mondiale, et les origines discrètes du S.H.I.E.L.D.
-				</p>
-				<div class="timeline__meta">4 planches · 6 œuvres</div>
-			</a>
-		</div>
+  <div class="timeline__item" id="ti-2" data-nav-label="antiquite">
+    <span class="timeline__chapter-num">I</span>
+    <span class="timeline__dot"></span>
+    <a class="timeline__card" href="mcu_antiquite.html">
+      <div class="timeline__period">1260 av. J.-C. — 1946</div>
+      <h2 class="timeline__title">Avant les héros</h2>
+      <p class="timeline__pitch">
+        Des agents secrets wakandais à travers les âges, la Seconde
+        Guerre mondiale, et les origines discrètes du S.H.I.E.L.D.
+      </p>
+      <div class="timeline__meta">4 planches · 6 œuvres</div>
+    </a>
+  </div>
 
-		<div class="timeline__item" id="ti-3" data-nav-label="origines">
-			<span class="timeline__chapter-num">II</span>
-			<span class="timeline__dot"></span>
-			<a class="timeline__card" href="mcu_origines.html">
-				<div class="timeline__period">1964 — 2012</div>
-				<h2 class="timeline__title">Les origines</h2>
-				<p class="timeline__pitch">
-					D'une famille de savants transformés par des rayons cosmiques
-					jusqu'à la toute première bataille des Avengers, à New York.
-				</p>
-				<div class="timeline__meta">5 planches · 10 œuvres</div>
-			</a>
-		</div>
+  <div class="timeline__item" id="ti-3" data-nav-label="origines">
+    <span class="timeline__chapter-num">II</span>
+    <span class="timeline__dot"></span>
+    <a class="timeline__card" href="mcu_origines.html">
+      <div class="timeline__period">1964 — 2012</div>
+      <h2 class="timeline__title">Les origines</h2>
+      <p class="timeline__pitch">
+        D'une famille de savants transformés par des rayons cosmiques
+        jusqu'à la toute première bataille des Avengers, à New York.
+      </p>
+      <div class="timeline__meta">5 planches · 10 œuvres</div>
+    </a>
+  </div>
 
-		<div class="timeline__item" id="ti-4" data-nav-label="expansion">
-			<span class="timeline__chapter-num">III</span>
-			<span class="timeline__dot"></span>
-			<a class="timeline__card" href="mcu_expansion.html">
-				<div class="timeline__period">2013 — 2018</div>
-				<h2 class="timeline__title">L'expansion</h2>
-				<p class="timeline__pitch">
-					Le S.H.I.E.L.D. s'effondre, les Gardiens de la Galaxie décollent,
-					Hell's Kitchen entre en scène — jusqu'au claquement de doigts
-					de Thanos.
-				</p>
-				<div class="timeline__meta">6 planches · 32 œuvres</div>
-			</a>
-		</div>
+  <div class="timeline__item" id="ti-4" data-nav-label="expansion">
+    <span class="timeline__chapter-num">III</span>
+    <span class="timeline__dot"></span>
+    <a class="timeline__card" href="mcu_expansion.html">
+      <div class="timeline__period">2013 — 2018</div>
+      <h2 class="timeline__title">L'expansion</h2>
+      <p class="timeline__pitch">
+        Le S.H.I.E.L.D. s'effondre, les Gardiens de la Galaxie décollent,
+        Hell's Kitchen entre en scène — jusqu'au claquement de doigts
+        de Thanos.
+      </p>
+      <div class="timeline__meta">6 planches · 32 œuvres</div>
+    </a>
+  </div>
 
-		<div class="timeline__item timeline__item--mv" id="ti-5" data-nav-label="multivers-chrono">
-			<span class="timeline__chapter-num">IV</span>
-			<span class="timeline__dot"></span>
-			<a class="timeline__card" href="mcu_multivers-chrono.html">
-				<div class="timeline__period">2023 — 2024</div>
-				<h2 class="timeline__title">La saga du multivers</h2>
-				<p class="timeline__pitch">
-					Le voyage dans le temps d'Endgame libère le multivers — jusqu'à
-					vingt univers qui s'entrechoquent à l'écran dans Multiverse of
-					Madness.
-				</p>
-				<div class="timeline__meta">4 planches · 11 œuvres</div>
-			</a>
-		</div>
+  <div class="timeline__item timeline__item--mv" id="ti-5" data-nav-label="multivers-chrono">
+    <span class="timeline__chapter-num">IV</span>
+    <span class="timeline__dot"></span>
+    <a class="timeline__card" href="mcu_multivers-chrono.html">
+      <div class="timeline__period">2023 — 2024</div>
+      <h2 class="timeline__title">La saga du multivers</h2>
+      <p class="timeline__pitch">
+        Le voyage dans le temps d'Endgame libère le multivers — jusqu'à
+        vingt univers qui s'entrechoquent à l'écran dans Multiverse of
+        Madness.
+      </p>
+      <div class="timeline__meta">4 planches · 11 œuvres</div>
+    </a>
+  </div>
 
-		<div class="timeline__item timeline__item--mv" id="ti-6" data-nav-label="actuel">
-			<span class="timeline__chapter-num">V</span>
-			<span class="timeline__dot"></span>
-			<a class="timeline__card" href="mcu_actuel.html">
-				<div class="timeline__period">2024 — 2027</div>
-				<h2 class="timeline__title">L'ère actuelle</h2>
-				<p class="timeline__pitch">
-					Un grand méchant abandonné en coulisses, deux équipes rivales qui
-					se disputent le nom d'Avengers, et un monde qui se prépare déjà
-					à la suite.
-				</p>
-				<div class="timeline__meta">5 planches · 22 œuvres</div>
-			</a>
-		</div>
+  <div class="timeline__item timeline__item--mv" id="ti-6" data-nav-label="actuel">
+    <span class="timeline__chapter-num">V</span>
+    <span class="timeline__dot"></span>
+    <a class="timeline__card" href="mcu_actuel.html">
+      <div class="timeline__period">2024 — 2027</div>
+      <h2 class="timeline__title">L'ère actuelle</h2>
+      <p class="timeline__pitch">
+        Un grand méchant abandonné en coulisses, deux équipes rivales qui
+        se disputent le nom d'Avengers, et un monde qui se prépare déjà
+        à la suite.
+      </p>
+      <div class="timeline__meta">5 planches · 22 œuvres</div>
+    </a>
+  </div>
 
-		<div class="timeline__item timeline__item--mv" id="ti-7" data-nav-label="horizon">
-			<span class="timeline__chapter-num">VI</span>
-			<span class="timeline__dot"></span>
-			<a class="timeline__card" href="mcu_horizon.html">
-				<div class="timeline__period">2027 — 2029</div>
-				<h2 class="timeline__title">L'horizon</h2>
-				<p class="timeline__pitch">
-					Le dernier Spider-Man avant l'orage, et la convergence de trois
-					univers vers un affrontement final porté par Doctor Doom.
-				</p>
-				<div class="timeline__meta">3 planches · 6 œuvres</div>
-			</a>
-		</div>
+  <div class="timeline__item timeline__item--mv" id="ti-7" data-nav-label="horizon">
+    <span class="timeline__chapter-num">VI</span>
+    <span class="timeline__dot"></span>
+    <a class="timeline__card" href="mcu_horizon.html">
+      <div class="timeline__period">2027 — 2029</div>
+      <h2 class="timeline__title">L'horizon</h2>
+      <p class="timeline__pitch">
+        Le dernier Spider-Man avant l'orage, et la convergence de trois
+        univers vers un affrontement final porté par Doctor Doom.
+      </p>
+      <div class="timeline__meta">3 planches · 6 œuvres</div>
+    </a>
+  </div>
 
-	</main>
+</main>
 
-	<script src="mcu_script.js"></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const items = document.querySelectorAll('.timeline__item');
-			const observer = new IntersectionObserver(
-				(entries) => {
-					entries.forEach((entry) => {
-						if (entry.isIntersecting) {
-							entry.target.classList.add('in');
-							observer.unobserve(entry.target);
-						}
-					});
-				},
-				{ threshold: 0.15 }
-			);
-			items.forEach((item) => observer.observe(item));
-		});
-	</script>
+<script src="mcu_script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.timeline__item');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    items.forEach((item) => observer.observe(item));
+  });
+</script>
 </body>
-
 </html>

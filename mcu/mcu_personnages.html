@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCU — Les personnages | Almanach</title>
+<link rel="stylesheet" href="mcu_style.css">
+<style>
+  .groups-section {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 24px 32px 80px;
+  }
+
+  .groups-section__label {
+    font-family: var(--font-ui);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 56px 0 24px;
+  }
+
+  .groups-section__label:first-child { margin-top: 0; }
+
+  .groups-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .group-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--paper-raised);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-md);
+    padding: 26px 26px 24px;
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease,
+                border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .group-card.in { opacity: 1; transform: translateY(0); }
+
+  .group-card:hover {
+    border-color: var(--mcu-red-soft);
+    box-shadow: 0 4px 18px rgba(28, 23, 18, 0.06);
+  }
+
+  .group-card--villain:hover { border-color: var(--mv-purple-soft); }
+
+  .group-card__eyebrow {
+    font-family: var(--font-ui);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--mcu-gold);
+    margin-bottom: 10px;
+  }
+
+  .group-card--villain .group-card__eyebrow { color: var(--mv-purple-soft); }
+
+  .group-card__title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0 0 10px;
+    color: var(--ink);
+  }
+
+  .group-card__members {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin: 0;
+    line-height: 1.55;
+  }
+</style>
+</head>
+<body>
+
+<nav class="mcu-topbar">
+  <a class="mcu-topbar__almanach" href="../hub_index.html">← Almanach</a>
+  <a class="mcu-topbar__home" href="mcu_hub.html">MCU</a>
+  <div class="mcu-topbar__links">
+    <a href="mcu_personnages.html" aria-current="page">Les personnages</a>
+    <a href="mcu_multivers.html">Comprendre le multivers</a>
+    <a href="mcu_antiquite.html">Avant les héros</a>
+    <a href="mcu_origines.html">Les origines</a>
+    <a href="mcu_expansion.html">L'expansion</a>
+    <a href="mcu_multivers-chrono.html">La saga du multivers</a>
+    <a href="mcu_actuel.html">L'ère actuelle</a>
+    <a href="mcu_horizon.html">L'horizon</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero__eyebrow">MCU</div>
+  <h1 class="hero__title">Les personnages</h1>
+  <p class="hero__subtitle">pour les nuls</p>
+  <p class="hero__lede">
+    D'où viennent leurs pouvoirs, qui ils aiment, qui ils affrontent —
+    <em>les figures qui font battre le cœur de l'écosystème Avengers</em>,
+    regroupées par famille narrative plutôt que par ordre alphabétique.
+  </p>
+
+  <div class="encart" style="margin-top:40px;">
+    <strong>Comment lire ces fiches.</strong> Chaque groupe ci-dessous
+    ouvre sur une sous-page dédiée, où chaque personnage se dévoile au
+    clic : origine des pouvoirs, famille, ennemis, relations clés. Les
+    équipes (Gardiens, Fantastic Four) s'ouvrent d'abord sur une
+    présentation collective, avant de se déplier membre par membre.
+  </div>
+</header>
+
+<main class="groups-section">
+
+  <div class="groups-section__label">Les héros</div>
+  <div class="groups-grid">
+
+    <a class="group-card" href="mcu_perso_avengers-originels.html">
+      <div class="group-card__eyebrow">Fondateurs · 2012</div>
+      <h2 class="group-card__title">Les Avengers originels</h2>
+      <p class="group-card__members">
+        Iron Man · Thor · Captain America · Hulk · Black Widow · Hawkeye
+      </p>
+    </a>
+
+    <a class="group-card" href="mcu_perso_mystiques.html">
+      <div class="group-card__eyebrow">Magie & arts mystiques</div>
+      <h2 class="group-card__title">Les mystiques</h2>
+      <p class="group-card__members">
+        Doctor Strange · Shang-Chi
+      </p>
+    </a>
+
+    <a class="group-card" href="mcu_perso_gardiens.html">
+      <div class="group-card__eyebrow">L'espace</div>
+      <h2 class="group-card__title">Les Gardiens de la Galaxie</h2>
+      <p class="group-card__members">
+        Star-Lord · Gamora · Rocket · Groot · Drax · Nebula · Mantis
+      </p>
+    </a>
+
+    <a class="group-card" href="mcu_perso_fantastic-four.html">
+      <div class="group-card__eyebrow">Terre-828</div>
+      <h2 class="group-card__title">Les Quatre Fantastiques</h2>
+      <p class="group-card__members">
+        Mister Fantastic · Invisible Woman · Human Torch · The Thing
+      </p>
+    </a>
+
+    <a class="group-card" href="mcu_perso_nouvelles-recrues.html">
+      <div class="group-card__eyebrow">Rejoignent l'équipe plus tard</div>
+      <h2 class="group-card__title">Les nouvelles recrues</h2>
+      <p class="group-card__members">
+        Ant-Man · Black Panther · Spider-Man · Captain Marvel ·
+        Wanda &amp; Vision · Loki
+      </p>
+    </a>
+
+  </div>
+
+  <div class="groups-section__label">Les grands méchants</div>
+  <div class="groups-grid">
+
+    <a class="group-card group-card--villain" href="mcu_perso_antagonistes.html">
+      <div class="group-card__eyebrow">Les menaces des films Avengers</div>
+      <h2 class="group-card__title">Les grands antagonistes</h2>
+      <p class="group-card__members">
+        Ultron · Thanos · Kang le Conquérant · Doctor Doom
+      </p>
+    </a>
+
+  </div>
+
+</main>
+
+<script src="mcu_script.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.group-card');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    cards.forEach((c) => observer.observe(c));
+  });
+</script>
+</body>
+</html>
