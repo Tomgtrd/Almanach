@@ -1,504 +1,521 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MCU — Comprendre le multivers | Almanach</title>
-<link rel="stylesheet" href="../mcu_style.css">
-<style>
-  /* Flip-cards du glossaire — propres à cette page */
-  .glossary-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
-    margin-top: 32px;
-  }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MCU — Comprendre le multivers | Almanach</title>
+	<link rel="stylesheet" href="../mcu_style.css">
+	<style>
+		/* Flip-cards du glossaire — propres à cette page */
+		.glossary-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+			gap: 20px;
+			margin-top: 32px;
+		}
 
-  .flip-card {
-    perspective: 1200px;
-    height: 190px;
-  }
+		.flip-card {
+			perspective: 1200px;
+			height: 190px;
+		}
 
-  .flip-card__inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: left;
-    transition: transform 0.5s cubic-bezier(.4,.2,.2,1);
-    transform-style: preserve-3d;
-    cursor: pointer;
-  }
+		.flip-card__inner {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			text-align: left;
+			transition: transform 0.5s cubic-bezier(.4, .2, .2, 1);
+			transform-style: preserve-3d;
+			cursor: pointer;
+		}
 
-  .flip-card.flipped .flip-card__inner {
-    transform: rotateY(180deg);
-  }
+		.flip-card.flipped .flip-card__inner {
+			transform: rotateY(180deg);
+		}
 
-  .flip-card__face {
-    position: absolute;
-    inset: 0;
-    backface-visibility: hidden;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--hairline);
-    padding: 22px;
-    display: flex;
-    flex-direction: column;
-  }
+		.flip-card__face {
+			position: absolute;
+			inset: 0;
+			backface-visibility: hidden;
+			border-radius: var(--radius-md);
+			border: 1px solid var(--hairline);
+			padding: 22px;
+			display: flex;
+			flex-direction: column;
+		}
 
-  .flip-card__front {
-    background: var(--paper-raised);
-    justify-content: space-between;
-  }
+		.flip-card__front {
+			background: var(--paper-raised);
+			justify-content: space-between;
+		}
 
-  .flip-card__back {
-    background: var(--mv-purple);
-    color: var(--mcu-cream);
-    transform: rotateY(180deg);
-    justify-content: center;
-    border-color: var(--mv-purple);
-  }
+		.flip-card__back {
+			background: var(--mv-purple);
+			color: var(--mcu-cream);
+			transform: rotateY(180deg);
+			justify-content: center;
+			border-color: var(--mv-purple);
+		}
 
-  .flip-card__term {
-    font-family: var(--font-display);
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--ink);
-  }
+		.flip-card__term {
+			font-family: var(--font-display);
+			font-size: 1.2rem;
+			font-weight: 500;
+			color: var(--ink);
+		}
 
-  .flip-card__hint {
-    font-family: var(--font-ui);
-    font-size: 11px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-  }
+		.flip-card__hint {
+			font-family: var(--font-ui);
+			font-size: 11px;
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			color: var(--ink-faint);
+		}
 
-  .flip-card__def {
-    font-size: 0.92rem;
-    line-height: 1.5;
-  }
+		.flip-card__def {
+			font-size: 0.92rem;
+			line-height: 1.5;
+		}
 
-  .flip-card:focus-visible .flip-card__inner {
-    outline: none;
-    box-shadow: 0 0 0 3px var(--mcu-gold-soft);
-    border-radius: var(--radius-md);
-  }
+		.flip-card:focus-visible .flip-card__inner {
+			outline: none;
+			box-shadow: 0 0 0 3px var(--mcu-gold-soft);
+			border-radius: var(--radius-md);
+		}
 
-  /* Palette multivers : violet-magenta, réservée à cette page et à la chrono multivers */
-  .mv-accent { color: var(--mv-purple); }
-  .planche--mv .planche__eyebrow { color: var(--mv-purple-soft); }
-  .planche--mv .encart { border-left-color: var(--mv-purple); }
-</style>
+		/* Palette multivers : violet-magenta, réservée à cette page et à la chrono multivers */
+		.mv-accent {
+			color: var(--mv-purple);
+		}
+
+		.planche--mv .planche__eyebrow {
+			color: var(--mv-purple-soft);
+		}
+
+		.planche--mv .encart {
+			border-left-color: var(--mv-purple);
+		}
+	</style>
 </head>
+
 <body>
 
-<nav class="mcu-topbar">
-  <a class="mcu-topbar__almanach" href="../../hub_index.html">← Almanach</a>
-  <a class="mcu-topbar__home" href="../mcu_hub.html">MCU</a>
-  <div class="mcu-topbar__links">
-    <a href="../mcu_personnages.html">Les personnages</a>
-    <a href="mcu_multivers.html" aria-current="page">Comprendre le multivers</a>
-    <a href="mcu_antiquite.html">Avant les héros</a>
-    <a href="mcu_origines.html">Les origines</a>
-    <a href="mcu_expansion.html">L'expansion</a>
-    <a href="mcu_multivers-chrono.html">La saga du multivers</a>
-    <a href="mcu_actuel.html">L'ère actuelle</a>
-    <a href="mcu_horizon.html">L'horizon</a>
-  </div>
-</nav>
+	<nav class="mcu-topbar">
+		<a class="mcu-topbar__almanach" href="../../hub_index.html">← Almanach</a>
+		<a class="mcu-topbar__home" href="../mcu_hub.html">MCU</a>
+		<div class="mcu-topbar__links">
+			<a href="../mcu_personnages.html">Les personnages</a>
+			<a href="mcu_multivers.html" aria-current="page">Comprendre le multivers</a>
+			<a href="mcu_antiquite.html">Avant les héros</a>
+			<a href="mcu_origines.html">Les origines</a>
+			<a href="mcu_expansion.html">L'expansion</a>
+			<a href="mcu_multivers-chrono.html">La saga du multivers</a>
+			<a href="mcu_actuel.html">L'ère actuelle</a>
+			<a href="mcu_horizon.html">L'horizon</a>
+		</div>
+	</nav>
 
-<header class="hero">
-  <div class="hero__eyebrow">MCU — introduction</div>
-  <h1 class="hero__title">Comprendre le multivers</h1>
-  <p class="hero__subtitle">pour les nuls</p>
-  <p class="hero__lede">
-    6 planches pour comprendre, une bonne fois pour toutes, ce qu'est la
-    Sacred Timeline, qui est la TVA, et pourquoi votre univers préféré n'est
-    peut-être pas le seul qui compte — <em>à lire avant de plonger dans la
-    suite du chaos temporel</em>.
-  </p>
-</header>
+	<header class="hero">
+		<div class="hero__eyebrow">MCU — introduction</div>
+		<h1 class="hero__title">Comprendre le multivers</h1>
+		<p class="hero__subtitle">pour les nuls</p>
+		<p class="hero__lede">
+			6 planches pour comprendre, une bonne fois pour toutes, ce qu'est la
+			Sacred Timeline, qui est la TVA, et pourquoi votre univers préféré n'est
+			peut-être pas le seul qui compte — <em>à lire avant de plonger dans la
+				suite du chaos temporel</em>.
+		</p>
+	</header>
 
-<main>
+	<main>
 
-  <!-- ================= PLANCHE I ================= -->
-  <section class="planche planche--mv" id="planche-1" data-nav-label="I. La Sacred Timeline">
-    <div class="planche__eyebrow"><span class="roman">I</span>La Sacred Timeline</div>
-    <h2 class="planche__title">Un faisceau, pas une ligne</h2>
-    <p class="planche__lede">
-      Le terme le plus mal compris de tout le MCU. Non, ce n'est pas « la
-      vraie histoire » face à de simples copies — c'est beaucoup plus subtil
-      que ça.
-    </p>
+		<!-- ================= PLANCHE I ================= -->
+		<section class="planche planche--mv" id="planche-1" data-nav-label="I. La Sacred Timeline">
+			<div class="planche__eyebrow"><span class="roman">I</span>La Sacred Timeline</div>
+			<h2 class="planche__title">Un faisceau, pas une ligne</h2>
+			<p class="planche__lede">
+				Le terme le plus mal compris de tout le MCU. Non, ce n'est pas « la
+				vraie histoire » face à de simples copies — c'est beaucoup plus subtil
+				que ça.
+			</p>
 
-    <div class="planche__body">
-      <p>
-        Selon le scénariste en chef de <em>Loki</em>, Michael Waldron, la
-        Sacred Timeline n'est pas un unique fil temporel, mais un
-        <strong>amas de lignes temporelles quasi identiques qui se
-        superposent</strong>. D'innombrables instances de temps coexistent
-        en permanence, chacune presque indiscernable des autres — peu
-        importe qu'un Loki particulier ressemble à un humain dans l'une et
-        à un alligator dans l'autre, tant que toutes ces variantes
-        convergent vers le même point clé de l'histoire : la naissance
-        d'un certain homme, appelé He Who Remains.
-      </p>
-      <p>
-        Ces micro-fluctuations sont tolérées par la TVA tant qu'elles
-        restent mineures. Mais dès qu'une déviation devient trop
-        importante — un choix radicalement différent, un événement qui
-        change tout — la ligne concernée se détache du faisceau principal
-        et devient une branche à part entière. C'est cette branche que la
-        TVA est censée éliminer.
-      </p>
+			<div class="planche__body">
+				<p>
+					Selon le scénariste en chef de <em>Loki</em>, Michael Waldron, la
+					Sacred Timeline n'est pas un unique fil temporel, mais un
+					<strong>amas de lignes temporelles quasi identiques qui se
+						superposent</strong>. D'innombrables instances de temps coexistent
+					en permanence, chacune presque indiscernable des autres — peu
+					importe qu'un Loki particulier ressemble à un humain dans l'une et
+					à un alligator dans l'autre, tant que toutes ces variantes
+					convergent vers le même point clé de l'histoire : la naissance
+					d'un certain homme, appelé He Who Remains.
+				</p>
+				<p>
+					Ces micro-fluctuations sont tolérées par la TVA tant qu'elles
+					restent mineures. Mais dès qu'une déviation devient trop
+					importante — un choix radicalement différent, un événement qui
+					change tout — la ligne concernée se détache du faisceau principal
+					et devient une branche à part entière. C'est cette branche que la
+					TVA est censée éliminer.
+				</p>
 
-      <div class="encart">
-        <strong>Le point zéro.</strong> Toutes les lignes qui composent la
-        Sacred Timeline convergent vers un même événement fondateur :
-        la naissance de He Who Remains, quelque part au XXXIe siècle.
-        Tant qu'une timeline mène à cette naissance, elle fait partie du
-        faisceau protégé.
-      </div>
+				<div class="encart">
+					<strong>Le point zéro.</strong> Toutes les lignes qui composent la
+					Sacred Timeline convergent vers un même événement fondateur :
+					la naissance de He Who Remains, quelque part au XXXIe siècle.
+					Tant qu'une timeline mène à cette naissance, elle fait partie du
+					faisceau protégé.
+				</div>
 
-      <p>
-        Le multivers ne se limite pas à des lignes temporelles parallèles :
-        il englobe aussi des <strong>dimensions</strong> distinctes qui
-        coexistent avec le plan terrestre habituel — la Dimension Astrale
-        (où l'âme peut voyager séparément du corps), la Dimension Miroir
-        (un décor identique à la réalité, mais sans conséquence sur elle,
-        utilisé par les sorciers comme terrain de combat sûr), ou encore
-        la Dimension des Ténèbres, fief de Dormammu. Le Royaume Quantique,
-        lui, sert de passerelle privilégiée entre ces dimensions et les
-        lignes temporelles alternatives — c'est par lui que les Avengers
-        remontent le temps dans <em>Endgame</em>.
-      </p>
-    </div>
-  </section>
+				<p>
+					Le multivers ne se limite pas à des lignes temporelles parallèles :
+					il englobe aussi des <strong>dimensions</strong> distinctes qui
+					coexistent avec le plan terrestre habituel — la Dimension Astrale
+					(où l'âme peut voyager séparément du corps), la Dimension Miroir
+					(un décor identique à la réalité, mais sans conséquence sur elle,
+					utilisé par les sorciers comme terrain de combat sûr), ou encore
+					la Dimension des Ténèbres, fief de Dormammu. Le Royaume Quantique,
+					lui, sert de passerelle privilégiée entre ces dimensions et les
+					lignes temporelles alternatives — c'est par lui que les Avengers
+					remontent le temps dans <em>Endgame</em>.
+				</p>
+			</div>
+		</section>
 
-  <!-- ================= PLANCHE II ================= -->
-  <section class="planche planche--mv" id="planche-2" data-nav-label="II. La TVA">
-    <div class="planche__eyebrow"><span class="roman">II</span>La TVA</div>
-    <h2 class="planche__title">Des bureaucrates au bout du temps</h2>
-    <p class="planche__lede">
-      Ni des dieux, ni des scientifiques : une administration. Costumes
-      ternes, dossiers papier, pauses café — la TVA emprunte volontairement
-      l'esthétique la plus banale possible pour un pouvoir aussi
-      vertigineux.
-    </p>
+		<!-- ================= PLANCHE II ================= -->
+		<section class="planche planche--mv" id="planche-2" data-nav-label="II. La TVA">
+			<div class="planche__eyebrow"><span class="roman">II</span>La TVA</div>
+			<h2 class="planche__title">Des bureaucrates au bout du temps</h2>
+			<p class="planche__lede">
+				Ni des dieux, ni des scientifiques : une administration. Costumes
+				ternes, dossiers papier, pauses café — la TVA emprunte volontairement
+				l'esthétique la plus banale possible pour un pouvoir aussi
+				vertigineux.
+			</p>
 
-    <div class="planche__body">
-      <p>
-        La Time Variance Authority est une organisation chargée de
-        surveiller et de préserver la Sacred Timeline. Son travail : traquer
-        les <strong>variants</strong> — des individus qui s'écartent du
-        chemin qui leur était destiné — et <strong>élaguer</strong> les
-        lignes temporelles déviantes à l'aide de charges de réinitialisation,
-        avant qu'elles ne dégénèrent en univers à part entière.
-      </p>
-      <p>
-        Ironie du système : la quasi-totalité des employés de la TVA sont
-        eux-mêmes d'anciens variants, arrachés à leur propre ligne
-        temporelle et convaincus, par un lavage de mémoire, d'avoir
-        toujours travaillé pour l'organisation. Ni Mobius, ni la plupart
-        des agents ne se souviennent avoir eu une autre vie avant.
-      </p>
-      <p>
-        L'organisation est présentée pendant longtemps comme quasi
-        omnisciente, dirigée en apparence par de mystérieuses entités
-        appelées les Gardiens du Temps (Time-Keepers) — dont la série
-        révèle, dans son dénouement, qu'ils ne sont en réalité que des
-        automates, des figures de façade créées pour masquer le véritable
-        dirigeant de l'organisation.
-      </p>
-      <p>
-        Sa mascotte, Miss Minutes, une horloge animée au sourire
-        chaleureux et à l'accent du Sud américain, incarne parfaitement ce
-        double visage : un ton enfantin et rassurant pour habiller une
-        machine de contrôle temporel absolu.
-      </p>
-    </div>
-  </section>
+			<div class="planche__body">
+				<p>
+					La Time Variance Authority est une organisation chargée de
+					surveiller et de préserver la Sacred Timeline. Son travail : traquer
+					les <strong>variants</strong> — des individus qui s'écartent du
+					chemin qui leur était destiné — et <strong>élaguer</strong> les
+					lignes temporelles déviantes à l'aide de charges de réinitialisation,
+					avant qu'elles ne dégénèrent en univers à part entière.
+				</p>
+				<p>
+					Ironie du système : la quasi-totalité des employés de la TVA sont
+					eux-mêmes d'anciens variants, arrachés à leur propre ligne
+					temporelle et convaincus, par un lavage de mémoire, d'avoir
+					toujours travaillé pour l'organisation. Ni Mobius, ni la plupart
+					des agents ne se souviennent avoir eu une autre vie avant.
+				</p>
+				<p>
+					L'organisation est présentée pendant longtemps comme quasi
+					omnisciente, dirigée en apparence par de mystérieuses entités
+					appelées les Gardiens du Temps (Time-Keepers) — dont la série
+					révèle, dans son dénouement, qu'ils ne sont en réalité que des
+					automates, des figures de façade créées pour masquer le véritable
+					dirigeant de l'organisation.
+				</p>
+				<p>
+					Sa mascotte, Miss Minutes, une horloge animée au sourire
+					chaleureux et à l'accent du Sud américain, incarne parfaitement ce
+					double visage : un ton enfantin et rassurant pour habiller une
+					machine de contrôle temporel absolu.
+				</p>
+			</div>
+		</section>
 
-  <!-- ================= PLANCHE III ================= -->
-  <section class="planche planche--mv" id="planche-3" data-nav-label="III. He Who Remains">
-    <div class="planche__eyebrow"><span class="roman">III</span>He Who Remains</div>
-    <h2 class="planche__title">Le vainqueur d'une guerre contre lui-même</h2>
-    <p class="planche__lede">
-      Derrière la façade bureaucratique de la TVA se cache un seul homme —
-      ou plutôt, une seule variante d'un homme qui en compte des milliers.
-    </p>
+		<!-- ================= PLANCHE III ================= -->
+		<section class="planche planche--mv" id="planche-3" data-nav-label="III. He Who Remains">
+			<div class="planche__eyebrow"><span class="roman">III</span>He Who Remains</div>
+			<h2 class="planche__title">Le vainqueur d'une guerre contre lui-même</h2>
+			<p class="planche__lede">
+				Derrière la façade bureaucratique de la TVA se cache un seul homme —
+				ou plutôt, une seule variante d'un homme qui en compte des milliers.
+			</p>
 
-    <div class="planche__body">
-      <p>
-        Au XXXIe siècle, un scientifique nommé Nathaniel Richards découvre
-        le multivers — et, avec lui, l'existence d'innombrables variantes
-        de lui-même à travers les réalités. Certaines de ces variantes,
-        bien plus belliqueuses que lui, cherchent à conquérir des réalités
-        entières. Le conflit qui en résulte, la <strong>Guerre
-        multiversale</strong>, manque de détruire l'ensemble du multivers
-        dans son sillage.
-      </p>
-      <p>
-        L'une de ces variantes parvient à mettre fin au conflit — en
-        neutralisant Alioth, une entité destructrice capable d'engloutir
-        la matière et le temps eux-mêmes, et en utilisant sa menace pour
-        forcer un cessez-le-feu. Cette variante prend alors le nom de
-        <strong>He Who Remains</strong> et impose une solution radicale :
-        isoler une seule ligne temporelle — la Sacred Timeline — et fonder
-        la TVA pour la surveiller en permanence, empêchant ainsi le retour
-        de ses propres variantes les plus dangereuses.
-      </p>
-      <p>
-        Il s'installe alors à la Citadelle au Bout du Temps, un astéroïde
-        posé hors de l'espace et du temps, d'où il veille sur son œuvre
-        pendant des millénaires — jusqu'à sa rencontre avec Loki et Sylvie.
-      </p>
-    </div>
-  </section>
+			<div class="planche__body">
+				<p>
+					Au XXXIe siècle, un scientifique nommé Nathaniel Richards découvre
+					le multivers — et, avec lui, l'existence d'innombrables variantes
+					de lui-même à travers les réalités. Certaines de ces variantes,
+					bien plus belliqueuses que lui, cherchent à conquérir des réalités
+					entières. Le conflit qui en résulte, la <strong>Guerre
+						multiversale</strong>, manque de détruire l'ensemble du multivers
+					dans son sillage.
+				</p>
+				<p>
+					L'une de ces variantes parvient à mettre fin au conflit — en
+					neutralisant Alioth, une entité destructrice capable d'engloutir
+					la matière et le temps eux-mêmes, et en utilisant sa menace pour
+					forcer un cessez-le-feu. Cette variante prend alors le nom de
+					<strong>He Who Remains</strong> et impose une solution radicale :
+					isoler une seule ligne temporelle — la Sacred Timeline — et fonder
+					la TVA pour la surveiller en permanence, empêchant ainsi le retour
+					de ses propres variantes les plus dangereuses.
+				</p>
+				<p>
+					Il s'installe alors à la Citadelle au Bout du Temps, un astéroïde
+					posé hors de l'espace et du temps, d'où il veille sur son œuvre
+					pendant des millénaires — jusqu'à sa rencontre avec Loki et Sylvie.
+				</p>
+			</div>
+		</section>
 
-  <!-- ================= PLANCHE IV ================= -->
-  <section class="planche planche--mv" id="planche-4" data-nav-label="IV. La libération du multivers">
-    <div class="planche__eyebrow"><span class="roman">IV</span>La libération du multivers</div>
-    <h2 class="planche__title">Un coup de poignard qui change tout</h2>
-    <p class="planche__lede">
-      Un choix, une lame, et des décennies de contrôle absolu s'effondrent
-      en un instant — libérant ce que la TVA avait passé toute son
-      existence à contenir.
-    </p>
+		<!-- ================= PLANCHE IV ================= -->
+		<section class="planche planche--mv" id="planche-4" data-nav-label="IV. La libération du multivers">
+			<div class="planche__eyebrow"><span class="roman">IV</span>La libération du multivers</div>
+			<h2 class="planche__title">Un coup de poignard qui change tout</h2>
+			<p class="planche__lede">
+				Un choix, une lame, et des décennies de contrôle absolu s'effondrent
+				en un instant — libérant ce que la TVA avait passé toute son
+				existence à contenir.
+			</p>
 
-    <div class="planche__body">
-      <p>
-        À la fin de la première saison de <em>Loki</em>, He Who Remains
-        propose à Loki et Sylvie de lui succéder à la tête de la TVA,
-        les prévenant qu'une version bien plus dangereuse de lui-même
-        prendrait sa place s'ils refusaient. Loki, conscient du mal
-        nécessaire que représente la TVA, hésite. Sylvie, elle, refuse
-        d'accepter ce système de contrôle et le tue.
-      </p>
-      <p>
-        La conséquence est immédiate : privée de son fondateur, la Sacred
-        Timeline cesse d'être isolée du reste du multivers. Les branches
-        que la TVA élaguait depuis des générations recommencent à se
-        former librement, et le multivers, jusque-là verrouillé sur une
-        seule trajectoire, explose en une multitude de réalités parallèles
-        pleinement distinctes.
-      </p>
+			<div class="planche__body">
+				<p>
+					À la fin de la première saison de <em>Loki</em>, He Who Remains
+					propose à Loki et Sylvie de lui succéder à la tête de la TVA,
+					les prévenant qu'une version bien plus dangereuse de lui-même
+					prendrait sa place s'ils refusaient. Loki, conscient du mal
+					nécessaire que représente la TVA, hésite. Sylvie, elle, refuse
+					d'accepter ce système de contrôle et le tue.
+				</p>
+				<p>
+					La conséquence est immédiate : privée de son fondateur, la Sacred
+					Timeline cesse d'être isolée du reste du multivers. Les branches
+					que la TVA élaguait depuis des générations recommencent à se
+					former librement, et le multivers, jusque-là verrouillé sur une
+					seule trajectoire, explose en une multitude de réalités parallèles
+					pleinement distinctes.
+				</p>
 
-      <div class="encart">
-        <strong>Ce que Sylvie n'a pas créé.</strong> Un point souvent mal
-        compris : Sylvie n'a pas « créé » le multivers en tuant He Who
-        Remains. Le multivers existait déjà — c'est sa capacité à se
-        développer librement, sans intervention de la TVA, qui vient
-        d'être libérée.
-      </div>
+				<div class="encart">
+					<strong>Ce que Sylvie n'a pas créé.</strong> Un point souvent mal
+					compris : Sylvie n'a pas « créé » le multivers en tuant He Who
+					Remains. Le multivers existait déjà — c'est sa capacité à se
+					développer librement, sans intervention de la TVA, qui vient
+					d'être libérée.
+				</div>
 
-      <p>
-        Cet événement a des répercussions directes et immédiates sur toute
-        la suite du MCU : c'est lui qui rend possibles <em>Spider-Man: No
-        Way Home</em>, <em>Doctor Strange in the Multiverse of Madness</em>
-        et <em>Ant-Man and the Wasp: Quantumania</em>, entre autres.
-      </p>
-    </div>
-  </section>
+				<p>
+					Cet événement a des répercussions directes et immédiates sur toute
+					la suite du MCU : c'est lui qui rend possibles <em>Spider-Man: No
+						Way Home</em>, <em>Doctor Strange in the Multiverse of Madness</em>
+					et <em>Ant-Man and the Wasp: Quantumania</em>, entre autres.
+				</p>
+			</div>
+		</section>
 
-  <!-- ================= PLANCHE V ================= -->
-  <section class="planche planche--mv" id="planche-5" data-nav-label="V. Le vocabulaire à connaître">
-    <div class="planche__eyebrow"><span class="roman">V</span>Le vocabulaire à connaître</div>
-    <h2 class="planche__title">Le glossaire du multivers</h2>
-    <p class="planche__lede">
-      Six termes qui reviendront sans cesse dans la suite de cet almanach.
-      Cliquez sur chaque carte pour la retourner.
-    </p>
+		<!-- ================= PLANCHE V ================= -->
+		<section class="planche planche--mv" id="planche-5" data-nav-label="V. Le vocabulaire à connaître">
+			<div class="planche__eyebrow"><span class="roman">V</span>Le vocabulaire à connaître</div>
+			<h2 class="planche__title">Le glossaire du multivers</h2>
+			<p class="planche__lede">
+				Six termes qui reviendront sans cesse dans la suite de cet almanach.
+				Cliquez sur chaque carte pour la retourner.
+			</p>
 
-    <div class="planche__body">
-      <div class="glossary-grid">
+			<div class="planche__body">
+				<div class="glossary-grid">
 
-        <div class="flip-card" tabindex="0" role="button" aria-label="Variant — cliquer pour voir la définition">
-          <div class="flip-card__inner">
-            <div class="flip-card__face flip-card__front">
-              <span class="flip-card__term">Variant</span>
-              <span class="flip-card__hint">Cliquer pour retourner</span>
-            </div>
-            <div class="flip-card__face flip-card__back">
-              <p class="flip-card__def">
-                Toute version d'une personne qui s'écarte du chemin qui lui
-                était destiné sur la Sacred Timeline. Loki est lui-même un
-                variant : sa fuite avec le Tesseract en 2012 est l'écart
-                fondateur qui déclenche toute la série.
-              </p>
-            </div>
-          </div>
-        </div>
+					<div class="flip-card" tabindex="0" role="button"
+						aria-label="Variant — cliquer pour voir la définition">
+						<div class="flip-card__inner">
+							<div class="flip-card__face flip-card__front">
+								<span class="flip-card__term">Variant</span>
+								<span class="flip-card__hint">Cliquer pour retourner</span>
+							</div>
+							<div class="flip-card__face flip-card__back">
+								<p class="flip-card__def">
+									Toute version d'une personne qui s'écarte du chemin qui lui
+									était destiné sur la Sacred Timeline. Loki est lui-même un
+									variant : sa fuite avec le Tesseract en 2012 est l'écart
+									fondateur qui déclenche toute la série.
+								</p>
+							</div>
+						</div>
+					</div>
 
-        <div class="flip-card" tabindex="0" role="button" aria-label="Élagage — cliquer pour voir la définition">
-          <div class="flip-card__inner">
-            <div class="flip-card__face flip-card__front">
-              <span class="flip-card__term">Élagage <span class="mv-accent">(pruning)</span></span>
-              <span class="flip-card__hint">Cliquer pour retourner</span>
-            </div>
-            <div class="flip-card__face flip-card__back">
-              <p class="flip-card__def">
-                L'action de la TVA consistant à effacer une ligne temporelle
-                déviante à l'aide d'une charge de réinitialisation, avant
-                qu'elle ne se développe en un univers parallèle complet.
-              </p>
-            </div>
-          </div>
-        </div>
+					<div class="flip-card" tabindex="0" role="button"
+						aria-label="Élagage — cliquer pour voir la définition">
+						<div class="flip-card__inner">
+							<div class="flip-card__face flip-card__front">
+								<span class="flip-card__term">Élagage <span class="mv-accent">(pruning)</span></span>
+								<span class="flip-card__hint">Cliquer pour retourner</span>
+							</div>
+							<div class="flip-card__face flip-card__back">
+								<p class="flip-card__def">
+									L'action de la TVA consistant à effacer une ligne temporelle
+									déviante à l'aide d'une charge de réinitialisation, avant
+									qu'elle ne se développe en un univers parallèle complet.
+								</p>
+							</div>
+						</div>
+					</div>
 
-        <div class="flip-card" tabindex="0" role="button" aria-label="Point de divergence — cliquer pour voir la définition">
-          <div class="flip-card__inner">
-            <div class="flip-card__face flip-card__front">
-              <span class="flip-card__term">Point de divergence</span>
-              <span class="flip-card__hint">Cliquer pour retourner</span>
-            </div>
-            <div class="flip-card__face flip-card__back">
-              <p class="flip-card__def">
-                Le moment précis où une décision ou un événement fait
-                dévier une ligne temporelle du faisceau de la Sacred
-                Timeline, créant les conditions d'une nouvelle branche.
-              </p>
-            </div>
-          </div>
-        </div>
+					<div class="flip-card" tabindex="0" role="button"
+						aria-label="Point de divergence — cliquer pour voir la définition">
+						<div class="flip-card__inner">
+							<div class="flip-card__face flip-card__front">
+								<span class="flip-card__term">Point de divergence</span>
+								<span class="flip-card__hint">Cliquer pour retourner</span>
+							</div>
+							<div class="flip-card__face flip-card__back">
+								<p class="flip-card__def">
+									Le moment précis où une décision ou un événement fait
+									dévier une ligne temporelle du faisceau de la Sacred
+									Timeline, créant les conditions d'une nouvelle branche.
+								</p>
+							</div>
+						</div>
+					</div>
 
-        <div class="flip-card" tabindex="0" role="button" aria-label="Nexus Being — cliquer pour voir la définition">
-          <div class="flip-card__inner">
-            <div class="flip-card__face flip-card__front">
-              <span class="flip-card__term">Nexus Being</span>
-              <span class="flip-card__hint">Cliquer pour retourner</span>
-            </div>
-            <div class="flip-card__face flip-card__back">
-              <p class="flip-card__def">
-                Un individu dont les choix ont un poids si déterminant sur
-                le cours du temps qu'il peut, à lui seul, faire naître de
-                nouvelles branches. Kang le Conquérant en est un exemple
-                explicite.
-              </p>
-            </div>
-          </div>
-        </div>
+					<div class="flip-card" tabindex="0" role="button"
+						aria-label="Nexus Being — cliquer pour voir la définition">
+						<div class="flip-card__inner">
+							<div class="flip-card__face flip-card__front">
+								<span class="flip-card__term">Nexus Being</span>
+								<span class="flip-card__hint">Cliquer pour retourner</span>
+							</div>
+							<div class="flip-card__face flip-card__back">
+								<p class="flip-card__def">
+									Un individu dont les choix ont un poids si déterminant sur
+									le cours du temps qu'il peut, à lui seul, faire naître de
+									nouvelles branches. Kang le Conquérant en est un exemple
+									explicite.
+								</p>
+							</div>
+						</div>
+					</div>
 
-        <div class="flip-card" tabindex="0" role="button" aria-label="Incursion — cliquer pour voir la définition">
-          <div class="flip-card__inner">
-            <div class="flip-card__face flip-card__front">
-              <span class="flip-card__term">Incursion</span>
-              <span class="flip-card__hint">Cliquer pour retourner</span>
-            </div>
-            <div class="flip-card__face flip-card__back">
-              <p class="flip-card__def">
-                Un événement destructeur qui survient lorsqu'une personne
-                ou une action laisse une empreinte trop importante dans une
-                réalité qui n'est pas la sienne, déstabilisant la connexion
-                entre deux univers jusqu'à la destruction de l'un d'eux,
-                voire des deux.
-              </p>
-            </div>
-          </div>
-        </div>
+					<div class="flip-card" tabindex="0" role="button"
+						aria-label="Incursion — cliquer pour voir la définition">
+						<div class="flip-card__inner">
+							<div class="flip-card__face flip-card__front">
+								<span class="flip-card__term">Incursion</span>
+								<span class="flip-card__hint">Cliquer pour retourner</span>
+							</div>
+							<div class="flip-card__face flip-card__back">
+								<p class="flip-card__def">
+									Un événement destructeur qui survient lorsqu'une personne
+									ou une action laisse une empreinte trop importante dans une
+									réalité qui n'est pas la sienne, déstabilisant la connexion
+									entre deux univers jusqu'à la destruction de l'un d'eux,
+									voire des deux.
+								</p>
+							</div>
+						</div>
+					</div>
 
-        <div class="flip-card" tabindex="0" role="button" aria-label="Reset charge — cliquer pour voir la définition">
-          <div class="flip-card__inner">
-            <div class="flip-card__face flip-card__front">
-              <span class="flip-card__term">Charge de réinitialisation</span>
-              <span class="flip-card__hint">Cliquer pour retourner</span>
-            </div>
-            <div class="flip-card__face flip-card__back">
-              <p class="flip-card__def">
-                L'outil concret utilisé par les agents de la TVA pour
-                effectuer un élagage — un dispositif qui efface purement
-                et simplement une ligne temporelle entière de l'existence.
-              </p>
-            </div>
-          </div>
-        </div>
+					<div class="flip-card" tabindex="0" role="button"
+						aria-label="Reset charge — cliquer pour voir la définition">
+						<div class="flip-card__inner">
+							<div class="flip-card__face flip-card__front">
+								<span class="flip-card__term">Charge de réinitialisation</span>
+								<span class="flip-card__hint">Cliquer pour retourner</span>
+							</div>
+							<div class="flip-card__face flip-card__back">
+								<p class="flip-card__def">
+									L'outil concret utilisé par les agents de la TVA pour
+									effectuer un élagage — un dispositif qui efface purement
+									et simplement une ligne temporelle entière de l'existence.
+								</p>
+							</div>
+						</div>
+					</div>
 
-      </div>
-    </div>
-  </section>
+				</div>
+			</div>
+		</section>
 
-  <!-- ================= PLANCHE VI ================= -->
-  <section class="planche planche--mv" id="planche-6" data-nav-label="VI. Comment nommer un univers">
-    <div class="planche__eyebrow"><span class="roman">VI</span>Comment nommer un univers</div>
-    <h2 class="planche__title">Terre-616, Terre-838 : d'où viennent ces chiffres ?</h2>
-    <p class="planche__lede">
-      Un système hérité tel quel des comics, avec une petite entorse
-      propre au cinéma — et une anecdote d'origine assez inattendue pour
-      le nom de l'univers principal.
-    </p>
+		<!-- ================= PLANCHE VI ================= -->
+		<section class="planche planche--mv" id="planche-6" data-nav-label="VI. Comment nommer un univers">
+			<div class="planche__eyebrow"><span class="roman">VI</span>Comment nommer un univers</div>
+			<h2 class="planche__title">Terre-616, Terre-838 : d'où viennent ces chiffres ?</h2>
+			<p class="planche__lede">
+				Un système hérité tel quel des comics, avec une petite entorse
+				propre au cinéma — et une anecdote d'origine assez inattendue pour
+				le nom de l'univers principal.
+			</p>
 
-    <div class="planche__body">
-      <p>
-        Le système de numérotation « Earth-[nombre] » vient tout droit des
-        comics Marvel, où il sert depuis les années 1980 à distinguer les
-        innombrables réalités parallèles publiées au fil des décennies.
-        Rien dans ces chiffres n'est chronologique ni séquentiel : il
-        s'agit d'un simple système de classement, pas d'une carte du
-        multivers.
-      </p>
+			<div class="planche__body">
+				<p>
+					Le système de numérotation « Earth-[nombre] » vient tout droit des
+					comics Marvel, où il sert depuis les années 1980 à distinguer les
+					innombrables réalités parallèles publiées au fil des décennies.
+					Rien dans ces chiffres n'est chronologique ni séquentiel : il
+					s'agit d'un simple système de classement, pas d'une carte du
+					multivers.
+				</p>
 
-      <div class="encart">
-        <strong>D'où vient le 616 ?</strong> Le nombre a été choisi par le
-        scénariste britannique Dave Thorpe dans les années 1980, en
-        soustrayant 50 au « nombre de la bête », 666 — un clin d'œil que
-        Thorpe jugeait initialement trop évident pour l'univers corrompu
-        qu'il décrivait alors, une Terre jugée « la pire de toutes »,
-        freinant l'évolution des autres. Son successeur, Alan Moore,
-        réattribue peu après ce nombre à une tout autre Terre — celle de
-        Captain Britain, la plus proche du monde réel — qui devient par
-        la suite la désignation communément admise de l'univers principal
-        des comics Marvel.
-      </div>
+				<div class="encart">
+					<strong>D'où vient le 616 ?</strong> Le nombre a été choisi par le
+					scénariste britannique Dave Thorpe dans les années 1980, en
+					soustrayant 50 au « nombre de la bête », 666 — un clin d'œil que
+					Thorpe jugeait initialement trop évident pour l'univers corrompu
+					qu'il décrivait alors, une Terre jugée « la pire de toutes »,
+					freinant l'évolution des autres. Son successeur, Alan Moore,
+					réattribue peu après ce nombre à une tout autre Terre — celle de
+					Captain Britain, la plus proche du monde réel — qui devient par
+					la suite la désignation communément admise de l'univers principal
+					des comics Marvel.
+				</div>
 
-      <p>
-        Le MCU a longtemps été désigné, dans les documents officiels
-        annexes, sous le nom d'Earth-199999. Le terme « 616 » fait sa toute
-        première apparition à l'écran dès <em>Thor: The Dark World</em>
-        (2013), où Erik Selvig, alors interné, griffonne « univers 616 »
-        sur un tableau — un easter egg encore ambigu à l'époque. Il faudra
-        attendre <em>Doctor Strange in the Multiverse of Madness</em>
-        (2022) pour trancher définitivement la question : une variante de
-        Christine Palmer y confirme explicitement que l'univers principal
-        du MCU est bien la Terre-616, empruntant ainsi directement la
-        désignation de l'univers principal des comics. Le livre officiel
-        de la chronologie MCU, sorti en 2023, a confirmé cette désignation
-        par écrit.
-      </p>
-      <p>
-        Les autres univers rencontrés dans le MCU suivent la même logique
-        de classement arbitraire : Earth-838 (les Illuminati), Earth-10005
-        (l'univers X-Men de la Fox), Earth-828 (les Quatre Fantastiques) —
-        chacun de ces chiffres est une étiquette de catalogue, pas une
-        indication de proximité ou d'ordre d'apparition.
-      </p>
+				<p>
+					Le MCU a longtemps été désigné, dans les documents officiels
+					annexes, sous le nom d'Earth-199999. Le terme « 616 » fait sa toute
+					première apparition à l'écran dès <em>Thor: The Dark World</em>
+					(2013), où Erik Selvig, alors interné, griffonne « univers 616 »
+					sur un tableau — un easter egg encore ambigu à l'époque. Il faudra
+					attendre <em>Doctor Strange in the Multiverse of Madness</em>
+					(2022) pour trancher définitivement la question : une variante de
+					Christine Palmer y confirme explicitement que l'univers principal
+					du MCU est bien la Terre-616, empruntant ainsi directement la
+					désignation de l'univers principal des comics. Le livre officiel
+					de la chronologie MCU, sorti en 2023, a confirmé cette désignation
+					par écrit.
+				</p>
+				<p>
+					Les autres univers rencontrés dans le MCU suivent la même logique
+					de classement arbitraire : Earth-838 (les Illuminati), Earth-10005
+					(l'univers X-Men de la Fox), Earth-828 (les Quatre Fantastiques) —
+					chacun de ces chiffres est une étiquette de catalogue, pas une
+					indication de proximité ou d'ordre d'apparition.
+				</p>
 
-      <div class="encart">
-        <strong>Et ensuite ?</strong> Muni de ce vocabulaire, direction la
-        chronologie complète du multivers — d'Avengers: Endgame jusqu'à la
-        Multiverse of Madness, là où ces concepts prennent enfin vie à
-        l'écran.
-      </div>
-    </div>
-  </section>
+				<div class="encart">
+					<strong>Et ensuite ?</strong> Muni de ce vocabulaire, direction la
+					chronologie complète du multivers — d'Avengers: Endgame jusqu'à la
+					Multiverse of Madness, là où ces concepts prennent enfin vie à
+					l'écran.
+				</div>
+			</div>
+		</section>
 
-</main>
+	</main>
 
-<footer class="mcu-next">
-  <div class="mcu-next__label">Poursuivre l'almanach</div>
-  <a href="mcu_antiquite.html">Avant les héros →</a>
-</footer>
+	<footer class="mcu-next">
+		<div class="mcu-next__label">Poursuivre l'almanach</div>
+		<a href="mcu_antiquite.html">Avant les héros →</a>
+	</footer>
 
-<script src="../mcu_script.js"></script>
-<script>
-  document.querySelectorAll('.flip-card').forEach((card) => {
-    const toggle = () => card.classList.toggle('flipped');
-    card.addEventListener('click', toggle);
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        toggle();
-      }
-    });
-  });
-</script>
+	<script src="../mcu_script.js"></script>
+	<script>
+		document.querySelectorAll('.flip-card').forEach((card) => {
+			const toggle = () => card.classList.toggle('flipped');
+			card.addEventListener('click', toggle);
+			card.addEventListener('keydown', (e) => {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					toggle();
+				}
+			});
+		});
+	</script>
 </body>
+
 </html>
