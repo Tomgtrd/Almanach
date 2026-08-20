@@ -108,23 +108,15 @@
 			});
 		}
 
-		// Le burger n'est visible qu'en dessous du point de rupture mobile (CSS) :
-		// s'y fier plutôt que dupliquer la largeur en JS.
-		function isBurgerActive() {
-			return burger && getComputedStyle(burger).display !== "none";
-		}
-
 		groups.forEach((group) => {
 			const chevBtn = group.querySelector(".topbar-menu-chev");
 
 			if (!isTouch) {
 				group.addEventListener("mouseenter", () => {
-					if (isBurgerActive()) return;
 					group.classList.add("open");
 					chevBtn.setAttribute("aria-expanded", "true");
 				});
 				group.addEventListener("mouseleave", () => {
-					if (isBurgerActive()) return;
 					group.classList.remove("open");
 					chevBtn.setAttribute("aria-expanded", "false");
 				});
