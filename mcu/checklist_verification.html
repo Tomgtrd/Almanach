@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Almanach MCU — Checklist de vérification Fandom</title>
+	<style>
+		:root {
+			--paper: #f6f1e7;
+			--paper-raised: #fbf8f1;
+			--ink: #1c1712;
+			--ink-soft: #4a4038;
+			--ink-faint: #8a7f72;
+			--hairline: rgba(28, 23, 18, 0.14);
+			--hairline-strong: rgba(28, 23, 18, 0.28);
+			--mcu-red: #8a2e24;
+			--mcu-red-soft: #b0483a;
+			--mcu-gold: #a9782f;
+			--mcu-cream: #ede2c8;
+			--mv-purple: #5b3a72;
+			--done-green: #4a7c59;
+			--warn-amber: #a9782f;
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			background: var(--paper);
+			color: var(--ink);
+			font-family: Georgia, 'Times New Roman', serif;
+			font-size: 16px;
+			line-height: 1.6;
+			padding-bottom: 120px;
+		}
+
+		.topbar {
+			position: sticky;
+			top: 0;
+			z-index: 50;
+			background: rgba(246, 241, 231, 0.96);
+			backdrop-filter: blur(6px);
+			border-bottom: 1px solid var(--hairline);
+			padding: 14px 24px;
+			display: flex;
+			align-items: center;
+			gap: 16px;
+			flex-wrap: wrap;
+		}
+
+		.topbar__title {
+			font-weight: bold;
+			font-size: 15px;
+			color: var(--mcu-red);
+			margin-right: auto;
+		}
+
+		.topbar__stat {
+			font-family: 'Courier New', monospace;
+			font-size: 13px;
+			color: var(--ink-soft);
+			background: var(--mcu-cream);
+			padding: 4px 12px;
+			border-radius: 999px;
+		}
+
+		.topbar__reset {
+			font-family: 'Courier New', monospace;
+			font-size: 12px;
+			color: var(--ink-faint);
+			background: none;
+			border: 1px solid var(--hairline-strong);
+			border-radius: 999px;
+			padding: 5px 12px;
+			cursor: pointer;
+		}
+		.topbar__reset:hover {
+			border-color: var(--mcu-red-soft);
+			color: var(--mcu-red);
+		}
+
+		.wrap {
+			max-width: 820px;
+			margin: 0 auto;
+			padding: 32px 24px;
+		}
+
+		.hero h1 {
+			font-size: 2rem;
+			margin: 0 0 8px;
+		}
+		.hero p {
+			color: var(--ink-soft);
+			max-width: 60ch;
+		}
+		.hero .note {
+			font-size: 0.9rem;
+			color: var(--ink-faint);
+			border-left: 3px solid var(--mcu-gold);
+			padding-left: 14px;
+			margin-top: 20px;
+		}
+
+		.group-section {
+			margin-top: 48px;
+		}
+		.group-section__label {
+			font-family: 'Courier New', monospace;
+			font-size: 12px;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: var(--mcu-gold);
+			border-bottom: 1px solid var(--hairline-strong);
+			padding-bottom: 8px;
+			margin-bottom: 20px;
+		}
+
+		.fiche {
+			background: var(--paper-raised);
+			border: 1px solid var(--hairline);
+			border-radius: 10px;
+			margin-bottom: 16px;
+			overflow: hidden;
+		}
+		.fiche.fiche--done {
+			border-color: var(--done-green);
+		}
+
+		.fiche__header {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			padding: 14px 18px;
+			cursor: pointer;
+			user-select: none;
+		}
+		.fiche__header:hover {
+			background: var(--mcu-cream);
+		}
+
+		.fiche__check {
+			width: 20px;
+			height: 20px;
+			flex-shrink: 0;
+			cursor: pointer;
+			accent-color: var(--done-green);
+		}
+
+		.fiche__name {
+			font-weight: bold;
+			flex-grow: 1;
+		}
+		.fiche--done .fiche__name {
+			color: var(--done-green);
+		}
+
+		.fiche__progress {
+			font-family: 'Courier New', monospace;
+			font-size: 12px;
+			color: var(--ink-faint);
+		}
+
+		.fiche__chevron {
+			font-size: 11px;
+			color: var(--ink-faint);
+			transition: transform 0.2s ease;
+		}
+		.fiche.open .fiche__chevron {
+			transform: rotate(90deg);
+		}
+
+		.fiche__body {
+			display: none;
+			padding: 0 18px 16px 50px;
+			border-top: 1px solid var(--hairline);
+		}
+		.fiche.open .fiche__body {
+			display: block;
+			padding-top: 12px;
+		}
+
+		.item {
+			display: flex;
+			align-items: flex-start;
+			gap: 10px;
+			padding: 6px 0;
+			font-size: 0.95rem;
+		}
+		.item input[type="checkbox"] {
+			margin-top: 4px;
+			accent-color: var(--done-green);
+			cursor: pointer;
+		}
+		.item label {
+			cursor: pointer;
+			flex-grow: 1;
+		}
+		.item.checked label {
+			text-decoration: line-through;
+			color: var(--ink-faint);
+		}
+
+		.item--warn {
+			background: rgba(169, 120, 47, 0.08);
+			border-left: 3px solid var(--warn-amber);
+			padding-left: 10px;
+			margin: 6px 0;
+			font-size: 0.88rem;
+			color: var(--ink-soft);
+		}
+		.item--warn strong {
+			color: var(--warn-amber);
+		}
+
+		.chapter-note {
+			font-size: 0.88rem;
+			color: var(--ink-faint);
+			font-style: italic;
+			margin-bottom: 10px;
+		}
+
+		footer {
+			max-width: 820px;
+			margin: 60px auto 0;
+			padding: 24px;
+			border-top: 1px solid var(--hairline);
+			text-align: center;
+			font-size: 0.85rem;
+			color: var(--ink-faint);
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="topbar">
+		<span class="topbar__title">Almanach MCU — Checklist Fandom</span>
+		<span class="topbar__stat" id="globalStat">0 / 0</span>
+		<button class="topbar__reset" id="resetBtn" type="button">Tout réinitialiser</button>
+	</nav>
+
+	<div class="wrap">
+		<header class="hero">
+			<h1>Checklist de vérification</h1>
+			<p>
+				Chaque case cochée est sauvegardée automatiquement dans ce navigateur
+				(localStorage). Reviens sur ce fichier plus tard : ta progression sera
+				toujours là. Clique sur le titre d'une fiche pour déplier/replier son
+				détail.
+			</p>
+			<div class="note">
+				Scan technique effectué le 20/08/2026 : 0 caractère invisible corrompu,
+				0 résidu <code>[cite:</code> sur les 61 fichiers HTML du repo — rien à
+				nettoyer côté forme, cette checklist porte uniquement sur le fond
+				factuel à confirmer sur Fandom EN.
+			</div>
+		</header>
+
+		<div id="content"></div>
+	</div>
+
+	<footer>
+		Almanach — projet personnel de Tom. Généré le 20 août 2026.
+	</footer>
+
+	<script>
+		const DATA = [
+			{
+				group: "Personnages — Avengers originels", items: [
+					{ id: "tony-stark", name: "tony-stark.html (Iron Man)", films: ["Iron Man", "Iron Man 2", "The Avengers", "Iron Man 3", "Avengers: Age of Ultron", "Captain America: Civil War", "Spider-Man: Homecoming", "Avengers: Infinity War", "Avengers: Endgame"] },
+					{ id: "thor", name: "thor.html", films: ["Thor", "The Avengers", "Thor: The Dark World", "Avengers: Age of Ultron", "Thor: Ragnarok", "Avengers: Infinity War", "Avengers: Endgame", "Thor: Love and Thunder"] },
+					{ id: "steve-rogers", name: "steve-rogers.html (Captain America)", films: ["Captain America: The First Avenger", "The Avengers", "Captain America: The Winter Soldier", "Avengers: Age of Ultron", "Captain America: Civil War", "Avengers: Infinity War", "Avengers: Endgame"] },
+					{ id: "bruce-banner", name: "bruce-banner.html (Hulk)", films: ["The Incredible Hulk", "The Avengers", "Avengers: Age of Ultron", "Thor: Ragnarok", "Avengers: Infinity War", "Avengers: Endgame", "She-Hulk: Attorney at Law"] },
+					{ id: "natasha-romanoff", name: "natasha-romanoff.html (Black Widow)", films: ["Iron Man 2", "The Avengers", "Captain America: The Winter Soldier", "Avengers: Age of Ultron", "Captain America: Civil War", "Black Widow", "Avengers: Infinity War", "Avengers: Endgame"] },
+					{ id: "clint-barton", name: "clint-barton.html (Hawkeye)", films: ["The Avengers", "Avengers: Age of Ultron", "Captain America: Civil War", "Avengers: Endgame", "Hawkeye"] },
+				]
+			},
+			{
+				group: "Personnages — Mystiques", items: [
+					{ id: "doctor-strange", name: "doctor-strange.html", films: ["Doctor Strange", "Thor: Ragnarok", "Avengers: Infinity War", "Avengers: Endgame", "Spider-Man: No Way Home", "Doctor Strange in the Multiverse of Madness"] },
+					{ id: "shang-chi", name: "shang-chi.html", films: ["Shang-Chi and the Legend of the Ten Rings"], warn: "Une seule entrée — vérifier si la scène post-crédits (Wong/Banner/Danvers) mérite sa propre ligne comme fait pour dix-anneaux.html" },
+				]
+			},
+			{
+				group: "Personnages — Gardiens de la Galaxie", items: [
+					{ id: "star-lord", name: "star-lord.html", films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame", "Thor: Love and Thunder", "Guardians of the Galaxy Vol. 3"] },
+					{ id: "gamora", name: "gamora.html", films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame", "Guardians of the Galaxy Vol. 3"], warn: "Pas de Thor: Love and Thunder — vérifier si Gamora (variante 2014) y apparaît réellement ou non" },
+					{ id: "rocket", name: "rocket.html", films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame", "Thor: Love and Thunder", "Guardians of the Galaxy Vol. 3"] },
+					{ id: "groot", name: "groot.html", films: ["Guardians of the Galaxy", "I Am Groot — épisodes", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame", "Thor: Love and Thunder", "Guardians of the Galaxy Vol. 3"] },
+					{ id: "drax", name: "drax.html", films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame", "Thor: Love and Thunder", "Guardians of the Galaxy Vol. 3"] },
+					{ id: "nebula", name: "nebula.html", films: ["Guardians of the Galaxy", "Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame", "Guardians of the Galaxy Vol. 3"], warn: "Pas de Thor: Love and Thunder — même remarque que Gamora" },
+					{ id: "mantis", name: "mantis.html", films: ["Guardians of the Galaxy Vol. 2", "Avengers: Infinity War", "Avengers: Endgame", "Thor: Love and Thunder", "Guardians of the Galaxy Vol. 3"] },
+				]
+			},
+			{
+				group: "Personnages — Quatre Fantastiques", items: [
+					{ id: "reed-richards", name: "reed-richards.html", films: ["The Fantastic Four: First Steps"], warn: "Une seule entrée pour les 4 — cohérent vu qu'un seul film existe, à re-vérifier une fois Doomsday/Secret Wars sortis" },
+					{ id: "sue-storm", name: "sue-storm.html", films: ["The Fantastic Four: First Steps"] },
+					{ id: "johnny-storm", name: "johnny-storm.html", films: ["The Fantastic Four: First Steps"] },
+					{ id: "ben-grimm", name: "ben-grimm.html", films: ["The Fantastic Four: First Steps"] },
+				]
+			},
+			{
+				group: "Personnages — Nouvelles recrues", items: [
+					{ id: "ant-man", name: "ant-man.html", films: ["Ant-Man", "Captain America: Civil War", "Ant-Man and the Wasp", "Avengers: Endgame", "Ant-Man and the Wasp: Quantumania"] },
+					{ id: "black-panther", name: "black-panther.html (T'Challa & Shuri)", films: ["Captain America: Civil War", "Black Panther", "Avengers: Infinity War", "Avengers: Endgame", "Black Panther: Wakanda Forever"] },
+					{ id: "spider-man", name: "spider-man.html", films: ["Captain America: Civil War", "Spider-Man: Homecoming", "Avengers: Infinity War", "Avengers: Endgame", "Spider-Man: Far From Home", "Spider-Man: No Way Home", "Spider-Man: Brand New Day"], warn: "Brand New Day n'est pas encore sorti (voir mcu_horizon.html) — vérifier que le contenu reste au conditionnel/prudent" },
+					{ id: "captain-marvel", name: "captain-marvel.html", films: ["Captain Marvel", "Avengers: Endgame", "Shang-Chi and the Legend of the Ten Rings", "The Marvels"] },
+					{ id: "wanda", name: "wanda.html", films: ["Avengers: Age of Ultron", "Captain America: Civil War", "Avengers: Infinity War", "WandaVision", "Doctor Strange in the Multiverse of Madness"] },
+					{ id: "vision", name: "vision.html", films: ["Avengers: Age of Ultron", "Captain America: Civil War", "Avengers: Infinity War", "WandaVision"] },
+					{ id: "loki", name: "loki.html", films: ["Thor", "The Avengers", "Thor: The Dark World", "Thor: Ragnarok", "Avengers: Infinity War", "Loki — saison 1", "Loki — saison 2"] },
+				]
+			},
+			{
+				group: "Personnages — Grands antagonistes", items: [
+					{ id: "ultron", name: "ultron.html", films: ["Avengers: Age of Ultron"], warn: "Une seule entrée — vérifier absence dans What If...? ou autres apparitions secondaires" },
+					{ id: "thanos", name: "thanos.html", films: ["The Avengers", "Guardians of the Galaxy", "Avengers: Infinity War", "Avengers: Endgame"], warn: "Pas d'Avengers: Age of Ultron (scène post-crédits) — à vérifier, Fandom EN la liste dans ses apparitions" },
+					{ id: "kang", name: "kang.html", films: ["Loki — saison 1", "Ant-Man and the Wasp: Quantumania", "Loki — saison 2"], warn: "Point de vigilance déjà connu : ne pas confondre avec Rama-Tut dans X-Men '97 (continuité séparée)" },
+					{ id: "doctor-doom", name: "doctor-doom.html", films: ["The Fantastic Four: First Steps"], warn: "Une seule entrée (scène post-crédits) — cohérent, à re-vérifier une fois Doomsday sorti" },
+					{ id: "galactus", name: "galactus.html", films: ["The Fantastic Four: First Steps"], warn: "Vérifier la scène de storyboard coupée de Thor: Love and Thunder (mentionnée en encart, à confirmer comme non-canon)" },
+				]
+			},
+			{
+				group: "Artefacts", items: [
+					{ id: "pierre-espace", name: "pierre-espace.html", films: ["Captain America: The First Avenger", "Captain Marvel", "The Avengers", "Thor: Ragnarok", "Avengers: Infinity War", "Avengers: Endgame"] },
+					{ id: "pierre-esprit", name: "pierre-esprit.html", films: ["The Avengers", "Avengers: Age of Ultron", "Captain America: Civil War", "Avengers: Infinity War", "WandaVision"] },
+					{ id: "pierre-realite", name: "pierre-realite.html", films: ["Thor: The Dark World", "Avengers: Infinity War", "Avengers: Endgame"] },
+					{ id: "pierre-puissance", name: "pierre-puissance.html", films: ["Guardians of the Galaxy", "Avengers: Infinity War", "Avengers: Endgame"] },
+					{ id: "pierre-temps", name: "pierre-temps.html", films: ["Doctor Strange", "Avengers: Infinity War", "Avengers: Endgame"] },
+					{ id: "pierre-ame", name: "pierre-ame.html", films: ["Avengers: Infinity War", "Avengers: Endgame"] },
+					{ id: "gantelet", name: "gantelet.html", films: ["Avengers: Age of Ultron", "Avengers: Infinity War", "Avengers: Endgame", "Doctor Strange in the Multiverse of Madness"] },
+					{ id: "bouclier", name: "bouclier-captain-america.html", films: ["Captain America: The First Avenger", "The Avengers", "Captain America: The Winter Soldier", "Avengers: Age of Ultron", "Captain America: Civil War", "Avengers: Endgame", "The Falcon and the Winter Soldier", "Captain America: Brave New World"] },
+					{ id: "mjolnir", name: "mjolnir.html", films: ["Thor", "The Avengers", "Thor: The Dark World", "Avengers: Age of Ultron", "Thor: Ragnarok", "Avengers: Endgame", "Thor: Love and Thunder"] },
+					{ id: "stormbreaker", name: "stormbreaker.html", films: ["Avengers: Infinity War", "Avengers: Endgame", "Thor: Love and Thunder"] },
+					{ id: "dix-anneaux", name: "dix-anneaux.html", films: ["Shang-Chi and the Legend of the Ten Rings", "Scène post-crédits — analyse des anneaux (Wong/Banner/Danvers)"] },
+					{ id: "darkhold", name: "darkhold.html", films: ["WandaVision", "Doctor Strange in the Multiverse of Madness", "Agatha All Along"], warn: "Encart de continuité sur Agents of S.H.I.E.L.D./Runaways — volontairement non détaillé (hors périmètre de l'Almanach)" },
+				]
+			},
+			{
+				group: "Chronologie — II. Avant les héros", items: [
+					{ id: "chrono-antiquite", name: "mcu_antiquite.html", films: ["Épisode 1 — L'âge du bronze", "Épisode 2 — La guerre de Troie", "Épisode 3 — La dynastie Ming", "Captain America: The First Avenger", "Agent Carter"] },
+				]
+			},
+			{
+				group: "Chronologie — III. Les origines", items: [
+					{ id: "chrono-origines", name: "mcu_origines.html", films: ["The Fantastic Four: First Steps", "Captain Marvel", "Iron Man", "The Consultant", "A Funny Thing Happened on the Way to Thor's Hammer", "Iron Man 2", "The Incredible Hulk", "Thor", "The Avengers", "Item 47"] },
+				]
+			},
+			{
+				group: "Chronologie — IV. L'expansion (32 œuvres, 13 déjà repassées)", items: [
+					{ id: "chrono-expansion", name: "mcu_expansion.html", films: [
+						"Thor: The Dark World", "Iron Man 3", "All Hail the King", "Captain America: The Winter Soldier", "Guardians of the Galaxy",
+						"I Am Groot — épisode 1 ✅ déjà vérifié", "Guardians of the Galaxy Vol. 2", "I Am Groot — épisodes 2 à 10",
+						"Daredevil — saison 1 ✅ déjà vérifié", "Jessica Jones — saison 1 ✅ déjà vérifié", "Avengers: Age of Ultron", "Ant-Man",
+						"Daredevil — saison 2 ✅ déjà vérifié", "Luke Cage — saison 1", "Iron Fist — saison 1", "The Defenders ✅ déjà vérifié",
+						"Captain America: Civil War", "Your Friendly Neighborhood Spider-Man — saison 1 ✅ déjà vérifié", "Black Widow", "Black Panther",
+						"Spider-Man: Homecoming", "The Punisher — saison 1 ✅ déjà vérifié", "Doctor Strange", "Jessica Jones — saison 2 ✅ déjà vérifié",
+						"Luke Cage — saison 2 ✅ déjà vérifié", "Iron Fist — saison 2 ✅ déjà vérifié", "Daredevil — saison 3 ✅ déjà vérifié (date corrigée 2017→2018)",
+						"Thor: Ragnarok", "The Punisher — saison 2 ✅ déjà vérifié", "Jessica Jones — saison 3 ✅ déjà vérifié", "Ant-Man and the Wasp", "Avengers: Infinity War"
+					] },
+				]
+			},
+			{
+				group: "Chronologie — V. La saga du multivers", items: [
+					{ id: "chrono-multivers-chrono", name: "mcu_multivers-chrono.html", films: ["Avengers: Endgame", "Loki — saison 1", "What If...? — saison 1", "Marvel Zombies", "WandaVision", "Shang-Chi and the Legend of the Ten Rings", "The Falcon and the Winter Soldier", "Spider-Man: Far From Home", "Eternals", "Spider-Man: No Way Home", "Doctor Strange in the Multiverse of Madness"] },
+				]
+			},
+			{
+				group: "Chronologie — VI. L'ère actuelle", items: [
+					{ id: "chrono-actuel", name: "mcu_actuel.html", films: ["Hawkeye", "Moon Knight", "Black Panther: Wakanda Forever", "Echo", "She-Hulk: Attorney at Law", "Ms. Marvel", "Thor: Love and Thunder", "Ironheart", "Werewolf by Night", "The Guardians of the Galaxy Holiday Special", "Ant-Man and the Wasp: Quantumania", "Guardians of the Galaxy Vol. 3", "Secret Invasion", "The Marvels", "Loki — saison 2", "What If...? — saison 2", "Deadpool & Wolverine", "Agatha All Along", "What If...? — saison 3", "Daredevil: Born Again — saison 1", "Captain America: Brave New World", "Thunderbolts*"] },
+				]
+			},
+			{
+				group: "Chronologie — VII. L'horizon (prudence : événements non sortis)", items: [
+					{ id: "chrono-horizon", name: "mcu_horizon.html", films: ["Wonder Man", "Daredevil: Born Again — saison 2", "The Punisher: One Last Kill", "Spider-Man: Brand New Day", "Avengers: Doomsday", "Avengers: Secret Wars"] },
+				]
+			},
+		];
+
+		const STORAGE_KEY = "almanach_mcu_checklist_v1";
+
+		function loadState() {
+			try {
+				const raw = localStorage.getItem(STORAGE_KEY);
+				return raw ? JSON.parse(raw) : {};
+			} catch (e) {
+				return {};
+			}
+		}
+
+		function saveState(state) {
+			localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+		}
+
+		let state = loadState();
+
+		function itemKey(ficheId, index) {
+			return `${ficheId}::${index}`;
+		}
+
+		function isFicheDone(fiche) {
+			return fiche.films.every((_, i) => state[itemKey(fiche.id, i)]);
+		}
+
+		function ficheProgress(fiche) {
+			const done = fiche.films.filter((_, i) => state[itemKey(fiche.id, i)]).length;
+			return `${done}/${fiche.films.length}`;
+		}
+
+		function render() {
+			const content = document.getElementById("content");
+			content.innerHTML = "";
+
+			let totalItems = 0;
+			let totalDone = 0;
+
+			DATA.forEach((section) => {
+				const sectionEl = document.createElement("div");
+				sectionEl.className = "group-section";
+
+				const label = document.createElement("div");
+				label.className = "group-section__label";
+				label.textContent = section.group;
+				sectionEl.appendChild(label);
+
+				section.items.forEach((fiche) => {
+					totalItems += fiche.films.length;
+					totalDone += fiche.films.filter((_, i) => state[itemKey(fiche.id, i)]).length;
+
+					const ficheEl = document.createElement("div");
+					ficheEl.className = "fiche";
+					if (isFicheDone(fiche)) ficheEl.classList.add("fiche--done");
+
+					const header = document.createElement("div");
+					header.className = "fiche__header";
+
+					const masterCheck = document.createElement("input");
+					masterCheck.type = "checkbox";
+					masterCheck.className = "fiche__check";
+					masterCheck.checked = isFicheDone(fiche);
+					masterCheck.addEventListener("click", (e) => {
+						e.stopPropagation();
+						const newVal = masterCheck.checked;
+						fiche.films.forEach((_, i) => {
+							state[itemKey(fiche.id, i)] = newVal;
+						});
+						saveState(state);
+						render();
+					});
+
+					const name = document.createElement("span");
+					name.className = "fiche__name";
+					name.textContent = fiche.name;
+
+					const progress = document.createElement("span");
+					progress.className = "fiche__progress";
+					progress.textContent = ficheProgress(fiche);
+
+					const chevron = document.createElement("span");
+					chevron.className = "fiche__chevron";
+					chevron.textContent = "▶";
+
+					header.appendChild(masterCheck);
+					header.appendChild(name);
+					header.appendChild(progress);
+					header.appendChild(chevron);
+
+					header.addEventListener("click", () => {
+						ficheEl.classList.toggle("open");
+					});
+
+					const body = document.createElement("div");
+					body.className = "fiche__body";
+
+					if (fiche.note) {
+						const note = document.createElement("div");
+						note.className = "chapter-note";
+						note.textContent = fiche.note;
+						body.appendChild(note);
+					}
+
+					fiche.films.forEach((filmName, i) => {
+						const key = itemKey(fiche.id, i);
+						const itemEl = document.createElement("div");
+						itemEl.className = "item";
+						if (state[key]) itemEl.classList.add("checked");
+
+						const cb = document.createElement("input");
+						cb.type = "checkbox";
+						cb.id = key;
+						cb.checked = !!state[key];
+						cb.addEventListener("change", () => {
+							state[key] = cb.checked;
+							saveState(state);
+							itemEl.classList.toggle("checked", cb.checked);
+							progress.textContent = ficheProgress(fiche);
+							const nowDone = isFicheDone(fiche);
+							ficheEl.classList.toggle("fiche--done", nowDone);
+							masterCheck.checked = nowDone;
+							updateGlobalStat();
+						});
+
+						const lbl = document.createElement("label");
+						lbl.htmlFor = key;
+						lbl.textContent = filmName;
+
+						itemEl.appendChild(cb);
+						itemEl.appendChild(lbl);
+						body.appendChild(itemEl);
+					});
+
+					if (fiche.warn) {
+						const warnEl = document.createElement("div");
+						warnEl.className = "item--warn";
+						warnEl.innerHTML = `<strong>⚠️ Point d'attention —</strong> ${fiche.warn}`;
+						body.appendChild(warnEl);
+					}
+
+					ficheEl.appendChild(header);
+					ficheEl.appendChild(body);
+					sectionEl.appendChild(ficheEl);
+				});
+
+				content.appendChild(sectionEl);
+			});
+
+			document.getElementById("globalStat").textContent = `${totalDone} / ${totalItems}`;
+		}
+
+		function updateGlobalStat() {
+			let totalItems = 0;
+			let totalDone = 0;
+			DATA.forEach((section) => {
+				section.items.forEach((fiche) => {
+					totalItems += fiche.films.length;
+					totalDone += fiche.films.filter((_, i) => state[itemKey(fiche.id, i)]).length;
+				});
+			});
+			document.getElementById("globalStat").textContent = `${totalDone} / ${totalItems}`;
+		}
+
+		document.getElementById("resetBtn").addEventListener("click", () => {
+			if (confirm("Effacer toute la progression sauvegardée dans ce navigateur ?")) {
+				state = {};
+				saveState(state);
+				render();
+			}
+		});
+
+		render();
+	</script>
+</body>
+
+</html>
