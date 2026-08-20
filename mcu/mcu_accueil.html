@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>MCU — pour les nuls | Almanach</title>
+	<link rel="stylesheet" href="mcu_style.css" />
+</head>
+
+<body>
+	<div id="mcu-topbar"></div>
+	<script src="mcu_topbar.js"></script>
+
+	<header class="hero">
+		<div class="hero__eyebrow">MCU</div>
+		<h1 class="hero__title">MCU</h1>
+		<p class="hero__subtitle">pour les nuls</p>
+		<p class="hero__lede">
+			La chronologie complète du plus grand univers partagé du cinéma —
+			<em>de 1260 avant notre ère jusqu'à la fin du monde tel qu'on le
+				connaît</em>
+			— doublée des biographies détaillées de ses personnages principaux,
+			héros comme grands méchants, et des fiches consacrées aux artefacts
+			les plus marquants de la saga.
+		</p>
+
+		<div class="encart" style="margin-top: 40px">
+			<strong>Comment lire cet almanach.</strong> Ce thème se déploie sur
+			plusieurs dizaines de pages plutôt qu'une seule, réparties en trois
+			volets : une <strong>chronologie</strong> en sept chapitres qui raconte
+			le MCU dans l'ordre, des <strong>fiches personnages</strong>
+			regroupées par famille narrative (Avengers originels, Gardiens de la
+			Galaxie, grands antagonistes...), et des <strong>fiches objets</strong>
+			consacrées aux artefacts les plus marquants de la saga — Pierres
+			d'Infinité, bouclier de Captain America, Mjolnir, et bien d'autres.
+			Chaque page reste autonome, à picorer selon ce que vous cherchez. Pour
+			la chronologie, le premier chapitre, <em>Comprendre le multivers</em>,
+			pose le vocabulaire (Sacred Timeline, TVA, variants) utilisé partout
+			ensuite ; le lire en premier facilite tout le reste.
+		</div>
+	</header>
+
+	<main class="groups-section">
+		<div class="groups-section__label">Les trois volets</div>
+		<div class="groups-grid">
+			<a class="group-card" href="mcu_hub.html">
+				<div class="group-card__eyebrow">Sept chapitres</div>
+				<h2 class="group-card__title">La chronologie</h2>
+				<p class="group-card__members">
+					De <em>Comprendre le multivers</em> à <em>L'horizon</em> — le MCU
+					raconté dans l'ordre, de 1260 avant notre ère à 2029.
+				</p>
+			</a>
+
+			<a class="group-card" href="mcu_personnages.html">
+				<div class="group-card__eyebrow">Biographies</div>
+				<h2 class="group-card__title">Les personnages</h2>
+				<p class="group-card__members">
+					Avengers originels · mystiques · Gardiens de la Galaxie · Quatre
+					Fantastiques · nouvelles recrues · grands antagonistes
+				</p>
+			</a>
+
+			<a class="group-card" href="artefacts/mcu_artefacts.html">
+				<div class="group-card__eyebrow">Objets de pouvoir</div>
+				<h2 class="group-card__title">Les artefacts</h2>
+				<p class="group-card__members">
+					Les Pierres d'Infinité · le bouclier de Captain America · Mjolnir &
+					Stormbreaker · les Dix Anneaux · le Darkhold
+				</p>
+			</a>
+		</div>
+	</main>
+
+	<script src="mcu_script.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const cards = document.querySelectorAll(".group-card");
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.classList.add("in");
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{ threshold: 0.15 },
+			);
+			cards.forEach((c) => observer.observe(c));
+		});
+	</script>
+</body>
+
+</html>
