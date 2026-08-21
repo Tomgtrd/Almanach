@@ -43,7 +43,8 @@
 	const ARTEFACTS = [
 		["Les Pierres d'Infinité", "artefacts/pierres-infinite/mcu_pierres-infinite.html"],
 		["Bouclier de Captain America", "artefacts/bouclier-captain-america.html"],
-		["Mjolnir & Stormbreaker", "artefacts/mjolnir-stormbreaker.html"],
+		["Mjolnir", "artefacts/mjolnir.html"],
+		["Stormbreaker", "artefacts/stormbreaker.html"],
 		["Les Dix Anneaux", "artefacts/dix-anneaux.html"],
 		["Le Darkhold", "artefacts/darkhold.html"],
 	];
