@@ -278,18 +278,21 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ============================================================
      PLANCHE VI — LACS ET PLANS D'EAU
      ============================================================ */
-  document.getElementById('lakeSvgWrap').innerHTML = `<svg class="lake-svg" viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg">
+  document.getElementById('lakeSvgWrap').innerHTML = `<svg class="lake-svg" viewBox="0 -12 320 212" xmlns="http://www.w3.org/2000/svg">
+    <defs><marker id="lakeArrow" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="var(--ink)"/></marker></defs>
+
     <ellipse cx="90" cy="70" rx="55" ry="34" fill="var(--teal-lt)"/>
-    <path d="M90,36 C130,45 145,70 130,95 C118,113 100,104 90,104" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round" marker-end="url(#lakeArrow)"/>
-    <text x="90" y="150" text-anchor="middle" font-family="Space Grotesk" font-size="13" font-weight="700" fill="var(--ink)">Exoréique</text>
-    <text x="90" y="168" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="var(--ink-3)">se déverse vers l'aval</text>
+    <path d="M118,98 C130,112 124,124 134,138" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round" marker-end="url(#lakeArrow)"/>
+    <text x="90" y="152" text-anchor="middle" font-family="Space Grotesk" font-size="13" font-weight="700" fill="var(--ink)">Exoréique</text>
+    <text x="90" y="168" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="var(--ink-3)">se déverse</text>
+    <text x="90" y="181" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="var(--ink-3)">vers l'aval</text>
 
     <ellipse cx="230" cy="75" rx="55" ry="34" fill="var(--sand-lt)"/>
-    <path d="M225,18 C245,4 262,10 258,28" fill="none" stroke="var(--ink-3)" stroke-width="1.5" stroke-dasharray="3 4"/>
-    <text x="262" y="16" text-anchor="end" font-family="Space Grotesk" font-size="10" fill="var(--ink-3)">évaporation</text>
-    <text x="230" y="150" text-anchor="middle" font-family="Space Grotesk" font-size="13" font-weight="700" fill="var(--ink)">Endoréique</text>
-    <text x="230" y="168" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="var(--ink-3)">aucune issue, sort par évaporation</text>
-    <defs><marker id="lakeArrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="var(--ink)"/></marker></defs>
+    <path d="M212,38 C206,28 218,22 212,10 M232,38 C226,28 238,22 232,10 M252,38 C246,28 258,22 252,10" fill="none" stroke="var(--ink-3)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 4"/>
+    <text x="232" y="1" text-anchor="middle" font-family="Space Grotesk" font-size="10" fill="var(--ink-3)">évaporation</text>
+    <text x="230" y="152" text-anchor="middle" font-family="Space Grotesk" font-size="13" font-weight="700" fill="var(--ink)">Endoréique</text>
+    <text x="230" y="168" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="var(--ink-3)">aucune issue,</text>
+    <text x="230" y="181" text-anchor="middle" font-family="Space Grotesk" font-size="11" fill="var(--ink-3)">sort par évaporation</text>
   </svg>`;
   const LAKES = [
     { icon: '💧', nm: 'Lac Baïkal', d: "Le plus profond du monde (1 642&nbsp;m) et le plus grand réservoir d'eau douce liquide non gelée&nbsp;: environ 20&nbsp;% de l'eau douce de surface de la planète." },
@@ -471,9 +474,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <path d="M900,150 L940,124 M900,150 L940,150 M900,150 L940,176" fill="none" stroke="var(--deep)" stroke-width="4" stroke-linecap="round"/>
       </g>
 
-      <!-- estuaire (à part, en haut à droite) -->
+      <!-- estuaire (embouchure en entonnoir, à part, en haut à droite) -->
       <g class="zone" data-id="estuaire">
-        <path class="lf-hit" d="M820,32 C860,27 900,32 938,48 L938,60 C900,46 860,43 822,46 Z" fill="var(--deep-lt)" stroke="var(--ink)" stroke-width="1.5" opacity="0.75"/>
+        <path class="lf-hit" d="M770,36 C830,34 890,22 945,14 L945,70 C890,56 830,46 770,44 Z" fill="var(--deep-lt)" stroke="var(--ink)" stroke-width="1.5" opacity="0.75"/>
       </g>
 
       <!-- lagune (à part, en bas à droite) -->
@@ -490,15 +493,15 @@ document.addEventListener('DOMContentLoaded', () => {
       <!-- labels -->
       <text class="lf-label" x="140" y="70">Source</text>
       <text class="lf-label" x="185" y="205">Torrent</text>
-      <text class="lf-label" x="300" y="300">Cascade</text>
-      <text class="lf-label" x="470" y="195">Plaine d'inondation</text>
-      <text class="lf-label" x="590" y="195">Méandre</text>
+      <text class="lf-label" x="285" y="207">Cascade</text>
+      <text class="lf-label" x="470" y="185">Plaine d'inondation</text>
+      <text class="lf-label" x="610" y="262">Méandre</text>
       <text class="lf-label" x="500" y="378">Bras mort</text>
-      <text class="lf-label" x="730" y="115">Confluent</text>
+      <text class="lf-label" x="760" y="115">Confluent</text>
       <text class="lf-label" x="800" y="335">Zone humide</text>
-      <text class="lf-label" x="905" y="200">Delta</text>
-      <text class="lf-label" x="900" y="20">Estuaire</text>
-      <text class="lf-label" x="900" y="298">Lagune</text>
+      <text class="lf-label" x="922" y="205">Delta</text>
+      <text class="lf-label" x="860" y="14">Estuaire</text>
+      <text class="lf-label" x="900" y="293">Lagune</text>
       <text class="lf-label" x="605" y="400" fill="var(--paper)">Nappe phréatique</text>
     </svg>`;
   }
