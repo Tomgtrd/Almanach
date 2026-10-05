@@ -15,7 +15,7 @@ Pas de framework, pas d'étape de build : du HTML/CSS/JS servi tel quel, ouvrabl
 - ✅ **Architecture des ordinateurs** — de la machine de Babbage au cache du processeur moderne
 - ✅ **Hydrologie** — cycle de l'eau, bassins versants, nappes phréatiques, gestion des ressources en eau
 - ✅ **MCU** — toute la chronologie du Marvel Cinematic Universe, ses personnages regroupés par famille narrative, et les grands artefacts qui façonnent ses conflits, de 1260 av. J.-C. à la fin du monde tel qu'on le connaît.
-- 🚧 **Star Wars** — la chronologie canon de la galaxie, événement par événement, de la fondation de l'Ordre Jedi (25 025 BBY) à la bataille d'Exegol et aux films annoncés ; ses personnages regroupés par famille et les objets qui traversent la saga. En construction.
+- ✅ **Star Wars** — la chronologie canon de la galaxie, événement par événement, de la fondation de l'Ordre Jedi (25 025 BBY) à la bataille d'Exegol et aux films annoncés ; ses personnages regroupés par famille et les objets qui traversent la saga.
 
 ## Structure du dépôt
 
@@ -85,10 +85,30 @@ Almanach/
     ├── sw_style.css
     ├── sw_script.js
     ├── sw_topbar.js               # bandeau de navigation centralisé, injecté sur chaque page
-    ├── chronologie/               # 8 chapitres, de 25 025 BBY à 50 ABY
-    ├── personnages/               # 6 groupes : mini-hub + fiches
+    ├── chronologie/
+    │   ├── sw_galaxie.html              # fiche concept : la Force, Jedi/Sith, calendrier BBY/ABY, ordre de visionnage
+    │   ├── sw_aube.html                 # 25 025 — vers 1032 BBY
+    │   ├── sw_haute-republique.html     # vers 233 — 132 BBY
+    │   ├── sw_chute-jedi.html           # vers 68 — 19 BBY
+    │   ├── sw_empire.html               # 19 — 1 BBY
+    │   ├── sw_age-rebellion.html        # 0 — 4 ABY
+    │   ├── sw_nouvelle-republique.html  # vers 9 ABY
+    │   └── sw_premier-ordre.html        # 34 — 50 ABY
+    ├── personnages/
+    │   ├── skywalker/             # mini-hub + 3 fiches
+    │   ├── jedi/                  # mini-hub + 3 fiches
+    │   ├── sith/                  # mini-hub + 3 fiches
+    │   ├── rebellion/             # mini-hub + 3 fiches
+    │   ├── mandaloriens/          # mini-hub + 3 fiches
+    │   └── empire/                # mini-hub + 3 fiches
     └── objets/
-        └── sw_objets.html         # hub des objets
+        ├── sw_objets.html         # hub des objets
+        ├── sabres-laser.html      # dont le Darksaber
+        ├── cristaux-kyber.html
+        ├── holocrons.html
+        ├── etoile-de-la-mort.html
+        ├── faucon-millenium.html
+        └── beskar.html
 ```
 
 Chaque dossier de thème est indépendant et autoporteur — il fonctionne seul (on peut ouvrir son `xxx_index.html` directement) aussi bien que depuis le hub.
