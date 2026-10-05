@@ -2,7 +2,7 @@
 
 ## C'est quoi ?
 
-**Almanach** est une collection de mini-sites autonomes, chacun dédié à un thème — taxonomie, géologie, physique quantique, cosmologie, architecture des ordinateurs, hydrologie, MCU, et d'autres à venir. Chaque fiche est pensée comme une planche à l'ancienne (gravures naturalistes, mnémotechniques, arbres et schémas interactifs) mais entièrement navigable et animée.
+**Almanach** est une collection de mini-sites autonomes, chacun dédié à un thème — taxonomie, géologie, physique quantique, cosmologie, architecture des ordinateurs, hydrologie, MCU, Star Wars, et d'autres à venir. Chaque fiche est pensée comme une planche à l'ancienne (gravures naturalistes, mnémotechniques, arbres et schémas interactifs) mais entièrement navigable et animée.
 
 Pas de framework, pas d'étape de build : du HTML/CSS/JS servi tel quel, ouvrable directement dans un navigateur.
 
@@ -15,6 +15,7 @@ Pas de framework, pas d'étape de build : du HTML/CSS/JS servi tel quel, ouvrabl
 - ✅ **Architecture des ordinateurs** — de la machine de Babbage au cache du processeur moderne
 - ✅ **Hydrologie** — cycle de l'eau, bassins versants, nappes phréatiques, gestion des ressources en eau
 - ✅ **MCU** — toute la chronologie du Marvel Cinematic Universe, ses personnages regroupés par famille narrative, et les grands artefacts qui façonnent ses conflits, de 1260 av. J.-C. à la fin du monde tel qu'on le connaît.
+- 🚧 **Star Wars** — la chronologie canon de la galaxie, événement par événement, de la fondation de l'Ordre Jedi (25 025 BBY) à la bataille d'Exegol et aux films annoncés ; ses personnages regroupés par famille et les objets qui traversent la saga. En construction.
 
 ## Structure du dépôt
 
@@ -77,20 +78,31 @@ Almanach/
         ├── stormbreaker.html
         ├── dix-anneaux.html
         └── darkhold.html
+└── starwars/
+    ├── sw_accueil.html            # point d'entrée du thème : 3 volets (chronologie, personnages, objets)
+    ├── sw_hub.html                # hub de la chronologie (8 chapitres)
+    ├── sw_personnages.html        # sommaire des personnages, groupés par famille
+    ├── sw_style.css
+    ├── sw_script.js
+    ├── sw_topbar.js               # bandeau de navigation centralisé, injecté sur chaque page
+    ├── chronologie/               # 8 chapitres, de 25 025 BBY à 50 ABY
+    ├── personnages/               # 6 groupes : mini-hub + fiches
+    └── objets/
+        └── sw_objets.html         # hub des objets
 ```
 
 Chaque dossier de thème est indépendant et autoporteur — il fonctionne seul (on peut ouvrir son `xxx_index.html` directement) aussi bien que depuis le hub.
 
-**Cas particulier : MCU.** Contrairement aux autres thèmes qui tiennent sur une seule fiche, MCU est un mini-site à plusieurs niveaux (le volume de contenu — près de 90 films et séries, une trentaine de personnages, une dizaine d'artefacts — ne rentrait pas dans une planche unique). Chaque sous-page reste néanmoins autonome et suit la même charte graphique. `mcu_accueil.html` sert de point d'entrée du thème, avec trois volets : la chronologie (7 chapitres, via `mcu_hub.html`), les personnages (6 groupes, chacun avec son propre mini-hub) et les artefacts (Pierres d'Infinité, Gantelet, bouclier, marteaux de Thor, Dix Anneaux, Darkhold). Le bandeau de navigation est centralisé dans un seul fichier, `mcu_topbar.js`, injecté automatiquement sur chaque page — il calcule seul les chemins relatifs et propose un menu déroulant par volet, ce qui évite de dupliquer ou de devoir corriger la nav sur les 60+ fichiers du thème à chaque ajout.
+**Cas particulier : MCU (et Star Wars).** Contrairement aux autres thèmes qui tiennent sur une seule fiche, MCU est un mini-site à plusieurs niveaux (le volume de contenu — près de 90 films et séries, une trentaine de personnages, une dizaine d'artefacts — ne rentrait pas dans une planche unique). Chaque sous-page reste néanmoins autonome et suit la même charte graphique. `mcu_accueil.html` sert de point d'entrée du thème, avec trois volets : la chronologie (7 chapitres, via `mcu_hub.html`), les personnages (6 groupes, chacun avec son propre mini-hub) et les artefacts (Pierres d'Infinité, Gantelet, bouclier, marteaux de Thor, Dix Anneaux, Darkhold). Le bandeau de navigation est centralisé dans un seul fichier, `mcu_topbar.js`, injecté automatiquement sur chaque page — il calcule seul les chemins relatifs et propose un menu déroulant par volet, ce qui évite de dupliquer ou de devoir corriger la nav sur les 60+ fichiers du thème à chaque ajout. Star Wars reprend exactement la même architecture (`sw_topbar.js`, préfixe `sw_`), avec un bandeau et un hero sur fond noir.
 
 ## Voir le site
 
 - **En ligne** : [tomgtrd.github.io/Almanach](https://tomgtrd.github.io/Almanach/)
-- **En local** : ouvrir `hub_index.html` à la racine (le hub), ou directement le `xxx_index.html` d'un thème (pour MCU : `mcu/mcu_accueil.html`).
+- **En local** : ouvrir `hub_index.html` à la racine (le hub), ou directement le `xxx_index.html` d'un thème (pour MCU : `mcu/mcu_accueil.html` ; pour Star Wars : `starwars/sw_accueil.html`).
 
 ## Ajouter un nouveau thème
 
-1. Dupliquer un dossier de thème existant comme point de départ (structure + variables CSS communes), en préfixant les 3 fichiers avec un code court propre au thème (ex. `geo_`, `tax_`, `qua_`, `mcu_`).
+1. Dupliquer un dossier de thème existant comme point de départ (structure + variables CSS communes), en préfixant les 3 fichiers avec un code court propre au thème (ex. `geo_`, `tax_`, `qua_`, `mcu_`, `sw_`).
 2. Adapter le contenu et les données au nouveau sujet.
 3. Ajouter une carte vers ce dossier dans `hub_index.html`.
 4. Si le sujet est trop dense pour une seule fiche (comme MCU), découper en plusieurs sous-pages liées par un bandeau de navigation inter-pages, avec une page sommaire faisant office de point d'entrée. Pour un thème aussi vaste que MCU, envisager un bandeau centralisé en JS (voir `mcu_topbar.js`) plutôt qu'un bandeau dupliqué dans chaque fichier.
@@ -104,6 +116,7 @@ Chaque dossier de thème est indépendant et autoporteur — il fonctionne seul 
   - Physique quantique : indigo, cyan, violet, amber (+ un presque-noir réservé à la planche gravité quantique)
   - Architecture des ordinateurs : graphite, silicium, cuivre, vert PCB, bleu phosphore, ambre LED, rouge signal
   - MCU : rouge/or Avengers désaturé, avec un accent violet-magenta réservé aux sections traitant du multivers et des artefacts mystiques
+  - Star Wars : noir spatial et jaune du générique (le jaune vif réservé aux fonds sombres, un jaune foncé sur papier) ; jaune pour les Jedi, rouge pour les Sith
 - **Structure** : planches numérotées en chiffres romains (4 à 13 selon le sujet), nav à points générée en JS, reveal-on-scroll, hero animé au chargement.
 - **Interactivité** : patterns réutilisés d'un thème à l'autre — flip-cards, onglets à mini-diagrammes SVG, accordéons, arbres/diagrammes cliquables avec panneau d'info. Un seul type d'interaction par planche ; jamais de couleurs arc-en-ciel par nœud (palette sombre uniforme + un seul accent pour l'état actif).
 - **Techno** : vanilla JS, zéro dépendance, zéro build.

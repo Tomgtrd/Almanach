@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Star Wars — pour les nuls | Almanach</title>
+	<link rel="stylesheet" href="sw_style.css" />
+</head>
+
+<body>
+	<div id="sw-topbar"></div>
+	<script src="sw_topbar.js"></script>
+
+	<header class="hero">
+		<div class="hero__eyebrow">Star Wars</div>
+		<h1 class="hero__title">Star Wars</h1>
+		<p class="hero__subtitle">pour les nuls</p>
+		<p class="hero__lede">
+			La chronologie complète d'une galaxie lointaine, très lointaine —
+			<em>de la fondation de l'Ordre Jedi, en 25 025 avant la bataille de
+				Yavin, jusqu'à la bataille d'Exegol et au-delà</em>
+			— doublée des biographies de ses grandes figures, Jedi comme Sith, et
+			des fiches consacrées aux objets qui traversent toute la saga.
+		</p>
+
+		<svg class="hero__svg" viewBox="0 0 440 140" role="img"
+			aria-label="Un sabre laser bleu et un sabre laser rouge qui s'allument et se croisent">
+			<defs>
+				<filter id="saber-glow" x="-20%" y="-60%" width="140%" height="220%">
+					<feGaussianBlur stdDeviation="4" />
+				</filter>
+			</defs>
+			<!-- Sabre Jedi : de bas-gauche vers haut-droite -->
+			<g class="saber saber--jedi">
+				<line class="saber__hilt" x1="22" y1="120" x2="62" y2="110" stroke="#9aa0ab" stroke-width="7"
+					stroke-linecap="round" />
+				<line class="saber__hilt" x1="54" y1="112" x2="58" y2="111" stroke="#3a3f4a" stroke-width="9"
+					stroke-linecap="round" />
+				<line class="saber__blade" x1="62" y1="110" x2="382" y2="30" stroke="#3d8bff" stroke-width="12"
+					stroke-linecap="round" opacity="0.55" filter="url(#saber-glow)" />
+				<line class="saber__blade" x1="62" y1="110" x2="382" y2="30" stroke="#e6f0ff" stroke-width="4"
+					stroke-linecap="round" />
+			</g>
+			<!-- Sabre Sith : de bas-droite vers haut-gauche -->
+			<g class="saber saber--sith">
+				<line class="saber__hilt" x1="418" y1="120" x2="378" y2="110" stroke="#5a5f6a" stroke-width="7"
+					stroke-linecap="round" />
+				<line class="saber__hilt" x1="386" y1="112" x2="382" y2="111" stroke="#c3141e" stroke-width="9"
+					stroke-linecap="round" />
+				<line class="saber__blade" x1="378" y1="110" x2="58" y2="30" stroke="#e0535a" stroke-width="12"
+					stroke-linecap="round" opacity="0.6" filter="url(#saber-glow)" />
+				<line class="saber__blade" x1="378" y1="110" x2="58" y2="30" stroke="#ffe5e6" stroke-width="4"
+					stroke-linecap="round" />
+			</g>
+		</svg>
+
+		<div class="encart">
+			<strong>Comment lire cet almanach.</strong> Ce thème se déploie sur une
+			quarantaine de pages, réparties en trois volets : une
+			<strong>chronologie</strong> en huit chapitres qui raconte l'histoire de
+			la galaxie événement par événement, des <strong>fiches
+				personnages</strong> regroupées par famille (les Skywalker, les Jedi,
+			les Sith...), et des <strong>fiches objets</strong> consacrées aux
+			sabres laser, à l'Étoile de la Mort ou au Faucon Millenium. Tout suit
+			le <em>canon officiel</em> de Lucasfilm : films, séries live et séries
+			animées. Les dates sont données en <em>BBY</em> (avant la bataille de
+			Yavin) et <em>ABY</em> (après) ; le premier chapitre,
+			<em>Comprendre la galaxie</em>, explique ce calendrier et pose le
+			vocabulaire utilisé partout ensuite.
+		</div>
+	</header>
+
+	<main class="groups-section">
+		<div class="groups-section__label">Les trois volets</div>
+		<div class="groups-grid">
+			<a class="group-card" href="sw_hub.html">
+				<div class="group-card__eyebrow">Huit chapitres</div>
+				<h2 class="group-card__title">La chronologie</h2>
+				<p class="group-card__members">
+					De <em>Comprendre la galaxie</em> au <em>Premier Ordre et
+						l'horizon</em> — l'histoire de la galaxie dans l'ordre, de
+					25 025 BBY aux films annoncés.
+				</p>
+			</a>
+
+			<a class="group-card" href="sw_personnages.html">
+				<div class="group-card__eyebrow">Biographies</div>
+				<h2 class="group-card__title">Les personnages</h2>
+				<p class="group-card__members">
+					Les Skywalker · les Jedi · les Sith · la Rébellion ·
+					Mandaloriens et chasseurs de primes · l'Empire
+				</p>
+			</a>
+
+			<a class="group-card" href="objets/sw_objets.html">
+				<div class="group-card__eyebrow">Ce qui traverse la saga</div>
+				<h2 class="group-card__title">Les objets</h2>
+				<p class="group-card__members">
+					Les sabres laser · les cristaux kyber · les holocrons ·
+					l'Étoile de la Mort · le Faucon Millenium · le beskar
+				</p>
+			</a>
+		</div>
+	</main>
+
+	<footer class="sw-next">
+		<div class="sw-next__label">Commencer par le début</div>
+		<a href="chronologie/sw_galaxie.html">Comprendre la galaxie →</a>
+	</footer>
+
+	<script src="sw_script.js"></script>
+</body>
+
+</html>
